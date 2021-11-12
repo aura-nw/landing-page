@@ -19,10 +19,6 @@ build:
   tags:
     - build
     - akcCluster
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - /data/app/node_modules
   script:
     - chmod 777 -R ./ci
     - ./ci/build.sh
