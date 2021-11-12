@@ -1,5 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 
-// @import "~/node_modules/bootstrap/scss/functions";
-// @import "~/node_modules/bootstrap/scss/variables";
-// @import "~/node_modules/bootstrap/scss/bootstrap";
+body {
+    background-image: url("./assets/img/Rectangle.png");
+    background-color: #000;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.btn-outline-metaverse {
+    position: relative;
+    background-color: #13111a;
+    color: #fff;
+    border-radius: 25px;
+    min-width: 150px;
+    &:before {
+        content: "";
+        background: linear-gradient(130deg, #7353e5, #ce4da4 41.07%, #ce4da4 76.05%);
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        z-index: -1;
+        border-radius: 25px;
+    }
+}
+
+.btn-transparent {
+    border-radius: 25px;
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.img-zindex {
+    z-index: -1;
+    position: relative;
+}
+
+span,
+h1,
+p {
+    color: #fff;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.card {
+    background: #1d1a27;
+    box-shadow: 0px 17.1429px 42.8571px rgba(0, 0, 0, 0.5);
+    border-radius: 17.1429px;
+    background: rgba(255, 255, 255, 0.1);
+}
