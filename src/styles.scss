@@ -34,6 +34,13 @@ body {
     color: #fff;
 }
 
+.btn:hover,
+a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09,
+        0 0 151px #f09;
+}
+
 .img-zindex {
     z-index: -1;
     position: relative;
@@ -45,6 +52,34 @@ p {
     color: #fff;
 }
 
+span {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 3.2px;
+    font-family: "Manrope", sans-serif;
+    color: #d4d4d4;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+h1 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 70px;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: "Poppins", sans-serif;
+    color: #d4d4d4;
+}
+
 .section {
     padding: 100px 0;
 }
@@ -54,4 +89,5 @@ p {
     box-shadow: 0px 17.1429px 42.8571px rgba(0, 0, 0, 0.5);
     border-radius: 17.1429px;
     background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 60px;
 }
