@@ -4,11 +4,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 700px;
+    min-height: 830px;
     display: flex;
     align-items: center;
     position: relative;
 }
+
 .section-2 {
     // background-image: url("../../../assets/img/Pattern_galaxy.png");
     background-color: transparent;
@@ -19,59 +20,65 @@
     align-items: center;
     position: relative;
 }
+
 img {
     padding-bottom: 30px;
 }
-.img-1 {
-    width: 670px;
-    position: absolute;
-    left: 10%;
-    top: 0;
-    z-index: -1;
-    animation: bonben 10s linear 2s infinite reverse;
+
+.img-bannner {
+    position: relative;
+    .img-1 {
+        position: absolute;
+        left: 160px;
+        top: -65px;
+        z-index: -1;
+        animation: bonben 10s linear 2s infinite reverse;
+    }
 }
+
 @keyframes bonben {
     0% {
-        opacity: 0.1;
+        // opacity: 0.1;
         transform: translate(0%, 0%);
     }
     10% {
-        opacity: 0.9;
+        // opacity: 0.9;
         transform: translate(1%, -1%);
     }
     20% {
-        opacity: 1;
+        // opacity: 1;
         transform: translate(2%, 0%);
     }
     30% {
-        opacity: 0.5;
+        // opacity: 0.5;
         transform: translate(1%, 1%);
     }
     40% {
-        opacity: 1;
+        // opacity: 1;
         transform: translate(0%, 0%);
     }
     50% {
-        opacity: 0.3;
+        // opacity: 0.3;
         transform: translate(-1%, -1%);
     }
     60% {
-        opacity: 0.9;
+        // opacity: 0.9;
         transform: translate(-2%, 0%);
     }
     70% {
-        opacity: 0.7;
+        // opacity: 0.7;
         transform: translate(-1%, -1%);
     }
     80% {
-        opacity: 1;
+        // opacity: 1;
         transform: translate(0%, 0%);
     }
     90% {
-        opacity: 0.5;
+        // opacity: 0.5;
         transform: translate(1%, 1%);
     }
 }
+
 marquee {
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -85,6 +92,7 @@ marquee {
     color: #ffffff;
     opacity: 0.2;
 }
+
 .img-2-wrap {
     position: relative;
     &::after {
@@ -104,13 +112,13 @@ marquee {
         z-index: 2;
     }
 }
+
 .img-card-wrap {
     width: 179px;
     height: 179px;
     position: absolute;
     top: -15%;
     left: calc(50% - 90px);
-
     &::after {
         content: "";
         position: absolute;
@@ -127,6 +135,7 @@ marquee {
         z-index: 2;
     }
 }
+
 .card-title {
     font-family: Poppins;
     font-style: normal;
@@ -141,6 +150,7 @@ marquee {
 .card-body {
     text-align: center;
 }
+
 .card-text {
     font-family: Poppins;
     font-style: normal;
@@ -150,6 +160,7 @@ marquee {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
 }
+
 .btn-link {
     font-family: Poppins;
     font-style: normal;
@@ -180,7 +191,6 @@ marquee {
         background: rgba(255, 255, 255, 0.1);
         margin-bottom: 26px;
         position: relative;
-
         &::before {
             content: "";
             width: 10.96px;
@@ -244,6 +254,7 @@ marquee {
         }
     }
 }
+
 .slider-staff {
     display: flex;
     margin-left: 15%;
@@ -262,7 +273,6 @@ marquee {
             font-size: 24px;
             line-height: 36px;
             /* identical to box height */
-
             color: #ffffff;
             font-family: Poppins;
             font-style: normal;
@@ -283,6 +293,7 @@ marquee {
         }
     }
 }
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -307,6 +318,7 @@ marquee {
         padding-bottom: 0;
     }
 }
+
 .card-button {
     display: flex;
     align-items: center;
@@ -316,7 +328,6 @@ marquee {
     min-height: 100px;
     margin: 10px;
     padding: 0 50px;
-
     img {
         padding-bottom: 0;
     }

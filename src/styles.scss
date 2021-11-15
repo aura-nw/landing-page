@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background-image: url("./assets/img/Rectangle.png");
+    background-image: url("./assets/img/bg_1920_01.png");
     background-color: #000;
-    background-position: center;
-    background-repeat: repeat-y;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1920px;
+    background-position: top center;
 }
 
 .btn-outline-metaverse {
@@ -37,8 +37,7 @@ body {
 .btn:hover,
 a:hover {
     color: #fff !important;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09,
-        0 0 151px #f09;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
 }
 
 .img-zindex {
@@ -63,6 +62,7 @@ span {
     text-transform: uppercase;
     padding-bottom: 30px;
 }
+
 h1 {
     font-weight: 700;
     font-style: normal;
