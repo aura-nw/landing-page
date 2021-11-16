@@ -153,7 +153,7 @@ marquee {
     font-size: 15.4286px;
     line-height: 23px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    // color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-link {
@@ -314,6 +314,11 @@ marquee {
     }
 }
 
+.card {
+    min-height: 300px;
+    padding-top: 140px;
+}
+
 .card-button {
     display: flex;
     align-items: center;
@@ -336,4 +341,20 @@ marquee {
         letter-spacing: -0.2px;
         color: #ffffff;
     }
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .social-wrap {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        img {
+            cursor: pointer;
+        }
+    }
+    // opacity: 0.4;
 }
