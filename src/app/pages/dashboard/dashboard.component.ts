@@ -10,11 +10,12 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
   constructor() { }
 
   ngOnInit(): void {
-  }
-  ngAfterViewChecked(): void {
     setTimeout(() => {
       this.scrollRight();
     }, 500);
+  }
+  ngAfterViewChecked(): void {
+
   }
   scrollRight(): void {
     this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 5000), behavior: 'smooth' });

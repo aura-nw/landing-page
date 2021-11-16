@@ -11,14 +11,9 @@
 }
 
 .section-2 {
-    // background-image: url("../../../assets/img/Pattern_galaxy.png");
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    position: relative;
+    img {
+        mix-blend-mode: screen;
+    }
 }
 
 img {
