@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatTooltipModule
   ]
 })
 export class LayoutsModule { }
