@@ -288,15 +288,18 @@ marquee {
 
 .slider-staff {
     display: flex;
-    margin-left: 15%;
+    // margin-left: 15%;
     padding-bottom: 50px;
     overflow: auto;
+    justify-content: center;
+    text-align: center;
     &.slider-staff-2 {
-        margin-left: 0%;
-        margin-right: 15%;
+        // margin-left: 0%;
+        // margin-right: 15%;
     }
     .card-item {
         margin-right: 30px;
+        max-width: 258px;
         &:hover {
             .img-wrapper {
                 img {
@@ -343,6 +346,15 @@ marquee {
             font-weight: normal;
             font-size: 20px;
             line-height: 30px;
+            color: #ffffff;
+            mix-blend-mode: normal;
+            // opacity: 0.7;
+        }
+        .des {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
             color: #ffffff;
             mix-blend-mode: normal;
             opacity: 0.7;
