@@ -8,11 +8,21 @@
     display: flex;
     // align-items: center;
     position: relative;
+    padding-bottom: 0;
 }
 
-.section-2 {
-    img {
+.img-bannner {
+    position: relative;
+    mix-blend-mode: screen;
+    .img-main {
         mix-blend-mode: screen;
+        margin-top: 50px;
+    }
+    .img-animation {
+        position: absolute;
+        top: 0;
+        left: -69px;
+        animation: bonben1 5s linear 2s infinite reverse;
     }
 }
 
@@ -26,14 +36,18 @@ img {
     padding-bottom: 30px;
 }
 
-.img-bannner {
-    position: relative;
-    .img-1 {
-        position: absolute;
-        left: 160px;
-        top: 200px;
-        z-index: -1;
-        animation: bonben 10s linear 2s infinite reverse;
+@keyframes bonben1 {
+    0% {
+        // opacity: 0.1;
+        transform: translateY(0);
+    }
+    50% {
+        // opacity: 0.3;
+        transform: translateY(2%);
+    }
+    100% {
+        // opacity: 0.5;
+        transform: translateY(0);
     }
 }
 
