@@ -119,6 +119,7 @@ a:hover {
 
 span,
 h1,
+h2,
 p {
     color: #fff;
 }
@@ -143,6 +144,14 @@ h1 {
     font-family: "Poppins", sans-serif;
 }
 
+h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 70px;
+    font-family: "Poppins", sans-serif;
+}
+
 p {
     font-weight: 400;
     font-style: normal;
@@ -152,16 +161,21 @@ p {
     color: #d4d4d4;
 }
 
+.hl {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 .section {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 .card {
+    margin-bottom: 60px;
     background: #1d1a27;
     box-shadow: 0px 17.1429px 42.8571px rgba(0, 0, 0, 0.5);
     border-radius: 17.1429px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 60px;
 }
 
 // :hover {
@@ -178,4 +192,8 @@ p {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: linear-gradient(130.23deg, #ce4da4 23.87%, #8a79ff 100%), #c4c4c4;
+}
+
+.text-right {
+    text-align: right;
 }
