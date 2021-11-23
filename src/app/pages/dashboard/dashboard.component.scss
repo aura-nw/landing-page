@@ -16,12 +16,14 @@
     mix-blend-mode: screen;
     .img-main {
         mix-blend-mode: screen;
-        margin-top: 50px;
+        top: 75px;
+        left: -130px;
+        position: absolute;
     }
     .img-animation {
         position: absolute;
-        top: 0;
-        left: -69px;
+        top: -30px;
+        left: -130px;
         animation: bonben1 5s linear 2s infinite reverse;
     }
 }
@@ -449,16 +451,69 @@ marquee {
     width: 79px;
 }
 
+.title {
+    text-align: right;
+}
+
+.sub-tit {
+    color: #fff;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 70px;
+    font-family: "Poppins", sans-serif;
+}
+
+.content-tit {
+    text-align: right;
+    width: 80%;
+}
+
 @media only screen and (max-width: 600px) {
     .section-1 {
         padding: 0;
+        min-height: unset;
+        padding-bottom: 30px;
     }
     .img-bannner {
+        min-height: 333px;
         .img-main {
-            margin-left: 10%;
+            top: 40px;
+            left: -155px;
+            position: absolute;
+            width: 750px;
         }
         .img-animation {
-            left: 0;
+            left: -135px;
+            top: -35px;
+            width: 600px;
+        }
+    }
+    .text-top {
+        align-items: center;
+        .title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        .sub-tit {
+            font-size: 28px;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        .content-tit {
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             width: 100%;
         }
     }
