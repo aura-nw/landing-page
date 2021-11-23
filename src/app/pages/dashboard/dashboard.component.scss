@@ -448,3 +448,18 @@ marquee {
 .w-79 {
     width: 79px;
 }
+
+@media only screen and (max-width: 600px) {
+    .section-1 {
+        padding: 0;
+    }
+    .img-bannner {
+        .img-main {
+            margin-left: 10%;
+        }
+        .img-animation {
+            left: 0;
+            width: 100%;
+        }
+    }
+}

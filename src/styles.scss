@@ -36,7 +36,7 @@ $aura-network-theme: mat-light-theme( ( color: ( primary: $aura-network-primary,
 }
 
 html:not([data-scroll="0"]) {
-    .navbar {
+    .aura-navbar {
         position: fixed;
         width: 100%;
         top: 0;
@@ -65,10 +65,35 @@ html:not([data-scroll="0"]) {
     }
 }
 
-.nav-item {
-    .nav-link {
-        color: #fff;
-        cursor: pointer;
+.aura-navbar {
+    padding: 15px 0;
+    .aura-nav-content {
+        display: flex;
+        justify-content: space-between;
+        .aura-navbar-brand {}
+        .aura-nav-menu {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            .aura-navbar-nav {
+                display: flex;
+                list-style-type: none;
+                .aura-nav-item {
+                    .aura-nav-link {
+                        text-decoration: none;
+                        cursor: pointer;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 21px;
+                        text-align: center;
+                        color: #ffffff;
+                        padding: 10px 24px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -196,4 +221,49 @@ p {
 
 .text-right {
     text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .aura-navbar {
+        padding: 15px 0;
+        .aura-nav-content {
+            display: flex;
+            .aura-navbar-brand {}
+            .aura-nav-menu {
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-end;
+                display: none;
+                .aura-navbar-nav {
+                    display: flex;
+                    list-style-type: none;
+                    .aura-nav-item {
+                        .aura-nav-link {
+                            text-decoration: none;
+                            cursor: pointer;
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 21px;
+                            text-align: center;
+                            color: #ffffff;
+                            padding: 10px 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .img-bannner {
+        .img-main {
+            width: 100%;
+        }
+        .img-animation {
+            width: 100%;
+        }
+    }
+    .list-logo {
+        flex-direction: column;
+    }
 }

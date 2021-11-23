@@ -1,35 +1,31 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="aura-navbar">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">
+        <div class="aura-nav-content">
+            <a class="aura-navbar-brand" href="#">
                 <img src="../../assets/img/Logo.png" alt="" class="d-inline-block align-text-top">
             </a>
-            <div class="d-flex w-100 justify-content-end">
-                <ul class="navbar-nav align-items-center mb-2">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
+            <div class="aura-nav-menu">
+                <ul class="aura-navbar-nav align-items-center mb-2">
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('team')">Team</a>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('team')">Team</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('partner')">Partner</a>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('partner')">Partner</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('advisors')">White Paper</a>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('advisors')">White Paper</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('community')">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> <button class="btn btn-outline-metaverse" type="button" matTooltip="Feature is coming soon!">Start Now!</button></a>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('community')">Community</a>
                     </li>
                 </ul>
-
             </div>
+            <a class="aura-nav-link" href="#">
+                <button class="btn btn-outline-metaverse" type="button" matTooltip="Feature is coming soon!">Start Now!</button>
+            </a>
         </div>
     </div>
 </nav>
