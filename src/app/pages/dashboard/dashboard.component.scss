@@ -385,7 +385,7 @@ marquee {
             font-size: 14px;
             color: #ffffff;
             opacity: 0.7;
-            text-align: justify;
+            // text-align: justify;
         }
     }
 }
@@ -468,15 +468,28 @@ marquee {
     text-align: right;
     width: 80%;
 }
-
+.button-group {
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
 @media only screen and (max-width: 600px) {
+    .section{
+        padding: 30px 0;
+    }
     .section-1 {
-        padding: 0;
+        // padding: 0;
         min-height: unset;
-        padding-bottom: 30px;
+        overflow: hidden;
+        position: relative; 
     }
     .img-bannner {
-        min-height: 333px;
+        height: calc(100vh - 100px);
+        width: 100%;
+        top: 70px;
+        left: 0;
+        position: absolute;
+
         .img-main {
             top: 40px;
             left: -155px;
@@ -490,6 +503,9 @@ marquee {
         }
     }
     .text-top {
+        height: calc(100vh - 60px);
+        display: flex;
+        justify-content: end;
         align-items: center;
         .title {
             font-family: Poppins;
@@ -515,6 +531,18 @@ marquee {
             letter-spacing: 0.5px;
             text-transform: uppercase;
             width: 100%;
+        }
+    }
+    .button-group {
+        justify-content: center;
+    }
+
+    .slider-staff {
+        flex-direction: column;
+        align-items: center;
+        .card-item {
+            margin-right: 0;
+            margin-bottom: 30px;
         }
     }
 }
