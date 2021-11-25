@@ -504,10 +504,11 @@ marquee {
         }
     }
     .text-top {
-        height: 100vh;
+        height: calc(100vh - 60px);
         display: flex;
         justify-content: end;
         align-items: center;
+        background-color: violet;
         .title {
             font-family: Poppins;
             font-style: normal;
