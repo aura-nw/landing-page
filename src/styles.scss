@@ -15,15 +15,7 @@ $aura-network-accent: mat-palette($mat-pink, A200, A100, A400);
 $aura-network-warn: mat-palette($mat-red);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$aura-network-theme: mat-light-theme(
-    (
-        color: (
-            primary: $aura-network-primary,
-            accent: $aura-network-accent,
-            warn: $aura-network-warn,
-        ),
-    )
-);
+$aura-network-theme: mat-light-theme( ( color: ( primary: $aura-network-primary, accent: $aura-network-accent, warn: $aura-network-warn, ), ));
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -31,12 +23,16 @@ $aura-network-theme: mat-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+@import "../src/library/slick/slick.scss";
+@import "../src/library/slick/slick-theme.scss";
 #button {
     display: none;
 }
+
 html {
     overflow-x: hidden;
 }
+
 html:not([data-scroll="0"]) {
     .aura-navbar {
         position: fixed;
@@ -67,6 +63,19 @@ html:not([data-scroll="0"]) {
     }
 }
 
+.slick-prev {
+    left: 0 !important;
+}
+
+.slick-next {
+    right: 0 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 30px !important;
+}
+
 .aura-navbar {
     padding: 15px 0;
     position: absolute;
@@ -77,8 +86,7 @@ html:not([data-scroll="0"]) {
     .aura-nav-content {
         display: flex;
         justify-content: space-between;
-        .aura-navbar-brand {
-        }
+        .aura-navbar-brand {}
         .aura-nav-menu {
             flex-grow: 1;
             display: flex;
@@ -145,8 +153,7 @@ body {
 .btn:hover,
 a:hover {
     color: #fff !important;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09,
-        0 0 151px #f09;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
 }
 
 .img-zindex {
@@ -328,7 +335,6 @@ p {
         color: #ffffff;
         font-weight: bold;
     }
-
     .list-logo {
         img {
             padding-bottom: 30px;
