@@ -7,7 +7,7 @@ if [ ${CI_COMMIT_REF_NAME} = "develop" ]
 then
     echo 'This is develop branch'
     pwd
-    ls -al
+    ls ./src
     cp ./src/robots/robots-akachains.txt ./src/robots.txt
     cp ./src/robots/sitemap-akachains.txt ./src/sitemap.uml
 elif [ ${CI_COMMIT_REF_NAME} = "uat" ]
