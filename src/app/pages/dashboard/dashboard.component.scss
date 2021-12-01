@@ -142,10 +142,10 @@ marquee {
     &::after {
         content: "";
         position: absolute;
-        left: 10%;
-        top: 10%;
-        width: 80%;
-        height: 80%;
+        left: 13%;
+        top: 13%;
+        width: 74%;
+        height: 74%;
         border-radius: 50%;
         background: linear-gradient(130.23deg, #ce4da4 23.87%, #8a79ff 100%), #c4c4c4;
         z-index: 1;
@@ -352,7 +352,7 @@ marquee {
                 bottom: 35px;
                 right: 10px;
                 &:hover {
-                    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+                    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
                 }
             }
         }
@@ -565,6 +565,66 @@ marquee {
     .list-logo {
         img {
             padding-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+    .img-bannner {
+        .img-main {
+            top: 40px;
+            left: -115px;
+            width: 750px;
+        }
+        .img-animation {
+            left: -122px;
+            top: -35px;
+            width: 600px;
+        }
+    }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .img-bannner {
+        .img-main {
+            top: 26px;
+            left: -128px;
+            width: 750px;
+        }
+        .img-animation {
+            left: -130px;
+            top: -37px;
+            width: 600px;
+        }
+    }
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .img-bannner {
+        .img-main {
+            top: 40px;
+            left: -140px;
+            width: 750px;
+        }
+        .img-animation {
+            left: -141px;
+            top: -35px;
+            width: 600px;
+        }
+    }
+}
+
+@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 3) {
+    .img-bannner {
+        .img-main {
+            top: -10px;
+            left: -128px;
+            width: 653px;
+        }
+        .img-animation {
+            left: -92px;
+            top: -37px;
+            width: 460px;
         }
     }
 }
