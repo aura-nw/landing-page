@@ -63,6 +63,18 @@ html:not([data-scroll="0"]) {
     }
 }
 
+.btn {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.size-18 {
+    font-size: 18px !important;
+    font-weight: 500;
+}
+
 // .slick-prev {
 //     left: 0 !important;
 // }
