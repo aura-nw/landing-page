@@ -21,7 +21,7 @@ jobs:
         echo REPO_MANIFEST_NAME=aura-network >> $GITHUB_ENV
         echo REPO_MANIFEST_URL=git@gitlab.com:akachain/gitops/aura-network.git >> $GITHUB_ENV
         echo REPO_MANIFEST_BRANCH=master >> $GITHUB_ENV
-        echo REPO_MANIFEST_ENV_DEV=./clusters/k8s-dev/develop >> $GITHUB_ENV
+        echo REPO_MANIFEST_ENV_DEV=./clusters/k8s-dev >> $GITHUB_ENV
         echo REPO_MANIFEST_TAG_IMAGE=image_frontend_github >> $GITHUB_ENV
     - name: Build the Docker image and push it to the registry
       env:
