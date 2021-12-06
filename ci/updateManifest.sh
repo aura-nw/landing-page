@@ -22,7 +22,7 @@ git checkout ${REPO_MANIFEST_BRANCH} && git pull
 if [ ${GITHUB_REF_NAME} = "main" ]
 then
   echo 'This is main branch'
-  cd ${REPO_MANIFEST_ENV_DEV}
+  cd ${REPO_MANIFEST_ENV_MAIN}
 else
   exit
 fi
