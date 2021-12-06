@@ -1,0 +1,72 @@
+<nav class="aura-navbar">
+    <div class="container">
+        <div class="aura-nav-content">
+            <a class="aura-navbar-brand" href="#">
+                <img src="../../assets/img/Logo.png" alt="" class="d-inline-block align-text-top">
+            </a>
+            <div class="aura-nav-menu">
+                <ul class="aura-navbar-nav align-items-center mb-2">
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
+                    </li>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('team')">Team</a>
+                    </li>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('partner')">Partner</a>
+                    </li>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('advisors')">White Paper</a>
+                    </li>
+                    <li class="aura-nav-item">
+                        <a class="aura-nav-link" (click)="scroll('community')">Community</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="aura-nav-link btn-start" href="#">
+                <button class="btn btn-outline-metaverse" type="button" matTooltip="Feature is coming soon!">Start
+                    Now!</button>
+            </a>
+            <div class="mobile-menu" (click)="isShow=!isShow">
+                <img src="../../assets/img/menu.png" alt="">
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-menu-content" *ngIf="isShow">
+    <div class="mobile-menu-content-top">
+        <a class="aura-navbar-brand" href="#">
+            <img src="../../assets/img/Logo.png" alt="" class="d-inline-block align-text-top">
+        </a>
+        <div class="close-menu" (click)="isShow=false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </div>
+    </div>
+    <div class="aura-nav-menu">
+        <ul class="aura-navbar-nav align-items-center mb-2">
+            <li class="aura-nav-item">
+                <a class="aura-nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
+            </li>
+            <li class="aura-nav-item">
+                <a class="aura-nav-link" (click)="scroll('team')">Team</a>
+            </li>
+            <li class="aura-nav-item">
+                <a class="aura-nav-link" (click)="scroll('partner')">Partner</a>
+            </li>
+            <li class="aura-nav-item">
+                <a class="aura-nav-link" (click)="scroll('advisors')">White Paper</a>
+            </li>
+            <li class="aura-nav-item">
+                <a class="aura-nav-link" (click)="scroll('community')">Community</a>
+            </li>
+        </ul>
+    </div>
+    <div class="aura-nav-button" href="#">
+        <button class="btn btn-outline-metaverse w-100" type="button" matTooltip="Feature is coming soon!">Start
+            Now!</button>
+    </div>
+</div>
