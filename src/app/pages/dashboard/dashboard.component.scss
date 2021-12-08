@@ -134,25 +134,26 @@ marquee {
 }
 
 .img-card-wrap {
-    width: 179px;
-    height: 179px;
+    width: 194px;
+    height: 194px;
     position: absolute;
-    top: -15%;
+    top: -20%;
     left: calc(50% - 90px);
-    &::after {
-        content: "";
-        position: absolute;
-        left: 13%;
-        top: 13%;
-        width: 74%;
-        height: 74%;
-        border-radius: 50%;
-        background: linear-gradient(130.23deg, #ce4da4 23.87%, #8a79ff 100%), #c4c4c4;
-        z-index: 1;
-    }
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: 13%;
+    //     top: 13%;
+    //     width: 74%;
+    //     height: 74%;
+    //     border-radius: 50%;
+    //     background: linear-gradient(130.23deg, #ce4da4 23.87%, #8a79ff 100%), #c4c4c4;
+    //     z-index: 1;
+    // }
     .img-card {
         position: relative;
         z-index: 2;
+        width: 100%;
     }
 }
 
@@ -161,9 +162,10 @@ marquee {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 30px;
     text-align: center;
     color: #ffffff;
+    padding-bottom: 10px;
 }
 
 .card-body {
@@ -178,6 +180,8 @@ marquee {
     line-height: 23px;
     text-align: center;
     color: #ffffff;
+    padding: 0 30px;
+
     .hl-2 {
         font-weight: bold;
         color: #ffffff;
@@ -406,8 +410,8 @@ marquee {
 }
 
 .card {
-    min-height: 380px;
-    padding-top: 140px;
+    min-height: 350px;
+    padding-top: 125px;
 }
 
 .card-button {
