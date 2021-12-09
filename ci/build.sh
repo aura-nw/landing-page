@@ -2,7 +2,7 @@
 set -xe
 
 #Login to registry
-echo ${{ secrets.REGISTRY_PASSWORD }} | docker login ghcr.io -u $REGISTRY_USERNAME --password-stdin
+echo ${{ secrets.REGISTRY_PASSWORD }} | docker login -u $REGISTRY_USERNAME --password-stdin
 if [ ${GITHUB_REF_NAME} = "main" ]
 then
     echo 'This is main branch'
