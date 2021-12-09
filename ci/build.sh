@@ -2,7 +2,7 @@
 set -xe
 
 #Login to registry
-docker login registry.gitlab.com -u $GITLAB_USERNAME -p $GITLAB_PASSWORD
+docker login ghcr.io -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
 if [ ${GITHUB_REF_NAME} = "main" ]
 then
     echo 'This is main branch'
