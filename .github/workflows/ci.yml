@@ -19,7 +19,7 @@ jobs:
         SHORT_SHA_COMMIT=$(git rev-parse --short HEAD)
         echo CONTAINER_RELEASE_IMAGE=ghcr.io/aura-nw/landing-page/${GITHUB_REF_NAME}_${SHORT_SHA_COMMIT} >> $GITHUB_ENV
         echo REPO_MANIFEST_NAME=aura-network >> $GITHUB_ENV
-        echo REPO_MANIFEST_URL=git@gitlab.com:akachain/gitops/aura-network.git >> $GITHUB_ENV
+        echo REPO_MANIFEST_URL=git@github.com:aura-nw/gitops.git >> $GITHUB_ENV
         echo REPO_MANIFEST_BRANCH=master >> $GITHUB_ENV
         echo REPO_MANIFEST_ENV_DEV=./clusters/k8s-dev >> $GITHUB_ENV
         echo REPO_MANIFEST_ENV_MAIN=./clusters/k8s-uat >> $GITHUB_ENV
