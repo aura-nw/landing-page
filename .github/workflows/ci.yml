@@ -26,8 +26,8 @@ jobs:
         echo REPO_MANIFEST_TAG_IMAGE=image_landing_page >> $GITHUB_ENV
     - name: Build the Docker image and push it to the registry
       env:
-        GITLAB_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
-        GITLAB_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+        GITHUB_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
+        GITHUB_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
       run: |
         chmod 777 -R ./ci
         ./ci/build.sh
