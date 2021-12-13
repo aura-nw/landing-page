@@ -15,7 +15,15 @@ $aura-network-accent: mat-palette($mat-pink, A200, A100, A400);
 $aura-network-warn: mat-palette($mat-red);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$aura-network-theme: mat-light-theme( ( color: ( primary: $aura-network-primary, accent: $aura-network-accent, warn: $aura-network-warn, ), ));
+$aura-network-theme: mat-light-theme(
+    (
+        color: (
+            primary: $aura-network-primary,
+            accent: $aura-network-accent,
+            warn: $aura-network-warn,
+        ),
+    )
+);
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -96,7 +104,8 @@ html:not([data-scroll="0"]) {
     .aura-nav-content {
         display: flex;
         justify-content: space-between;
-        .aura-navbar-brand {}
+        .aura-navbar-brand {
+        }
         .aura-nav-menu {
             flex-grow: 1;
             display: flex;
@@ -163,7 +172,8 @@ body {
 .btn:hover,
 a:hover {
     color: #fff !important;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09,
+        0 0 151px #f09;
 }
 
 .img-zindex {
@@ -400,5 +410,15 @@ p {
         display: flex;
         justify-content: center;
         padding: 0px 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url("./assets/img/bg.png");
+        background-color: #000;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        background-position: top center;
     }
 }
