@@ -75,4 +75,8 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  openWhitePaper(): void {
+    window.open(`//github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf`);
+  }
+
 }
