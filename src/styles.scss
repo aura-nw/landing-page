@@ -88,17 +88,6 @@ html:not([data-scroll="0"]) {
     font-weight: 500;
 }
 
-// .slick-prev {
-//     left: 0 !important;
-// }
-// .slick-next {
-//     right: 0 !important;
-// }
-.slick-prev:before,
-.slick-next:before {
-    font-size: 30px !important;
-}
-
 .aura-navbar {
     padding: 15px 0;
     position: absolute;
@@ -422,6 +411,18 @@ p {
 .slick-next {
     height: 30px;
     width: 30px;
+}
+
+// .slick-prev {
+//     left: 0 !important;
+// }
+// .slick-next {
+//     right: 0 !important;
+// }
+.slick-prev:before,
+.slick-next:before {
+    font-size: 28px !important;
+    margin-top: 2px;
 }
 @media only screen and (max-width: 600px) {
     body {
