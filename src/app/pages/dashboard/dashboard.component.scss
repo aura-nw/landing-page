@@ -565,8 +565,15 @@ marquee {
         }
     }
     .list-logo {
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: flex-start;
+
         img {
             padding-bottom: 30px;
+            max-width: 40%;
+            min-width: 40%;
+            margin: 00 5%;
         }
     }
 }
