@@ -513,6 +513,8 @@ marquee {
         height: calc(100vh - 60px);
         display: flex;
         align-items: flex-end;
+        position: relative;
+        z-index: 1;
         .content {
             display: block;
             text-align: center;
