@@ -30,11 +30,13 @@
 }
 
 .text-top {
+    position: relative;
+    z-index: 10;
     .content {
         text-align: right;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: end;
     }
 }
 

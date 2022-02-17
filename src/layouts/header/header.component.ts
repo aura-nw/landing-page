@@ -18,4 +18,8 @@ export class HeaderComponent implements OnInit {
     el!.scrollIntoView({ behavior: 'smooth' });
     this.isShow = false;
   }
+
+  openWhitePaper(): void {
+    window.open(`//github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf`);
+  }
 }
