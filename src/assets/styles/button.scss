@@ -1,7 +1,11 @@
 .button {
+  display: inline-block;
   padding: var(--spacer-3) var(--spacer-6) calc(var(--spacer-half) + var(--spacer-3)) var(--spacer-6);
   letter-spacing: 0.02em;
   font-family: SFProDisplay;
+  text-decoration: none;
+  outline: none;
+  transition: all .35s ease-in-out;
   &.button-outline {
     -webkit-background-clip: text;
     background-clip: text;
@@ -15,6 +19,29 @@
     position: relative;
     z-index:0;
     text-decoration: none;
+  }
+  &.button-inline {
+    border: none;
+    color: var(--aura-white);
+  }
+  &.button-primary {
+    background: var(--aura-dark-gray);
+    color: var(--aura-neutrals-4);
+    border-radius: 100px;
+    &:hover, &.active {
+      background: var(--aura-gradient-simple);
+      color: var(--aura-neutrals-2);
+      //background-position: 168px;
+    }
+  }
+  &.button-secondary {
+    background: var(--aura-light-gray);
+    color: var(--aura-white);
+    border-radius: 100px;
+    //&:hover, &.active {
+    //  background: var(--aura-gradient-simple);
+    //  color: var(--aura-neutrals-2);
+    //}
   }
 }
 .button-outline {

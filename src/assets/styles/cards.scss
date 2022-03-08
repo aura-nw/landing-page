@@ -1,0 +1,48 @@
+.aura-card {
+  border: 2px solid var(--aura-neutrals-3);
+  background-color: var(--aura-black);
+  box-shadow: 0 64px 64px -48px rgba(15, 15, 15, 0.1);
+  border-radius: 20px;
+  padding: var(--spacer-16) var(--spacer-8);
+  color: var(--aura-light-gray);
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  &-staff {
+    background: transparent;
+    padding: var(--spacer-6) var(--spacer-1);
+    border: none;
+    box-shadow: none;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    .card__image {
+      margin: auto;
+      width: 267px;
+      height: 267px;
+      object-fit: cover;
+      border-radius: 100.142px;
+      padding: 2px;
+      background: var(--aura-gradient-simple);
+    }
+    .card__title {
+      color: var(--aura-neutrals-8);
+    }
+    .card__excerpt {
+      color: var(--aura-white);
+    }
+    .card__button {
+      padding: var(--spacer-1) var(--spacer-6);
+    }
+  }
+}
+.aura-card-row {
+  margin-left: -2px;
+  margin-right: -2px;
+  .aura-card {
+    height: 456px;
+    max-width: 376px;
+    margin: 0 14px;
+  }
+}

@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
+  formData: {email: string | undefined} = {email: ''};
+  email: string | undefined;
+  submitted = false;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onSubmitCTAForm() {
+    this.submitted = true;
+    console.log(this.formData.email);
   }
 
 }

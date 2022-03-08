@@ -8,6 +8,11 @@
 @import "assets/styles/typo";
 @import "assets/styles/divider";
 @import "assets/styles/button";
+@import "assets/styles/icons";
+@import "assets/styles/keyframes";
+@import "assets/styles/image";
+@import "assets/styles/cards";
+@import "assets/styles/form";
 // Plus imports for other components in your app.
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -49,7 +54,7 @@ html:not([data-scroll="0"]) {
         top: 0;
         left: 0;
         z-index: 1;
-        background: rgba(255, 255, 255, 0.1);
+        //background: rgba(255, 255, 255, 0.1);
     }
     #button {
         background: rgba(255, 255, 255, 0.1);
@@ -80,11 +85,7 @@ html:not([data-scroll="0"]) {
 }
 
 body {
-    background-image: url("./assets/img/background.png");
-    background-color: #000;
-    background-repeat: no-repeat;
-    background-size: 1920px;
-    background-position: top center;
+    background-color: var(--aura-black);
 }
 
 .btn-outline-metaverse {
@@ -113,11 +114,11 @@ body {
     color: #fff;
 }
 
-.btn:hover,
-a:hover {
-    color: #fff !important;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
-}
+//.btn:hover,
+//a:hover {
+//    color: #fff !important;
+//    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+//}
 
 .img-zindex {
     z-index: -1;
