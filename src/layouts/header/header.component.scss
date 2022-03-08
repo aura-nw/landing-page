@@ -1,0 +1,16 @@
+.navbar {
+  .nav-menu {
+    .nav-item {
+      .divider.divider-vertical { min-height: var(--spacer-12)}
+      .nav-link {
+        color: var(--aura-light-gray) !important;
+        transition: text-shadow .35s ease-in-out;
+        margin: 0 var(--spacer-8);
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .h4 { margin-bottom: 0}
+    }
+  }
+}

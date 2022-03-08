@@ -1,34 +1,57 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg py-5">
+    <div class="container-fluid mx-10 px-0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#headerMenu" aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">
-                <img src="../../assets/img/Logo.png" alt="" class="d-inline-block align-text-top">
-            </a>
+        <div class="collapse navbar-collapse" id="headerMenu">
+          <div class="d-flex">
+            <ul class="navbar-nav nav-menu align-items-center">
+              <li class="nav-item">
+                <a class="navbar-brand p-0 m-0" href="#">
+                  <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
+                       src="../../assets/imgs/auraMainLogo-1x.png"
+                       alt="Aura Logo">
+                </a>
+              </li>
+              <li class="nav-item mx-12">
+                <div class="divider divider-vertical"></div>
+              </li>
+              <li class="nav-item h4">
+                <a class="nav-link" (click)="scroll('about')">ABOUT</a>
+              </li>
+              <li class="nav-item h4">
+                <a class="nav-link" (click)="scroll('ecosystem')">ECOSYSTEM</a>
+              </li>
+              <li class="nav-item h4">
+                <a class="nav-link" (click)="scroll('news')">NEWS</a>
+              </li>
+              <li class="nav-item h4">
+                <a class="nav-link" (click)="scroll('community')">COMMUNITY</a>
+              </li>
+            </ul>
+          </div>
             <div class="d-flex w-100 justify-content-end">
-                <ul class="navbar-nav align-items-center mb-2">
+                <ul class="navbar-nav align-items-center">
+                  <li class="nav-item mr-haft pr-6">
+                    <a class="nav-link icon--social p-0 d-flex">
+                      <img src="assets/imgs/icons/fb.svg" alt="instagram">
+                    </a>
+                  </li>
+                  <li class="nav-item mr-haft pr-6">
+                    <a class="nav-link icon--social p-0 d-flex">
+                      <img src="assets/imgs/icons/twitter.svg" alt="instagram">
+                    </a>
+                  </li>
+                  <li class="nav-item mr-10">
+                    <a class="nav-link icon--social p-0 d-flex">
+                      <img src="assets/imgs/icons/instagram.svg" alt="instagram">
+                    </a>
+                  </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('team')">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('partner')">Partner</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('advisors')">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="scroll('community')">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> <button class="btn btn-outline-metaverse" type="button" matTooltip="Feature is coming soon!">Buy Now!</button></a>
+                        <a class="nav-link p-0" href="#"> <button class="button button-outline button--gradient-simple" type="button" matTooltip="Feature is coming soon!">Get started!</button></a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </div>

@@ -1,0 +1,52 @@
+.button {
+  padding: var(--spacer-3) var(--spacer-6) calc(var(--spacer-half) + var(--spacer-3)) var(--spacer-6);
+  letter-spacing: 0.02em;
+  font-family: SFProDisplay;
+  &.button-outline {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    border: none;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index:0;
+    text-decoration: none;
+  }
+}
+.button-outline {
+  background: var(--aura-gradient-simple);
+}
+.button-outline::before {
+  content:"";
+  position:absolute;
+  z-index: -1;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius: 90px;
+  border: 1px solid transparent;
+  background: inherit;
+  background-origin:border-box;
+  background-clip:border-box;
+  -webkit-mask:
+    var(--aura-gradient-simple) padding-box,
+    var(--aura-gradient-simple);
+  -webkit-mask-composite:destination-out;
+  mask-composite: exclude;
+  -webkit-mask-repeat:no-repeat;
+}
+//.btn:hover {
+//  color: #fff;
+//  -webkit-text-fill-color: #fff;
+//  -webkit-background-clip: border-box;
+//  background-clip: border-box;
+//}
+//
+//.btn:hover::before {
+//  -webkit-mask:none;
+//}
