@@ -1,0 +1,21 @@
+.aura-card {
+  border: 2px solid var(--aura-neutrals-3);
+  background-color: var(--aura-black);
+  box-shadow: 0 64px 64px -48px rgba(15, 15, 15, 0.1);
+  border-radius: 20px;
+  padding: var(--spacer-16) var(--spacer-8);
+  color: var(--aura-light-gray);
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.aura-card-row {
+  margin-left: -2px;
+  margin-right: -2px;
+  .aura-card {
+    height: 456px;
+    max-width: 376px;
+    margin: 0 14px;
+  }
+}

@@ -8,6 +8,10 @@
 @import "assets/styles/typo";
 @import "assets/styles/divider";
 @import "assets/styles/button";
+@import "assets/styles/icons";
+@import "assets/styles/keyframes";
+@import "assets/styles/image";
+@import "assets/styles/cards";
 // Plus imports for other components in your app.
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -80,11 +84,7 @@ html:not([data-scroll="0"]) {
 }
 
 body {
-    background-image: url("./assets/img/background.png");
-    background-color: #000;
-    background-repeat: no-repeat;
-    background-size: 1920px;
-    background-position: top center;
+    background-color: var(--aura-black-1);
 }
 
 .btn-outline-metaverse {
