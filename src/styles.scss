@@ -4,6 +4,7 @@
 @import "assets/fonts/Redig/Redig.css";
 @import "assets/fonts/SfProDisplay/SfProDisplay.css";
 @import "assets/styles/variables";
+@import "assets/styles/reboot";
 @import "assets/styles/spacer";
 @import "assets/styles/typo";
 @import "assets/styles/divider";
@@ -35,13 +36,6 @@ $aura-network-theme: mat-light-theme( ( color: ( primary: $aura-network-primary,
 
 /* You can add global styles to this file, and also import other style files */
 
-.navbar {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
 
 #button {
     display: none;
@@ -76,14 +70,6 @@ html:not([data-scroll="0"]) {
         }
     }
 }
-
-.nav-item {
-    .nav-link {
-        color: #fff;
-        cursor: pointer;
-    }
-}
-
 body {
     background-color: var(--aura-black);
 }
@@ -112,78 +98,4 @@ body {
     min-width: 150px;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-}
-
-//.btn:hover,
-//a:hover {
-//    color: #fff !important;
-//    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
-//}
-
-.img-zindex {
-    z-index: -1;
-    position: relative;
-}
-
-span,
-h1,
-p {
-    color: #fff;
-}
-
-span {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 3.2px;
-    font-family: "Manrope", sans-serif;
-    color: #d4d4d4;
-    text-transform: uppercase;
-    padding-bottom: 30px;
-}
-
-h1 {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 60px;
-    line-height: 70px;
-    font-family: "Poppins", sans-serif;
-}
-
-p {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 27px;
-    font-family: "Poppins", sans-serif;
-    color: #d4d4d4;
-}
-
-.section {
-    padding: 100px 0;
-}
-
-.card {
-    background: #1d1a27;
-    box-shadow: 0px 17.1429px 42.8571px rgba(0, 0, 0, 0.5);
-    border-radius: 17.1429px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 60px;
-}
-
-// :hover {
-//     box-shadow: 0px 17.1429px 42.8571px rgba(0, 0, 0, 0.5);
-// }
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(130.23deg, #ce4da4 23.87%, #8a79ff 100%), #c4c4c4;
 }

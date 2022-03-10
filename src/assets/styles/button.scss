@@ -5,10 +5,9 @@
   font-family: SFProDisplay;
   text-decoration: none;
   outline: none;
-  transition: all .35s ease-in-out;
+  @extend .body;
   &.button-outline {
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     border: none;
@@ -42,6 +41,11 @@
     //  background: var(--aura-gradient-simple);
     //  color: var(--aura-neutrals-2);
     //}
+  }
+  &.button-fixed {
+    @media (max-width: 991.99px) {
+      width: 100%;
+    }
   }
 }
 .button-outline {

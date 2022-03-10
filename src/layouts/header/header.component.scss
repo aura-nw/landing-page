@@ -1,12 +1,44 @@
 .navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
   background-color: var(--aura-black);
+  .navbar-toggler {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    &:focus {
+      box-shadow: none;
+    }
+    .navbar-toggler-icon {
+      transition: background .35s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+    &[aria-expanded="false"]{
+      .navbar-toggler-icon {
+        background: url("../../assets/imgs/icons/color/burger.svg") center no-repeat;
+        background-size: contain;
+      }
+    }
+    &[aria-expanded="true"] {
+      .navbar-toggler-icon {
+        background: url("../../assets/imgs/icons/basic/close.svg") center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
   .nav-menu {
     .nav-item {
       .divider.divider-vertical { min-height: var(--spacer-12)}
       .nav-link {
-        color: var(--aura-light-gray) !important;
+        cursor: pointer;
         transition: text-shadow .35s ease-in-out;
-        margin: 0 var(--spacer-8);
         &:first-child {
           margin-left: 0;
         }

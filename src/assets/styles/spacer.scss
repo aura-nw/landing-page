@@ -57,20 +57,86 @@ $breakpoints: (
 
 @each $breakName, $breakValue in $breakpoints {
   @each $sideName, $sideValue in $sides {
-    @for $i from 0 through 20 {
+    @for $i from 0 through 21 {
 
       $property: if($sideName == '' and $sideName == 'x' and $sideName == 'y', '', -#{$sideValue});
       $space: $i * 4;
       $selector: '';
-
       @if $breakName != "" {
-        $selector: #{$sideName}-#{$breakName}-#{$i};
+        $selector: if($i != 21, #{$sideName}-#{$breakName}-#{$i}, #{$sideName}-#{$breakName}-auto);
       } @else {
-        $selector: #{$sideName}-#{$i};
+        $selector: if($i != 21, #{$sideName}-#{$i}, #{$sideName}-auto);
       }
 
-      @if $breakName != "" {
-        @media (min-width: $breakValue) {
+      @if ($i == 21) {
+        // check if spacer is auto
+        @if $breakName != "" {
+          @media (min-width: $breakValue) {
+            @if $sideName == 'x' {
+              .m#{$selector} {
+                margin-left: auto !important;
+                margin-right: auto !important;
+              }
+            } @else if $sideName == 'y' {
+              .m#{$selector} {
+                margin-top: auto !important;
+                margin-bottom: auto !important;
+              }
+            } @else {
+              .m#{$selector} {
+                margin#{$property}: auto !important;
+              }
+            }
+          }
+        } @else {
+          @if $sideName == 'x' {
+            .m#{$selector} {
+              margin-left: auto !important;
+              margin-right: auto !important;
+            }
+          } @else if $sideName == 'y' {
+            .m#{$selector} {
+              margin-top: auto !important;
+              margin-bottom: auto !important;
+            }
+          } @else {
+            .m#{$selector} {
+              margin#{$property}: auto !important;
+            }
+          }
+        }
+      } @else {
+        // check if spacer is number
+        @if $breakName != "" {
+          @media (min-width: $breakValue) {
+            @if $sideName == 'x' {
+              .m#{$selector} {
+                margin-left: #{$space}px !important;
+                margin-right: #{$space}px !important;
+              }
+              .p#{$selector} {
+                padding-left: #{$space}px !important;
+                padding-right: #{$space}px !important;
+              }
+            } @else if $sideName == 'y' {
+              .m#{$selector} {
+                margin-top: #{$space}px !important;
+                margin-bottom: #{$space}px !important;
+              }
+              .p#{$selector} {
+                padding-top: #{$space}px !important;
+                padding-bottom: #{$space}px !important;
+              }
+            } @else {
+              .m#{$selector} {
+                margin#{$property}: #{$space}px !important;
+              }
+              .p#{$selector} {
+                padding#{$property}: #{$space}px !important;
+              }
+            }
+          }
+        } @else {
           @if $sideName == 'x' {
             .m#{$selector} {
               margin-left: #{$space}px !important;
@@ -96,33 +162,6 @@ $breakpoints: (
             .p#{$selector} {
               padding#{$property}: #{$space}px !important;
             }
-          }
-        }
-      } @else {
-        @if $sideName == 'x' {
-          .m#{$selector} {
-            margin-left: #{$space}px !important;
-            margin-right: #{$space}px !important;
-          }
-          .p#{$selector} {
-            padding-left: #{$space}px !important;
-            padding-right: #{$space}px !important;
-          }
-        } @else if $sideName == 'y' {
-          .m#{$selector} {
-            margin-top: #{$space}px !important;
-            margin-bottom: #{$space}px !important;
-          }
-          .p#{$selector} {
-            padding-top: #{$space}px !important;
-            padding-bottom: #{$space}px !important;
-          }
-        } @else {
-          .m#{$selector} {
-            margin#{$property}: #{$space}px !important;
-          }
-          .p#{$selector} {
-            padding#{$property}: #{$space}px !important;
           }
         }
       }
