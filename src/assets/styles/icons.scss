@@ -31,24 +31,37 @@
     &::before {
       background: url("../imgs/icons/basic/#{$icon-name}.svg") no-repeat center;
       background-size: contain;
+    }
+  };
+  .icon-#{$icon-name}.icon--multi-color {
+    &::before {
+      background: url("../imgs/icons/color/#{$icon-name}.svg") no-repeat center;
+      background-size: contain;
+    }
+  };
+  .icon-#{$icon-name}.icon--switch-stage {
+    &::before {
+      background: url("../imgs/icons/basic/#{$icon-name}.svg") no-repeat center;
+      background-size: contain;
       opacity: 1;
     }
-    //&:hover,&.active {
-    //  background: url("../imgs/icons/color/#{$icon-name}.svg");
-    //  background-size: cover;
-    //  opacity: 1;
-    //  animation-name: fadeInOpacity;
-    //  animation-timing-function: ease-in;
-    //  animation-duration: .35s;
-    //}
-  }
+    &:hover {
+      &::before {
+        background: url("../imgs/icons/color/#{$icon-name}.svg") no-repeat center;
+        background-size: contain;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-timing-function: ease-in;
+        animation-duration: .35s;
+      }
+    }
+  };
 }
 @each $icon-name in $icon-black-variables {
   .icon-#{$icon-name} {
     &::before {
       background: url("../imgs/icons/black/#{$icon-name}.svg") no-repeat center;
       background-size: contain;
-      opacity: 1;
     }
   }
 }

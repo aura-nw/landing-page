@@ -1,44 +1,61 @@
+@mixin mono-font-size($font-size, $line-height, $font: 'system-ui') {
+  font-size: #{$font-size}rem !important;
+  line-height: #{$line-height}rem !important;
+  font-family: $font !important;
+}
+html,body {
+  font-size: 10px;
+}
 h1,.h1 {
-  font-size: 96px !important;
-  line-height: 96px !important;
-  font-family: Redig !important;
+  @include mono-font-size(9.6, 9.6,'Redig');
 }
 h2,.h2 {
-  font-size: 64px !important;
-  line-height: 64px !important;
-  font-family: Redig !important;
+  @include mono-font-size(6.4, 6.4,'Redig');
 }
 h3,.h3 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-family: Redig !important;
+  @include mono-font-size(4.8, 5.6,'Redig');
 }
 h4,.h4 {
-  font-size: 32px !important;
-  line-height: 38px !important;
-  font-weight: 400 !important;
-  font-family: Redig !important;
+  @include mono-font-size(3.2, 3.8,'Redig');
 }
 .title {
-  font-size: 32px !important;
-  line-height: 40px !important;
-  font-family: SFProDisplay !important;
+  @include mono-font-size(3.2, 4,'SFProDisplay');
 }
 .sub-text {
-  font-size: 24px !important;
-  line-height: 32px !important;
-}
-body,.body {
-  font-size: 16px !important;
-  line-height: 24px !important;
+  @include mono-font-size(2.4, 3.2);
 }
 .body {
-  font-family: SFProDisplay !important;
+  @include mono-font-size(1.6, 2.4, 'SFProDisplay')
 }
 .small-text{
-  font-size: 12px !important;
-  line-height: 16px !important;
-  font-family: SFProDisplay !important;
+  @include mono-font-size(1.2, 1.6, 'SFProDisplay')
+}
+
+@media (max-width: 991.98px) {
+  .h1-mob {
+    @include mono-font-size(9.6, 9.6,'Redig');
+  }
+  .h2-mob {
+    @include mono-font-size(6.4, 6.4,'Redig');
+  }
+  .h3-mob {
+    @include mono-font-size(4.8, 5.6,'Redig');
+  }
+  .h4-mob {
+    @include mono-font-size(3.2, 3.8,'Redig');
+  }
+  .title-mob {
+    @include mono-font-size(3.2, 4,'SFProDisplay');
+  }
+  .sub-text-mob {
+    @include mono-font-size(2.4, 3.2);
+  }
+  .body-mob {
+    @include mono-font-size(1.6, 2.4, 'SFProDisplay')
+  }
+  .small-text-mob {
+    @include mono-font-size(1.2, 1.6, 'SFProDisplay')
+  }
 }
 $textColors: (
   'white', 'light-gray', 'dark-gray', 'black', 'black-1',

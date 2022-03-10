@@ -1,5 +1,5 @@
 <!--Hero-->
-<section class="aura-hero px-9 layout--has-bg">
+<section class="aura-hero px-4 px-lg-9">
   <div class="img-contain">
     <div class="img-title">
       <img src="../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@1x.png" class="w-100"
@@ -15,17 +15,17 @@
   </div>
 </section>
 <!--Introduction-->
-<section class="introduction">
+<section class="introduction pt-10 pt-md-8">
   <div class="img--scale object-1">
     <img src="../../../assets/imgs/pages/dashboard/object_1@1x.png"
          srcset="../../../assets/imgs/pages/dashboard/object_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1@2x.png 2x"
          alt="" loading="lazy"/>
   </div>
-  <div class="container">
+  <div class="container px-4 px-lg-0">
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-5 pl-md-5 offset-md-4 position-relative">
-        <h1 class="mb-5">To NFT and beyond</h1>
-        <div class="sub-text mb-5 text--white ">
+      <div class="col-12 col-md-12 col-xl-5 pl-xl-5 offset-xl-4 position-relative">
+        <h1 class="mb-5 h2-mob">To NFT and beyond</h1>
+        <div class="sub-text body-mob mb-5 text--white ">
           Aura Network is a NFT centric blockchain built to provide an open infrastructure system,
           maximize interoperability and create more utilities for brands
           and digital asset owners. </div>
@@ -50,62 +50,68 @@
   </div>
 </section>
 <!--Outstanding Feature-->
-<section class="feature">
+<section class="mt-10 mt-lg-0 feature">
   <div class="padding-1">
-    <div class="container">
+    <div class="container px-4 px-lg-0">
       <!-- content -->
       <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <h2 class="mb-8">From novelty to wide NFT adoption</h2>
-          <div class="sub-text text--light-gray">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
+        <div class="col-12 col-xl-6">
+          <h2 class="mb-5 mb-md-8">From novelty to wide NFT adoption</h2>
+          <div class="sub-text body-mob text--light-gray">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
         </div>
       </div>
     </div>
   </div>
-  <article class="layout--has-bg padding-1">
-    <div class="container">
-      <!-- card-list -->
+  <article class="padding-1">
+    <div class="container px-4 px-lg-0">
+      <!-- card-list desktop -->
       <div class="aura-card-row mt-12">
-        <div class="row">
-          <div class="aura-card">
-            <i class="icon icon-circle icon-chain mb-8"></i>
-            <div class="title fw-bold">Comprehensive DAPP eco-system connecting to brands and I.P owners’ portfolio</div>
+        <div class="row d-none d-lg-flex">
+          <div class="col-md-4" *ngFor="let cardData of featureCardData">
+            <div class="aura-card">
+              <i class="icon icon-circle {{cardData.icon}} mb-8"></i>
+              <div class="title sub-text-mob">{{cardData.text}}</div>
+            </div>
           </div>
-          <div class="aura-card">
-            <i class="icon icon-circle icon-film mb-8"></i>
-            <div class="title fw-bold">Authentic engagement with customers and fans</div>
-          </div>
-          <div class="aura-card">
-            <i class="icon icon-circle icon-heart mb-8"></i>
-            <div class="title fw-bold">All about expanding NFTs liquidity and usability</div>
-          </div>
+        </div>
+        <!-- card-list mobile (carousel) -->
+        <div class="row d-lg-none">
+          <ngx-slick-carousel class="carousel"
+                              [config]="featureSlideConfig">
+            <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
+              <div class="aura-card">
+                <i class="icon icon-circle {{cardData.icon}} mb-8"></i>
+                <div class="title sub-text-mob">{{cardData.text}}</div>
+              </div>
+            </div>
+          </ngx-slick-carousel>
         </div>
       </div>
       <!-- how it work -->
-      <div class="row mt-20 pt-18">
-        <div class="col-12 col-md-6 col-lg-5 my-auto">
+      <div class="row mt-10 mt-md-20 pt-md-18">
+        <div class="col-12 col-lg-6 my-auto">
           <!-- logo -->
-          <div class="img--scale aura-color-logo mb-4">
+          <div class="img--scale aura-color-logo mb-5 mb-md-4">
             <img src="../../../assets/imgs/auraColorLogo-1x.png"
                  srcset="../../../assets/imgs/auraColorLogo-1x.png 1x, ../../../assets/imgs/auraColorLogo-1x.png 2x"
                  alt="" loading="lazy"/>
           </div>
           <!-- content -->
           <h2>Layer-1 NFT centric infrastructure</h2>
-          <div class="sub-text text--light-gray my-8">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
+          <div class="sub-text body-mob text--light-gray my-8">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
           <!-- list -->
-          <ul class="aura-list">
+          <ul class="aura-list body">
             <li>Move digital assets through interchain connection </li>
             <li>Stay ahead of the game and unlock full DeFI potentials </li>
             <li>Metaverse integration  </li>
           </ul>
           <!-- button group -->
-          <div class="d-flex mt-12">
+          <div class="d-flex justify-content-center justify-content-sm-start mt-12">
             <a href="#" class="button button-outline d-inline-block">Request for Demo</a>
             <a href="#" class="button button-inline d-inline-block ml-2">Learn more</a>
           </div>
         </div>
-        <div class="col">
+        <div class="col d-none d-lg-block">
           <div class="img--scale object-5">
             <img src="../../../assets/imgs/pages/dashboard/astronaut_3@1x.png"
                  srcset="../../../assets/imgs/pages/dashboard/astronaut_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_3@2x.png 2x"
@@ -117,9 +123,9 @@
   </article>
 </section>
 <!--partner-->
-<section class="text-center partner">
-  <div class="title text--light-gray mb-6 fw-bold">We work with people from over the world</div>
-  <div class="partner-group mx-auto justify-content-center">
+<section class="text-center partner mx-4 mx-md-auto">
+  <div class="title body-mob text--light-gray mb-6">We work with people from over the world</div>
+  <div class="partner-group justify-content-center">
     <img src="../../../assets/imgs/pages/partner/fpt@1x.png"
          srcset="../../../assets/imgs/pages/partner/fpt@1x.png 1x, ../../../assets/imgs/pages/partner/fpt@2x.png 2x"
          alt="" loading="lazy"/>
@@ -141,29 +147,33 @@
   </div>
 </section>
 <!--team-->
-<section class="team">
+<section class="team mt-20">
   <!--content-->
-  <div class="container">
+  <div class="container px-4 px-lg-0">
     <div class="row">
       <div class="col-12 col-md-10 mx-auto text-center">
-        <h1 class="mb-5">Meet our people</h1>
+        <h1 class="mb-5 h3-mob">Meet our people</h1>
         <div class="body mb-6 text--neutrals-6">
           From all over the world, we select and provide you a team of seasoned trainers.<br/>
           What's more, the 1-on-1 live practice mode helps you quickly get great results.</div>
         <div class="d-flex justify-content-center">
-          <a href="#" class="button button-primary active sub-text d-inline-block mr-3 px-0 py-2">Advisors</a>
-          <a href="#" class="button button-primary sub-text d-inline-block px-0 py-2">Team</a>
+          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData()">Advisors</button>
+          <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData()">Team</button>
         </div>
       </div>
     </div>
   </div>
   <!--slider-->
-  <div class="padding-3 pr-0 mt-12">
+  <div class="padding-3 pr-0 mt-4 mt-md-12">
     <ngx-slick-carousel class="carousel mat-elevation-z10"
                         #slickModal="slick-carousel"
-                        [config]="slideConfig">
-      <div ngxSlickItem *ngFor="let slide of [1,2,3,4,5,6,7,8,9,1,2,3,4,5]" class="slide">
-        <app-staff-card></app-staff-card>
+                        [config]="teamSlideConfig">
+      <div ngxSlickItem *ngFor="let data of staffData" class="slide">
+        <app-staff-card [img]="data.img"
+                        [name]="data.name"
+                        [position]="data.position"
+                        [desc]="data.desc"
+        ></app-staff-card>
       </div>
     </ngx-slick-carousel>
   </div>

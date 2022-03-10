@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-layouts',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layouts.component.scss']
 })
 export class LayoutsComponent implements OnInit {
-
-  constructor() { }
+  pageYOffset = 0;
+  @HostListener('window:scroll', ['$event']) onScroll(event){
+    this.pageYOffset = window.pageYOffset;
+  }
+  constructor(private scroll: ViewportScroller) { }
 
   ngOnInit(): void {
   }
-
+  scrollToTop(){
+    this.scroll.scrollToPosition([0, 0]);
+  }
 }
