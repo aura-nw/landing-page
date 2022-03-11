@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  isShow = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +16,10 @@ export class HeaderComponent implements OnInit {
   scroll(id) {
     let el = document.getElementById(id);
     el!.scrollIntoView({ behavior: 'smooth' });
+    this.isShow = false;
+  }
+
+  openWhitePaper(): void {
+    window.open(`//github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf`);
   }
 }
