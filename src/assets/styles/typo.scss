@@ -7,10 +7,10 @@ html,body {
   font-size: 10px;
 }
 h1,.h1 {
-  @include mono-font-size(9.6, 9.6,'Redig');
+  @include mono-font-size(9.6, 12,'Redig');
 }
 h2,.h2 {
-  @include mono-font-size(6.4, 6.4,'Redig');
+  @include mono-font-size(6.4, 8,'Redig');
 }
 h3,.h3 {
   @include mono-font-size(4.8, 5.6,'Redig');
@@ -33,10 +33,10 @@ h4,.h4 {
 
 @media (max-width: 991.98px) {
   .h1-mob {
-    @include mono-font-size(9.6, 9.6,'Redig');
+    @include mono-font-size(9.6, 12,'Redig');
   }
   .h2-mob {
-    @include mono-font-size(6.4, 6.4,'Redig');
+    @include mono-font-size(6.4, 8,'Redig');
   }
   .h3-mob {
     @include mono-font-size(4.8, 5.6,'Redig');

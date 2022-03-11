@@ -12,6 +12,15 @@ export class DashboardComponent implements OnInit{
     infinite: false,
     variableWidth: true,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
   teamSlideConfig = {
     slidesToShow: 6,

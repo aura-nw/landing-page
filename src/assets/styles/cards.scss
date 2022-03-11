@@ -48,7 +48,9 @@
   margin-left: -2px;
   margin-right: -2px;
   .aura-card {
-    margin: 0 14px;
-
+    margin-right: 32px;
+    @media (min-width: 992px) {
+      margin-right: 0;
+    }
   }
 }
