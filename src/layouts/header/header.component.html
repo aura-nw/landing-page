@@ -1,72 +1,61 @@
-<nav class="aura-navbar">
-    <div class="container">
-        <div class="aura-nav-content">
-            <a class="aura-navbar-brand" href="#">
-                <img src="../../assets/img/Logo2.svg" alt="" class="d-inline-block align-text-top">
-            </a>
-            <div class="aura-nav-menu">
-                <ul class="aura-navbar-nav align-items-center mb-2">
-                    <li class="aura-nav-item">
-                        <a class="aura-nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
-                    </li>
-                    <li class="aura-nav-item">
-                        <a class="aura-nav-link" (click)="scroll('team')">Team</a>
-                    </li>
-                    <li class="aura-nav-item">
-                        <a class="aura-nav-link" (click)="scroll('partner')">Partner</a>
-                    </li>
-                    <li class="aura-nav-item">
-                        <a class="aura-nav-link" (click)="openWhitePaper()">White Paper</a>
-                    </li>
-                    <li class="aura-nav-item">
-                        <a class="aura-nav-link" (click)="scroll('community')">Community</a>
-                    </li>
-                </ul>
-            </div>
-            <a class="aura-nav-link btn-start" href="#">
-                <button class="btn btn-outline-metaverse" type="button" matTooltip="Feature is coming soon!">Start
-                    Now!</button>
-            </a>
-            <div class="mobile-menu" (click)="isShow=!isShow">
-                <img src="../../assets/img/Vector.svg" alt="">
-            </div>
+<nav class="navbar navbar-expand-lg py-4 py-lg-5">
+    <div class="container-fluid mx-4 mx-lg-10 px-0">
+      <a class="d-lg-none" href="#">
+        <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
+             src="../../assets/imgs/auraMainLogo-1x.png"
+             alt="Aura Logo">
+      </a>
+        <button class="navbar-toggler ml-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#headerMenu" aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-15 mt-md-0" id="headerMenu">
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <ul class="navbar-nav nav-menu align-items-center">
+              <li class="nav-item d-none d-lg-block">
+                <a class="navbar-brand p-0 m-0" href="#">
+                  <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
+                       src="../../assets/imgs/auraMainLogo-1x.png"
+                       alt="Aura Logo">
+                </a>
+              </li>
+              <li class="nav-item mx-12 d-none d-lg-block">
+                <div class="divider divider-vertical"></div>
+              </li>
+              <li class="nav-item h4 h3-mob mb-12 mb-md-0 mr-lg-8">
+                <a class="nav-link text--light-gray" (click)="scroll('about')">ABOUT</a>
+              </li>
+              <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
+                <a class="nav-link text--light-gray" (click)="scroll('ecosystem')">ECOSYSTEM</a>
+              </li>
+              <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
+                <a class="nav-link text--light-gray" (click)="scroll('news')">NEWS</a>
+              </li>
+              <li class="nav-item h4 h3-mob mb-12 my-md-0">
+                <a class="nav-link text--light-gray" (click)="scroll('community')">COMMUNITY</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex w-100 flex-column-reverse align-items-center flex-lg-row justify-content-lg-end mt-19 mt-md-0">
+            <ul class="d-flex align-items-center mt-10 mt-md-0 mb-0 pl-0">
+              <li class="nav-item mr-haft pr-6">
+                <a href="#" class="nav-link icon--social p-0 d-flex">
+                  <i class="icon icon--switch-stage icon-fb-circle"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-haft pr-6">
+                <a href="#" class="nav-link icon--social p-0 d-flex">
+                  <i class="icon icon--switch-stage icon-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-md-10">
+                <a href="#" class="nav-link icon--social p-0 d-flex">
+                  <i class="icon icon--switch-stage icon-instagram"></i>
+                </a>
+              </li>
+            </ul>
+            <button class="button button-outline button--gradient-simple button-fixed" type="button" matTooltip="Feature is coming soon!">Get started!</button>
+          </div>
         </div>
     </div>
 </nav>
-<div class="mobile-menu-content" *ngIf="isShow">
-    <div class="mobile-menu-content-top">
-        <a class="aura-navbar-brand" href="#">
-            <img src="../../assets/img/Logo2.svg" alt="" class="d-inline-block align-text-top">
-        </a>
-        <div class="close-menu" (click)="isShow=false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-        </div>
-    </div>
-    <div class="aura-nav-menu">
-        <ul class="aura-navbar-nav align-items-center mb-2">
-            <li class="aura-nav-item">
-                <a class="aura-nav-link active" aria-current="page" (click)="scroll('roadmap')">Roadmap</a>
-            </li>
-            <li class="aura-nav-item">
-                <a class="aura-nav-link" (click)="scroll('team')">Team</a>
-            </li>
-            <li class="aura-nav-item">
-                <a class="aura-nav-link" (click)="scroll('partner')">Partner</a>
-            </li>
-            <li class="aura-nav-item">
-                <a class="aura-nav-link" (click)="openWhitePaper()">White Paper</a>
-            </li>
-            <li class="aura-nav-item">
-                <a class="aura-nav-link" (click)="scroll('community')">Community</a>
-            </li>
-        </ul>
-    </div>
-    <div class="aura-nav-button" href="#">
-        <button class="btn btn-outline-metaverse w-100" type="button" matTooltip="Feature is coming soon!">Start
-            Now!</button>
-    </div>
-</div>

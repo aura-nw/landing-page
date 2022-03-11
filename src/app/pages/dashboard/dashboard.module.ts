@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {SharedModule} from '../../shared/shared.module';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MatTooltipModule
+    MatTooltipModule,
+    SharedModule,
+    SlickCarouselModule
   ]
 })
 export class DashboardModule { }

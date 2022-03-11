@@ -3,22 +3,10 @@
 
 <head>
     <meta charset="utf-8">
+    <title>AuraNetwork</title>
     <base href="/">
-    <title>Aura Network</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <link rel="icon" type="image/png" href="./assets/img/Logo1.svg">
-    <link rel="shortcut icon" href="//aura.network/assets/img/Logo1.svg" />
-
-    <meta name="description" content="A NFT – centric blockchain platform that provides infrastructure assisting to bring your assets to the decentralized market and ultimately, the metaverse ecosystem" />
-    <meta name="keywords" content="Aura Network">
-
-    <meta property="og:url" content="/" />
-    <meta property="og:type" content="network" />
-    <meta property="og:title" content="Aura Network" />
-    <meta property="og:description" content="A NFT – centric blockchain platform that provides infrastructure assisting to bring your assets to the decentralized market and ultimately, the metaverse ecosystem" />
-    <meta property="og:image" content="https://aura.network/assets/img/Logo.svg" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./assets/img/Logo1.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
     </style>
@@ -31,34 +19,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K3NWXQS');
-    </script>
-    <!-- End Google Tag Manager -->
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://aura.network">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aura Network">
+    <meta property="og:description" content="A NFT – centric blockchain platform that provides infrastructure assisting to bring your assets to the decentralized market and ultimately, the metaverse ecosystem">
+    <meta property="og:image" content="http://aura.network/assets/img/Logo.svg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aura Network">
+    <meta name="twitter:description" content="A NFT – centric blockchain platform that provides infrastructure assisting to bring your assets to the decentralized market and ultimately, the metaverse ecosystem">
+    <meta name="twitter:image" content="http://aura.network/assets/img/Logo.svg">
 </head>
 
 <body>
     <app-root></app-root>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3NWXQS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 </body>
 <script>
     // The debounce function receives our function as a parameter
@@ -84,38 +59,6 @@
 
         }
     };
-
-
-    // Reads out the scroll position and stores it in the data attribute
-    // so we can use it in our stylesheets
-    const storeScroll = () => {
-        document.documentElement.dataset.scroll = window.scrollY;
-    }
-
-    // Listen for new scroll events, here we debounce our `storeScroll` function
-    document.addEventListener('scroll', debounce(storeScroll), {
-        passive: true
-    });
-
-    // Update scroll position for first time
-    storeScroll();
 </script>
-<a id="button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-up" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-      </svg>
-</a>
-<script>
-    const button = document.getElementById('button');
-
-    button.addEventListener('click', event => {
-        window.scroll({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-</script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </html>
