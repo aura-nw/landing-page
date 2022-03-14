@@ -68,10 +68,9 @@
       <div class="aura-card-row mt-12">
         <div class="row d-none d-lg-flex">
           <div class="col-md-4" *ngFor="let cardData of featureCardData">
-            <div class="aura-card">
-              <i class="icon icon-circle {{cardData.icon}} mb-8"></i>
-              <div class="title sub-text-mob">{{cardData.text}}</div>
-            </div>
+            <app-aura-card [size]="'md'"
+                           [icon]="cardData.icon"
+                           [title]="cardData.text" ></app-aura-card>
           </div>
         </div>
         <!-- card-list mobile (carousel) -->
@@ -79,10 +78,9 @@
           <ngx-slick-carousel class="carousel"
                               [config]="featureSlideConfig">
             <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
-              <div class="aura-card">
-                <i class="icon icon-circle {{cardData.icon}} mb-8"></i>
-                <div class="title sub-text-mob">{{cardData.text}}</div>
-              </div>
+              <app-aura-card [size]="'md'"
+                             [icon]="cardData.icon"
+                             [title]="cardData.text" ></app-aura-card>
             </div>
           </ngx-slick-carousel>
         </div>
@@ -146,8 +144,33 @@
          alt="" loading="lazy"/>
   </div>
 </section>
+<!--road map-->
+<section class="road-map">
+  <div class="container-fluid pl-4 pr-0 pl-md-0">
+    <div class="d-flex align-items-center">
+      <div class="col-5 d-none d-md-block">
+        <div class="img-astronaut">
+          <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png"
+               srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x"
+               alt="" loading="lazy"/>
+        </div>
+      </div>
+      <div class="col-12 col-md-7">
+        <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator"
+                            [config]="roadmapSlideConfig">
+          <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
+            <app-aura-card [size]="'sm'"
+                           [icon]="data.icon"
+                           [subTitle]="data.date"
+                           [content]="data.content"></app-aura-card>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</section>
 <!--team-->
-<section class="team mt-20">
+<section class="team mt-20 mt-lg-0">
   <!--content-->
   <div class="container px-4 px-lg-0">
     <div class="row">
@@ -165,8 +188,7 @@
   </div>
   <!--slider-->
   <div class="padding-3 pr-0 mt-4 mt-md-12">
-    <ngx-slick-carousel class="carousel mat-elevation-z10"
-                        #slickModal="slick-carousel"
+    <ngx-slick-carousel class="carousel carousel--has-arrows"
                         [config]="teamSlideConfig">
       <div ngxSlickItem *ngFor="let data of staffData" class="slide">
         <app-staff-card [img]="data.img"

@@ -5,10 +5,36 @@
   border-radius: 20px;
   padding: var(--spacer-16) var(--spacer-8);
   color: var(--aura-light-gray);
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  &--md {
+    max-width: 300px;
+    height: 364px;
+    @media (min-width: 992px) {
+      max-width: 376px;
+      height: 456px;
+    }
+  }
+  &--sm {
+    padding: var(--spacer-8);
+    padding-bottom: var(--spacer-12);
+    width: 264px;
+    height: 264px;
+  }
+  .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    @media (min-width: 992px) {
+      font-weight: bold;
+      -webkit-line-clamp: 7;
+    }
+  }
+  .content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   &-staff {
     background: transparent;
     padding: var(--spacer-6) 0;

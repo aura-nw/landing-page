@@ -100,7 +100,6 @@ section.partner {
     min-width: 168px;
   }
   .carousel {
-    box-shadow: none;
     .slick-slide {
       width: 252px;
       margin: 0 16px;
@@ -109,52 +108,9 @@ section.partner {
         margin: 0 20px;
       }
       display: inline-table;
-      opacity: 1;
-      transition: opacity .35s ease-in-out;
-      &:not(.slick-active) {
-        opacity: 0.2;
-      }
     }
     .slick-list {
       margin: 0 -20px;
-    }
-  }
-}
-:host::ng-deep {
-  .slick-track {
-    display: flex;
-  }
-  .team {
-    .slick-prev.slick-arrow,.slick-next.slick-arrow{
-      opacity: 1;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--aura-gradient-simple);
-      border-radius: 50%;
-      transition: opacity .75s ease-in-out;
-      z-index: 2;
-      &::before {
-        content: '';
-        width: 18px;
-        height: 12px;
-        background: url("../../../assets/imgs/icons/basic/arrow-right-2.svg") center;
-      }
-    }
-    .slick-prev.slick-arrow.slick-disabled,.slick-next.slick-arrow.slick-disabled {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slick-next.slick-arrow {
-      right: 57px;
-    }
-    .slick-prev.slick-arrow {
-      &::before {
-        transform: rotate(180deg);
-      }
     }
   }
 }
@@ -166,20 +122,24 @@ section.partner {
       background-size: contain;
     }
   }
-  .aura-card {
-    max-width: 300px;
-    height: 364px;
-    @media (min-width: 992px) {
-      max-width: 376px;
-      height: 456px;
-    }
-    .title {
-      @media (min-width: 992px) {
-        font-weight: bold;
-      }
+}
+.road-map {
+  margin-top: 40px;
+  @media (min-width: 992px) {
+    margin-top: 104px;
+  }
+  position: relative;
+  padding-top: 298px;
+  background: url("../../../assets/imgs/backgrounds/ROADMAP_2x.png") center top no-repeat;
+  background-size: contain;
+  .carousel {
+    transform: translateY(25%);
+    .slick-slide {
+      margin: 0 64px;
     }
   }
 }
+
 /* Heading style */
 h1, h2 {
   background: var(--aura-gradient-simple);

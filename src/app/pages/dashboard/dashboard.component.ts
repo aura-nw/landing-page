@@ -6,6 +6,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit{
+  isAdvisors = true;
+  staffData: any[] = [];
+  // SlideConfig
   featureSlideConfig = {
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -68,7 +71,23 @@ export class DashboardComponent implements OnInit{
       },
     ]
   };
-  isAdvisors = true;
+  roadmapSlideConfig = {
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: false,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      },
+    ]
+  };
+  // MockData
   featureCardData = [
     {
       icon: 'icon-chain',
@@ -83,7 +102,6 @@ export class DashboardComponent implements OnInit{
       text: 'All about expanding NFTs liquidity and usability'
     }
   ];
-  staffData: any[] = [];
   advisorData = [
     {
       name: 'Dr. Truong Gia Binh',
@@ -159,6 +177,50 @@ export class DashboardComponent implements OnInit{
       position: `Coin98 Finance<br/>Founder`,
       desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
     }
+  ];
+  roadmapData = [
+    {
+      icon: 'icon-heart',
+      date: '11/2021',
+      content: `Whitepaper Announcement Establish Entity`,
+    },
+    {
+      icon: 'icon-heart',
+      date: '12/2021',
+      content: `Strategic Round`,
+    },
+    {
+      icon: 'icon-heart',
+      date: '1/2022',
+      content: `IEO Aura Token`,
+    },
+    {
+      icon: 'icon-heart',
+      date: '11/2021',
+      content: `Whitepaper Announcement Establish Entity`,
+    },
+    {
+      icon: 'icon-heart',
+      date: 'Q2/2022',
+      content: `Aura Testnet<br/>Aura Wallet<br/>Aura Explorer`,
+    },
+    {
+      icon: 'icon-heart',
+      date: 'Q3/2022',
+      content: `Aura Mainnet<br/>Governance Tool`,
+    },
+    {
+      icon: 'icon-heart',
+      date: 'Q4/2022',
+      content: `First NFT use case`,
+    },
+    {
+      icon: 'icon-heart',
+      date: '2023',
+      content: `Bridge to public chain (e.g., ETH)<br/>
+                Bridge to private chain (e.g., Hyperledger Fabric)<br/>
+                First Metaverse Integration`,
+    },
   ];
 
   constructor() {}
