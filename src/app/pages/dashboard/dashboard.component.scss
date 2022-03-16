@@ -389,16 +389,19 @@ marquee {
 }
 
 .list-logo {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    img {
-        padding-bottom: 0;
-        // max-height: 45px;
-    }
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
+  img {
+    padding: 16px;
+    max-width: 220px;
+  }
 }
 
 .card {
