@@ -24,12 +24,10 @@
   <div class="container px-4 px-lg-0">
     <div class="row">
       <div class="col-12 col-md-12 col-xl-5 pl-xl-5 offset-xl-4 position-relative">
-        <h1 class="mb-5 h2-mob">To NFT and beyond</h1>
+        <h1 class="mb-5 h2-mob">Join the INTEROPERABLE future</h1>
         <div class="sub-text body-mob mb-5 text--white ">
-          Aura Network is a NFT centric blockchain built to provide an open infrastructure system,
-          maximize interoperability and create more utilities for brands
-          and digital asset owners. </div>
-        <a href="#" class="button button-outline d-inline-block">Read more</a>
+          Aura Network is a <b>layer-1 NFT-centric blockchain</b>, built to accelerate global NFT adoption by the Internet of Blockchain.</div>
+        <a href="#" class="button button-outline d-inline-block">Learn more</a>
         <div class="img--scale object-3">
           <img src="../../../assets/imgs/pages/dashboard/object_3@1x.png"
                srcset="../../../assets/imgs/pages/dashboard/object_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_3@2x.png 2x"
@@ -56,8 +54,11 @@
       <!-- content -->
       <div class="row">
         <div class="col-12 col-xl-6">
-          <h2 class="mb-5 mb-md-8">From novelty to wide NFT adoption</h2>
-          <div class="sub-text body-mob text--light-gray">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
+          <h2 class="mb-5 mb-md-8">To NFT and beyond</h2>
+          <div class="sub-text body-mob text--white">
+            It doesn’t matter what your technical background is, we got you!
+            Getting started with our guide, documentation, and more. Explore the infinite potential with Aura solutions
+          </div>
         </div>
       </div>
     </div>
@@ -70,7 +71,8 @@
           <div class="col-md-4" *ngFor="let cardData of featureCardData">
             <app-aura-card [size]="'md'"
                            [icon]="cardData.icon"
-                           [title]="cardData.text" ></app-aura-card>
+                           [title]="cardData.title"
+                           [subTitle]="cardData.subTitle"></app-aura-card>
           </div>
         </div>
         <!-- card-list mobile (carousel) -->
@@ -80,7 +82,8 @@
             <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
               <app-aura-card [size]="'md'"
                              [icon]="cardData.icon"
-                             [title]="cardData.text" ></app-aura-card>
+                             [title]="cardData.title"
+                             [subTitle]="cardData.subTitle"></app-aura-card>
             </div>
           </ngx-slick-carousel>
         </div>

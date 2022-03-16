@@ -91,15 +91,18 @@ export class DashboardComponent implements OnInit{
   featureCardData = [
     {
       icon: 'icon-chain',
-      text: 'Comprehensive DAPP eco-system connecting to brands and I.P owners’ portfolio'
+      title: 'Built on Cosmos, powerful for developers:',
+      subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network.'
     },
     {
       icon: 'icon-film',
-      text: 'Authentic engagement with customers and fans'
+      title: 'Stay ahead of the Metaverse game: ',
+      subTitle: 'Providing brands an open infrastructure to ride the wave of digital transformation, which enhances brand value, encourages customer’s engagement and conversion.'
     },
     {
       icon: 'icon-heart',
-      text: 'All about expanding NFTs liquidity and usability'
+      title: 'All about NFTs:',
+      subTitle: 'Expanding the usability of NFTs'
     }
   ];
   advisorData = [
