@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isShow = false;
+  public innerWidth: any;
+  isContainer = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+    this.isContainer = this.innerWidth > 1920;
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    this.isContainer = this.innerWidth > 1920;
   }
 
 
   scroll(id) {
-    let el = document.getElementById(id);
-    el!.scrollIntoView({ behavior: 'smooth' });
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: 'smooth' });
     this.isShow = false;
   }
 

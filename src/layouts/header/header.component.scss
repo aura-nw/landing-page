@@ -46,4 +46,8 @@
       .h4 { margin-bottom: 0}
     }
   }
+  &--container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
