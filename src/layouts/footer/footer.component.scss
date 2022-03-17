@@ -19,9 +19,10 @@ footer {
     @media (min-width: 992px) {
       border: none;
       margin-bottom: 100px;
-    }
-    @media (min-width: 1440px) {
       padding-right: 40px;
+      .title {
+        font-weight: 600;
+      }
     }
     ul {
       li {
@@ -40,27 +41,38 @@ footer {
   }
   .footer__contact {
     flex: 0 1 100%;
-    padding: var(--spacer-10) 52px;
+    padding: var(--spacer-10) 0;
+    .footer__logo {
+      width: 105px;
+      height: 65px;
+      img { object-fit: contain}
+    }
     .contact__title {
       color: var(--aura-white);
     }
     border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 992px) {
+      padding: var(--spacer-10) 20px;
       border-left: 1px solid var(--aura-neutrals-3);
       border-right: 1px solid var(--aura-neutrals-3);
+    }
+    @media (min-width: 1024.99px) {
+      padding: var(--spacer-10) 52px;
     }
   }
   .footer__cta {
     padding-top: 40px;
     color: var(--aura-white);
     border-bottom: 1px solid var(--aura-neutrals-3);
-    form.aura-form.single-input-field {
+    &-contain {
       max-width: 256px;
     }
     @media (min-width: 992px) {
       padding-left: 47px;
       border: none;
-      max-width: 300px;
+      .footer__cta-contain {
+        max-width: 300px;
+      }
     }
   }
   .bottom-bar {
