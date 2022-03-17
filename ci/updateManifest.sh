@@ -12,6 +12,10 @@ if [ ${GITHUB_REF_NAME} = "main" ]
 then
   echo 'This is main branch'
   cd ${REPO_MANIFEST_ENV_MAIN}
+elif [ ${GITHUB_REF_NAME} = "main_v1" ]
+then
+  echo 'This is main_v1 branch'
+  cd ${REPO_MANIFEST_ENV_MAIN}
 else
   exit
 fi

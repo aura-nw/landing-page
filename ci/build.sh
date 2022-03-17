@@ -3,7 +3,7 @@ set -xe
 
 #Login to registry
 echo $GITHUB_PASSWORD | docker login ghcr.io -u $GITHUB_USERNAME --password-stdin
-if [ ${GITHUB_REF_NAME} = "main" ]
+if [ ${GITHUB_REF_NAME} = "main" -o ${GITHUB_REF_NAME} = "main_v1" ]
 then
     echo 'This is main branch'
     cp ./src/robots/robots-aura.txt ./src/robots.txt
