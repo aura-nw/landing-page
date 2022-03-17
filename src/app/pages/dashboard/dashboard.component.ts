@@ -97,7 +97,7 @@ export class DashboardComponent implements OnInit{
     {
       icon: 'icon-film',
       title: 'Stay ahead of the Metaverse game: ',
-      subTitle: 'Providing brands an open infrastructure to ride the wave of digital transformation, which enhances brand value, encourages customer’s engagement and conversion.'
+      subTitle: 'Providing brands an open infrastructure to ride the wave of digital transformation.'
     },
     {
       icon: 'icon-heart',
@@ -106,6 +106,15 @@ export class DashboardComponent implements OnInit{
     }
   ];
   advisorData = [
+    {
+      name: 'Frank Bignone',
+      img: 'staff_1.png',
+      position: `Former VP & Head of<br/>Digital Transformation<br/>in Asia-Pacific & China | Airbus`,
+      desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
+        'platform strategy Skywise, alongside developing strategic digital initiatives and' +
+        'optimize Airbus services. Frank advices Aura on growth strategy and global ' +
+        'business development'
+    },
     {
       name: 'Dr. Truong Gia Binh',
       img: 'staff_1.png',
@@ -123,12 +132,6 @@ export class DashboardComponent implements OnInit{
       img: 'staff_3.png',
       position: `Coin98 Finance<br/>Founder`,
       desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
-    },
-    {
-      name: 'Dr. Truong Gia Binh',
-      img: 'staff_1.png',
-      position: `Founder & Chairman of<br/>FPT Corporation`,
-      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. '
     },
     {
       name: 'Vinh Nguyen',
@@ -145,10 +148,10 @@ export class DashboardComponent implements OnInit{
   ];
   teamData = [
     {
-      name: 'Dr. Truong Gia Binh',
+      name: 'Yamato Tran',
       img: 'staff_1.png',
-      position: `Founder & Chairman of<br/>FPT Corporation`,
-      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. '
+      position: `Co-founder`,
+      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.'
     },
     {
       name: 'Vinh Nguyen 2',

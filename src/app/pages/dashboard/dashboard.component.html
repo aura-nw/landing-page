@@ -93,22 +93,25 @@
         <div class="col-12 col-lg-6 my-auto">
           <!-- logo -->
           <div class="img--scale aura-color-logo mb-5 mb-md-4">
-            <img src="../../../assets/imgs/auraColorLogo-1x.png"
-                 srcset="../../../assets/imgs/auraColorLogo-1x.png 1x, ../../../assets/imgs/auraColorLogo-1x.png 2x"
+            <img src="../../../assets/imgs/auraMainLogo-1x.png"
+                 srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-1x.png 2x"
                  alt="" loading="lazy"/>
           </div>
           <!-- content -->
-          <h2>Layer-1 NFT centric infrastructure</h2>
-          <div class="sub-text body-mob text--light-gray my-8">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
+          <h2>Beyond a Network</h2>
+          <div class="sub-text body-mob text--white my-8">
+            Aura Network solves the scalability problem which increases efficiency with an economical price.
+            Developers never need to deal with fragmented Layer 2 systems or sharded chains
+          </div>
           <!-- list -->
-          <ul class="aura-list body">
-            <li>Move digital assets through interchain connection </li>
-            <li>Stay ahead of the game and unlock full DeFI potentials </li>
-            <li>Metaverse integration  </li>
+          <ul class="aura-list body text--white">
+            <li>Create a one-stop destination for developing new NFT use cases.</li>
+            <li>Commit to support both newcomers and crypto-native.</li>
+            <li>Integrate to a new fully-fledged metaverse.</li>
           </ul>
           <!-- button group -->
           <div class="d-flex justify-content-center justify-content-sm-start mt-12">
-            <a href="#" class="button button-outline d-inline-block">Request for Demo</a>
+            <a href="#" class="button button-outline d-inline-block">Request a Free Demo</a>
             <a href="#" class="button button-inline d-inline-block ml-2">Learn more</a>
           </div>
         </div>
@@ -125,7 +128,8 @@
 </section>
 <!--partner-->
 <section class="text-center partner mx-4 mx-md-auto">
-  <div class="title body-mob text--light-gray mb-6">We work with people from over the world</div>
+  <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
+  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with partner networks and IP owners from all around the world. </div>
   <div class="partner-group justify-content-center">
     <img src="../../../assets/imgs/pages/partner/fpt@1x.png"
          srcset="../../../assets/imgs/pages/partner/fpt@1x.png 1x, ../../../assets/imgs/pages/partner/fpt@2x.png 2x"
@@ -139,11 +143,20 @@
     <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
          srcset="../../../assets/imgs/pages/partner/coin98@1x.png 1x, ../../../assets/imgs/pages/partner/coin98@2x.png 2x"
          alt="" loading="lazy"/>
+    <img src="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png"
+         srcset="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png 1x, ../../../assets/imgs/pages/partner/KuCoin_labs@2x.png 2x"
+         alt="" loading="lazy"/>
     <img src="../../../assets/imgs/pages/partner/aha@1x.png"
          srcset="../../../assets/imgs/pages/partner/aha@1x.png 1x, ../../../assets/imgs/pages/partner/aha@2x.png 2x"
          alt="" loading="lazy"/>
     <img src="../../../assets/imgs/pages/partner/kyber@1x.png"
          srcset="../../../assets/imgs/pages/partner/kyber@1x.png 1x, ../../../assets/imgs/pages/partner/kyber@2x.png 2x"
+         alt="" loading="lazy"/>
+    <img src="../../../assets/imgs/pages/partner/ecomobi@1x.png"
+         srcset="../../../assets/imgs/pages/partner/ecomobi@1x.png 1x, ../../../assets/imgs/pages/partner/ecomobi@2x.png 2x"
+         alt="" loading="lazy"/>
+    <img src="../../../assets/imgs/pages/partner/avatar@1x.png"
+         srcset="../../../assets/imgs/pages/partner/avatar@1x.png 1x, ../../../assets/imgs/pages/partner/avatar@2x.png 2x"
          alt="" loading="lazy"/>
   </div>
 </section>
@@ -178,10 +191,8 @@
   <div class="container px-4 px-lg-0">
     <div class="row">
       <div class="col-12 col-md-10 mx-auto text-center">
-        <h1 class="mb-5 h3-mob">Meet our people</h1>
-        <div class="body mb-6 text--neutrals-6">
-          From all over the world, we select and provide you a team of seasoned trainers.<br/>
-          What's more, the 1-on-1 live practice mode helps you quickly get great results.</div>
+        <h1 class="mb-5 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Teams ' }}</h1>
+        <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Who drives us to pursue the deFi dream.' : 'a diversity team of NFT and blockchain believers. '}}</div>
         <div class="d-flex justify-content-center">
           <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData()">Advisors</button>
           <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData()">Team</button>

@@ -3,31 +3,30 @@
   background-color: var(--aura-black);
   box-shadow: 0 64px 64px -48px rgba(15, 15, 15, 0.1);
   border-radius: 20px;
-  padding: var(--spacer-16) var(--spacer-8);
   color: var(--aura-white);
   height: 100%;
   &--md {
+    padding: var(--spacer-14) var(--spacer-8);
     max-width: 300px;
-    height: 364px;
+    height: 437px;
     @media (min-width: 992px) {
       max-width: 376px;
       height: 100%;
-      //height: 500px;
+      padding: var(--spacer-16) var(--spacer-8);
     }
   }
   &--sm {
     padding: var(--spacer-8);
-    padding-bottom: var(--spacer-12);
     width: 264px;
     height: 264px;
   }
   .title {
+    font-weight: bold;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
     @media (min-width: 992px) {
-      font-weight: bold;
       -webkit-line-clamp: 7;
     }
   }
