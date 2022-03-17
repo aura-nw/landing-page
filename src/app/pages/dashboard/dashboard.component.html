@@ -205,11 +205,13 @@
     <ngx-slick-carousel class="carousel carousel--has-arrows"
                         [config]="teamSlideConfig">
       <div ngxSlickItem *ngFor="let data of staffData" class="slide">
-        <app-staff-card [img]="data.img"
-                        [name]="data.name"
-                        [position]="data.position"
-                        [desc]="data.desc"
-        ></app-staff-card>
+        <a href="{{ data.link }}">
+          <app-staff-card [img]="data.img"
+                          [name]="data.name"
+                          [position]="data.position"
+                          [desc]="data.desc"
+          ></app-staff-card>
+        </a>
       </div>
     </ngx-slick-carousel>
   </div>

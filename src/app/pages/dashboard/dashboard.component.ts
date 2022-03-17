@@ -149,39 +149,76 @@ export class DashboardComponent implements OnInit{
   teamData = [
     {
       name: 'Yamato Tran',
-      img: 'staff_1.png',
+      img: 'YamatoTran.png',
       position: `Co-founder`,
-      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.'
+      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.',
+      link: 'https://www.linkedin.com/in/trandanghoa/'
     },
     {
-      name: 'Vinh Nguyen 2',
-      img: 'staff_2.png',
-      position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. '
+      name: 'Giang Tran',
+      img: 'GiangTran.png',
+      position: `Founder`,
+      desc: 'As a Forbes Technology Council member, Giang has deep expertise in Cloud and Enterprise Blockchain. ' +
+        'He is the founder of akaChain and had guided numbers of successful startups with his value driven leadership and strong startup mindset.' +
+        'Giang drives Aura’s strategy adoption and equitable growth.',
+      link: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/'
+
     },
     {
-      name: 'Thanh Le',
-      img: 'staff_3.png',
-      position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
+      name: 'Steve Nguyen',
+      img: 'SteveNguyen.png',
+      position: `Co-Founder`,
+      desc: 'Steve has more than 25 years of profound experience in Digital transformation as CIO of various giant corporations such as Unilever and Masan Group in Vietnam. ' +
+        'Steve guides Aura’s technical operations and project integration.',
+      link: 'https://www.linkedin.com/in/steve-nguy%E1%BB%85n-anh-nguy%C3%AAn-84321043/'
     },
     {
-      name: 'Dr. Truong Gia Binh',
-      img: 'staff_1.png',
-      position: `Founder & Chairman of<br/>FPT Corporation`,
-      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. '
+      name: 'Osamu Suzuki',
+      img: 'OsamuSuzuki.png',
+      position: `Head of Global Business`,
+      desc: 'Suzuki draws on his past experiences as a senior consultant in DX and new business strategy with AI and Blockchain to advance Aura in growth acquisition. ' +
+        'Suzuki explores potentials and facilitates integrations with Global partners.',
+      link: 'https://www.linkedin.com/in/osamu-suzuki-7024a1200/'
     },
     {
-      name: 'Vinh Nguyen',
-      img: 'staff_2.png',
-      position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. '
+      name: 'Long Nguyen',
+      img: 'LongNguyen.png',
+      position: `CTO`,
+      desc: 'Long is a software architect, he has been building consortium blockchain systems for international enterprises since 2018. ' +
+        'Grad from Aalto Unviersty and Université de Lorraine, major in security and privacy.',
+      link: 'https://www.linkedin.com/in/eledra/'
     },
     {
-      name: 'Thanh Le',
-      img: 'staff_3.png',
-      position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
+      name: 'Thu Tran',
+      img: 'ThuTran.png',
+      position: `CMO`,
+      desc: 'Thu is a former lead of marketing communication and partnership for a leading Southeast Asia IT services provider. ' +
+        'She advances Aura’s branding and communication strategy, and explores opportunities for growth acquisition of its ecosystem and partners.',
+      link: 'https://www.linkedin.com/in/thu-tran-88708b163/'
+    },
+    {
+      name: 'James Le',
+      img: 'JamesLe.png',
+      position: `Head of Business Development`,
+      desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. ' +
+        'He is in charge of developing Aura’s business integrations with the growing number of partners.',
+      link: 'https://www.linkedin.com/in/duc-le-minh-akachain-consultant/'
+    },
+    {
+      name: 'Tai Nguyen',
+      img: 'TaiNguyen.png',
+      position: `Head of Operation`,
+      desc: 'Tai has more than 10 years of experience as a product manager. ' +
+        'His main focus is building strong product delivery team, managing project activities such as planning, issues tracking and risk management.',
+      link: 'https://www.linkedin.com/in/tai-nguyen-30595917a/'
+    },
+    {
+      name: 'Claire Nguyen',
+      img: 'ClaireNguyen.png',
+      position: `Community Lead`,
+      desc: 'With 5 years of experience in community growth and marketing management in Digital Banking and Enterprise Blockchain, ' +
+        'Claire drives Aura’s community engagement, development, and sustainable growth.',
+      link: 'https://www.linkedin.com/in/viet-chinh-nguyen/'
     }
   ];
   roadmapData = [
