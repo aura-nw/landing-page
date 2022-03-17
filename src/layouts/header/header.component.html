@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg py-4 py-lg-5">
+<nav class="navbar navbar-expand-lg py-4 py-lg-5 {{isContainer ? 'container navbar--container' : ''}}">
     <div class="container-fluid mx-4 mx-lg-10 px-0">
       <a class="d-lg-none" href="#">
         <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
@@ -10,7 +10,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-15 mt-md-0" id="headerMenu">
-          <div class="d-flex justify-content-center justify-content-lg-start">
+          <div class="d-lg-flex justify-content-center justify-content-lg-start">
             <ul class="navbar-nav nav-menu align-items-center">
               <li class="nav-item d-none d-lg-block">
                 <a class="navbar-brand p-0 m-0" href="#">
@@ -22,39 +22,78 @@
               <li class="nav-item mx-12 d-none d-lg-block">
                 <div class="divider divider-vertical"></div>
               </li>
-              <li class="nav-item h4 h3-mob mb-12 mb-md-0 mr-lg-8">
-                <a class="nav-link text--light-gray" (click)="scroll('about')">ABOUT</a>
+              <li class="nav-item h4 h3-mob mb-12 mb-md-0 pr-lg-8 dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
+                    FEATURES
+                  </button>
+                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuFeatures">
+                    <li><a class="dropdown-item" href="#">Safe</a></li>
+                    <li><a class="dropdown-item" href="#">Docs</a></li>
+                    <li><a class="dropdown-item" href="#">Explorer</a></li>
+                  </ul>
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
-                <a class="nav-link text--light-gray" (click)="scroll('ecosystem')">ECOSYSTEM</a>
+                <div class="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuPartners" data-bs-toggle="dropdown">
+                    PARTNERS
+                  </button>
+                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuPartners">
+                    <li><a class="dropdown-item" href="#">Partners</a></li>
+                    <li><a class="dropdown-item" href="#">Advisors</a></li>
+                  </ul>
+                </div>
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
-                <a class="nav-link text--light-gray" (click)="scroll('news')">NEWS</a>
+                <div class="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuResources" data-bs-toggle="dropdown">
+                    RESOURCES
+                  </button>
+                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuResources">
+                    <li><a class="dropdown-item" href="#">News</a></li>
+                    <li><a class="dropdown-item" href="#">Whitepaper</a></li>
+                    <li><a class="dropdown-item" href="#">Research</a></li>
+                    <li><a class="dropdown-item" href="#">FAQs</a></li>
+                  </ul>
+                </div>
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0">
-                <a class="nav-link text--light-gray" (click)="scroll('community')">COMMUNITY</a>
+                <div class="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuAbout" data-bs-toggle="dropdown">
+                    ABOUT US
+                  </button>
+                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuAbout">
+                    <li><a class="dropdown-item" href="#">Meet Our Team</a></li>
+                    <li><a class="dropdown-item" href="#">Careers</a></li>
+                    <li><a class="dropdown-item" href="#">Contact us</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
           <div class="d-flex w-100 flex-column-reverse align-items-center flex-lg-row justify-content-lg-end mt-19 mt-md-0">
             <ul class="d-flex align-items-center mt-10 mt-md-0 mb-0 pl-0">
-              <li class="nav-item mr-haft pr-6">
-                <a href="#" class="nav-link icon--social p-0 d-flex">
-                  <i class="icon icon--switch-stage icon-fb-circle"></i>
-                </a>
-              </li>
-              <li class="nav-item mr-haft pr-6">
+              <li class="nav-item mr-half pr-6">
                 <a href="#" class="nav-link icon--social p-0 d-flex">
                   <i class="icon icon--switch-stage icon-twitter"></i>
                 </a>
               </li>
-              <li class="nav-item mr-md-10">
+              <li class="nav-item pr-6">
                 <a href="#" class="nav-link icon--social p-0 d-flex">
-                  <i class="icon icon--switch-stage icon-instagram"></i>
+                  <i class="icon icon--switch-stage icon-discord"></i>
+                </a>
+              </li>
+              <li class="nav-item pr-6">
+                <a href="#" class="nav-link icon--social p-0 d-flex">
+                  <i class="icon icon--switch-stage icon-telegram"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-10">
+                <a href="#" class="nav-link icon--social p-0 d-flex">
+                  <i class="icon icon--switch-stage icon-fb-circle"></i>
                 </a>
               </li>
             </ul>
-            <button class="button button-outline button--gradient-simple button-fixed" type="button" matTooltip="Feature is coming soon!">Get started!</button>
+            <button class="button button-outline button--gradient-simple button-fixed" type="button" matTooltip="Feature is coming soon!">WHITEPAPER</button>
           </div>
         </div>
     </div>

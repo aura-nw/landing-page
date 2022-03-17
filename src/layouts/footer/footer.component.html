@@ -1,46 +1,83 @@
 <footer>
   <section class="footer__blocks d-flex flex-column flex-lg-row">
-    <div class="footer__menu pb-10">
-      <div class="footer__logo">
+    <div class="footer__menu pb-10 order-2 order-lg-1">
+      <div class="footer__logo d-none d-lg-block">
         <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
              src="../../assets/imgs/auraMainLogo-1x.png"
              alt="Aura Logo">
       </div>
-      <div class="ml-8 menu body">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Ecosystem</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">FAQs</a></li>
+      <div class="menu body mt-lg-11 d-flex d-lg-block">
+        <div class="body sub-text-mob mr-4 mr-lg-0 title">Headquarter</div>
+        <ul class="small-text">
+          <li>Unit 8 - 3/F.</li>
+          <li>Qwomar Trading Complex,</li>
+          <li>Blackburne Road,</li>
+          <li>Port Purcell, Road Town, Tortola</li>
+          <li>British Virgin Islands VG1110.</li>
+          <li class="mt-4">732-528-4945</li>
         </ul>
       </div>
     </div>
-    <div class="footer__contact">
-      <div class="mx-lg-auto d-flex d-lg-inline-block justify-content-between">
-        <div class="sub-text contact__title">Contact</div>
-        <div class="small-text mt-md-10 ml-8 ml-md-0">
-          <div class="mb-2">43252 Borer Mountains</div>
-          <div class="mb-2">Zackerychester</div>
-          <div class="mb-2">Bahamas</div>
-          <div>732-528-4945</div>
+    <div class="footer__contact order-1 order-lg-2 d-flex d-lg-block">
+      <div class="footer__logo d-lg-none flex-shrink-0 flex-grow-1 mr-11">
+        <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
+             src="../../assets/imgs/auraMainLogo-1x.png"
+             alt="Aura Logo">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <div class="sub-text body-mob contact__title">Features</div>
+            <div class="body mt-2 mt-md-10">
+              <div class="mb-4"><a href="#">Safe</a></div>
+              <div class="mb-4"><a href="#">Docs</a></div>
+              <div class="mb-4"><a href="#">Explorer</a></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="sub-text body-mob contact__title">Partners</div>
+            <div class="body mt-2 mt-md-10">
+              <div class="mb-4"><a href="#">Partners</a></div>
+              <div class="mb-4"><a href="#">Advisors</a></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="sub-text body-mob contact__title">Resources</div>
+            <div class="body mt-2 mt-md-10">
+              <div class="mb-4"><a href="#">News</a></div>
+              <div class="mb-4"><a href="#">Whitepaper</a></div>
+              <div class="mb-4"><a href="#">Research</a></div>
+              <div class="mb-4"><a href="#">FAQs</a></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="sub-text body-mob contact__title">About us</div>
+            <div class="body mt-2 mt-md-10">
+              <div class="mb-4"><a href="#">Meet Our Team</a></div>
+              <div class="mb-4"><a href="#">Careers</a></div>
+              <div class="mb-4"><a href="#">Contact us</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer__cta pb-10 pb-lg-0">
-      <div class="sub-text">newsletter</div>
-      <div class="small-text mt-2 mt-md-10">
-        Subscribe our newsletter to get more free design course and resource.
-      </div>
-      <div class="mt-6">
-        <form #ctaForm="ngForm" (ngSubmit)="onSubmitCTAForm(); ctaForm.reset()" class="aura-form single-input-field">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Recipient's username" [(ngModel)]="formData.email" name="inputEmail" #email="ngModel">
-            <button class="button button-outline" type="submit">
-              <img src="assets/imgs/icons/color/arrow-right-white.svg" alt="" width="14" height="9">
-            </button>
-          </div>
-        </form>
+    <div class="footer__cta order-3 pb-10 pb-lg-0 flex-xl-shrink-0 flex-xl-grow-1">
+      <div class="footer__cta-contain">
+        <div class="sub-text">stay in touch</div>
+        <div class="small-text mt-2 mt-md-10">
+          Subscribe to our Newsletter and be the first to get new details about our latest feature release,
+          announcement, NFTs, tips and tricks when using Aura Network.
+        </div>
+        <div class="mt-6">
+          <form #ctaForm="ngForm" (ngSubmit)="onSubmitCTAForm(); ctaForm.reset()" class="aura-form single-input-field">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Recipient's username" [(ngModel)]="formData.email" name="inputEmail" #email="ngModel">
+              <button class="button button-outline" type="submit">
+                <img src="assets/imgs/icons/color/arrow-right-white.svg" alt="" width="14" height="9">
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -49,19 +86,19 @@
       <div class="caption-2 mt-10 mt-lg-0">Copyright © 2022 Aura Network. All rights reserved</div>
       <div class="d-flex">
         <a href="#">
-          <i class="icon icon--switch-stage icon-fb-circle"></i>
+          <i class="icon icon--switch-stage icon-discord"></i>
         </a>
         <a href="#">
           <i class="icon icon--switch-stage icon-twitter"></i>
         </a>
         <a href="#">
-          <i class="icon icon--switch-stage icon-instagram"></i>
+          <i class="icon icon--switch-stage icon-telegram"></i>
         </a>
         <a href="#">
-          <i class="icon icon--switch-stage icon-behance"></i>
+          <i class="icon icon--switch-stage icon-fb-circle"></i>
         </a>
         <a href="#">
-          <i class="icon icon--switch-stage icon-dribble"></i>
+          <i class="icon icon--switch-stage icon-linkedIn"></i>
         </a>
       </div>
     </div>

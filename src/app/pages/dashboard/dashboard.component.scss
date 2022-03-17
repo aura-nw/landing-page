@@ -62,13 +62,13 @@
 section.partner {
   margin-top: var(--spacer-20);
   @media (min-width: 992px) {
-    margin-top: 104px;
+    margin-top: 76px;
     .title { font-weight: bold; }
   }
 }
 .partner-group {
   @media (min-width: 1400px) {
-    max-width: 620px;
+    max-width: 850px;
   }
   display: flex;
   flex-wrap: wrap;
@@ -96,6 +96,7 @@ section.partner {
 }
 .team {
   position: relative;
+  margin-top: 120px;
   .button-primary {
     min-width: 168px;
   }
@@ -125,11 +126,14 @@ section.partner {
 }
 .road-map {
   margin-top: 40px;
+  padding-top: 80px;
+  @media (min-width: 375.99px) {
+    padding-top: 120px;
+  }
   @media (min-width: 992px) {
-    margin-top: 104px;
+    padding-top: 298px;
   }
   position: relative;
-  padding-top: 298px;
   background: url("../../../assets/imgs/backgrounds/ROADMAP_2x.png") center top no-repeat;
   background-size: contain;
   .carousel {
@@ -139,7 +143,12 @@ section.partner {
     }
   }
 }
-
+// Override component
+:host::ng-deep {
+  .aura-card.aura-card--sm {
+    min-height: 296px;
+  }
+}
 /* Heading style */
 h1, h2 {
   background: var(--aura-gradient-simple);
@@ -237,7 +246,6 @@ h1, h2 {
   }
 }
 ul.aura-list {
-  color: var(--aura-light-gray);
   li {
     padding-left: var(--spacer-9);
     position: relative;
