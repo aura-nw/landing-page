@@ -148,13 +148,6 @@ export class DashboardComponent implements OnInit{
   ];
   teamData = [
     {
-      name: 'Yamato Tran',
-      img: 'YamatoTran.png',
-      position: `Co-founder`,
-      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.',
-      link: 'https://www.linkedin.com/in/trandanghoa/'
-    },
-    {
       name: 'Giang Tran',
       img: 'GiangTran.png',
       position: `Founder`,
@@ -163,6 +156,13 @@ export class DashboardComponent implements OnInit{
         'Giang drives Aura’s strategy adoption and equitable growth.',
       link: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/'
 
+    },
+    {
+      name: 'Yamato Tran',
+      img: 'YamatoTran.png',
+      position: `Co-founder`,
+      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.',
+      link: 'https://www.linkedin.com/in/trandanghoa/'
     },
     {
       name: 'Steve Nguyen',
@@ -191,7 +191,7 @@ export class DashboardComponent implements OnInit{
     {
       name: 'Thu Tran',
       img: 'ThuTran.png',
-      position: `CMO`,
+      position: `COO`,
       desc: 'Thu is a former lead of marketing communication and partnership for a leading Southeast Asia IT services provider. ' +
         'She advances Aura’s branding and communication strategy, and explores opportunities for growth acquisition of its ecosystem and partners.',
       link: 'https://www.linkedin.com/in/thu-tran-88708b163/'
@@ -215,7 +215,7 @@ export class DashboardComponent implements OnInit{
     {
       name: 'Claire Nguyen',
       img: 'ClaireNguyen.png',
-      position: `Community Lead`,
+      position: `Marketing Leader`,
       desc: 'With 5 years of experience in community growth and marketing management in Digital Banking and Enterprise Blockchain, ' +
         'Claire drives Aura’s community engagement, development, and sustainable growth.',
       link: 'https://www.linkedin.com/in/viet-chinh-nguyen/'

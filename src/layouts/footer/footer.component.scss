@@ -11,6 +11,9 @@ footer {
       padding-left: 196px;
       padding-right: 196px;
     }
+    @media (min-width: 1920px) {
+      padding-right: 0;
+    }
   }
   .footer__menu {
     color: var(--aura-white);
