@@ -47,13 +47,17 @@
       &:after {
         content: '';
         position: absolute;
-        top: 50%;
+        top: 0;
         right: -24px;
-        width: 80px;
+        width: 62px;
         height: 80px;
         background: url("../imgs/pages/slider-separator.png") center no-repeat;
-        background-size: cover;
-        transform: translate3D(100%, -50%, 0);
+        background-size: contain;
+        transform: translate3D(100%, 0, 0);
+        @media (min-width: 992px) {
+          width: 80px;
+          background-size: cover;
+        }
       }
     }
   }

@@ -162,23 +162,27 @@
 </section>
 <!--road map-->
 <section class="road-map">
-  <div class="container-fluid pl-4 pr-0 pl-md-0">
+  <div class="">
     <div class="d-flex align-items-center">
-      <div class="col-5 d-none d-md-block">
+      <div class="col-5 d-none d-xl-block">
         <div class="img-astronaut">
           <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png"
                srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x"
                alt="" loading="lazy"/>
         </div>
       </div>
-      <div class="col-12 col-md-7">
+      <div class="col-12 col-xl-7">
+        <img src="../../../assets/imgs/backgrounds/ROADMAP-mob.png" alt="" loading="lazy" class="d-md-none"/>
         <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator"
                             [config]="roadmapSlideConfig">
           <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
-            <app-aura-card [size]="'sm'"
-                           [icon]="data.icon"
-                           [subTitle]="data.date"
-                           [content]="data.content"></app-aura-card>
+            <div class="road-map-item text--white text-center">
+              <div class="road-map__img" style="background-color: {{data.color}}"><i class="icon {{data.icon}}"></i></div>
+              <h3 class="road-map__time-line mt-2">{{data.date}}</h3>
+              <div class="road-map__content mt-4 body">
+                <div class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></div>
+              </div>
+            </div>
           </div>
         </ngx-slick-carousel>
       </div>
@@ -186,7 +190,7 @@
   </div>
 </section>
 <!--team-->
-<section class="team mt-md-0">
+<section class="team mt-lg-0">
   <!--content-->
   <div class="container px-4 px-lg-0">
     <div class="row">
@@ -231,4 +235,55 @@
          srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
          alt="" loading="lazy"/>
   </div>
+</section>
+<!-- FAQ -->
+<section class="faq">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5 d-none d-lg-block">
+        <img src="../../../assets/imgs/pages/dashboard/object_9@1x.png" class="object-13 d-none d-md-block"
+             srcset="../../../assets/imgs/pages/dashboard/object_9@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_9@2x.png 2x"
+             alt="" loading="lazy"/>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="faq__contain px-2 px-md-0">
+          <!-- logo -->
+          <div class="img--scale aura-color-logo">
+            <img src="../../../assets/imgs/auraMainLogo-1x.png"
+                 srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-1x.png 2x"
+                 alt="" loading="lazy"/>
+          </div>
+          <div class="h1 h2-mob d-inline-block">FAQs</div>
+            <ol class="text--white mt-4">
+              <li class="mt-10 mt-md-15">
+                <div class="title sub-text-mob">How does Aura Network differ from other chains?</div>
+                <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">In addition to being low-cost, fast, and scalable,
+                  Aura Network focuses on expanding the use of NFT across various industries.
+                  We primarily focus on bridging assets to other blockchains.</div>
+              </li>
+              <li class="mt-10 mt-md-15">
+                <div class="title sub-text-mob">What reasons did Aura Network choose Cosmos?</div>
+                <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">
+                  Firstly, Cosmos is a great place to build on. They have everything we need to build Aura Network with all the features inside.
+                  Secondly, they have an ecosystem with other great blockchains but can not compare to Ethereum or Solana in trading volume.
+                  So as an NFT-centric blockchain platform, we want to be the pioneer in the cosmos system,
+                  becoming the first choice for all NFT projects.</div>
+              </li>
+            </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="../../../assets/imgs/backgrounds/bw_space_lineart_4@1x.png" class="w-100 background d-none d-lg-block"
+       srcset="../../../assets/imgs/backgrounds/bw_space_lineart_4@1x.png 1x, ../../../assets/imgs/backgrounds/bw_space_lineart_4@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/object_7@1x.png" class="object-10 d-none d-md-block"
+       srcset="../../../assets/imgs/pages/dashboard/object_7@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_7@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/astronaut_5@1x.png" class="object-11"
+       srcset="../../../assets/imgs/pages/dashboard/astronaut_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_5@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/object_8@1x.png" class="object-12 d-md-none"
+       srcset="../../../assets/imgs/pages/dashboard/object_8@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_8@2x.png 2x"
+       alt="" loading="lazy"/>
 </section>

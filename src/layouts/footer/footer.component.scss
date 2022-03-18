@@ -7,12 +7,13 @@ footer {
       border-top: 1px solid var(--aura-neutrals-3);
       border-bottom: 1px solid var(--aura-neutrals-3);
     }
+    //@media (min-width: 1400px) {
+    //  padding-left: 196px;
+    //  padding-right: 196px;
+    //}
     @media (min-width: 1400px) {
-      padding-left: 196px;
-      padding-right: 196px;
-    }
-    @media (min-width: 1920px) {
-      padding-right: 0;
+      padding-left: 90px;
+      padding-right: 90px;
     }
   }
   .footer__menu {
@@ -74,7 +75,7 @@ footer {
       padding-left: 47px;
       border: none;
       .footer__cta-contain {
-        max-width: 300px;
+        max-width: 350px;
       }
     }
   }

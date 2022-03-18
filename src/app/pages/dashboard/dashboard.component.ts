@@ -60,6 +60,7 @@ export class DashboardComponent implements OnInit{
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
+          arrows: true,
         }
       },
       {
@@ -67,22 +68,54 @@ export class DashboardComponent implements OnInit{
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          arrows: true,
         }
       },
     ]
   };
   roadmapSlideConfig = {
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
     variableWidth: true,
+    mobileFirst: true,
+    arrows: false,
     responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+        }
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
         }
       },
     ]
@@ -108,7 +141,7 @@ export class DashboardComponent implements OnInit{
   advisorData = [
     {
       name: 'Frank Bignone',
-      img: 'staff_1.png',
+      img: 'TruongGiaBinh.png',
       position: `Former VP & Head of<br/>Digital Transformation<br/>in Asia-Pacific & China | Airbus`,
       desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
         'platform strategy Skywise, alongside developing strategic digital initiatives and' +
@@ -118,35 +151,21 @@ export class DashboardComponent implements OnInit{
     },
     {
       name: 'Dr. Truong Gia Binh',
-      img: 'staff_1.png',
+      img: 'TruongGiaBinh.png',
       position: `Founder & Chairman of<br/>FPT Corporation`,
       desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. ',
       link: '#'
     },
     {
       name: 'Vinh Nguyen',
-      img: 'staff_2.png',
+      img: 'VinhNguyen.png',
       position: `Coin98 Finance<br/>Founder & CEO`,
       desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
       link: '#'
     },
     {
       name: 'Thanh Le',
-      img: 'staff_3.png',
-      position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
-      link: '#'
-    },
-    {
-      name: 'Vinh Nguyen',
-      img: 'staff_2.png',
-      position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
-      link: '#'
-    },
-    {
-      name: 'Thanh Le',
-      img: 'staff_3.png',
+      img: 'ThanhLe.png',
       position: `Coin98 Finance<br/>Founder`,
       desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
       link: '#'
@@ -229,47 +248,67 @@ export class DashboardComponent implements OnInit{
   ];
   roadmapData = [
     {
-      icon: 'icon-heart',
+      icon: 'icon-announcement',
+      color: '#3772FF',
       date: '11/2021',
-      content: `Whitepaper Announcement Establish Entity`,
+      content: [
+        'Whitepaper',
+        'Announcement',
+        'Establish Entity'
+      ],
     },
     {
-      icon: 'icon-heart',
-      date: '12/2021',
-      content: `Strategic Round`,
+      icon: 'icon-target',
+      color: '#FFBA69',
+      date: 'Q1/2022',
+      content: [
+        'Strategic Round'
+      ],
     },
     {
-      icon: 'icon-heart',
-      date: '1/2022',
-      content: `IEO Aura Token`,
-    },
-    {
-      icon: 'icon-heart',
-      date: '11/2021',
-      content: `Whitepaper Announcement Establish Entity`,
-    },
-    {
-      icon: 'icon-heart',
+      icon: 'icon-hdd-network',
+      color: '#9757D7',
       date: 'Q2/2022',
-      content: `Aura Testnet<br/>Aura Wallet<br/>Aura Explorer`,
+      content: [
+        'IEO',
+        'Aura Testnet',
+        'Smart Contract & DAPP SDK',
+        'Aura Playground',
+        'Aura Explorer',
+        'Aura Multi-Sig Safe'
+      ],
     },
     {
-      icon: 'icon-heart',
+      icon: 'icon-key',
+      color: '#EF466F',
       date: 'Q3/2022',
-      content: `Aura Mainnet<br/>Governance Tool`,
+      content: [
+        'Aura Mainnet',
+        'Governance Tool',
+        `Integrate with C98 ecosystem <br/>(Wallet, Marketplace)`,
+        'IBC enable for native token'
+      ],
     },
     {
-      icon: 'icon-heart',
+      icon: 'icon-key',
+      color: '#45B26B',
       date: 'Q4/2022',
-      content: `First NFT use case`,
+      content: [
+        'NFT game supports',
+        `First NFT use case candidates:<br/>NFT fan token`
+      ],
     },
     {
-      icon: 'icon-heart',
+      icon: 'icon-people',
+      color: '#FF7979',
       date: '2023',
-      content: `Bridge to public chain (e.g., ETH)<br/>
-                Bridge to private chain (e.g., Hyperledger Fabric)<br/>
-                First Metaverse Integration`,
-    },
+      content: [
+        'IBC enable for NFT',
+        'First Metaverse Integration',
+        'Collaboration with Enterprise blockchain.',
+        'Launch at least 2 games'
+      ],
+    }
   ];
 
   constructor() {}
