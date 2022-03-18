@@ -26,16 +26,33 @@ export class DashboardComponent implements OnInit{
     ]
   };
   teamSlideConfig = {
-    slidesToShow: 6,
-    slidesToScroll: 5,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
     infinite: false,
     variableWidth: true,
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1990,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          arrows: true,
         }
       },
       {
@@ -46,27 +63,10 @@ export class DashboardComponent implements OnInit{
         }
       },
       {
-        breakpoint: 1025,
+        breakpoint: 1920,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
+          slidesToScroll: 2,
         }
       },
     ]
@@ -113,47 +113,46 @@ export class DashboardComponent implements OnInit{
       desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
         'platform strategy Skywise, alongside developing strategic digital initiatives and' +
         'optimize Airbus services. Frank advices Aura on growth strategy and global ' +
-        'business development'
+        'business development',
+      link: '#'
     },
     {
       name: 'Dr. Truong Gia Binh',
       img: 'staff_1.png',
       position: `Founder & Chairman of<br/>FPT Corporation`,
-      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. '
+      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. ',
+      link: '#'
     },
     {
       name: 'Vinh Nguyen',
       img: 'staff_2.png',
       position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. '
+      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
+      link: '#'
     },
     {
       name: 'Thanh Le',
       img: 'staff_3.png',
       position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
+      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
+      link: '#'
     },
     {
       name: 'Vinh Nguyen',
       img: 'staff_2.png',
       position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. '
+      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
+      link: '#'
     },
     {
       name: 'Thanh Le',
       img: 'staff_3.png',
       position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
+      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
+      link: '#'
     }
   ];
   teamData = [
-    {
-      name: 'Yamato Tran',
-      img: 'YamatoTran.png',
-      position: `Co-founder`,
-      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.',
-      link: 'https://www.linkedin.com/in/trandanghoa/'
-    },
     {
       name: 'Giang Tran',
       img: 'GiangTran.png',
@@ -163,6 +162,13 @@ export class DashboardComponent implements OnInit{
         'Giang drives Aura’s strategy adoption and equitable growth.',
       link: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/'
 
+    },
+    {
+      name: 'Yamato Tran',
+      img: 'YamatoTran.png',
+      position: `Co-founder`,
+      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.',
+      link: 'https://www.linkedin.com/in/trandanghoa/'
     },
     {
       name: 'Steve Nguyen',
@@ -191,7 +197,7 @@ export class DashboardComponent implements OnInit{
     {
       name: 'Thu Tran',
       img: 'ThuTran.png',
-      position: `CMO`,
+      position: `COO`,
       desc: 'Thu is a former lead of marketing communication and partnership for a leading Southeast Asia IT services provider. ' +
         'She advances Aura’s branding and communication strategy, and explores opportunities for growth acquisition of its ecosystem and partners.',
       link: 'https://www.linkedin.com/in/thu-tran-88708b163/'
@@ -215,7 +221,7 @@ export class DashboardComponent implements OnInit{
     {
       name: 'Claire Nguyen',
       img: 'ClaireNguyen.png',
-      position: `Community Lead`,
+      position: `Marketing Leader`,
       desc: 'With 5 years of experience in community growth and marketing management in Digital Banking and Enterprise Blockchain, ' +
         'Claire drives Aura’s community engagement, development, and sustainable growth.',
       link: 'https://www.linkedin.com/in/viet-chinh-nguyen/'

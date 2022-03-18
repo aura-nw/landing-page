@@ -98,7 +98,10 @@ section.partner {
   position: relative;
   margin-top: 120px;
   .button-primary {
-    min-width: 168px;
+    min-width: 100px;
+    @media (min-width: 320.99px) {
+      min-width: 168px;
+    }
   }
   .carousel {
     .slick-slide {
