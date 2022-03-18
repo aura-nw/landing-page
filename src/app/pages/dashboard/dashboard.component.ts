@@ -41,10 +41,19 @@ export class DashboardComponent implements OnInit{
         }
       },
       {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+        }
+      },
+      {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          arrows: true,
         }
       },
       {
@@ -141,7 +150,7 @@ export class DashboardComponent implements OnInit{
   advisorData = [
     {
       name: 'Frank Bignone',
-      img: 'TruongGiaBinh.png',
+      img: 'frankBignone.png',
       position: `Former VP & Head of<br/>Digital Transformation<br/>in Asia-Pacific & China | Airbus`,
       desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
         'platform strategy Skywise, alongside developing strategic digital initiatives and' +

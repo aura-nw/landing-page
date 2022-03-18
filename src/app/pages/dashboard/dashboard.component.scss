@@ -67,9 +67,6 @@ section.partner {
   }
 }
 .partner-group {
-  @media (min-width: 1400px) {
-    max-width: 850px;
-  }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -80,11 +77,9 @@ section.partner {
   img {
     padding: 0 14px;
     margin-bottom: var(--spacer-4);
-    height: 25px;
     @media (min-width: 992px) {
       padding: 0 24px;
       margin-bottom: var(--spacer-8);
-      height: 40px;
     }
     &:first-child {
       margin-left: 0;
