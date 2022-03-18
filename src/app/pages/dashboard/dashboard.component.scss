@@ -169,6 +169,7 @@ section.partner {
   margin-top: var(--spacer-10);
   position: relative;
   &__contain {
+    position: relative;
     .aura-color-logo {
       width: 160px;
       height: 60px;
@@ -355,6 +356,12 @@ h1, h2 {
 }
 .object-13 {
   margin: 100px 84px 0 auto;
+}
+.object-14 {
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  width: 150px;
 }
 .object-1,.object-2,.object-3,.object-7,.object-8,.object-9 {
   display: none;
