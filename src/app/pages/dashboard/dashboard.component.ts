@@ -26,16 +26,33 @@ export class DashboardComponent implements OnInit{
     ]
   };
   teamSlideConfig = {
-    slidesToShow: 6,
-    slidesToScroll: 5,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
     infinite: false,
     variableWidth: true,
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1990,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          arrows: true,
         }
       },
       {
@@ -46,27 +63,10 @@ export class DashboardComponent implements OnInit{
         }
       },
       {
-        breakpoint: 1025,
+        breakpoint: 1920,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
+          slidesToScroll: 2,
         }
       },
     ]
@@ -113,37 +113,43 @@ export class DashboardComponent implements OnInit{
       desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
         'platform strategy Skywise, alongside developing strategic digital initiatives and' +
         'optimize Airbus services. Frank advices Aura on growth strategy and global ' +
-        'business development'
+        'business development',
+      link: '#'
     },
     {
       name: 'Dr. Truong Gia Binh',
       img: 'staff_1.png',
       position: `Founder & Chairman of<br/>FPT Corporation`,
-      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. '
+      desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. ',
+      link: '#'
     },
     {
       name: 'Vinh Nguyen',
       img: 'staff_2.png',
       position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. '
+      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
+      link: '#'
     },
     {
       name: 'Thanh Le',
       img: 'staff_3.png',
       position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
+      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
+      link: '#'
     },
     {
       name: 'Vinh Nguyen',
       img: 'staff_2.png',
       position: `Coin98 Finance<br/>Founder & CEO`,
-      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. '
+      desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
+      link: '#'
     },
     {
       name: 'Thanh Le',
       img: 'staff_3.png',
       position: `Coin98 Finance<br/>Founder`,
-      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. '
+      desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
+      link: '#'
     }
   ];
   teamData = [
