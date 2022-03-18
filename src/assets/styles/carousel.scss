@@ -9,6 +9,9 @@
     }
   }
   .carousel--has-arrows {
+    .slick-prev {
+      left: 0 !important;
+    }
     .slick-prev.slick-arrow,.slick-next.slick-arrow{
       opacity: 1;
       width: 48px;
