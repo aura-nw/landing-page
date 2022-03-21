@@ -141,10 +141,8 @@ export class TeamService {
     }
   ];
 
-  private dataSourceType = new BehaviorSubject(this.dataType);
-  private dataSource = new BehaviorSubject(this.staffData);
-  currentDataType = this.dataSourceType.asObservable();
-  currentData = this.dataSource.asObservable();
+  public dataSourceType = new BehaviorSubject(this.dataType);
+  public dataSource = new BehaviorSubject(this.staffData);
 
   constructor() {
     this.switchStaffData('advisor');

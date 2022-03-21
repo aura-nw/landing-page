@@ -23,7 +23,6 @@ import {TeamService} from '../core/teamService.service';
     RouterModule,
     FormsModule,
     MatTooltipModule
-  ],
-  providers: [TeamService]
+  ]
 })
 export class LayoutsModule { }

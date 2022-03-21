@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TeamService} from '../../../core/teamService.service';
 
 @Component({
@@ -206,18 +206,15 @@ export class DashboardComponent implements OnInit {
   ];
 
   constructor(
-    public teamService: TeamService,
-    private changeDetectorRefs: ChangeDetectorRef
+    public teamService: TeamService
   ) {}
 
   ngOnInit() {
-    this.teamService.currentData.subscribe(data => this.staffData  = data);
-    this.teamService.currentDataType.subscribe(type => this.isAdvisors = (type === 'advisor'));
-    // console.log(this.staffData);
+    this.teamService.dataSource.subscribe(data => this.staffData  = data);
+    this.teamService.dataSourceType.subscribe(type => this.isAdvisors = (type === 'advisor'));
   }
 
   switchStaffData(dataType: 'advisor' | 'team') {
     this.teamService.switchStaffData(dataType);
-    this.changeDetectorRefs.detectChanges();
   }
 }

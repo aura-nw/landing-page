@@ -18,7 +18,6 @@ import {TeamService} from '../../../core/teamService.service';
     MatTooltipModule,
     SharedModule,
     SlickCarouselModule
-  ],
-  providers: [TeamService]
+  ]
 })
 export class DashboardModule { }
