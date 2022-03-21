@@ -222,7 +222,7 @@
     <ngx-slick-carousel class="carousel carousel--has-arrows"
                         [config]="teamSlideConfig">
       <div ngxSlickItem *ngFor="let data of staffData" class="slide">
-        <a href="{{ data.link }}">
+        <a href="{{ data.link }}" target="_blank">
           <app-staff-card [img]="data.img"
                           [name]="data.name"
                           [position]="data.position"
