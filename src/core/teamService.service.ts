@@ -22,7 +22,7 @@ export class TeamService {
     {
       name: 'Dr. Truong Gia Binh',
       img: 'TruongGiaBinh.png',
-      position: `Founder & Chairman of`,
+      position: `Founder & Chairman`,
       company: 'FPT Corporation',
       desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. ',
       link: {

@@ -71,7 +71,7 @@
         <div class="mt-6">
           <form #ctaForm="ngForm" (ngSubmit)="onSubmitCTAForm(); ctaForm.reset()" class="aura-form single-input-field">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Recipient's username" [(ngModel)]="formData.email" name="inputEmail" #email="ngModel">
+              <input type="text" class="form-control" placeholder="Enter your email" [(ngModel)]="formData.email" name="inputEmail" #email="ngModel">
               <button class="button button-outline" type="submit">
                 <img src="assets/imgs/icons/color/arrow-right-white.svg" alt="" width="14" height="9">
               </button>
