@@ -118,15 +118,7 @@ export class DashboardComponent implements OnInit{
           slidesToScroll: 1,
           arrows: true,
         }
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true,
-        }
-      },
+      }
     ]
   };
   // MockData
