@@ -136,7 +136,7 @@ export class TeamService {
     {
       name: 'Claire Nguyen',
       img: 'ClaireNguyen.png',
-      position: `Marketing Leader`,
+      position: `Marketing Lead`,
       desc: 'With 5 years of experience in community growth and marketing management in Digital Banking and Enterprise Blockchain, ' +
         'Claire drives Aura’s community engagement, development, and sustainable growth.',
       link: {

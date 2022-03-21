@@ -128,8 +128,8 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-heart',
-      title: 'All about NFTs:',
-      subTitle: 'Expanding the usability of NFTs.'
+      title: 'All about NFTs and interoperability:',
+      subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network.'
     }
   ];
   roadmapData = [

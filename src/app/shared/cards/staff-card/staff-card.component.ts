@@ -6,6 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./staff-card.component.scss']
 })
 export class StaffCardComponent implements OnInit {
+  @Input() isAdvisors = true;
   @Input() img: string | undefined;
   @Input() name: string | undefined;
   @Input() position: string | undefined;
