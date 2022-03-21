@@ -7,10 +7,9 @@ import {TeamService} from '../../core/teamService.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isShow = false;
   public innerWidth: any;
   isContainer = false;
-  constructor(private teamService: TeamService) { }
+  constructor(public teamService: TeamService) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
@@ -29,6 +28,5 @@ export class HeaderComponent implements OnInit {
   scroll(id, position: 'nearest' | 'end' | 'start' | 'center') {
     const el = document.getElementById(id);
     el?.scrollIntoView({ behavior: 'smooth', block: position });
-    this.isShow = false;
   }
 }
