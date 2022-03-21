@@ -8,9 +8,11 @@ html,body {
 }
 h1,.h1 {
   @include mono-font-size(9.6, 12,'Redig');
+  display: inline-block;
 }
 h2,.h2 {
   @include mono-font-size(6.4, 8,'Redig');
+  display: inline-block;
 }
 h3,.h3 {
   @include mono-font-size(4.8, 5.6,'Redig');
