@@ -211,7 +211,9 @@
         <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Team' }}</h2>
         <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Drive us to pursue the deFi dream.' : 'Is a diversity of NFT and blockchain believers. '}}</div>
         <div class="d-flex justify-content-center">
-          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
+          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2"
+                  [class.active]="isAdvisors"
+                  (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
           <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData('team')">Team</button>
         </div>
       </div>
@@ -219,7 +221,7 @@
   </div>
   <!--slider-->
   <div class="padding-3 pr-0 mt-4 mt-md-12" *ngIf="staffData && staffData.length > 0">
-    <ngx-slick-carousel class="carousel carousel--has-arrows"
+    <ngx-slick-carousel class="carousel carousel--has-arrows" #slickModal="slick-carousel"
                         [config]="teamSlideConfig">
       <div ngxSlickItem *ngFor="let data of staffData" class="slide">
         <app-staff-card [isAdvisors]="isAdvisors"
