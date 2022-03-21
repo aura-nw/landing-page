@@ -23,10 +23,16 @@
                 <div class="divider divider-vertical"></div>
               </li>
               <li class="nav-item h4 h3-mob mb-12 mb-md-0 pr-lg-8 dropdown">
-                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" [class.show]="featureShow && innerWidth > 992"
+                          (mouseover)="featureShow=true"
+                          (mouseout)="featureShow=false"
+                          type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
                     FEATURES
                   </button>
-                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuFeatures">
+                  <ul class="dropdown-menu body sub-text-mob" [class.show]="featureShow && innerWidth > 992"
+                      (mouseover)="featureShow=true"
+                      (mouseout)="featureShow=false"
+                      aria-labelledby="dropdownMenuFeatures">
                     <li><a class="dropdown-item" target="_blank" href="https://safe.aura.network/welcome">Safe</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://docs.aura.network/">Docs</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://explorer.aura.network/">Explorer</a></li>
@@ -34,10 +40,16 @@
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
                 <div class="dropdown">
-                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuPartners" data-bs-toggle="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" [class.show]="partnerShow && innerWidth > 992"
+                          (mouseover)="partnerShow=true"
+                          (mouseout)="partnerShow=false"
+                          type="button" id="dropdownMenuPartners" data-bs-toggle="dropdown">
                     PARTNERS
                   </button>
-                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuPartners">
+                  <ul class="dropdown-menu body sub-text-mob" [class.show]="partnerShow && innerWidth > 992"
+                      (mouseover)="partnerShow=true"
+                      (mouseout)="partnerShow=false"
+                      aria-labelledby="dropdownMenuPartners">
                     <li><button class="dropdown-item" (click)="scroll('partner', 'center')">Partners</button></li>
                     <li><button class="dropdown-item" (click)="switchStaffData('advisor'); scroll('advisors', 'end')">Advisors</button></li>
                   </ul>
@@ -45,10 +57,16 @@
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
                 <div class="dropdown">
-                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuResources" data-bs-toggle="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" [class.show]="resourceShow && innerWidth > 992"
+                          (mouseover)="resourceShow=true"
+                          (mouseout)="resourceShow=false"
+                          type="button" id="dropdownMenuResources" data-bs-toggle="dropdown">
                     RESOURCES
                   </button>
-                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuResources">
+                  <ul class="dropdown-menu body sub-text-mob" [class.show]="resourceShow && innerWidth > 992"
+                      (mouseover)="resourceShow=true"
+                      (mouseout)="resourceShow=false"
+                      aria-labelledby="dropdownMenuResources">
                     <li><a class="dropdown-item" target="_blank" href="https://aura.network/news/">News</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf">Whitepaper</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://docs.aura.network/blog">Research</a></li>
@@ -58,10 +76,16 @@
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0">
                 <div class="dropdown">
-                  <button class="nav-link dropdown-toggle m-auto" type="button" id="dropdownMenuAbout" data-bs-toggle="dropdown">
+                  <button class="nav-link dropdown-toggle m-auto" [class.show]="aboutShow && innerWidth > 992"
+                          (mouseover)="aboutShow=true"
+                          (mouseout)="aboutShow=false"
+                          type="button" id="dropdownMenuAbout" data-bs-toggle="dropdown">
                     ABOUT US
                   </button>
-                  <ul class="dropdown-menu body sub-text-mob" aria-labelledby="dropdownMenuAbout">
+                  <ul class="dropdown-menu body sub-text-mob" [class.show]="aboutShow && innerWidth > 992"
+                      (mouseover)="aboutShow=true"
+                      (mouseout)="aboutShow=false"
+                      aria-labelledby="dropdownMenuAbout">
                     <li><button class="dropdown-item" (click)="switchStaffData('team'); scroll('advisors', 'center')">Meet Our Team</button></li>
                     <li><a class="dropdown-item" target="_blank" href="https://aura-network.notion.site/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23">Careers</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://discord.com/login?redirect_to=%2Fchannels%2F925227249408557086%2F925227249408557089">Contact us</a></li>
@@ -70,27 +94,27 @@
               </li>
             </ul>
           </div>
-          <div class="d-flex w-100 flex-column-reverse align-items-center flex-lg-row justify-content-lg-end mt-19 mt-md-0">
+          <div class="d-flex w-100 flex-column-reverse align-items-center flex-lg-row justify-content-lg-end mt-md-0">
             <ul class="d-flex align-items-center mt-10 mt-md-0 mb-0 pl-0">
-              <li class="nav-item mr-half pr-6">
+              <li class="nav-item mr-half pr-6 pr-md-3 mr-lg-6">
                 <a href="https://twitter.com/AuraNetworkHQ" target="_blank"
                    class="nav-link icon--social p-0 d-flex">
                   <i class="icon icon--switch-stage icon-twitter"></i>
                 </a>
               </li>
-              <li class="nav-item pr-6">
+              <li class="nav-item pr-6 pr-md-3 mr-lg-6">
                 <a href="https://discord.com/channels/925227249408557086/925227249408557089" target="_blank"
                    class="nav-link icon--social p-0 d-flex">
                   <i class="icon icon--switch-stage icon-discord"></i>
                 </a>
               </li>
-              <li class="nav-item pr-6">
+              <li class="nav-item pr-6 pr-md-3 mr-lg-6">
                 <a href="https://t.me/auranw" target="_blank"
                    class="nav-link icon--social p-0 d-flex">
                   <i class="icon icon--switch-stage icon-telegram"></i>
                 </a>
               </li>
-              <li class="nav-item mr-10">
+              <li class="nav-item mr-md-5 mr-lg-10">
                 <a href="https://www.facebook.com/AuraNetworkHQ/" target="_blank"
                    class="nav-link icon--social p-0 d-flex">
                   <i class="icon icon--switch-stage icon-fb-circle"></i>

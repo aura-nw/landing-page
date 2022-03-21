@@ -23,10 +23,10 @@
   </div>
   <div class="container px-4 px-lg-0">
     <div class="row">
-      <div class="col-12 col-md-12 col-xl-5 pl-xl-5 offset-xl-4 position-relative">
+      <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
         <h1 class="mb-5 h2-mob">Join the INTEROPERABLE future</h1>
         <div class="sub-text body-mob mb-5 text--white ">
-          Aura Network is a <b>layer-1 NFT-centric blockchain</b>, built to accelerate global NFT adoption by the Internet of Blockchain.</div>
+          Aura Network is a <b>layer-1 NFT-centric blockchain</b>, <br/>built to accelerate global NFT adoption by the Internet <br class="d-none d-lg-block"/> of Blockchain.</div>
         <a href="#" class="button button-outline d-inline-block">Learn more</a>
         <div class="img--scale object-3">
           <img src="../../../assets/imgs/pages/dashboard/object_3@1x.png"
@@ -57,7 +57,7 @@
           <h2 class="mb-5 mb-md-8">To NFT and beyond</h2>
           <div class="sub-text body-mob text--white">
             It doesn’t matter what your technical background is, we got you!
-            Getting started with our guide, documentation, and more. Explore the infinite potential with Aura solutions
+            Getting started with our guide, documentation, and more. Explore the infinite potential with Aura solutions!
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
           <h2>Beyond a Network</h2>
           <div class="sub-text body-mob text--white my-8">
             Aura Network solves the scalability problem which increases efficiency with an economical price.
-            Developers never need to deal with fragmented Layer 2 systems or sharded chains
+            Developers never need to deal with fragmented Layer 2 systems or sharded chains.
           </div>
           <!-- list -->
           <ul class="aura-list body text--white">
@@ -129,7 +129,7 @@
 <!--partner-->
 <section class="text-center partner mx-4 mx-md-auto" id="partner">
   <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
-  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with partner networks and IP owners from all around the world. </div>
+  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with partners network and IP owners from all around the world. </div>
   <div class="partner-group justify-content-center">
     <div>
       <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
@@ -208,8 +208,8 @@
   <div class="container px-4 px-lg-0">
     <div class="row">
       <div class="col-12 col-md-10 mx-auto text-center">
-        <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Teams ' }}</h2>
-        <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Who drives us to pursue the deFi dream.' : 'a diversity team of NFT and blockchain believers. '}}</div>
+        <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Team' }}</h2>
+        <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Drive us to pursue the deFi dream.' : 'Is a diversity of NFT and blockchain believers. '}}</div>
         <div class="d-flex justify-content-center">
           <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
           <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData('team')">Team</button>
@@ -225,6 +225,7 @@
         <app-staff-card [img]="data.img"
                         [name]="data.name"
                         [position]="data.position"
+                        [company]="data.company"
                         [desc]="data.desc"
                         [socialLink]="data.link"
         ></app-staff-card>

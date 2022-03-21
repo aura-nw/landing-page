@@ -9,7 +9,8 @@ export class TeamService {
     {
       name: 'Frank Bignone',
       img: 'frankBignone.png',
-      position: `Former VP & Head of<br/>Digital Transformation<br/>in Asia-Pacific & China | Airbus`,
+      position: `Former VP & Head<br/>Digital Transformation<br/>in Asia-Pacific & China`,
+      company: 'Airbus',
       desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
         'platform strategy Skywise, alongside developing strategic digital initiatives and' +
         'optimize Airbus services. Frank advices Aura on growth strategy and global ' +
@@ -21,7 +22,8 @@ export class TeamService {
     {
       name: 'Dr. Truong Gia Binh',
       img: 'TruongGiaBinh.png',
-      position: `Founder & Chairman of<br/>FPT Corporation`,
+      position: `Founder & Chairman of`,
+      company: 'FPT Corporation',
       desc: 'Dr. Binh supports Aura expanding business relation as well as advance Aura goals by facilitating integrations with the growing number of industry partners. ',
       link: {
         linkedIn: 'https://www.linkedin.com/in/binh-truong-gia-9a9b2260/'
@@ -30,7 +32,8 @@ export class TeamService {
     {
       name: 'Vinh Nguyen',
       img: 'VinhNguyen.png',
-      position: `Coin98 Finance<br/>Founder & CEO`,
+      position: `Founder & CEO`,
+      company: 'Coin98 Finance',
       desc: 'Vinh is a tech expert from Coin98 Finance, he advices Aura on various technological matter, especially in the token generation, wallet, multichain and bridging aspects. ',
       link: {
         linkedIn: 'https://www.linkedin.com/in/vinhthenguyen/',
@@ -40,7 +43,8 @@ export class TeamService {
     {
       name: 'Thanh Le',
       img: 'ThanhLe.png',
-      position: `Coin98 Finance<br/>Founder`,
+      position: `Founder`,
+      company: 'Coin98 Finance',
       desc: 'Thanh is an entrepreneur and expert in developing cryptocurrency community. He provides valuable insight on how to scale Aura community and connecting with other crypto partners. ',
       link: {
         linkedIn: 'https://www.linkedin.com/in/imlethanh/',
