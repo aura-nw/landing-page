@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
+    z-index: 10;
     &:focus {
       box-shadow: none;
     }
@@ -114,4 +115,7 @@
     left: 50%;
     transform: translateX(-50%);
   }
+}
+#headerMenu {
+  z-index: -1;
 }
