@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {TeamService} from '../core/teamService.service';
 
 
 
@@ -22,6 +23,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     RouterModule,
     FormsModule,
     MatTooltipModule
-  ]
+  ],
+  providers: [TeamService]
 })
 export class LayoutsModule { }

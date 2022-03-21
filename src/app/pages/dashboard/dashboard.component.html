@@ -127,7 +127,7 @@
   </article>
 </section>
 <!--partner-->
-<section class="text-center partner mx-4 mx-md-auto">
+<section class="text-center partner mx-4 mx-md-auto" id="partner">
   <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
   <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with partner networks and IP owners from all around the world. </div>
   <div class="partner-group justify-content-center">
@@ -203,7 +203,7 @@
   </div>
 </section>
 <!--team-->
-<section class="team mt-lg-0">
+<section class="team mt-lg-0" id="advisors">
   <!--content-->
   <div class="container px-4 px-lg-0">
     <div class="row">
@@ -211,24 +211,23 @@
         <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Teams ' }}</h2>
         <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Who drives us to pursue the deFi dream.' : 'a diversity team of NFT and blockchain believers. '}}</div>
         <div class="d-flex justify-content-center">
-          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData()">Advisors</button>
-          <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData()">Team</button>
+          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
+          <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData('team')">Team</button>
         </div>
       </div>
     </div>
   </div>
   <!--slider-->
-  <div class="padding-3 pr-0 mt-4 mt-md-12">
+  <div class="padding-3 pr-0 mt-4 mt-md-12" *ngIf="staffData && staffData.length > 0">
     <ngx-slick-carousel class="carousel carousel--has-arrows"
                         [config]="teamSlideConfig">
       <div ngxSlickItem *ngFor="let data of staffData" class="slide">
-        <a href="{{ data.link }}" target="_blank">
-          <app-staff-card [img]="data.img"
-                          [name]="data.name"
-                          [position]="data.position"
-                          [desc]="data.desc"
-          ></app-staff-card>
-        </a>
+        <app-staff-card [img]="data.img"
+                        [name]="data.name"
+                        [position]="data.position"
+                        [desc]="data.desc"
+                        [socialLink]="data.link"
+        ></app-staff-card>
       </div>
     </ngx-slick-carousel>
   </div>
@@ -250,7 +249,7 @@
   </div>
 </section>
 <!-- FAQ -->
-<section class="faq">
+<section class="faq" id="faqs">
   <div class="container-fluid">
     <div class="row">
       <div class="col-5 d-none d-lg-block">

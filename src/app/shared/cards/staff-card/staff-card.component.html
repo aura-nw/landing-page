@@ -5,5 +5,15 @@
     <div class="card__excerpt mt-2 small-text body-mob" [innerHTML]="position"></div>
     <div class="card__button button button-secondary small-text mt-2">Advisors</div>
     <div class="card__desc mt-2 text--neutrals-4 body">{{desc}}</div>
+    <div class="card__social-group mt-2 d-flex justify-content-lg-center" *ngIf="socialLink">
+      <a href="{{socialLink.twitter}}" target="_blank" *ngIf="socialLink.twitter"
+         class="icon--social px-1 d-flex">
+        <i class="icon icon--switch-stage icon-twitter"></i>
+      </a>
+      <a href="{{socialLink.linkedIn}}" target="_blank" *ngIf="socialLink.linkedIn"
+         class="icon--social px-1 d-flex">
+        <i class="icon icon--switch-stage icon-linkedIn"></i>
+      </a>
+    </div>
   </div>
 </div>
