@@ -126,18 +126,18 @@ export class DashboardComponent implements OnInit {
   featureCardData = [
     {
       icon: 'icon-chain',
-      title: 'Built on Cosmos, powerful for developers:',
+      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network.'
     },
     {
       icon: 'icon-film',
       title: 'Stay ahead of the Metaverse game: ',
-      subTitle: 'Providing brands an open infrastructure to ride the wave of digital transformation.'
+      subTitle: 'Providing brands an open infrastructure to ride the wave of digital&nbsp;transformation.'
     },
     {
       icon: 'icon-heart',
       title: 'All about NFTs:',
-      subTitle: 'Expanding the usability of NFTs'
+      subTitle: 'Expanding the usability of NFTs.'
     }
   ];
   roadmapData = [

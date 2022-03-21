@@ -7,6 +7,10 @@ import {TeamService} from '../../core/teamService.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  featureShow = false;
+  partnerShow = false;
+  resourceShow = false;
+  aboutShow = false;
   public innerWidth: any;
   isContainer = false;
   constructor(public teamService: TeamService) { }

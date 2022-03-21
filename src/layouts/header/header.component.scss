@@ -42,6 +42,8 @@
         background: transparent;
         color: var(--aura-light-gray);
         transition: all .35s ease-in-out;
+        padding-top: 0;
+        padding-bottom: 10px;
         &:after {
           border: none;
           width: var(--spacer-3);
@@ -89,7 +91,10 @@
         }
         li { display: block}
         .dropdown-item {
-          padding: var(--spacer-2) var(--spacer-6);
+          padding: 0;
+          @media (min-width: 992px) {
+            padding: var(--spacer-2) var(--spacer-6);
+          }
           color: var(--aura-white);
           transition: background-color .35s ease-in-out;
           &:hover, &:focus {
