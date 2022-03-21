@@ -94,4 +94,14 @@ footer {
       margin: 0 var(--spacer-3);
     }
   }
+  button {
+    outline: none;
+    background: transparent;
+    padding: 0;
+    color: var(--aura-light-gray);
+    transition: color .35s ease-in-out;
+    &:hover {
+      color: var(--aura-white);
+    }
+  }
 }

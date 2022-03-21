@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {TeamService} from '../../core/teamService.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
   isShow = false;
   public innerWidth: any;
   isContainer = false;
-  constructor() { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
@@ -21,14 +22,13 @@ export class HeaderComponent implements OnInit {
     this.isContainer = this.innerWidth > 1920;
   }
 
-
-  scroll(id) {
-    const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: 'smooth' });
-    this.isShow = false;
+  switchStaffData(dataType: 'advisor' | 'team') {
+    this.teamService.switchStaffData(dataType);
   }
 
-  openWhitePaper(): void {
-    window.open(`//github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf`);
+  scroll(id, position: 'nearest' | 'end' | 'start' | 'center') {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: 'smooth', block: position });
+    this.isShow = false;
   }
 }
