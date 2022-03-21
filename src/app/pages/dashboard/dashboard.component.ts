@@ -61,26 +61,18 @@ export class DashboardComponent implements OnInit {
         breakpoint: 1400,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           arrows: true,
         }
       },
       {
         breakpoint: 1600,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: 4,
+          slidesToScroll: 1,
           arrows: true,
         }
-      },
-      {
-        breakpoint: 1920,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          arrows: true,
-        }
-      },
+      }
     ]
   };
   roadmapSlideConfig = {

@@ -18,6 +18,10 @@
     @media (min-width: 1200px) {
       padding: var(--spacer-16) var(--spacer-5);
     }
+    @media (min-width: 1200px) {
+      max-width: 400px;
+      padding: var(--spacer-16) var(--spacer-8);
+    }
   }
   &--sm {
     padding: var(--spacer-8);
