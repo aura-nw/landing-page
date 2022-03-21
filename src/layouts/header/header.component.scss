@@ -12,21 +12,20 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    z-index: 10;
     &:focus {
       box-shadow: none;
     }
-    .navbar-toggler-icon {
-      transition: background .35s ease-in-out;
+    i.icon {
+      //transition: background .35s ease-in-out;
       width: 100%;
       height: 100%;
     }
-      .navbar-toggler-icon {
+      i.icon:before {
         background: url("../../assets/imgs/icons/color/burger.svg") center no-repeat;
         background-size: auto;
       }
 
-      .navbar-toggler-icon.close {
+      i.icon.close:before  {
         background: url("../../assets/imgs/icons/basic/close.svg") center no-repeat;
         background-size: auto;
       }
@@ -115,7 +114,4 @@
     left: 50%;
     transform: translateX(-50%);
   }
-}
-#headerMenu {
-  z-index: -1;
 }
