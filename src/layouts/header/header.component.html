@@ -6,10 +6,10 @@
              alt="Aura Logo">
       </a>
         <button class="navbar-toggler ml-auto d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#headerMenu" aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-15 mt-md-0" id="headerMenu">
+              data-bs-target="#headerMenu" aria-controls="headerMenu" [attr.aria-expanded]="ariaExpanded" (click)="ariaExpanded = !ariaExpanded">
+          <span class="navbar-toggler-icon" [class.close]="ariaExpanded"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-15 mt-md-0" id="headerMenu" #headerMenu >
           <div class="d-lg-flex justify-content-center justify-content-lg-start">
             <ul class="navbar-nav nav-menu align-items-center">
               <li class="nav-item d-none d-lg-block">
@@ -50,8 +50,8 @@
                       (mouseover)="partnerShow=true"
                       (mouseout)="partnerShow=false"
                       aria-labelledby="dropdownMenuPartners">
-                    <li><button class="dropdown-item" (click)="scroll('partner', 'center')">Partners</button></li>
-                    <li><button class="dropdown-item" (click)="switchStaffData('advisor'); scroll('advisors', 'end')">Advisors</button></li>
+                    <li><button class="dropdown-item" (click)="scroll('partner', 'center'); headerMenu.classList.remove('show'); ariaExpanded = false">Partners</button></li>
+                    <li><button class="dropdown-item" (click)="switchStaffData('advisor'); scroll('advisors', 'end'); headerMenu.classList.remove('show'); ariaExpanded = false">Advisors</button></li>
                   </ul>
                 </div>
               </li>
@@ -70,13 +70,14 @@
                     <li><a class="dropdown-item" target="_blank" href="https://aura.network/news/">News</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf">Whitepaper</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://docs.aura.network/blog">Research</a></li>
-                    <li><button class="dropdown-item" (click)="scroll('faqs', 'start')">FAQs</button></li>
+                    <li><button class="dropdown-item" (click)="scroll('faqs', 'start'); headerMenu.classList.remove('show'); ariaExpanded = false">FAQs</button></li>
                   </ul>
                 </div>
               </li>
               <li class="nav-item h4 h3-mob mb-12 my-md-0">
                 <div class="dropdown">
-                  <button class="nav-link dropdown-toggle m-auto" [class.show]="aboutShow && innerWidth > 992"
+                  <button class="nav-link dropdown-toggle m-auto"
+                          [class.show]="aboutShow && innerWidth > 992"
                           (mouseover)="aboutShow=true"
                           (mouseout)="aboutShow=false"
                           type="button" id="dropdownMenuAbout" data-bs-toggle="dropdown">
@@ -86,7 +87,7 @@
                       (mouseover)="aboutShow=true"
                       (mouseout)="aboutShow=false"
                       aria-labelledby="dropdownMenuAbout">
-                    <li><button class="dropdown-item" (click)="switchStaffData('team'); scroll('advisors', 'center')">Meet Our Team</button></li>
+                    <li><button class="dropdown-item" (click)="switchStaffData('team'); scroll('advisors', 'center'); headerMenu.classList.remove('show'); ariaExpanded = false">Meet Our Team</button></li>
                     <li><a class="dropdown-item" target="_blank" href="https://aura-network.notion.site/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23">Careers</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://discord.com/login?redirect_to=%2Fchannels%2F925227249408557086%2F925227249408557089">Contact us</a></li>
                   </ul>

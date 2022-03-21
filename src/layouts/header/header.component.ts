@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 import {TeamService} from '../../core/teamService.service';
 
 @Component({
@@ -13,8 +13,8 @@ export class HeaderComponent implements OnInit {
   aboutShow = false;
   public innerWidth: any;
   isContainer = false;
-  constructor(public teamService: TeamService) { }
-
+  ariaExpanded = false;
+  constructor(public teamService: TeamService, private element: ElementRef) { }
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
     this.isContainer = this.innerWidth > 1920;
