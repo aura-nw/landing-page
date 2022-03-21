@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {TeamService} from '../../../core/teamService.service';
+import {SlickCarouselComponent} from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-dashboard',
@@ -196,13 +197,16 @@ export class DashboardComponent implements OnInit {
       ],
     }
   ];
-
+  @ViewChild('slickModal') slickModal: SlickCarouselComponent | undefined;
   constructor(
     public teamService: TeamService
   ) {}
 
   ngOnInit() {
-    this.teamService.dataSource.subscribe(data => this.staffData  = data);
+    this.teamService.dataSource.subscribe(data => {
+      this.staffData  = data;
+      this.slickModal?.slickGoTo(0);
+    });
     this.teamService.dataSourceType.subscribe(type => this.isAdvisors = (type === 'advisor'));
   }
 
