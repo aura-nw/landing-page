@@ -1,0 +1,7 @@
+<div class="aura-card {{size==='' ? '' : 'aura-card--'+size}}">
+  <i class="icon icon-circle {{icon}}" *ngIf="icon"></i>
+  <div class="sub-text fw-bold mt-8 aura-card__title" *ngIf="title" [innerHTML]="title"></div>
+  <h3 class="sub-text mt-8 mt-md-4" *ngIf="subTitle" [innerHTML]="subTitle" ></h3>
+  <div class="desc sub-text body-mob mt-2 mt-md-4" *ngIf="desc" [innerHTML]="desc"></div>
+  <div class="content body mt-4" *ngIf="content" [innerHTML]="content"></div>
+</div>

@@ -23,13 +23,11 @@
   </div>
   <div class="container px-4 px-lg-0">
     <div class="row">
-      <div class="col-12 col-md-12 col-xl-5 pl-xl-5 offset-xl-4 position-relative">
-        <h1 class="mb-5 h2-mob">To NFT and beyond</h1>
-        <div class="sub-text body-mob mb-5 text--white ">
-          Aura Network is a NFT centric blockchain built to provide an open infrastructure system,
-          maximize interoperability and create more utilities for brands
-          and digital asset owners. </div>
-        <a href="#" class="button button-outline d-inline-block">Read more</a>
+      <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
+        <h1 class="mb-5 h2-mob">Join the INTEROPERABLE future</h1>
+        <div class="sub-text body-mob mb-5 text--white pb-md-12">
+          Aura Network is a <b>layer-1 NFT-centric blockchain</b>, <br/>built to accelerate global NFT adoption by the Internet <br class="d-none d-lg-block"/> of Blockchain.</div>
+<!--        <a href="#" class="button button-outline d-inline-block">Learn more</a>-->
         <div class="img--scale object-3">
           <img src="../../../assets/imgs/pages/dashboard/object_3@1x.png"
                srcset="../../../assets/imgs/pages/dashboard/object_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_3@2x.png 2x"
@@ -56,8 +54,11 @@
       <!-- content -->
       <div class="row">
         <div class="col-12 col-xl-6">
-          <h2 class="mb-5 mb-md-8">From novelty to wide NFT adoption</h2>
-          <div class="sub-text body-mob text--light-gray">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
+          <h2 class="mb-5 mb-md-8">To NFT and beyond</h2>
+          <div class="sub-text body-mob text--white">
+            It doesn’t matter what your technical background is, we got you!
+            Getting started with our guide, documentation, and more. Explore the infinite potential with Aura solutions!
+          </div>
         </div>
       </div>
     </div>
@@ -68,10 +69,10 @@
       <div class="aura-card-row mt-12">
         <div class="row d-none d-lg-flex">
           <div class="col-md-4" *ngFor="let cardData of featureCardData">
-            <div class="aura-card">
-              <i class="icon icon-circle {{cardData.icon}} mb-8"></i>
-              <div class="title sub-text-mob">{{cardData.text}}</div>
-            </div>
+            <app-aura-card [size]="'md'"
+                           [icon]="cardData.icon"
+                           [title]="cardData.title"
+                           [desc]="cardData.subTitle"></app-aura-card>
           </div>
         </div>
         <!-- card-list mobile (carousel) -->
@@ -79,10 +80,10 @@
           <ngx-slick-carousel class="carousel"
                               [config]="featureSlideConfig">
             <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
-              <div class="aura-card">
-                <i class="icon icon-circle {{cardData.icon}} mb-8"></i>
-                <div class="title sub-text-mob">{{cardData.text}}</div>
-              </div>
+              <app-aura-card [size]="'md'"
+                             [icon]="cardData.icon"
+                             [title]="cardData.title"
+                             [desc]="cardData.subTitle"></app-aura-card>
             </div>
           </ngx-slick-carousel>
         </div>
@@ -92,24 +93,27 @@
         <div class="col-12 col-lg-6 my-auto">
           <!-- logo -->
           <div class="img--scale aura-color-logo mb-5 mb-md-4">
-            <img src="../../../assets/imgs/auraColorLogo-1x.png"
-                 srcset="../../../assets/imgs/auraColorLogo-1x.png 1x, ../../../assets/imgs/auraColorLogo-1x.png 2x"
+            <img src="../../../assets/imgs/auraMainLogo-1x.png"
+                 srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-1x.png 2x"
                  alt="" loading="lazy"/>
           </div>
           <!-- content -->
-          <h2>Layer-1 NFT centric infrastructure</h2>
-          <div class="sub-text body-mob text--light-gray my-8">Onboarding has never been so easy with a seamless experience for both developers & brands to build NFT-related applications.</div>
+          <h2>Beyond a Network</h2>
+          <div class="sub-text body-mob text--white my-8">
+            Aura Network solves the scalability problem which increases efficiency with an economical price.
+            Developers never need to deal with fragmented Layer 2 systems or sharded chains.
+          </div>
           <!-- list -->
-          <ul class="aura-list body">
-            <li>Move digital assets through interchain connection </li>
-            <li>Stay ahead of the game and unlock full DeFI potentials </li>
-            <li>Metaverse integration  </li>
+          <ul class="aura-list body text--white">
+            <li>Create a one-stop destination for developing new NFT use cases.</li>
+            <li>Commit to support both newcomers and crypto-native.</li>
+            <li>Integrate to a new fully-fledged metaverse.</li>
           </ul>
           <!-- button group -->
-          <div class="d-flex justify-content-center justify-content-sm-start mt-12">
-            <a href="#" class="button button-outline d-inline-block">Request for Demo</a>
-            <a href="#" class="button button-inline d-inline-block ml-2">Learn more</a>
-          </div>
+<!--          <div class="d-flex justify-content-center justify-content-sm-start mt-12">-->
+<!--            <a href="#" class="button button-outline d-inline-block">Request a Free Demo</a>-->
+<!--            <a href="#" class="button button-inline d-inline-block ml-2">Learn more</a>-->
+<!--          </div>-->
         </div>
         <div class="col d-none d-lg-block">
           <div class="img--scale object-5">
@@ -123,56 +127,108 @@
   </article>
 </section>
 <!--partner-->
-<section class="text-center partner mx-4 mx-md-auto">
-  <div class="title body-mob text--light-gray mb-6">We work with people from over the world</div>
+<section class="text-center partner mx-4 mx-md-auto" id="partner">
+  <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
+  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with partners network and IP owners from all around the world. </div>
   <div class="partner-group justify-content-center">
-    <img src="../../../assets/imgs/pages/partner/fpt@1x.png"
-         srcset="../../../assets/imgs/pages/partner/fpt@1x.png 1x, ../../../assets/imgs/pages/partner/fpt@2x.png 2x"
-         alt="" loading="lazy"/>
-    <img src="../../../assets/imgs/pages/partner/gbv@1x.png"
-         srcset="../../../assets/imgs/pages/partner/gbv@1x.png 1x, ../../../assets/imgs/pages/partner/gbv@2x.png 2x"
-         alt="" loading="lazy"/>
-    <img src="../../../assets/imgs/pages/partner/expand@1x.png"
-         srcset="../../../assets/imgs/pages/partner/expand@1x.png 1x, ../../../assets/imgs/pages/partner/expand@2x.png 2x"
-         alt="" loading="lazy"/>
-    <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
-         srcset="../../../assets/imgs/pages/partner/coin98@1x.png 1x, ../../../assets/imgs/pages/partner/coin98@2x.png 2x"
-         alt="" loading="lazy"/>
-    <img src="../../../assets/imgs/pages/partner/aha@1x.png"
-         srcset="../../../assets/imgs/pages/partner/aha@1x.png 1x, ../../../assets/imgs/pages/partner/aha@2x.png 2x"
-         alt="" loading="lazy"/>
-    <img src="../../../assets/imgs/pages/partner/kyber@1x.png"
-         srcset="../../../assets/imgs/pages/partner/kyber@1x.png 1x, ../../../assets/imgs/pages/partner/kyber@2x.png 2x"
-         alt="" loading="lazy"/>
+    <div>
+      <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
+           srcset="../../../assets/imgs/pages/partner/coin98@1x.png 1x, ../../../assets/imgs/pages/partner/coin98@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/gbv@1x.png"
+           srcset="../../../assets/imgs/pages/partner/gbv@1x.png 1x, ../../../assets/imgs/pages/partner/gbv@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/avatar@1x.png"
+           srcset="../../../assets/imgs/pages/partner/avatar@1x.png 1x, ../../../assets/imgs/pages/partner/avatar@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/fpt@1x.png"
+           srcset="../../../assets/imgs/pages/partner/fpt@1x.png 1x, ../../../assets/imgs/pages/partner/fpt@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png"
+           srcset="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png 1x, ../../../assets/imgs/pages/partner/KuCoin_labs@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/kyber@1x.png"
+           srcset="../../../assets/imgs/pages/partner/kyber@1x.png 1x, ../../../assets/imgs/pages/partner/kyber@2x.png 2x"
+           alt="" loading="lazy"/>
+    </div>
+    <div>
+      <img src="../../../assets/imgs/pages/partner/TPXVentures@1x.png"
+           srcset="../../../assets/imgs/pages/partner/TPXVentures@1x.png 1x, ../../../assets/imgs/pages/partner/TPXVentures@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/Vanda1x.png"
+           srcset="../../../assets/imgs/pages/partner/Vanda1x.png 1x, ../../../assets/imgs/pages/partner/Vanda2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/aha@1x.png"
+           srcset="../../../assets/imgs/pages/partner/aha@1x.png 1x, ../../../assets/imgs/pages/partner/aha@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/expand@1x.png"
+           srcset="../../../assets/imgs/pages/partner/expand@1x.png 1x, ../../../assets/imgs/pages/partner/expand@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/ecomobi@1x.png"
+           srcset="../../../assets/imgs/pages/partner/ecomobi@1x.png 1x, ../../../assets/imgs/pages/partner/ecomobi@2x.png 2x"
+           alt="" loading="lazy"/>
+      <img src="../../../assets/imgs/pages/partner/PENCIL_LOGO@1x.png"
+           srcset="../../../assets/imgs/pages/partner/PENCIL_LOGO@1x.png 1x, ../../../assets/imgs/pages/partner/PENCIL_LOGO@2x.png 2x"
+           alt="" loading="lazy"/>
+    </div>
+  </div>
+</section>
+<!--road map-->
+<section class="road-map">
+  <div class="">
+    <div class="d-flex align-items-center">
+      <div class="col-5 d-none d-xl-block">
+        <div class="img-astronaut">
+          <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png"
+               srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x"
+               alt="" loading="lazy"/>
+        </div>
+      </div>
+      <div class="col-12 col-xl-7">
+        <img src="../../../assets/imgs/backgrounds/ROADMAP-mob.png" alt="" loading="lazy" class="d-md-none"/>
+        <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator"
+                            [config]="roadmapSlideConfig">
+          <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
+            <div class="road-map-item text--white text-center">
+              <div class="road-map__img" style="background-color: {{data.color}}"><i class="icon {{data.icon}}"></i></div>
+              <h3 class="road-map__time-line mt-2">{{data.date}}</h3>
+              <div class="road-map__content mt-4 body">
+                <div class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></div>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
   </div>
 </section>
 <!--team-->
-<section class="team mt-20">
+<section class="team mt-lg-0" id="advisors">
   <!--content-->
   <div class="container px-4 px-lg-0">
     <div class="row">
       <div class="col-12 col-md-10 mx-auto text-center">
-        <h1 class="mb-5 h3-mob">Meet our people</h1>
-        <div class="body mb-6 text--neutrals-6">
-          From all over the world, we select and provide you a team of seasoned trainers.<br/>
-          What's more, the 1-on-1 live practice mode helps you quickly get great results.</div>
+        <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Team' }}</h2>
+        <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Drive us to pursue the deFi dream.' : 'Is a diversity of NFT and blockchain believers. '}}</div>
         <div class="d-flex justify-content-center">
-          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData()">Advisors</button>
-          <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData()">Team</button>
+          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2" [class.active]="isAdvisors" (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
+          <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData('team')">Team</button>
         </div>
       </div>
     </div>
   </div>
   <!--slider-->
-  <div class="padding-3 pr-0 mt-4 mt-md-12">
-    <ngx-slick-carousel class="carousel mat-elevation-z10"
-                        #slickModal="slick-carousel"
+  <div class="padding-3 pr-0 mt-4 mt-md-12" *ngIf="staffData && staffData.length > 0">
+    <ngx-slick-carousel class="carousel carousel--has-arrows"
                         [config]="teamSlideConfig">
       <div ngxSlickItem *ngFor="let data of staffData" class="slide">
-        <app-staff-card [img]="data.img"
+        <app-staff-card [isAdvisors]="isAdvisors"
+                        [img]="data.img"
                         [name]="data.name"
                         [position]="data.position"
+                        [company]="data.company"
                         [desc]="data.desc"
+                        [socialLink]="data.link"
         ></app-staff-card>
       </div>
     </ngx-slick-carousel>
@@ -193,4 +249,58 @@
          srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
          alt="" loading="lazy"/>
   </div>
+</section>
+<!-- FAQ -->
+<section class="faq" id="faqs">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5 d-none d-lg-block">
+        <img src="../../../assets/imgs/pages/dashboard/object_9@1x.png" class="object-13 d-none d-md-block"
+             srcset="../../../assets/imgs/pages/dashboard/object_9@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_9@2x.png 2x"
+             alt="" loading="lazy"/>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="faq__contain px-2 px-md-0">
+          <!-- logo -->
+          <div class="img--scale aura-color-logo">
+            <img src="../../../assets/imgs/auraMainLogo-1x.png"
+                 srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-1x.png 2x"
+                 alt="" loading="lazy"/>
+          </div>
+          <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" class="object-14 d-none d-lg-block"
+               srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
+               alt="" loading="lazy"/>
+          <h2 class="h1 h2-mob d-inline-block">FAQs</h2>
+            <ol class="text--white mt-4">
+              <li class="mt-10 mt-md-15">
+                <div class="title sub-text-mob">How does Aura Network differ from other chains?</div>
+                <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">In addition to being low-cost, fast, and scalable,
+                  Aura Network focuses on expanding the use of NFT across various industries.
+                  We primarily focus on bridging assets to other blockchains.</div>
+              </li>
+              <li class="mt-10 mt-md-15">
+                <div class="title sub-text-mob">What reasons did Aura Network choose Cosmos?</div>
+                <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">
+                  Firstly, Cosmos is a great place to build on. They have everything we need to build Aura Network with all the features inside.
+                  Secondly, they have an ecosystem with other great blockchains but can not compare to Ethereum or Solana in trading volume.
+                  So as an NFT-centric blockchain platform, we want to be the pioneer in the cosmos system,
+                  becoming the first choice for all NFT projects.</div>
+              </li>
+            </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="../../../assets/imgs/backgrounds/bw_space_lineart_4@1x.png" class="w-100 background d-none d-lg-block"
+       srcset="../../../assets/imgs/backgrounds/bw_space_lineart_4@1x.png 1x, ../../../assets/imgs/backgrounds/bw_space_lineart_4@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/object_7@1x.png" class="object-10 d-none d-md-block"
+       srcset="../../../assets/imgs/pages/dashboard/object_7@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_7@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/astronaut_5@1x.png" class="object-11"
+       srcset="../../../assets/imgs/pages/dashboard/astronaut_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_5@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/object_8@1x.png" class="object-12 d-md-none"
+       srcset="../../../assets/imgs/pages/dashboard/object_8@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_8@2x.png 2x"
+       alt="" loading="lazy"/>
 </section>

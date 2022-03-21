@@ -3,12 +3,54 @@
   background-color: var(--aura-black);
   box-shadow: 0 64px 64px -48px rgba(15, 15, 15, 0.1);
   border-radius: 20px;
-  padding: var(--spacer-16) var(--spacer-8);
-  color: var(--aura-light-gray);
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  color: var(--aura-white);
+  height: 100%;
+  &--md {
+    padding: var(--spacer-14) var(--spacer-8);
+    width: 340px;
+    height: 437px;
+    @media (min-width: 992px) {
+      width: auto;
+      max-width: 376px;
+      height: 100%;
+      padding: var(--spacer-16) var(--spacer-3);
+    }
+    @media (min-width: 1200px) {
+      padding: var(--spacer-16) var(--spacer-5);
+    }
+    @media (min-width: 1200px) {
+      max-width: 400px;
+      padding: var(--spacer-16) var(--spacer-8);
+    }
+  }
+  &--sm {
+    padding: var(--spacer-8);
+    width: 264px;
+    height: 264px;
+  }
+  &__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 64px;
+  }
+  .title {
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    @media (min-width: 992px) {
+      -webkit-line-clamp: 7;
+    }
+  }
+  .content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   &-staff {
     background: transparent;
     padding: var(--spacer-6) 0;

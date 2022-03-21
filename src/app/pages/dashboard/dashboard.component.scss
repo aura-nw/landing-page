@@ -62,17 +62,11 @@
 section.partner {
   margin-top: var(--spacer-20);
   @media (min-width: 992px) {
-    margin-top: 104px;
+    margin-top: 76px;
     .title { font-weight: bold; }
   }
 }
 .partner-group {
-  @media (min-width: 1400px) {
-    max-width: 620px;
-  }
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   margin: 0 -28px;
   @media (min-width: 992px) {
     margin: auto;
@@ -80,11 +74,13 @@ section.partner {
   img {
     padding: 0 14px;
     margin-bottom: var(--spacer-4);
-    height: 25px;
+    height: 20px;
+    @media (min-width: 375.99px) {
+      height: auto;
+    }
     @media (min-width: 992px) {
       padding: 0 24px;
       margin-bottom: var(--spacer-8);
-      height: 40px;
     }
     &:first-child {
       margin-left: 0;
@@ -96,11 +92,14 @@ section.partner {
 }
 .team {
   position: relative;
+  margin-top: 40px;
   .button-primary {
-    min-width: 168px;
+    min-width: 100px;
+    @media (min-width: 320.99px) {
+      min-width: 168px;
+    }
   }
   .carousel {
-    box-shadow: none;
     .slick-slide {
       width: 252px;
       margin: 0 16px;
@@ -109,52 +108,9 @@ section.partner {
         margin: 0 20px;
       }
       display: inline-table;
-      opacity: 1;
-      transition: opacity .35s ease-in-out;
-      &:not(.slick-active) {
-        opacity: 0.2;
-      }
     }
     .slick-list {
       margin: 0 -20px;
-    }
-  }
-}
-:host::ng-deep {
-  .slick-track {
-    display: flex;
-  }
-  .team {
-    .slick-prev.slick-arrow,.slick-next.slick-arrow{
-      opacity: 1;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--aura-gradient-simple);
-      border-radius: 50%;
-      transition: opacity .75s ease-in-out;
-      z-index: 2;
-      &::before {
-        content: '';
-        width: 18px;
-        height: 12px;
-        background: url("../../../assets/imgs/icons/basic/arrow-right-2.svg") center;
-      }
-    }
-    .slick-prev.slick-arrow.slick-disabled,.slick-next.slick-arrow.slick-disabled {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slick-next.slick-arrow {
-      right: 57px;
-    }
-    .slick-prev.slick-arrow {
-      &::before {
-        transform: rotate(180deg);
-      }
     }
   }
 }
@@ -166,18 +122,117 @@ section.partner {
       background-size: contain;
     }
   }
-  .aura-card {
-    max-width: 300px;
-    height: 364px;
-    @media (min-width: 992px) {
-      max-width: 376px;
-      height: 456px;
+}
+.road-map {
+  margin-top: 40px;
+  &__img {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    i.icon {
+      font-size: 24px;
     }
-    .title {
+  }
+  .content__info {
+    margin-top: var(--spacer-4);
+  }
+  .carousel {
+    margin-top: 40px;
+    padding: 0 16px;
+    padding-right: 0;
+    .slick-slide {
+      margin: 0 50px;
       @media (min-width: 992px) {
-        font-weight: bold;
+        margin: 0 64px;
       }
     }
+  }
+  @media (min-width: 768px) {
+    background: url("../../../assets/imgs/backgrounds/ROADMAP.png") left top no-repeat;
+    background-size: contain;
+    padding-top: 240px;
+    .carousel {
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: 992px) {
+    padding-top: 298px;
+  }
+  @media (min-width: 1200px) {
+    background-size: auto;
+    .carousel {
+      transform: translateY(25%);
+    }
+  }
+}
+.faq {
+  margin-top: var(--spacer-10);
+  position: relative;
+  &__contain {
+    position: relative;
+    .aura-color-logo {
+      width: 160px;
+      height: 60px;
+    }
+    .h1 {
+      background: var(--aura-gradient-simple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .title {
+      font-weight: 600;
+      @media (min-width: 992px) {
+        font-weight: 700;
+      }
+    }
+    ol {
+      padding-left: 32px;
+      list-style: none;
+      counter-reset: item;
+      li {
+        padding-left: 24px;
+        position: relative;
+        &:before {
+          content: counter(item);
+          counter-increment: item;
+          font-family: Redig;
+          color: var(--aura-dark-gray);
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          left: -32px ;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          font-size: 20px;
+          background: url("../../../assets/imgs/pages/marker-frame.svg");
+        }
+      }
+    }
+    background: url("../../../assets/imgs/backgrounds/question-bg-mob.png") no-repeat;
+    background-size: contain;
+    background-position-x: 100%;
+    background-position-y: 100px;
+    @media (min-width: 992px) {
+      background: none;
+    }
+  }
+  img.background {
+    mix-blend-mode: lighten;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 170px;
+  }
+}
+// Override component
+:host::ng-deep {
+  .aura-card.aura-card--sm {
+    min-height: 296px;
   }
 }
 /* Heading style */
@@ -264,6 +319,54 @@ h1, h2 {
   z-index: -1;
   //transform: translate3D(-75px,46px,0);
 }
+.object-10 {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  z-index: -1;
+  @media (min-width: 768px) {
+    width: 153px;
+  }
+  @media (min-width: 1400px) {
+    width: auto;
+  }
+}
+.object-11 {
+  mix-blend-mode: lighten;
+  width: 307px;
+  @media (min-width: 768px) {
+    width: 400px;
+  }
+  @media (min-width: 992px) {
+    position: absolute;
+    z-index: -1;
+    left: 33px;
+    bottom: 268px;
+    width: 666px;
+  }
+  @media (min-width: 1023.99px) {
+    bottom: 0;
+  }
+  @media (min-width: 1400px) {
+    bottom: 268px;
+  }
+}
+.object-12 {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  z-index: -1;
+  width: 118px;
+}
+.object-13 {
+  margin: 100px 84px 0 auto;
+}
+.object-14 {
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  width: 150px;
+}
 .object-1,.object-2,.object-3,.object-7,.object-8,.object-9 {
   display: none;
   @media (min-width: 1200px) {
@@ -277,7 +380,6 @@ h1, h2 {
   }
 }
 ul.aura-list {
-  color: var(--aura-light-gray);
   li {
     padding-left: var(--spacer-9);
     position: relative;

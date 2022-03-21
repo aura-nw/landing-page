@@ -7,33 +7,30 @@ footer {
       border-top: 1px solid var(--aura-neutrals-3);
       border-bottom: 1px solid var(--aura-neutrals-3);
     }
+    //@media (min-width: 1400px) {
+    //  padding-left: 196px;
+    //  padding-right: 196px;
+    //}
     @media (min-width: 1400px) {
-      padding-left: 196px;
-      padding-right: 196px;
+      padding-left: 90px;
+      padding-right: 90px;
     }
   }
   .footer__menu {
-    flex: 0 1 100%;
+    color: var(--aura-white);
     padding-top: 40px;
-    display: flex;
     border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 992px) {
       border: none;
-      .menu { min-width: 160px; }
-    }
-    @media (min-width: 1440px) {
-      padding-right: 86px;
+      margin-bottom: 100px;
+      padding-right: 40px;
+      .title {
+        font-weight: 600;
+      }
     }
     ul {
       li {
-        margin-top: var(--spacer-4);
-        a {
-          color: var(--aura-light-gray);
-          text-decoration: none;
-        }
-        &:first-child {
-          margin-top: 0;
-        }
+        margin-top: var(--spacer-2);
       }
     }
   }
@@ -48,29 +45,38 @@ footer {
   }
   .footer__contact {
     flex: 0 1 100%;
-    display: flex;
     padding: var(--spacer-10) 0;
-    color: var(--aura-white);
+    .footer__logo {
+      width: 105px;
+      height: 65px;
+      img { object-fit: contain}
+    }
     .contact__title {
-      min-width: 160px;
+      color: var(--aura-white);
     }
     border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 992px) {
+      padding: var(--spacer-10) 20px;
       border-left: 1px solid var(--aura-neutrals-3);
       border-right: 1px solid var(--aura-neutrals-3);
     }
+    @media (min-width: 1024.99px) {
+      padding: var(--spacer-10) 52px;
+    }
   }
   .footer__cta {
-    flex: 0 1 100%;
     padding-top: 40px;
     color: var(--aura-white);
     border-bottom: 1px solid var(--aura-neutrals-3);
-    form.aura-form.single-input-field {
+    &-contain {
       max-width: 256px;
     }
     @media (min-width: 992px) {
-      padding-left: 86px;
+      padding-left: 47px;
       border: none;
+      .footer__cta-contain {
+        max-width: 350px;
+      }
     }
   }
   .bottom-bar {
@@ -86,6 +92,17 @@ footer {
     }
     i.icon {
       margin: 0 var(--spacer-3);
+    }
+  }
+  button {
+    text-align: left;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    color: var(--aura-light-gray);
+    transition: color .35s ease-in-out;
+    &:hover {
+      color: var(--aura-white);
     }
   }
 }

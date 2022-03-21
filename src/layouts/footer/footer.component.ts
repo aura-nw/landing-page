@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TeamService} from '../../core/teamService.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,13 +10,20 @@ export class FooterComponent implements OnInit {
   formData: {email: string | undefined} = {email: ''};
   email: string | undefined;
   submitted = false;
-  constructor() { }
+  constructor(public teamService: TeamService) { }
 
   ngOnInit(): void {}
 
   onSubmitCTAForm() {
     this.submitted = true;
     console.log(this.formData.email);
+  }
+  scroll(id, position: 'nearest' | 'end' | 'start' | 'center') {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: 'smooth', block: position });
+  }
+  switchStaffData(dataType: 'advisor' | 'team') {
+    this.teamService.switchStaffData(dataType);
   }
 
 }
