@@ -6,7 +6,8 @@
              alt="Aura Logo">
       </a>
         <button class="navbar-toggler ml-auto d-lg-none" type="button" data-bs-toggle="collapse"
-              data-bs-target="#headerMenu" aria-controls="headerMenu" [attr.aria-expanded]="ariaExpanded" (click)="ariaExpanded = !ariaExpanded">
+              data-bs-target="#headerMenu" aria-controls="headerMenu" [attr.aria-expanded]="ariaExpanded"
+                (click)="ariaExpanded ? (ariaExpanded = !ariaExpanded) : (ariaExpanded = false)">
           <i class="icon" [class.close]="ariaExpanded"></i>
         </button>
         <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-15 mt-md-0" id="headerMenu" #headerMenu >
@@ -19,10 +20,10 @@
                        alt="Aura Logo">
                 </a>
               </li>
-              <li class="nav-item mx-12 d-none d-lg-block">
+              <li class="nav-item mx-4 mx-lg-12 d-none d-lg-block">
                 <div class="divider divider-vertical"></div>
               </li>
-              <li class="nav-item h4 h3-mob mb-12 mb-md-0 pr-lg-8 dropdown">
+              <li class="nav-item h4 h3-mob mb-12 mb-md-0 mr-md-8 dropdown">
                   <button class="nav-link dropdown-toggle m-auto" [class.show]="featureShow && innerWidth > 992"
                           (mouseover)="featureShow=true"
                           (mouseout)="featureShow=false"
@@ -38,7 +39,7 @@
                     <li><a class="dropdown-item" target="_blank" href="https://explorer.aura.network/">Explorer</a></li>
                   </ul>
               </li>
-              <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
+              <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-md-8">
                 <div class="dropdown">
                   <button class="nav-link dropdown-toggle m-auto" [class.show]="partnerShow && innerWidth > 992"
                           (mouseover)="partnerShow=true"
@@ -55,7 +56,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-lg-8">
+              <li class="nav-item h4 h3-mob mb-12 my-md-0 mr-md-8">
                 <div class="dropdown">
                   <button class="nav-link dropdown-toggle m-auto" [class.show]="resourceShow && innerWidth > 992"
                           (mouseover)="resourceShow=true"
