@@ -112,30 +112,38 @@ export class DashboardComponent implements OnInit {
           slidesToScroll: 1,
           arrows: true,
         }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+        }
       }
     ]
   };
   // MockData
   featureCardData = [
     {
-      icon: 'icon-chain',
+      icon: 'icon-cosmos',
       title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
-      icon: 'icon-film',
+      icon: 'icon-control',
       title: 'Stay ahead of the Metaverse game: ',
       subTitle: 'Providing brands an open infrastructure to ride the wave of digital&nbsp;transformation'
     },
     {
-      icon: 'icon-heart',
+      icon: 'icon-microchip',
       title: 'All about NFTs and interoperability:',
       subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network'
     }
   ];
   roadmapData = [
     {
-      icon: 'icon-announcement',
+      icon: 'icon-megaphone',
       color: '#3772FF',
       date: '11/2021',
       content: [
@@ -153,7 +161,7 @@ export class DashboardComponent implements OnInit {
       ],
     },
     {
-      icon: 'icon-hdd-network',
+      icon: 'icon-sports-flag',
       color: '#9757D7',
       date: 'Q2/2022',
       content: [
@@ -166,7 +174,7 @@ export class DashboardComponent implements OnInit {
       ],
     },
     {
-      icon: 'icon-key',
+      icon: 'icon-globe',
       color: '#EF466F',
       date: 'Q3/2022',
       content: [
@@ -177,7 +185,7 @@ export class DashboardComponent implements OnInit {
       ],
     },
     {
-      icon: 'icon-key',
+      icon: 'icon-control-outline',
       color: '#45B26B',
       date: 'Q4/2022',
       content: [
