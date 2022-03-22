@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {TeamService} from '../../../core/teamService.service';
 import {SlickCarouselComponent} from 'ngx-slick-carousel';
 
@@ -112,31 +112,38 @@ export class DashboardComponent implements OnInit {
           slidesToScroll: 1,
           arrows: true,
         }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+        }
       }
     ]
   };
   // MockData
   featureCardData = [
     {
-      icon: 'icon-chain',
+      icon: 'icon-cosmos',
       title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
-      subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network.'
+      subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
-      icon: 'icon-film',
+      icon: 'icon-control',
       title: 'Stay ahead of the Metaverse game: ',
-      subTitle: 'Providing brands an open infrastructure to ride the wave of digital&nbsp;transformation.'
+      subTitle: 'Brand renaissance through NFTs is a new way to connect with customers, fans, and users'
     },
     {
-      icon: 'icon-heart',
+      icon: 'icon-microchip',
       title: 'All about NFTs and interoperability:',
-      subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network.'
+      subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network'
     }
   ];
   roadmapData = [
     {
-      icon: 'icon-announcement',
-      color: '#3772FF',
+      icon: 'icon-megaphone',
       date: '11/2021',
       content: [
         'Whitepaper',
@@ -146,15 +153,13 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-target',
-      color: '#FFBA69',
       date: 'Q1/2022',
       content: [
         'Strategic Round'
       ],
     },
     {
-      icon: 'icon-hdd-network',
-      color: '#9757D7',
+      icon: 'icon-sports-flag',
       date: 'Q2/2022',
       content: [
         'IEO',
@@ -166,8 +171,7 @@ export class DashboardComponent implements OnInit {
       ],
     },
     {
-      icon: 'icon-key',
-      color: '#EF466F',
+      icon: 'icon-globe',
       date: 'Q3/2022',
       content: [
         'Aura Mainnet',
@@ -177,8 +181,7 @@ export class DashboardComponent implements OnInit {
       ],
     },
     {
-      icon: 'icon-key',
-      color: '#45B26B',
+      icon: 'icon-control-outline',
       date: 'Q4/2022',
       content: [
         'NFT game supports',
@@ -187,7 +190,6 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-people',
-      color: '#FF7979',
       date: '2023',
       content: [
         'IBC enable for NFT',
@@ -198,6 +200,7 @@ export class DashboardComponent implements OnInit {
     }
   ];
   @ViewChild('slickModal') slickModal: SlickCarouselComponent | undefined;
+  @ViewChild('advisorSection') advisorSection!: ElementRef;
   constructor(
     public teamService: TeamService
   ) {}
@@ -211,6 +214,8 @@ export class DashboardComponent implements OnInit {
   }
 
   switchStaffData(dataType: 'advisor' | 'team') {
+    this.advisorSection.nativeElement.classList.remove('fade');
     this.teamService.switchStaffData(dataType);
+    this.advisorSection.nativeElement.classList.add('fade');
   }
 }

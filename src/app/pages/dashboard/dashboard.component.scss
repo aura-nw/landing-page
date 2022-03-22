@@ -133,6 +133,7 @@ section.partner {
     align-items: center;
     justify-content: center;
     border-radius: 24px;
+    background: var(--aura-gradient-simple);
     i.icon {
       font-size: 24px;
     }
@@ -392,7 +393,7 @@ ul.aura-list {
       width: 24px;
       height: 24px;
       background-size: contain;
-      background: url('../../../assets/imgs/icons/color/check-green.svg') no-repeat center;
+      background: url('../../../assets/imgs/icons/color/check-green.png') no-repeat center;
     }
   }
 }
@@ -411,4 +412,11 @@ ul.aura-list {
   @media (min-width: 1400px) {
     padding: 0 160px;
   }
+}
+
+.fade {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
 }

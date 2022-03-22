@@ -65,3 +65,20 @@ body {
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
 }
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}

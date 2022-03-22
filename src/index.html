@@ -6,7 +6,7 @@
     <title>AuraNetwork</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="./assets/img/Logo1.png">
+    <link rel="icon" type="image/png" href="./assets/imgs/auraTitleLogo.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
     </style>
@@ -35,30 +35,5 @@
 <body>
     <app-root></app-root>
 </body>
-<script>
-    // The debounce function receives our function as a parameter
-    const debounce = (fn) => {
-
-        // This holds the requestAnimationFrame reference, so we can cancel it if we wish
-        let frame;
-
-        // The debounce function returns a new function that can receive a variable number of arguments
-        return (...params) => {
-
-            // If the frame variable has been defined, clear it now, and queue for next frame
-            if (frame) {
-                cancelAnimationFrame(frame);
-            }
-
-            // Queue our function call for the next frame
-            frame = requestAnimationFrame(() => {
-
-                // Call our function and pass any params we received
-                fn(...params);
-            });
-
-        }
-    };
-</script>
 
 </html>
