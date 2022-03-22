@@ -133,7 +133,7 @@ export class DashboardComponent implements OnInit {
     {
       icon: 'icon-control',
       title: 'Stay ahead of the Metaverse game: ',
-      subTitle: 'Providing brands an open infrastructure to ride the wave of digital&nbsp;transformation'
+      subTitle: 'Brand renaissance through NFTs is a new way to connect with customers, fans, and users'
     },
     {
       icon: 'icon-microchip',
@@ -144,7 +144,6 @@ export class DashboardComponent implements OnInit {
   roadmapData = [
     {
       icon: 'icon-megaphone',
-      color: '#3772FF',
       date: '11/2021',
       content: [
         'Whitepaper',
@@ -154,7 +153,6 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-target',
-      color: '#FFBA69',
       date: 'Q1/2022',
       content: [
         'Strategic Round'
@@ -162,7 +160,6 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-sports-flag',
-      color: '#9757D7',
       date: 'Q2/2022',
       content: [
         'IEO',
@@ -175,7 +172,6 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-globe',
-      color: '#EF466F',
       date: 'Q3/2022',
       content: [
         'Aura Mainnet',
@@ -186,7 +182,6 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-control-outline',
-      color: '#45B26B',
       date: 'Q4/2022',
       content: [
         'NFT game supports',
@@ -195,7 +190,6 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-people',
-      color: '#FF7979',
       date: '2023',
       content: [
         'IBC enable for NFT',
