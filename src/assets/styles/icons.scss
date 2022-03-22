@@ -29,24 +29,25 @@
 @each $icon-name in $icon-variables {
   .icon-#{$icon-name} {
     &::before {
-      background: url("../imgs/icons/basic/#{$icon-name}.svg?v=0") no-repeat center;
+      background: url("../imgs/icons/basic/#{$icon-name}.png") no-repeat center;
       background-size: contain;
     }
   };
   .icon-#{$icon-name}.icon--multi-color {
     &::before {
-      background: url("../imgs/icons/color/#{$icon-name}.svg?v=0") no-repeat center;
+      background: url("../imgs/icons/color/#{$icon-name}.png") no-repeat center;
       background-size: contain;
     }
   };
   .icon-#{$icon-name}.icon--switch-stage {
     &::before {
-      background: url("../imgs/icons/basic/#{$icon-name}.svg?v=0") no-repeat center;
+      background: url("../imgs/icons/basic/#{$icon-name}.png") no-repeat center;
       background-size: contain;
+      transition: background .35s ease-in-out;
     }
     &:hover {
       &::before {
-        background: url("../imgs/icons/color/#{$icon-name}.svg?v=0") no-repeat center;
+        background: url("../imgs/icons/color/#{$icon-name}.png") no-repeat center;
         background-size: contain;
       }
     }
@@ -55,16 +56,16 @@
 @each $icon-name in $icon-black-variables {
   .icon-#{$icon-name} {
     &::before {
-      background: url("../imgs/icons/black/#{$icon-name}.svg?v=0") no-repeat center;
+      background: url("../imgs/icons/black/#{$icon-name}.png") no-repeat center;
       background-size: contain;
     }
   }
 }
-@each $icon-name in $icon-white-variables {
-  .icon-#{$icon-name} {
-    &::before {
-      background: url("../imgs/icons/white/#{$icon-name}.svg?v=0") no-repeat center;
-      background-size: contain;
-    }
-  }
-}
+//@each $icon-name in $icon-white-variables {
+//  .icon-#{$icon-name} {
+//    &::before {
+//      background: url("../imgs/icons/white/#{$icon-name}.png") no-repeat center;
+//      background-size: contain;
+//    }
+//  }
+//}
