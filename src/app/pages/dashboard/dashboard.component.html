@@ -24,7 +24,7 @@
   <div class="container px-4 px-lg-0">
     <div class="row">
       <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
-        <h1 class="mb-5 h2-mob">Join the INTEROPERABLE future</h1>
+        <h1 class="mb-5 h2-mob">Into the INTEROPERABLE future</h1>
         <div class="sub-text body-mob mb-5 text--white pb-md-12">
           Aura Network is a <b>layer-1 NFT-centric blockchain</b>, <br/>built to accelerate global NFT adoption by the Internet <br class="d-none d-lg-block"/> of Blockchain.</div>
 <!--        <a href="#" class="button button-outline d-inline-block">Learn more</a>-->
@@ -56,7 +56,7 @@
         <div class="col-12 col-xl-6">
           <h2 class="mb-5 mb-md-8">To NFT and beyond</h2>
           <div class="sub-text body-mob text--white">
-            It doesn’t matter what your technical background is, we got you!
+            It doesn’t matter what your technical background is, we got you! <br/>
             Getting started with our guide, documentation, and more. Explore the infinite potential with Aura solutions!
           </div>
         </div>
@@ -129,7 +129,7 @@
 <!--partner-->
 <section class="text-center partner mx-4 mx-md-auto" id="partner">
   <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
-  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with partners network and IP owners from all around the world. </div>
+  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with Global partners network and IP owners.</div>
   <div class="partner-group justify-content-center">
     <div>
       <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
@@ -204,36 +204,41 @@
 </section>
 <!--team-->
 <section class="team mt-lg-0" id="advisors">
-  <!--content-->
-  <div class="container px-4 px-lg-0">
-    <div class="row">
-      <div class="col-12 col-md-10 mx-auto text-center">
-        <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Team' }}</h2>
-        <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Drive us to pursue the deFi dream.' : 'Is a diversity of NFT and blockchain believers. '}}</div>
-        <div class="d-flex justify-content-center">
-          <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2"
-                  [class.active]="isAdvisors"
-                  (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
-          <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2" [class.active]="!isAdvisors" (click)="isAdvisors = false; switchStaffData('team')">Team</button>
+  <div #advisorSection>
+    <!--content-->
+    <div class="container px-4 px-lg-0">
+      <div class="row">
+        <div class="col-12 col-md-10 mx-auto text-center">
+          <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Team' }}</h2>
+          <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Drive us to pursue the deFi dream.' : 'A diversified team of blockchain believers.'}}</div>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2"
+                    [class.active]="isAdvisors"
+                    (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
+            <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2"
+                    [class.active]="!isAdvisors"
+                    (click)="isAdvisors = false;
+                  switchStaffData('team')">Team</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--slider-->
-  <div class="padding-3 pr-0 mt-4 mt-md-12" *ngIf="staffData && staffData.length > 0">
-    <ngx-slick-carousel class="carousel carousel--has-arrows" #slickModal="slick-carousel"
-                        [config]="teamSlideConfig">
-      <div ngxSlickItem *ngFor="let data of staffData" class="slide">
-        <app-staff-card [isAdvisors]="isAdvisors"
-                        [img]="data.img"
-                        [name]="data.name"
-                        [position]="data.position"
-                        [company]="data.company"
-                        [desc]="data.desc"
-                        [socialLink]="data.link"
-        ></app-staff-card>
-      </div>
-    </ngx-slick-carousel>
+    <!--slider-->
+    <div class="padding-3 pr-0 mt-4 mt-md-12" *ngIf="staffData && staffData.length > 0">
+      <ngx-slick-carousel class="carousel carousel--has-arrows" #slickModal="slick-carousel"
+                          [config]="teamSlideConfig">
+        <div ngxSlickItem *ngFor="let data of staffData" class="slide">
+          <app-staff-card [isAdvisors]="isAdvisors"
+                          [img]="data.img"
+                          [name]="data.name"
+                          [position]="data.position"
+                          [company]="data.company"
+                          [desc]="data.desc"
+                          [socialLink]="data.link"
+          ></app-staff-card>
+        </div>
+      </ngx-slick-carousel>
+    </div>
   </div>
   <!--Satellite Images-->
   <div class="img--scale object-7">

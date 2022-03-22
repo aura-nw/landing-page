@@ -412,3 +412,10 @@ ul.aura-list {
     padding: 0 160px;
   }
 }
+
+.fade {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
