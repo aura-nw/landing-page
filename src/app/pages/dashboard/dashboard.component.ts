@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {TeamService} from '../../../core/teamService.service';
 import {SlickCarouselComponent} from 'ngx-slick-carousel';
 
@@ -120,17 +120,17 @@ export class DashboardComponent implements OnInit {
     {
       icon: 'icon-chain',
       title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
-      subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network.'
+      subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
       icon: 'icon-film',
       title: 'Stay ahead of the Metaverse game: ',
-      subTitle: 'Providing brands an open infrastructure to ride the wave of digital&nbsp;transformation.'
+      subTitle: 'Providing brands an open infrastructure to ride the wave of digital&nbsp;transformation'
     },
     {
       icon: 'icon-heart',
       title: 'All about NFTs and interoperability:',
-      subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network.'
+      subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network'
     }
   ];
   roadmapData = [
@@ -198,6 +198,7 @@ export class DashboardComponent implements OnInit {
     }
   ];
   @ViewChild('slickModal') slickModal: SlickCarouselComponent | undefined;
+  @ViewChild('advisorSection') advisorSection!: ElementRef;
   constructor(
     public teamService: TeamService
   ) {}
@@ -211,6 +212,8 @@ export class DashboardComponent implements OnInit {
   }
 
   switchStaffData(dataType: 'advisor' | 'team') {
+    this.advisorSection.nativeElement.classList.remove('fade');
     this.teamService.switchStaffData(dataType);
+    this.advisorSection.nativeElement.classList.add('fade');
   }
 }

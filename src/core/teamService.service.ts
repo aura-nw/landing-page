@@ -7,19 +7,6 @@ export class TeamService {
   dataType: 'advisor' | 'team' = 'advisor';
   advisorData = [
     {
-      name: 'Frank Bignone',
-      img: 'frankBignone.png',
-      position: `Former VP & Head<br/>Digital Transformation<br/>in Asia-Pacific & China`,
-      company: 'Airbus',
-      desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
-        'platform strategy Skywise, alongside developing strategic digital initiatives and' +
-        'optimize Airbus services. Frank advices Aura on growth strategy and global ' +
-        'business development',
-      link: {
-        linkedIn: 'https://www.linkedin.com/in/frank-b-12046716/'
-      }
-    },
-    {
       name: 'Dr. Truong Gia Binh',
       img: 'TruongGiaBinh.png',
       position: `Founder & Chairman`,
@@ -49,6 +36,19 @@ export class TeamService {
       link: {
         linkedIn: 'https://www.linkedin.com/in/imlethanh/',
         twitter: 'https://twitter.com/imlethanh98'
+      }
+    },
+    {
+      name: 'Frank Bignone',
+      img: 'frankBignone.png',
+      position: `Former VP & Head<br/>Digital Transformation<br/>in Asia-Pacific & China`,
+      company: 'Airbus',
+      desc: 'Previously at Airbus, he led a regional team to implement Airbus\'s digital' +
+        'platform strategy Skywise, alongside developing strategic digital initiatives and' +
+        'optimize Airbus services. Frank advices Aura on growth strategy and global ' +
+        'business development',
+      link: {
+        linkedIn: 'https://www.linkedin.com/in/frank-b-12046716/'
       }
     }
   ];
