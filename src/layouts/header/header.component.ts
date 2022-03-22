@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit {
   onResize(event) {
     this.innerWidth = window.innerWidth;
     this.isContainer = this.innerWidth > 1920;
+    this.ariaExpanded = false;
   }
 
   switchStaffData(dataType: 'advisor' | 'team') {
