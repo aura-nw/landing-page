@@ -114,4 +114,11 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  &.expanded {
+    bottom: 0;
+    overflow-y: scroll;
+    @media (min-width: 992px) {
+      bottom: unset;
+    }
+  }
 }
