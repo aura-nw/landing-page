@@ -43,16 +43,11 @@
     &::before {
       background: url("../imgs/icons/basic/#{$icon-name}.svg") no-repeat center;
       background-size: contain;
-      opacity: 1;
     }
     &:hover {
       &::before {
         background: url("../imgs/icons/color/#{$icon-name}.svg") no-repeat center;
         background-size: contain;
-        opacity: 1;
-        animation-name: fadeInOpacity;
-        animation-timing-function: ease-in;
-        animation-duration: .35s;
       }
     }
   };
