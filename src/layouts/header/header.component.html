@@ -7,7 +7,7 @@
       </a>
         <button class="navbar-toggler ml-auto d-lg-none" type="button" data-bs-toggle="collapse"
               data-bs-target="#headerMenu" aria-controls="headerMenu" [attr.aria-expanded]="ariaExpanded"
-                (click)="ariaExpanded ? (ariaExpanded = !ariaExpanded) : (ariaExpanded = false)">
+                (click)="ariaExpanded = !ariaExpanded">
           <i class="icon" [class.close]="ariaExpanded"></i>
         </button>
         <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-15 mt-md-0" id="headerMenu" #headerMenu >
