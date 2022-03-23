@@ -52,7 +52,7 @@
                       (mouseout)="partnerShow=false"
                       aria-labelledby="dropdownMenuPartners">
                     <li><button class="dropdown-item" (click)="scroll('partner', 'center'); headerMenu.classList.remove('show'); ariaExpanded = false">Partners</button></li>
-                    <li><button class="dropdown-item" (click)="switchStaffData('advisor'); scroll('advisors', 'end'); headerMenu.classList.remove('show'); ariaExpanded = false">Advisors</button></li>
+                    <li><button class="dropdown-item" (click)="scroll('advisors', 'end'); headerMenu.classList.remove('show'); ariaExpanded = false">Advisors</button></li>
                   </ul>
                 </div>
               </li>
@@ -88,7 +88,7 @@
                       (mouseover)="aboutShow=true"
                       (mouseout)="aboutShow=false"
                       aria-labelledby="dropdownMenuAbout">
-                    <li><button class="dropdown-item" (click)="switchStaffData('team'); scroll('advisors', 'center'); headerMenu.classList.remove('show'); ariaExpanded = false">Meet Our Team</button></li>
+                    <li><button class="dropdown-item" (click)="scroll('team', 'center'); headerMenu.classList.remove('show'); ariaExpanded = false">Meet Our Team</button></li>
                     <li><a class="dropdown-item" target="_blank" href="https://aura-network.notion.site/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23">Careers</a></li>
                     <li><a class="dropdown-item" target="_blank" href="https://discord.com/login?redirect_to=%2Fchannels%2F925227249408557086%2F925227249408557089">Contact us</a></li>
                   </ul>

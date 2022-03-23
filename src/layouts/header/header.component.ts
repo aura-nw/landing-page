@@ -1,5 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
-import {TeamService} from '../../core/teamService.service';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +13,7 @@ export class HeaderComponent implements OnInit {
   public innerWidth: any;
   isContainer = false;
   ariaExpanded = false;
-  constructor(public teamService: TeamService, private element: ElementRef) { }
+  constructor() { }
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
     this.isContainer = this.innerWidth > 1920;
@@ -24,10 +23,6 @@ export class HeaderComponent implements OnInit {
     this.innerWidth = window.innerWidth;
     this.isContainer = this.innerWidth > 1920;
     this.ariaExpanded = false;
-  }
-
-  switchStaffData(dataType: 'advisor' | 'team') {
-    this.teamService.switchStaffData(dataType);
   }
 
   scroll(id, position: 'nearest' | 'end' | 'start' | 'center') {

@@ -54,7 +54,7 @@
       <!-- content -->
       <div class="row">
         <div class="col-12 col-xl-6">
-          <h2 class="mb-5 mb-md-8">To NFT and beyond</h2>
+          <h2 class="mb-5 mb-md-8">To NFT and Beyond</h2>
           <div class="sub-text body-mob text--white">
             It doesn’t matter what your technical background is, we got you! <br/>
             Getting started with our guide, documentation, and more. Explore the infinite potential with Aura solutions!
@@ -98,7 +98,7 @@
                  alt="" loading="lazy"/>
           </div>
           <!-- content -->
-          <h2>Beyond a Network</h2>
+          <h2>To NFT and Beyond</h2>
           <div class="sub-text body-mob text--white my-8">
             Aura Network enhances efficiency through solving the scalability problem.
             Developers will never have to cope with sharded chains or fragmented Layer 2 systems again!
@@ -202,61 +202,96 @@
     </div>
   </div>
 </section>
-<!--team-->
-<section class="team mt-lg-0" id="advisors">
-  <div #advisorSection>
-    <!--content-->
-    <div class="container px-4 px-lg-0">
-      <div class="row">
-        <div class="col-12 col-md-10 mx-auto text-center">
-          <h2 class="mb-5 h1 h3-mob">{{ isAdvisors ? 'Our Advisors' : 'Our Team' }}</h2>
-          <div class="body mb-6 text--neutrals-6">{{ isAdvisors ? 'Drive us to pursue the deFi dream.' : 'A diversified team of blockchain believers.'}}</div>
-          <div class="d-flex justify-content-center">
-            <button type="button" class="button button-primary sub-text d-inline-block mr-3 px-0 py-2"
-                    [class.active]="isAdvisors"
-                    (click)="isAdvisors = true; switchStaffData('advisor')">Advisors</button>
-            <button type="button" class="button button-primary sub-text d-inline-block px-0 py-2"
-                    [class.active]="!isAdvisors"
-                    (click)="isAdvisors = false;
-                  switchStaffData('team')">Team</button>
+<div class="position-relative">
+  <!--advisor-->
+  <section class="team mt-lg-0" id="advisors">
+    <div>
+      <!--content-->
+      <div class="container px-4 px-lg-0">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto text-center">
+            <h2 class="mb-5 h1 h3-mob">Our Advisors</h2>
+            <div class="body mb-6 text--neutrals-6">Drive us to pursue the deFi dream.</div>
           </div>
         </div>
       </div>
+      <!--slider-->
+      <div class="padding-3 pr-0 mt-4 mt-md-12">
+        <ngx-slick-carousel class="carousel carousel--has-arrows"
+                            [config]="teamSlideConfig">
+          <div ngxSlickItem *ngFor="let data of advisorData" class="slide">
+            <app-staff-card [isAdvisors]="true"
+                            [img]="data.img"
+                            [name]="data.name"
+                            [position]="data.position"
+                            [company]="data.company"
+                            [desc]="data.desc"
+                            [socialLink]="data.link"
+            ></app-staff-card>
+          </div>
+        </ngx-slick-carousel>
+      </div>
     </div>
-    <!--slider-->
-    <div class="padding-3 pr-0 mt-4 mt-md-12" *ngIf="staffData && staffData.length > 0">
-      <ngx-slick-carousel class="carousel carousel--has-arrows" #slickModal="slick-carousel"
-                          [config]="teamSlideConfig">
-        <div ngxSlickItem *ngFor="let data of staffData" class="slide">
-          <app-staff-card [isAdvisors]="isAdvisors"
-                          [img]="data.img"
-                          [name]="data.name"
-                          [position]="data.position"
-                          [company]="data.company"
-                          [desc]="data.desc"
-                          [socialLink]="data.link"
-          ></app-staff-card>
+    <!--Satellite Images-->
+    <div class="img--scale object-7">
+      <img src="../../../assets/imgs/pages/dashboard/object_4@1x.png"
+           srcset="../../../assets/imgs/pages/dashboard/object_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_4@2x.png 2x"
+           alt="" loading="lazy"/>
+    </div>
+    <div class="img--scale object-8">
+      <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png"
+           srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x"
+           alt="" loading="lazy"/>
+    </div>
+    <div class="img--scale object-9">
+      <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png"
+           srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
+           alt="" loading="lazy"/>
+    </div>
+  </section>
+  <!--team-->
+  <section class="team" id="team">
+    <div>
+      <!--content-->
+      <div class="container px-4 px-lg-0">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto text-center">
+            <h2 class="mb-5 h1 h3-mob">Our Team</h2>
+            <div class="body mb-6 text--neutrals-6">A diversified team of blockchain believers.</div>
+          </div>
         </div>
-      </ngx-slick-carousel>
+      </div>
+      <!--slider-->
+      <div class="padding-3 pr-0 mt-4 mt-md-12">
+        <ngx-slick-carousel class="carousel carousel--has-arrows"
+                            [config]="teamSlideConfig">
+          <div ngxSlickItem *ngFor="let data of teamData" class="slide">
+            <app-staff-card [isAdvisors]="false"
+                            [img]="data.img"
+                            [name]="data.name"
+                            [position]="data.position"
+                            [desc]="data.desc"
+                            [socialLink]="data.link"
+            ></app-staff-card>
+          </div>
+        </ngx-slick-carousel>
+      </div>
     </div>
-  </div>
+    <!--Satellite Images-->
+    <div class="img--scale object-17">
+      <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png"
+           srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x"
+           alt="" loading="lazy"/>
+    </div>
+  </section>
   <!--Satellite Images-->
-  <div class="img--scale object-7">
-    <img src="../../../assets/imgs/pages/dashboard/object_4@1x.png"
-         srcset="../../../assets/imgs/pages/dashboard/object_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_4@2x.png 2x"
-         alt="" loading="lazy"/>
-  </div>
-  <div class="img--scale object-8">
-    <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png"
-         srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x"
-         alt="" loading="lazy"/>
-  </div>
-  <div class="img--scale object-9">
-    <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png"
-         srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
-         alt="" loading="lazy"/>
-  </div>
-</section>
+  <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" class="object-15 d-none d-lg-block"
+       srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
+       alt="" loading="lazy"/>
+  <img src="../../../assets/imgs/pages/dashboard/object_7@1x.png" class="object-16 d-none d-lg-block"
+       srcset="../../../assets/imgs/pages/dashboard/object_7@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_7@2x.png 2x"
+       alt="" loading="lazy"/>
+</div>
 <!-- FAQ -->
 <section class="faq" id="faqs">
   <div class="container-fluid">
@@ -289,11 +324,10 @@
               <li class="mt-10 mt-md-15">
                 <div class="title sub-text-mob">Why building on Cosmos?</div>
                 <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">
-                  There are two main reasons why Aura Network chose Cosmos to build our ecosystem: interoperate and fast.
+                  There are two main reasons why Aura Network chose Cosmos: agility and cosmos IBC.
                   Cosmos is an ecosystem of blockchains that can scale and interoperate with each other.
-                  It solves the limitations of “the old blockchains”.
-                  With Cosmos, blockchains can maintain sovereignty, process transactions quickly, and communicate with other blockchains in the ecosystem,
-                  making it optimal for various use cases.
+                  It solves the limitations of “the old blockchains”. The Inter-Blockchain Communication protocol (IBC) allows blockchains to talk to each other.
+                  The backbone of the Cosmos ecosystem, IBC handles transport across different sovereign blockchains.
                   Building on Cosmos can help Aura Network accelerate Global NFTs adoption and become a catalyst for NFTs culture.
                 </div>
               </li>
