@@ -12,7 +12,7 @@ export class StaffCardComponent implements OnInit {
   @Input() position: string | undefined;
   @Input() company: string | undefined;
   @Input() desc: string | undefined;
-  @Input() socialLink: {linkedIn: string, twitter: string} | undefined;
+  @Input() socialLink: {linkedIn?: string, twitter?: string} | undefined;
   constructor() { }
 
   ngOnInit(): void {

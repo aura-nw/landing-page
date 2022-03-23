@@ -104,13 +104,29 @@ section.partner {
       width: 252px;
       margin: 0 16px;
       @media (min-width: 992px) {
-        width: 376px;
+        width: 298px;
+        margin: 0 15px;
+      }
+      @media (min-width: 1024px) {
+        width: 343px;
         margin: 0 20px;
       }
       display: inline-table;
     }
     .slick-list {
       margin: 0 -20px;
+    }
+  }
+  &#advisors {
+    margin-top: 40px;
+    @media (min-width: 992px) {
+      margin-top: 200px;
+    }
+  }
+  &#team {
+    margin-top: 40px;
+    @media (min-width: 992px) {
+      margin-top: 300px;
     }
   }
 }
@@ -242,6 +258,53 @@ h1, h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.aura-color-logo {
+  max-width: 169px;
+  &:before {
+    padding-top: 38.46153846%;
+  }
+}
+ul.aura-list {
+  li {
+    padding-left: var(--spacer-9);
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+      background: url('../../../assets/imgs/icons/color/check-green.png') no-repeat center;
+    }
+  }
+}
+// Custom spacer
+.padding-1 {
+  @media (min-width: 1400px) {
+    padding: 0 148px;
+  }
+}
+.padding-2 {
+  @media (min-width: 1400px) {
+    padding: 0 196px;
+  }
+}
+.padding-3 {
+  padding: 0 16px;
+  @media (min-width: 1400px) {
+    padding: 0 160px;
+  }
+}
+// Animation
+.fade {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
 /* Satellite Images */
 .object-1,.object-2,.object-3,.object-4,.object-7,.object-8,.object-9 {
   position: absolute;
@@ -318,7 +381,6 @@ h1, h2 {
   right: 431px;
   top: 0;
   z-index: -1;
-  //transform: translate3D(-75px,46px,0);
 }
 .object-10 {
   position: absolute;
@@ -368,55 +430,34 @@ h1, h2 {
   transform: translateX(-50%);
   width: 150px;
 }
+.object-15 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
+  width: 150px;
+}
+.object-16 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100px;
+  width: 408px;
+  height: 408px;
+  object-fit: contain;
+}
+.object-17 {
+  position: absolute;
+  width: 313px;
+  height: 313px;
+  left: 0;
+  top: 45%;
+  z-index: -1;
+  transform: translate3D(-50%,-50%,0);
+}
 .object-1,.object-2,.object-3,.object-7,.object-8,.object-9 {
   display: none;
   @media (min-width: 1200px) {
     display: block;
   }
-}
-.aura-color-logo {
-  max-width: 169px;
-  &:before {
-    padding-top: 38.46153846%;
-  }
-}
-ul.aura-list {
-  li {
-    padding-left: var(--spacer-9);
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 24px;
-      height: 24px;
-      background-size: contain;
-      background: url('../../../assets/imgs/icons/color/check-green.png') no-repeat center;
-    }
-  }
-}
-.padding-1 {
-  @media (min-width: 1400px) {
-    padding: 0 148px;
-  }
-}
-.padding-2 {
-  @media (min-width: 1400px) {
-    padding: 0 196px;
-  }
-}
-.padding-3 {
-  padding: 0 16px;
-  @media (min-width: 1400px) {
-    padding: 0 160px;
-  }
-}
-
-.fade {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
 }
