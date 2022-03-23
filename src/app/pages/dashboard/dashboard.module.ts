@@ -5,7 +5,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {SharedModule} from '../../shared/shared.module';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
-import {TeamService} from '../../../core/teamService.service';
 
 
 @NgModule({
