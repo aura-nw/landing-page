@@ -101,14 +101,10 @@ section.partner {
   }
   .carousel {
     .slick-slide {
-      width: 252px;
+      width: 300px;
       margin: 0 16px;
-      @media (min-width: 992px) {
-        width: 298px;
-        margin: 0 15px;
-      }
       @media (min-width: 1024px) {
-        width: 343px;
+        width: 370px;
         margin: 0 20px;
       }
       display: inline-table;
