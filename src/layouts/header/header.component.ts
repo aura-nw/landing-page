@@ -25,6 +25,12 @@ export class HeaderComponent implements OnInit {
     this.isContainer = this.innerWidth > 1920;
     this.ariaExpanded = !this.headerNavbarMenu.nativeElement.classList.contains('expanded');
   }
+  @HostListener('window:orientationchange', ['$event'])
+  onOrientationChange(event) {
+    this.innerWidth = window.innerWidth;
+    this.isContainer = this.innerWidth > 1920;
+    this.ariaExpanded = !this.headerNavbarMenu.nativeElement.classList.contains('expanded');
+  }
 
   scroll(id, position: 'nearest' | 'end' | 'start' | 'center') {
     const el = document.getElementById(id);
