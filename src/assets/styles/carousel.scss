@@ -10,7 +10,10 @@
   }
   .carousel--has-arrows {
     .slick-prev {
-      left: -100px !important;
+      left: 0 !important;
+      @media (min-width: 1440px) {
+        left: -100px !important;
+      }
     }
     .slick-prev.slick-arrow,.slick-next.slick-arrow{
       opacity: 1;

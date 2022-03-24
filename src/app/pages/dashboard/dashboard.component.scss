@@ -136,7 +136,10 @@ section.partner {
   }
 }
 .road-map {
-  margin-top: 40px;
+  margin-top: 55px;
+  @media (min-width: 992px) {
+    margin-top: 106px;
+  }
   &__img {
     margin: auto;
     width: 80px;
@@ -162,6 +165,9 @@ section.partner {
       @media (min-width: 992px) {
         margin: 0 64px;
       }
+    }
+    ::ng-deep button.slick-prev.slick-arrow {
+      left: -60px !important;
     }
   }
   @media (min-width: 768px) {
