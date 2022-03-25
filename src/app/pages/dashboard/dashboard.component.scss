@@ -190,7 +190,7 @@ section.partner {
     }
   }
   @media (min-width: 768px) {
-    background: url("../../../assets/imgs/backgrounds/ROADMAP.png") left top no-repeat;
+    background: url("../../../assets/imgs/backgrounds/ROADMAP.png") center top no-repeat;
     background-size: contain;
     padding-top: 240px;
     .carousel {
@@ -211,7 +211,6 @@ section.partner {
   margin-top: var(--spacer-10);
   position: relative;
   &__contain {
-    position: relative;
     .aura-color-logo {
       width: 160px;
       height: 60px;
@@ -251,13 +250,6 @@ section.partner {
           background: url("../../../assets/imgs/pages/marker-frame.svg");
         }
       }
-    }
-    background: url("../../../assets/imgs/backgrounds/question-bg-mob.png") no-repeat;
-    background-size: contain;
-    background-position-x: 100%;
-    background-position-y: 100px;
-    @media (min-width: 992px) {
-      background: none;
     }
   }
   @media (min-width: 1200px) {
@@ -397,17 +389,6 @@ ul.aura-list {
   top: 0;
   z-index: -1;
 }
-.object-10 {
-  position: absolute;
-  right: 0;
-  bottom: 80px;
-  @media (min-width: 768px) {
-    width: 153px;
-  }
-  @media (min-width: 1400px) {
-    width: auto;
-  }
-}
 .object-11 {
   width: 307px;
   transform: scaleX(-1);
@@ -427,15 +408,9 @@ ul.aura-list {
     bottom: 268px;
   }
 }
-.object-12 {
-  position: absolute;
-  right: 0;
-  bottom: 60px;
-  z-index: -1;
-  width: 118px;
-}
 .object-13 {
-  margin: 100px 84px 0 auto;
+  margin-top: 100px;
+  width: 100%;
 }
 .object-14 {
   position: absolute;
