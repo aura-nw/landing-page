@@ -123,17 +123,17 @@ export class DashboardComponent implements OnInit {
   featureCardData = [
     {
       icon: 'cosmos',
-      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
+      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
       icon: 'brands',
-      title: 'Brands renaissance:',
+      title: 'Brands renaissance',
       subTitle: 'Stay ahead of the game and provide new momentum with Aura Network framework, the innovative way to boost customers, users or fans engagement'
     },
     {
       icon: 'tailored',
-      title: 'Tailored for NFT owners:',
+      title: 'Tailored for NFT owners',
       subTitle: 'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before!'
     }
   ];
@@ -148,14 +148,14 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-target',
-      date: 'Q1/2022',
+      date: 'Q1-2022',
       content: [
         'Strategic Round'
       ],
     },
     {
       icon: 'icon-sports-flag',
-      date: 'Q2/2022',
+      date: 'Q2-2022',
       content: [
         'IEO',
         'Aura Testnet',
@@ -167,7 +167,7 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-globe',
-      date: 'Q3/2022',
+      date: 'Q3-2022',
       content: [
         'Aura Mainnet',
         'Governance Tool',
@@ -177,7 +177,7 @@ export class DashboardComponent implements OnInit {
     },
     {
       icon: 'icon-control-outline',
-      date: 'Q4/2022',
+      date: 'Q4-2022',
       content: [
         'NFT games support',
         `First NFT use case - NFT fan token`
