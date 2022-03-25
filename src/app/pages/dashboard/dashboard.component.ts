@@ -122,19 +122,19 @@ export class DashboardComponent implements OnInit {
   // MockData
   featureCardData = [
     {
-      icon: 'icon-cosmos',
+      icon: 'cosmos',
       title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
-      icon: 'icon-control',
-      title: 'Stay ahead of the Metaverse game: ',
-      subTitle: 'Brand renaissance through NFTs is a new way to connect with customers, fans, and users'
+      icon: 'brands',
+      title: 'Brands renaissance:',
+      subTitle: 'Stay ahead of the game and provide new momentum with Aura Network framework, the innovative way to boost customers, users or fans engagement'
     },
     {
-      icon: 'icon-microchip',
-      title: 'All about NFTs and interoperability:',
-      subTitle: 'Expanding the usability and unlimited potential of NFTs with Aura Network'
+      icon: 'tailored',
+      title: 'Tailored for NFT owners:',
+      subTitle: 'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before!'
     }
   ];
   roadmapData = [
@@ -143,8 +143,7 @@ export class DashboardComponent implements OnInit {
       date: '11/2021',
       content: [
         'Whitepaper',
-        'Announcement',
-        'Establish Entity'
+        'Foundation'
       ],
     },
     {
@@ -172,26 +171,26 @@ export class DashboardComponent implements OnInit {
       content: [
         'Aura Mainnet',
         'Governance Tool',
-        `Integrate with C98 ecosystem <br/>(Wallet, Marketplace)`,
-        'IBC enable for native token'
+        `Integrate with C98 ecosystem (Wallet, Marketplace)`,
+        'IBC enablement for native token'
       ],
     },
     {
       icon: 'icon-control-outline',
       date: 'Q4/2022',
       content: [
-        'NFT game supports',
-        `First NFT use case candidates:<br/>NFT fan token`
+        'NFT games support',
+        `First NFT use case - NFT fan token`
       ],
     },
     {
       icon: 'icon-people',
       date: '2023',
       content: [
-        'IBC enable for NFT',
+        'IBC enablement for NFTs',
         'First Metaverse Integration',
-        'Collaboration with Enterprise blockchain.',
-        'Launch at least 2 games'
+        'Enterprise blockchain collaboration',
+        'NFT games launch'
       ],
     }
   ];
@@ -211,7 +210,7 @@ export class DashboardComponent implements OnInit {
       img: 'VinhNguyen.png',
       position: `Founder & CEO`,
       company: 'Coin98 Finance',
-      desc: 'Vinh is a tech expert from Coin98 Finance. He advises Aura on the various technological matters, especially in the token generation, wallet, multi-chain and bridging aspects.',
+      desc: 'Vinh is the founder and technical expert of Coin98 Finance. He advises Aura on the various technological matters, especially in the token generation, wallet, multichain and bridging aspects.',
       link: {
         linkedIn: 'https://www.linkedin.com/in/vinhthenguyen/',
         twitter: 'https://twitter.com/drofin69'
@@ -222,7 +221,7 @@ export class DashboardComponent implements OnInit {
       img: 'ThanhLe.png',
       position: `Founder`,
       company: 'Coin98 Finance',
-      desc: 'Thanh is an entrepreneur and expert in developing the cryptocurrency community. He provides valuable insight on how to scale the Aura community and connect with other crypto partners.',
+      desc: 'Thanh Le is co-founder of Coin98, who contributes a lot for cryptocurrencies’ community. He provides valuable insight on scaling the Aura community and connecting with other crypto partners.',
       link: {
         linkedIn: 'https://www.linkedin.com/in/imlethanh/',
         twitter: 'https://twitter.com/imlethanh98'
@@ -246,18 +245,18 @@ export class DashboardComponent implements OnInit {
       name: 'Giang Tran',
       img: 'GiangTran.png',
       position: `Founder`,
-      desc: 'As a Forbes Technology Council member, Giang has deep expertise in Cloud and Enterprise Blockchain. ' +
-        'He is the founder of akaChain and has guided many successful startups with his value-driven leadership and a strong startup mindset. ' +
-        'Giang drives Aura\'s strategy adoption and equitable growth.',
+      desc: `As a Forbes Technology Council member, Giang has deep expertise in Cloud and Enterprise Blockchain. He is the founder of akaChain and has guided many successful start-ups. Giang drives Aura's strategy adoption and equitable growth.`,
       link: {
-        linkedIn: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/'
+        linkedIn: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/',
+        twitter: 'https://twitter.com/GiangTr41516054'
       }
     },
     {
       name: 'Yamato Tran',
       img: 'YamatoTran.png',
       position: `Co-founder`,
-      desc: 'As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.',
+      desc: `As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.
+      Yamato leads Aura’s vision and expands its partnership network.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/trandanghoa/'
       }
@@ -286,18 +285,17 @@ export class DashboardComponent implements OnInit {
       name: 'Long Nguyen',
       img: 'LongNguyen.png',
       position: `CTO`,
-      desc: 'Long is a software architect. He graduated from Aalto University and Université de Lorraine, majoring in security and privacy. ' +
-        'He has been building consortium blockchain systems for international enterprises since 2018.',
+      desc: `Graduated from Aalto University and Université de Lorraine, majoring in security and privacy. Long has been building consortium blockchain systems for international enterprises since 2018, he leads Aura’s technology strategy.`,
       link: {
-        linkedIn: 'https://www.linkedin.com/in/eledra/'
+        linkedIn: 'https://www.linkedin.com/in/eledra/',
+        twitter: 'https://twitter.com/EledraNguyen?t=CGG4tS7B0yetqboEDBIw_Q&s=09'
       }
     },
     {
       name: 'Thu Tran',
       img: 'ThuTran.png',
       position: `COO`,
-      desc: 'Thu is a former leader of marketing communication and partnership for a leading Southeast Asia IT services provider. ' +
-        'She advances Aura\'s branding and communication strategy and explores opportunities for growth acquisition of its ecosystem and partners.',
+      desc: `Thu is the former marketing and partnership lead of a Southeast Asia IT services provider. She advances Aura's strategic planning and opportunities for growth acquisition of its ecosystem and partners community.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/'
       }
@@ -326,8 +324,7 @@ export class DashboardComponent implements OnInit {
       name: 'Claire Nguyen',
       img: 'ClaireNguyen.png',
       position: `Marketing Lead`,
-      desc: 'With 5 years of experience in community growth and marketing management in Digital Banking and Enterprise Blockchain, ' +
-        'Claire drives Aura’s community engagement, development, and sustainable growth.',
+      desc: `With five years of marketing management experience in Digital Banking and Enterprise Blockchain, Claire drives Aura's marketing communication development and execution.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/viet-chinh-nguyen/'
       }
