@@ -62,11 +62,11 @@
     </div>
     <div class="footer__cta order-3 pb-10 pb-lg-0 flex-xl-shrink-0 flex-xl-grow-1">
       <div class="footer__cta-contain">
-        <div class="sub-text">Never miss an opportunity!</div>
-        <div class="small-text mt-2 mt-md-10">
+        <div class="sub-text text-gradient">Never miss an opportunity!</div>
+        <div class="small-text mt-2 mt-md-10 -max-width-256">
           Sign up now for exclusive events, feature release, announcement, plus few surprises!
         </div>
-        <div class="mt-6">
+        <div class="mt-6 -max-width-256">
           <form #ctaForm="ngForm" (ngSubmit)="onSubmitCTAForm(); ctaForm.reset()" class="aura-form single-input-field">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Enter your email" [(ngModel)]="formData.email" name="inputEmail" #email="ngModel">

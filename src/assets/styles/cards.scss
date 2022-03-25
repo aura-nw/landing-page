@@ -62,9 +62,9 @@
     border: none;
     box-shadow: none;
     display: block;
-    width: fit-content;
+    text-align: center;
     @media (min-width: 992px) {
-      text-align: center;
+      width: fit-content;
     }
     .card__image {
       width: 132px;
@@ -73,8 +73,8 @@
       border-radius: 32px;
       padding: 2px;
       background: var(--aura-gradient-simple);
+      margin: auto;
       @media (min-width: 992px) {
-        margin: auto;
         width: 267px;
         height: 267px;
         border-radius: 100.142px;
@@ -95,6 +95,8 @@
       overflow: hidden;
       -webkit-line-clamp: 7;
       height: 170px;
+      max-width: 400px;
+      margin: auto;
       @media (min-width: 992px) {
         -webkit-line-clamp: 6;
         height: 140px;
