@@ -41,6 +41,10 @@ footer {
       width: 100%;
       height: 100%;
       object-fit: contain;
+
+      @media (max-width: 992px) {
+        transform: translateY(-14px);
+      }
     }
   }
   .footer__contact {
@@ -49,7 +53,9 @@ footer {
     .footer__logo {
       width: 105px;
       height: 65px;
-      img { object-fit: contain}
+      img {
+        object-fit: contain;
+      }
     }
     .contact__title {
       color: var(--aura-white);
@@ -69,13 +75,25 @@ footer {
     color: var(--aura-white);
     border-bottom: 1px solid var(--aura-neutrals-3);
     &-contain {
-      max-width: 256px;
+      // max-width: 256px;
     }
     @media (min-width: 992px) {
       padding-left: 47px;
       border: none;
       .footer__cta-contain {
         max-width: 350px;
+      }
+    }
+
+    .text-gradient {
+      background: var(--aura-gradient-simple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: 992px) {
+      .-max-width-256 {
+        max-width: 256px;
       }
     }
   }
@@ -100,7 +118,7 @@ footer {
     background: transparent;
     padding: 0;
     color: var(--aura-light-gray);
-    transition: color .35s ease-in-out;
+    transition: color 0.35s ease-in-out;
     &:hover {
       color: var(--aura-white);
     }
