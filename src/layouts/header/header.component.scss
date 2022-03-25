@@ -21,14 +21,15 @@
       height: 100%;
     }
     i.icon:before {
-      background: url("../../assets/imgs/icons/color/burger.svg") center
+      background: url("../../assets/imgs/icons/color/burger.png") center
       no-repeat;
-      background-size: 30px;
+      background-size: auto;
     }
 
     i.icon.close:before {
-      background: url("../../assets/imgs/icons/basic/close.svg") center no-repeat;
-      background-size: 30px;
+      background: url("../../assets/imgs/icons/basic/close.png") center
+      no-repeat;
+      background-size: auto;
     }
   }
   .nav-menu {
@@ -110,17 +111,19 @@
         li {
           display: block;
           text-align: center;
-          @media (max-width: 991px) {
+          @media (min-width: 992px) {
             text-align: left;
-            //&:after {
-            //  content: "";
-            //  position: absolute;
-            //  left: 0;
-            //  right: 0;
-            //  height: 1px;
-            //  width: 100%;
-            //  background-color: var(--aura-neutrals-3);
-            //}
+          }
+          @media (max-width: 991px) {
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              height: 1px;
+              width: 100%;
+              background-color: var(--aura-neutrals-3);
+            }
           }
         }
         .dropdown-item {
