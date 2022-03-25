@@ -122,7 +122,7 @@ export class DashboardComponent implements OnInit {
   // MockData
   featureCardData = [
     {
-      icon: 'cosmos',
+      icon: 'planet-rocket',
       title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
@@ -329,6 +329,39 @@ export class DashboardComponent implements OnInit {
         linkedIn: 'https://www.linkedin.com/in/viet-chinh-nguyen/'
       }
     }
+  ];
+  faqData = [
+    {
+      quest: 'How does Aura Network differ from other chains?',
+      anw: 'Interoperability is everything. As a chain tailored for NFTs, we provide robust end-to-end solutions and purpose-built networks that enable NFTs swapping.'
+    },
+    {
+      quest: 'Where can I learn more about Aura Network?',
+      anw: `Visit our Blog, Insights, <a href='https://docs.aura.network/'>Docs</a>, <a href='https://github.com/aura-nw'>Github</a>
+            for constant updates or shoot any question on our community channels (<a href='https://discord.gg/sKsvpQTAzP'>Discord</a> and <a href='https://t.me/+zjYMBoLBslkwZjU1'>Telegram</a>)!`
+    },
+    {
+      quest: 'Does Aura Network have a bug bounty program available?',
+      anw: `Stay tuned, coming soon. Sign-up for our newsletter and follow us on <a href='https://discord.gg/sKsvpQTAzP'>Discord</a> for exclusive events and updates!`
+    },
+    {
+      quest: 'Why building on Cosmos?',
+      anw: 'Agility and Cosmos IBC. Cosmos solves the limitations of “the old blockchains”. The backbone of the Cosmos ecosystem, IBC handles transport across different sovereign blockchains.'
+    },
+    {
+      quest: 'When is Aura Network’s mainnet?',
+      anw: 'Aura Mainnet is going to be released at the end of the third quarter of 2022. Stay tuned!'
+    },
+    {
+      quest: 'Will there be an Aura token?',
+      anw: 'It will be released by IEO'
+    },
+    {
+      quest: 'What is Aura safe?',
+      anw: `Aura Safe is a user-friendly application that allows users to create multi-signature accounts with fine-grained access control for the Cosmos ecosystem.
+      If you are familiar with Gnosis-safe for Ethereum, it is quite similar. Find out more here:
+      <a href='https://github.com/aura-nw/safe-react'>https://github.com/aura-nw/safe-react</a>`
+    },
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
   constructor() {}

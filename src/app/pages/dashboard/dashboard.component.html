@@ -59,7 +59,7 @@
     <div class="container px-4 px-lg-0">
       <!-- content -->
       <div class="row">
-        <div class="col-12 col-xl-6">
+        <div class="col-12 col-xl-7">
           <h2 class="mb-5 mb-md-8">Crafting path</h2>
           <div class="sub-text body-mob text--white">
             It doesn’t matter what your background is, we got you! <br/>
@@ -109,7 +109,7 @@
             Aura Network enhances efficiency through solving the scalability problem. Never cope with sharded chains or fragmented Layer 2 systems again!
           </div>
           <!-- list -->
-          <ul class="aura-list body text--white">
+          <ul class="aura-list sub-text body-mob text--white">
             <li>Develop NFTs in one-stop destination.</li>
             <li>Support both newcomers and crypto-native.</li>
             <li>Integrate to a new fully-fledged Metaverse.</li>
@@ -314,25 +314,19 @@
           <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" class="object-14 d-none d-lg-block"
                srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
                alt="" loading="lazy"/>
-          <h2 class="h1 h2-mob d-inline-block">FAQs</h2>
-          <ol class="text--white mt-4">
-            <li class="mt-10 mt-md-15">
-              <div class="title sub-text-mob">How does Aura Network differ from other chains?</div>
-              <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">
-                Interoperability is everything. As a chain tailored for NFTs, we provide robust end-to-end solutions and purpose-built networks that enable NFTs swapping.
+          <h2 class="d-inline-block">FAQs</h2>
+          <div class="accordion mt-9">
+            <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
+              <div class="sub-text accordion-header" id="faq-{{i}}">
+                <button class="collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true" [attr.aria-controls]="'collapse-'+i">
+                  {{faq.quest}}
+                </button>
               </div>
-            </li>
-            <li class="mt-10 mt-md-15">
-              <div class="title sub-text-mob">Why building on Cosmos?</div>
-              <div class="mt-2 mt-md-4 sub-text body-mob text--light-gray">
-                There are two main reasons why Aura Network chose Cosmos: agility and cosmos IBC.
-                Cosmos is an ecosystem of blockchains that can scale and interoperate with each other.
-                It solves the limitations of “the old blockchains”. The Inter-Blockchain Communication protocol (IBC) allows blockchains to talk to each other.
-                The backbone of the Cosmos ecosystem, IBC handles transport across different sovereign blockchains.
-                Building on Cosmos can help Aura Network accelerate Global NFTs adoption and become a catalyst for NFTs culture.
+              <div id="collapse-{{i}}" class="accordion-collapse collapse" [attr.aria-labelledby]="'faq-'+i">
+                <div class="accordion-body body pl-0" [innerHTML]="faq.anw"></div>
               </div>
-            </li>
-          </ol>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-12 col-xl-4 text-end">
