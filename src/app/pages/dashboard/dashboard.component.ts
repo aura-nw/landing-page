@@ -28,22 +28,22 @@ export class DashboardComponent implements OnInit {
     slidesToScroll: 1,
     mobileFirst: true,
     infinite: false,
-    variableWidth: true,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          variableWidth: true,
         }
       },
       {
-        breakpoint: 992,
+        breakpoint: 991.99,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: true,
+          variableWidth: true,
         }
       },
       {
@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: true,
+          variableWidth: true,
         }
       },
       {
@@ -59,7 +59,7 @@ export class DashboardComponent implements OnInit {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: true,
+          variableWidth: true,
         }
       },
       {
@@ -67,7 +67,7 @@ export class DashboardComponent implements OnInit {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          arrows: true,
+          variableWidth: true,
         }
       }
     ]
@@ -76,29 +76,31 @@ export class DashboardComponent implements OnInit {
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
-    variableWidth: true,
     mobileFirst: true,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+          variableWidth: true,
         }
       },
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: true,
         }
       },
       {
@@ -106,7 +108,7 @@ export class DashboardComponent implements OnInit {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          arrows: true,
+          variableWidth: true,
         }
       },
       {
@@ -114,7 +116,7 @@ export class DashboardComponent implements OnInit {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: true,
+          variableWidth: true,
         }
       }
     ]

@@ -100,13 +100,12 @@ section.partner {
   }
   .carousel {
     .slick-slide {
-      width: 300px;
       margin: 0 16px;
       @media (min-width: 768px) {
-        width: 280px;
+        width: 368px;
       }
       @media (min-width: 992px) {
-        width: 285px;
+        width: 290px;
       }
       @media (min-width: 1024px) {
         width: 295px;
@@ -186,7 +185,7 @@ section.partner {
       }
     }
     ::ng-deep button.slick-prev.slick-arrow {
-      left: -60px !important;
+      left: 16px !important;
     }
   }
   @media (min-width: 768px) {
@@ -195,6 +194,9 @@ section.partner {
     padding-top: 240px;
     .carousel {
       margin-top: 80px;
+      .slick-slide {
+        width: 295px;
+      }
     }
   }
   @media (min-width: 992px) {
@@ -204,6 +206,9 @@ section.partner {
     background-size: auto;
     .carousel {
       transform: translateY(25%);
+      .slick-slide {
+        width: 220px;
+      }
     }
   }
 }
