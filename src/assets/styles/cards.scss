@@ -6,21 +6,21 @@
   color: var(--aura-white);
   height: 100%;
   &--md {
-    padding: var(--spacer-14) var(--spacer-8);
+    padding: var(--spacer-10) var(--spacer-8);
     width: 340px;
     height: 437px;
     @media (min-width: 992px) {
       width: auto;
       max-width: 376px;
       height: 100%;
-      padding: var(--spacer-16) var(--spacer-3);
+      padding: var(--spacer-10) var(--spacer-3);
     }
     @media (min-width: 1200px) {
-      padding: var(--spacer-16) var(--spacer-5);
+      padding: var(--spacer-10) var(--spacer-5);
     }
     @media (min-width: 1200px) {
       max-width: 400px;
-      padding: var(--spacer-16) var(--spacer-8);
+      padding: var(--spacer-10) var(--spacer-8);
     }
   }
   &--sm {
