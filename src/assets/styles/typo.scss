@@ -60,7 +60,7 @@ h4,.h4 {
   }
 }
 $textColors: (
-  'white', 'light-gray', 'dark-gray', 'black', 'black-1',
+  'white', 'light-gray', 'dark-gray', 'black', 'black-1', 'green',
   'primary-4', 'neutrals-2', 'neutrals-3', 'neutrals-4', 'neutrals-6', 'neutrals-8'
 );
 @each $color in $textColors {

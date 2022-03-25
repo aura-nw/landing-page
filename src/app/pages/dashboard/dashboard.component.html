@@ -12,19 +12,13 @@
     </div>
 </section>
 <!--Introduction-->
-<section class="introduction pt-md-8">
+<section class="introduction pt-10 pt-md-8">
     <div class="img--scale object-1">
         <img src="../../../assets/imgs/pages/dashboard/object_1@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1@2x.png 2x" alt="" loading="lazy" />
     </div>
     <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
-                <!-- logo -->
-                <!-- <div class="img--scale aura-color-logo d-lg-none">
-          <img src="../../../assets/imgs/auraMainLogo-1x.png"
-               srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-2x.png 2x"
-               alt="" loading="lazy"/>
-        </div> -->
                 <h1 class="mb-5 h2-mob">Into the INTEROPERABLE future</h1>
                 <div class="sub-text body-mob mb-5 text--white pb-md-12">
                     Aura Network is a <b>Layer-1 NFT-centric blockchain</b>, <br class="d-none d-md-block" />built to accelerate global NFTs adoption by the Internet <br class="d-none d-lg-block" /> of Blockchain.</div>
@@ -78,12 +72,6 @@
             <!-- how it work -->
             <div class="row mt-10 mt-md-20 pt-md-18">
                 <div class="col-12 col-lg-6 my-auto">
-                    <!-- logo -->
-                    <!-- <div class="img--scale aura-color-logo mb-5 mb-md-4">
-            <img src="../../../assets/imgs/auraMainLogo-1x.png"
-                 srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-2x.png 2x"
-                 alt="" loading="lazy"/>
-          </div> -->
                     <!-- content -->
                     <h2>To NFT and Beyond</h2>
                     <div class="sub-text body-mob text--white my-8">
@@ -253,22 +241,13 @@
         <div class="row flex-xl-row-reverse justify-content-center">
             <div class="col-12 col-xl-6">
                 <div class="faq__contain px-2 px-md-0">
-                    <!-- logo -->
-                    <!-- <div class="img--scale aura-color-logo">
-            <img src="../../../assets/imgs/auraMainLogo-1x.png"
-                 srcset="../../../assets/imgs/auraMainLogo-1x.png 1x, ../../../assets/imgs/auraMainLogo-2x.png 2x"
-                 alt="" loading="lazy"/>
-          </div> -->
-                    <!-- <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" class="object-14 d-none d-lg-block"
-               srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
-               alt="" loading="lazy"/> -->
                     <h2 class="d-inline-block">FAQs</h2>
                     <div class="accordion mt-9">
                         <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
                             <div class="sub-text accordion-header" id="faq-{{i}}">
                                 <button class="collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true" [attr.aria-controls]="'collapse-'+i">
-                  {{faq.quest}}
-                </button>
+                                  {{faq.quest}}
+                                </button>
                             </div>
                             <div id="collapse-{{i}}" class="accordion-collapse collapse" [attr.aria-labelledby]="'faq-'+i">
                                 <div class="accordion-body body pl-0" [innerHTML]="faq.anw"></div>
