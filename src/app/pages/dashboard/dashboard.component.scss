@@ -16,9 +16,9 @@
     background: url("../../../assets/imgs/backgrounds/bw_space_lineart.png") no-repeat center;
     background-size: cover;
   }
-  @media (min-width: 1025px) {
-    background-size: contain;
-  }
+  //@media (min-width: 1025px) {
+  //  background-size: contain;
+  //}
   position: relative;
   .img-contain {
     position: relative;
@@ -114,6 +114,9 @@ section.partner {
       }
       @media (min-width: 1200px) {
         width: 352px;
+      }
+      @media (min-width: 1366px) {
+        width: 415px;
       }
       @media (min-width: 1440px) {
         width: 345px;
