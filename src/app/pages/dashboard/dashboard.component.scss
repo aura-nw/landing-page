@@ -210,6 +210,19 @@ section.partner {
 .faq {
   margin-top: var(--spacer-12);
   position: relative;
+  .faq-background {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: calc(100% + 100px);
+
+    transform: translateY(-100px);
+
+    background: url("../../../assets/imgs/pages/dashboard/planet@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   &__contain {
     .aura-color-logo {
       width: 160px;

@@ -123,7 +123,7 @@ export class DashboardComponent implements OnInit {
   featureCardData = [
     {
       icon: 'planet-rocket',
-      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers:`,
+      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
