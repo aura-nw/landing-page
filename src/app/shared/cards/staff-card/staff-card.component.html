@@ -5,7 +5,7 @@
     <div class="card__excerpt mt-2 small-text body-mob" *ngIf="position && company"
       [innerHTML]="position + (company !== '' ? (' | ' + company) : null)"></div>
     <div class="card__excerpt mt-2 small-text body-mob" *ngIf="position && !company" [innerHTML]="position"></div>
-    <div class="card__social-group my-3 d-flex justify-content-lg-center" *ngIf="socialLink">
+    <div class="card__social-group my-3 d-flex justify-content-center" *ngIf="socialLink">
       <a href="{{socialLink.twitter}}" target="_blank" *ngIf="socialLink.twitter" class="icon--social px-1 d-flex">
         <i class="icon icon--switch-stage icon-twitter"></i>
       </a>
