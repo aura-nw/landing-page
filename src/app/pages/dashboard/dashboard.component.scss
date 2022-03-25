@@ -235,6 +235,7 @@ section.partner {
         background: url("../../../assets/imgs/pages/dashboard/planet@1x.png");
         background-repeat: no-repeat;
         background-size: contain;
+        z-index: -1;
     }
     &__contain {
         .aura-color-logo {
