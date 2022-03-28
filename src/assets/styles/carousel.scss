@@ -22,15 +22,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: var(--aura-gradient-simple);
+      background: var(--aura-dark-gray);
       border-radius: 50%;
       transition: opacity .75s ease-in-out;
       z-index: 2;
       &::before {
         content: '';
-        width: 18px;
+        width: 20px;
         height: 12px;
-        background: url("../imgs/icons/basic/arrow-right-2.png") center;
+        background: url("../imgs/icons/basic/arrow-right-3.png") center;
+        background-repeat: no-repeat;
       }
     }
     .slick-prev.slick-arrow.slick-disabled,.slick-next.slick-arrow.slick-disabled {
