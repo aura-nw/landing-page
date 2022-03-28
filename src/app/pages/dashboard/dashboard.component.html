@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <!-- card-list mobile (carousel) -->
-                <div class="row d-lg-none">
+                <div class="row d-lg-none card-mobile">
                     <ngx-slick-carousel class="carousel" [config]="featureSlideConfig">
                         <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
                             <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
