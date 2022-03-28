@@ -33,7 +33,7 @@
                 PARTNERS
               </button>
                             <ul class="dropdown-menu body sub-text-mob" [class.show]="partnerShow && innerWidth > 992" (mouseover)="partnerShow=true" (mouseout)="partnerShow=false" aria-labelledby="dropdownMenuPartners">
-                                <li><button class="dropdown-item" (click)="scroll('partner', 'center'); headerMenu.classList.remove('show'); ariaExpanded = false">Partners</button></li>
+                                <li><button type="button" class="dropdown-item">Partners</button></li>
                                 <li><button class="dropdown-item" (click)="scroll('advisors', 'end'); headerMenu.classList.remove('show'); ariaExpanded = false">Advisors</button></li>
                             </ul>
                         </div>

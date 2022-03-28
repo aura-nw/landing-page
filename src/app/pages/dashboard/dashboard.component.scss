@@ -193,7 +193,7 @@ section.partner {
                 margin: 0 64px;
             }
         }
-         ::ng-deep button.slick-prev.slick-arrow {
+        ::ng-deep button.slick-prev.slick-arrow {
             left: 16px !important;
         }
     }
@@ -251,6 +251,12 @@ section.partner {
             font-weight: 600;
             @media (min-width: 992px) {
                 font-weight: 700;
+            }
+        }
+        @media (max-width: 600px) {
+            .accordion-header {
+                font-size: 16px !important;
+                line-height: 24px !important;
             }
         }
     }

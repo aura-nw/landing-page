@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,6 +6,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  currentQuarter = 1;
   // SlideConfig
   featureSlideConfig = {
     slidesToShow: 2,
@@ -19,6 +20,7 @@ export class DashboardComponent implements OnInit {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true
         }
       }
     ]
@@ -78,6 +80,7 @@ export class DashboardComponent implements OnInit {
     infinite: false,
     mobileFirst: true,
     arrows: true,
+    initialSlide: this.currentQuarter,
     responsive: [
       {
         breakpoint: 767,
@@ -159,7 +162,6 @@ export class DashboardComponent implements OnInit {
       icon: 'icon-sports-flag',
       date: 'Q2-2022',
       content: [
-        'IEO',
         'Aura Testnet',
         'Smart Contract & DAPP SDK',
         'Aura Playground',
@@ -366,7 +368,12 @@ export class DashboardComponent implements OnInit {
     },
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
-  constructor() {}
+  constructor() {
+    const today = new Date();
+    this.currentQuarter = Math.floor((today.getMonth() + 3) / 3);
+    this.roadmapSlideConfig.initialSlide = this.currentQuarter;
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }
