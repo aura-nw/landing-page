@@ -213,7 +213,7 @@ section.partner {
     }
     @media (min-width: 768px) {
         background: url("../../../assets/imgs/backgrounds/ROADMAP.png") center top no-repeat;
-        background-size: contain;
+        background-size: 90%;
         padding-top: 240px;
         .carousel {
             margin-top: 80px;
@@ -227,7 +227,6 @@ section.partner {
         padding-top: 298px;
     }
     @media (min-width: 1200px) {
-        background-size: auto;
         .carousel {
             transform: translateY(25%);
             .slick-slide {
@@ -250,6 +249,9 @@ section.partner {
                 left: -68px !important;
             }
         }
+    }
+    @media (min-width: 1280px) {
+        background-size: auto;
     }
 }
 
