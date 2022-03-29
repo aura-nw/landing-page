@@ -68,3 +68,6 @@ $textColors: (
     color: var(--aura-#{$color}) !important;
   }
 }
+.fw-semibold {
+  font-weight: 600;
+}
