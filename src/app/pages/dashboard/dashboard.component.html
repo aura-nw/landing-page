@@ -55,13 +55,13 @@
         <div class="container px-4 px-lg-0">
             <!-- card-list desktop -->
             <div class="aura-card-row mt-12">
-                <div class="row d-none d-lg-flex">
+                <div class="row d-none d-xl-flex">
                     <div class="col-md-4" *ngFor="let cardData of featureCardData">
                         <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
                     </div>
                 </div>
                 <!-- card-list mobile (carousel) -->
-                <div class="row d-lg-none card-mobile">
+                <div class="row d-xl-none card-mobile">
                     <ngx-slick-carousel class="carousel" [config]="featureSlideConfig">
                         <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
                             <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>

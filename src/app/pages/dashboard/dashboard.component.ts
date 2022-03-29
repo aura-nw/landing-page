@@ -9,18 +9,19 @@ export class DashboardComponent implements OnInit {
   currentQuarter = 1;
   // SlideConfig
   featureSlideConfig = {
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
+    mobileFirst: true,
     infinite: false,
     variableWidth: true,
     arrows: false,
+    dots: true,
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          dots: true
         }
       }
     ]
