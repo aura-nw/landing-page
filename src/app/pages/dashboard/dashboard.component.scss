@@ -261,7 +261,8 @@ section.partner {
         top: 0;
         content: "";
         width: 100%;
-        height: calc(100% + 100px);
+        // height: calc(100% + 100px);
+        height: 912px;
         transform: translateY(-100px);
         background: url("../../../assets/imgs/pages/dashboard/planet@1x.png");
         background-repeat: no-repeat;
@@ -574,9 +575,13 @@ ul.aura-list {
             right: 0;
             width: 24px;
             height: 24px;
-            background: url("../../../assets/imgs/icons/basic/chevron-down.png") center;
+            background: url("../../../assets/imgs/icons/basic/chevron-up.png") center;
             background-size: contain;
-            transform: translateY(-50%);
+            transform: translateY(-50%);            
+        }
+
+        &.collapsed:after {
+            background: url("../../../assets/imgs/icons/basic/chevron-down.png") center;
         }
     }
 }
