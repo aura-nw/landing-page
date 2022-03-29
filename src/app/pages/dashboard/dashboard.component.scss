@@ -223,6 +223,10 @@ section.partner {
             .slick-slide {
                 width: 220px;
             }
+
+            ::ng-deep button.slick-prev.slick-arrow {
+                left: -36px !important;
+            }
         }
     }
 }
