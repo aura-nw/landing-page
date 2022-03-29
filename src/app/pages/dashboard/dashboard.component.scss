@@ -140,13 +140,13 @@ section.partner {
         }
     }
     &#advisors {
-        margin-top: 40px;
+        // margin-top: 40px;
         @media (min-width: 992px) {
             margin-top: 200px;
         }
     }
     &#team {
-        margin-top: 40px;
+        // margin-top: 40px;
         @media (min-width: 992px) {
             margin-top: 300px;
         }
@@ -358,7 +358,7 @@ ul.aura-list {
 }
 
 .padding-3 {
-    padding: 0 16px;
+    // padding: 0 16px;
     @media (min-width: 1400px) {
         padding: 0 160px;
     }
@@ -564,6 +564,8 @@ ul.aura-list {
         width: 100%;
         text-align: left;
         position: relative;
+
+        padding-right: 18px;
         &:after {
             content: "";
             position: absolute;
