@@ -21,11 +21,11 @@
             height: 100%;
         }
         i.icon:before {
-            background: url("../../assets/imgs/icons/color/burger.svg") center no-repeat;
+            background: url("../../assets/imgs/icons-svg/color/burger.svg") center no-repeat;
             background-size: 30px;
         }
         i.icon.close:before {
-            background: url("../../assets/imgs/icons/basic/close.svg") center no-repeat;
+            background: url("../../assets/imgs/icons-svg/basic/close.svg") center no-repeat;
             background-size: 30px;
         }
     }
@@ -53,7 +53,7 @@
                     border: none;
                     width: var(--spacer-5);
                     height: var(--spacer-5);
-                    background: url("../../assets/imgs/icons/basic/chevron-down.png") center no-repeat;
+                    background: url("../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
                     background-size: contain;
                     margin-left: var(--spacer-2);
                     transition: background 0.45s ease-in-out;
@@ -73,7 +73,7 @@
                 //}
                 &.show {
                     &:after {
-                        background: url("../../assets/imgs/icons/white/chevron-up.png") center no-repeat;
+                        background: url("../../assets/imgs/icons-svg/white/chevron-up.svg") center no-repeat;
                         background-size: contain;
                     }
                 }
