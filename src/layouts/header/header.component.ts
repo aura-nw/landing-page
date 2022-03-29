@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   public innerWidth: any;
   isContainer = false;
   ariaExpanded = false;
+  isFloatingButton = false;
   @ViewChild('headerNavbarMenu') headerNavbarMenu!: ElementRef;
   constructor() { }
   ngOnInit(): void {
@@ -37,4 +38,22 @@ export class HeaderComponent implements OnInit {
     el?.scrollIntoView({ behavior: 'smooth', block: position });
   }
 
-}
+  expandAria(): void {
+    this.ariaExpanded = !this.ariaExpanded;
+    const buttonFloat: HTMLElement | null =
+      document.getElementById('aura-button-float');
+
+    if (buttonFloat) {
+      this.isFloatingButton = this.isFloatingButton
+        ? true
+        : buttonFloat.classList.contains('show');
+
+      if (this.ariaExpanded) {
+        buttonFloat.classList.remove('show');
+      } else if (this.isFloatingButton) {
+        buttonFloat.classList.add('show');
+        this.isFloatingButton = false;
+      }
+    }
+  }
+} 

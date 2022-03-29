@@ -58,7 +58,7 @@
   }
   &-staff {
     background: transparent;
-    padding: var(--spacer-6) 0;
+    padding: var(--spacer-6) 0 0 0;
     border: none;
     box-shadow: none;
     display: block;
@@ -94,7 +94,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       -webkit-line-clamp: 7;
-      height: 170px;
+      height: 120px;
       max-width: 400px;
       margin: auto;
       @media (min-width: 992px) {
