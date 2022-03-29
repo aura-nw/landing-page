@@ -164,6 +164,11 @@ section.partner {
 
 .road-map {
     margin-top: 55px;
+
+    &__content {
+        list-style-type: unset;
+        text-align: start;
+    }
     @media (min-width: 992px) {
         margin-top: 106px;
     }
@@ -188,10 +193,14 @@ section.partner {
         padding: 0 16px;
         padding-right: 0;
         .slick-slide {
-            margin: 0 50px;
+            margin: 0 24px;
             @media (min-width: 992px) {
-                margin: 0 64px;
+                margin: 0 32px;
             }
+        }
+        ::ng-deep button.slick-arrow {
+            visibility: hidden;
+            opacity: 0;
         }
         ::ng-deep button.slick-prev.slick-arrow {
             left: 16px !important;
@@ -210,6 +219,7 @@ section.partner {
             margin-top: 80px;
             .slick-slide {
                 width: 295px;
+                padding-left: 20px;
             }
         }
     }
@@ -224,8 +234,20 @@ section.partner {
                 width: 220px;
             }
 
+            ::ng-deep button.slick-arrow {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            ::ng-deep .slick-list {
+                padding-left: 16px;
+            }
+
+            ::ng-deep button.slick-arrow {
+                transform: translateY(-132px);
+            }
             ::ng-deep button.slick-prev.slick-arrow {
-                left: -36px !important;
+                left: -68px !important;
             }
         }
     }
