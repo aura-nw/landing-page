@@ -1,4 +1,4 @@
-@mixin mono-font-size($font-size, $line-height, $font: 'system-ui') {
+@mixin mono-font-size($font-size, $line-height, $font: 'SFProDisplay') {
   font-size: #{$font-size}rem !important;
   line-height: #{$line-height}rem !important;
   font-family: $font !important;
@@ -24,7 +24,7 @@ h4,.h4 {
   @include mono-font-size(3.2, 4,'SFProDisplay');
 }
 .sub-text {
-  @include mono-font-size(2.4, 4);
+  @include mono-font-size(2.4, 4, 'SFProDisplay');
 }
 .body {
   @include mono-font-size(1.6, 2.4, 'SFProDisplay')
@@ -50,7 +50,7 @@ h4,.h4 {
     @include mono-font-size(3.2, 4,'SFProDisplay');
   }
   .sub-text-mob {
-    @include mono-font-size(2.4, 4);
+    @include mono-font-size(2.4, 4, 'SFProDisplay');
   }
   .body-mob {
     @include mono-font-size(1.6, 2.4, 'SFProDisplay')
