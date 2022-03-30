@@ -240,7 +240,7 @@
                     <div class="accordion mt-9">
                         <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
                             <div class="sub-text accordion-header" id="faq-{{i}}">
-                                <button class="sub-text collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true" [attr.aria-controls]="'collapse-'+i">
+                                <button class="collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true" [attr.aria-controls]="'collapse-'+i">
                                   {{faq.quest}}
                                 </button>
                             </div>
