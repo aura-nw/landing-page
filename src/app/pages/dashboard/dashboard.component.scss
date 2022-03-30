@@ -601,8 +601,7 @@ ul.aura-list {
             transition-delay: 0ms;
         }
         &.collapsed:after {
-            transform: translateY(-50%) rotate(180deg);
-            // background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
+            background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
         }
     }
 }
