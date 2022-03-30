@@ -596,13 +596,17 @@ ul.aura-list {
             right: 0;
             width: 10px;
             height: 10px;
-            background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
+            background: url("../../../assets/imgs/icons-svg/basic/chevron-up.svg") center no-repeat;
             background-size: contain;
-            transform: translateY(-50%);            
+            transform: translateY(-50%);
+            transition: .5s .5s;
+            transition-delay: 0ms;
         }
 
         &.collapsed:after {
-            background: url("../../../assets/imgs/icons/basic/chevron-down.png") center;
+
+            transform: translateY(-50%) rotate(180deg);
+            // background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
         }
     }
 }
