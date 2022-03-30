@@ -56,10 +56,15 @@
                     background: url("../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
                     background-size: contain;
                     margin-left: var(--spacer-2);
-                    transition: background 0.45s ease-in-out;
+                    // transition: background 0.45s ease-in-out;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
+
+
+                    transition: .5s .5s;
+                    transition-delay: 0ms;
+
                     @media (min-width: 992px) {
                         top: 0;
                         transform: translateY(120%);
@@ -73,7 +78,9 @@
                 //}
                 &.show {
                     &:after {
-                        background: url("../../assets/imgs/icons-svg/white/chevron-up.svg") center no-repeat;
+                        
+                        transform: rotate(180deg);
+                        background: url("../../assets/imgs/icons-svg/white/chevron-down.svg") center no-repeat;
                         background-size: contain;
                     }
                 }
