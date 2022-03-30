@@ -353,6 +353,7 @@ ul.aura-list {
     li {
         padding-left: var(--spacer-9);
         position: relative;
+        margin-top: 16px;
         &:before {
             content: "";
             position: absolute;
