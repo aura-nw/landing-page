@@ -13,9 +13,6 @@
 </section>
 <!--Introduction-->
 <section class="introduction pt-10 pt-md-8">
-    <div class="img--scale object-1">
-        <img src="../../../assets/imgs/pages/dashboard/object_1@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1@2x.png 2x" alt="" loading="lazy" />
-    </div>
     <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
@@ -37,7 +34,7 @@
     </div>
 </section>
 <!--Outstanding Feature-->
-<section class="mt-10 mt-lg-0 feature">
+<section class="mt-10 feature">
     <div class="padding-1">
         <div class="container px-4 px-lg-0">
             <!-- content -->
@@ -55,13 +52,13 @@
         <div class="container px-4 px-lg-0">
             <!-- card-list desktop -->
             <div class="aura-card-row mt-12">
-                <div class="row d-none d-lg-flex">
+                <div class="row d-none d-xl-flex">
                     <div class="col-md-4" *ngFor="let cardData of featureCardData">
                         <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
                     </div>
                 </div>
                 <!-- card-list mobile (carousel) -->
-                <div class="row d-lg-none card-mobile">
+                <div class="row d-xl-none card-mobile">
                     <ngx-slick-carousel class="carousel" [config]="featureSlideConfig">
                         <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
                             <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
@@ -150,11 +147,7 @@
 <!--road map-->
 <section class="road-map">
     <div class="d-flex align-items-center">
-        <div class="col-5 d-none d-xl-block">
-            <div class="img-astronaut">
-                <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x" alt="" loading="lazy" />
-            </div>
-        </div>
+        <div class="col-5 d-none d-xl-block"></div>
         <div class="col-12 col-xl-7 text-center">
             <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none" width="343" />
             <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator" [config]="roadmapSlideConfig">
@@ -171,7 +164,7 @@
         </div>
     </div>
 </section>
-<div class="position-relative">
+<div class="position-relative organization">
     <!--advisor-->
     <section class="team mt-20 mt-lg-0" id="advisors">
         <div>

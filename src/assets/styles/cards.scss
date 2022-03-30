@@ -10,17 +10,17 @@
     width: 340px;
     height: 437px;
     @media (min-width: 992px) {
-      width: auto;
-      max-width: 376px;
-      height: 100%;
       padding: var(--spacer-10) var(--spacer-3);
+      height: 520px;
     }
     @media (min-width: 1200px) {
-      padding: var(--spacer-10) var(--spacer-5);
-    }
-    @media (min-width: 1200px) {
-      max-width: 400px;
+      height: 100%;
+      width: 100%;
+      max-width: 95%;
       padding: var(--spacer-10) var(--spacer-8);
+    }
+    @media (min-width: 1920px) {
+      max-width: 90%;
     }
   }
   &--sm {
@@ -33,7 +33,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    height: 64px;
+    height: 85px;
   }
 
   .feat-icon {
@@ -109,7 +109,7 @@
   margin-right: -2px;
   .aura-card {
     margin-right: 32px;
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       margin-right: 0;
     }
   }

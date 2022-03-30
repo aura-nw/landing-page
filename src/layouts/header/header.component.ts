@@ -11,25 +11,21 @@ export class HeaderComponent implements OnInit {
   resourceShow = false;
   aboutShow = false;
   public innerWidth: any;
-  isContainer = false;
   ariaExpanded = false;
   isFloatingButton = false;
   @ViewChild('headerNavbarMenu') headerNavbarMenu!: ElementRef;
   constructor() { }
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
-    this.isContainer = this.innerWidth > 1920;
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.innerWidth = window.innerWidth;
-    this.isContainer = this.innerWidth > 1920;
     this.ariaExpanded = !!this.headerNavbarMenu.nativeElement.classList.contains('expanded');
   }
   @HostListener('window:orientationchange', ['$event'])
   onOrientationChange(event) {
     this.innerWidth = window.innerWidth;
-    this.isContainer = this.innerWidth > 1920;
     this.ariaExpanded = !!this.headerNavbarMenu.nativeElement.classList.contains('expanded');
   }
 

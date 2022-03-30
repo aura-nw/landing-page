@@ -24,7 +24,7 @@ h4,.h4 {
   @include mono-font-size(3.2, 4,'SFProDisplay');
 }
 .sub-text {
-  @include mono-font-size(2.4, 3.2);
+  @include mono-font-size(2.4, 4);
 }
 .body {
   @include mono-font-size(1.6, 2.4, 'SFProDisplay')
@@ -50,7 +50,7 @@ h4,.h4 {
     @include mono-font-size(3.2, 4,'SFProDisplay');
   }
   .sub-text-mob {
-    @include mono-font-size(2.4, 3.2);
+    @include mono-font-size(2.4, 4);
   }
   .body-mob {
     @include mono-font-size(1.6, 2.4, 'SFProDisplay')
@@ -67,4 +67,7 @@ $textColors: (
   .text--#{$color} {
     color: var(--aura-#{$color}) !important;
   }
+}
+.fw-semibold {
+  font-weight: 600;
 }

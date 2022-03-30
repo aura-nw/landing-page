@@ -1,9 +1,17 @@
-<div [class.container]="isContainer" id="layout-wrapper">
+<div id="layout-wrapper">
     <!-- header -->
     <app-header></app-header>
     <div class="main-content" id="mainContent">
         <div class="page-content">
             <router-outlet></router-outlet>
+
+          <!--Satellite Images-->
+          <div class="object-1">
+            <img src="../../../assets/imgs/pages/dashboard/object_1-1@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_1-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1-1@2x.png 2x" alt="" loading="lazy" />
+          </div>
+          <div class="object-2">
+            <img src="../../../assets/imgs/pages/dashboard/astronaut_4-1@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_4-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x" alt="" loading="lazy" />
+          </div>
         </div>
         <!-- footer -->
         <app-footer></app-footer>
