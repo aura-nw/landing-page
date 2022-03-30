@@ -103,15 +103,15 @@
     }
 
     .hover,
-    .no-hover {
+    .none-hover {
         position: absolute;
     }
 
     .hover { visibility: hidden; }
-    .no-hover { visibility: visible; }
+    .none-hover { visibility: visible; }
 
     &:hover {
         .hover { visibility: visible; }
-        .no-hover { visibility: hidden; }
+        .non-hover { visibility: hidden; }
     }
 }
