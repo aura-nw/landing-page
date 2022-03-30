@@ -351,6 +351,7 @@ ul.aura-list {
     li {
         padding-left: var(--spacer-9);
         position: relative;
+        margin-top: 16px;
         &:before {
             content: "";
             position: absolute;
@@ -584,7 +585,6 @@ ul.aura-list {
         width: 100%;
         text-align: left;
         position: relative;
-
         padding-right: 18px;
         &:after {
             content: "";
@@ -594,13 +594,15 @@ ul.aura-list {
             right: 0;
             width: 10px;
             height: 10px;
-            background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
+            background: url("../../../assets/imgs/icons-svg/basic/chevron-up.svg") center no-repeat;
             background-size: contain;
             transform: translateY(-50%);
+            transition: .5s .5s;
+            transition-delay: 0ms;
         }
-
         &.collapsed:after {
-            background: url("../../../assets/imgs/icons/basic/chevron-down.png") center;
+            transform: translateY(-50%) rotate(180deg);
+            // background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
         }
     }
 }

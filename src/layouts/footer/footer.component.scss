@@ -20,11 +20,12 @@ footer {
       padding-right: 40px;
       .title {
         font-weight: 600;
+        margin-bottom: var(--spacer-2);
       }
     }
     ul {
       li {
-        margin-top: var(--spacer-2);
+        margin-bottom: var(--spacer-2);
       }
     }
   }
