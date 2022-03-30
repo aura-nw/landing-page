@@ -9,18 +9,19 @@ export class DashboardComponent implements OnInit {
   currentQuarter = 1;
   // SlideConfig
   featureSlideConfig = {
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
+    mobileFirst: true,
     infinite: false,
     variableWidth: true,
     arrows: false,
+    dots: true,
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          dots: true
         }
       }
     ]
@@ -71,11 +72,25 @@ export class DashboardComponent implements OnInit {
           slidesToScroll: 1,
           variableWidth: true,
         }
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 3000,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+        }
       }
     ]
   };
   roadmapSlideConfig = {
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     infinite: false,
     mobileFirst: true,
@@ -93,7 +108,7 @@ export class DashboardComponent implements OnInit {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           variableWidth: true,
         }
@@ -101,7 +116,7 @@ export class DashboardComponent implements OnInit {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           variableWidth: true,
         }
@@ -115,9 +130,41 @@ export class DashboardComponent implements OnInit {
         }
       },
       {
-        breakpoint: 1600,
+        breakpoint: 1439,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 2500,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 3000,
+        settings: {
+          slidesToShow: 6,
           slidesToScroll: 1,
           variableWidth: true,
         }

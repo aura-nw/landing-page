@@ -10,15 +10,15 @@
   }
   .carousel--has-arrows {
     .slick-prev {
-      left: 0 !important;
+      left: 16px !important;
       @media (min-width: 1440px) {
         left: -100px !important;
       }
     }
     .slick-prev.slick-arrow,.slick-next.slick-arrow{
       opacity: 1;
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,8 +30,13 @@
         content: '';
         width: 20px;
         height: 12px;
-        background: url("../imgs/icons/basic/arrow-right-3.png") center;
+        background: url("../imgs/icons-svg/color/arrow-right.svg") center;
         background-repeat: no-repeat;
+      }
+
+      @media (min-width: 1024px) {
+        width: 48px;
+        height: 48px;
       }
     }
     .slick-prev.slick-arrow.slick-disabled,.slick-next.slick-arrow.slick-disabled {
@@ -41,10 +46,18 @@
     }
     .slick-next.slick-arrow {
       right: 16px;
+      top: 20%;
+      @media (min-width: 1024px) {
+        top: 50%;
+      }
     }
     .slick-prev.slick-arrow {
       &::before {
         transform: rotate(180deg);
+      }
+      top: 20%;
+      @media (min-width: 1024px) {
+        top: 50%;
       }
     }
   }
@@ -76,15 +89,57 @@
       &:last-child {
         &:after { display: none; }
       }
-      @media (min-width: 768px) {
+
+      @media (min-width: 375px) {
         &:before { display: none; }
         &:not(:last-child) {
           &:after {
-            right: 0;
-            transform: translateX(100%);
+            right: -32px;
+            // transform: translateX(100%);
           }
         }
       }
+
+      @media (min-width: 424px) {
+        &:not(:last-child) {
+          &:after {
+            right: -24px;
+          }
+        }
+      }
+
+      @media (min-width: 768px) {
+        &:not(:last-child) {
+          &:after {
+            right: 32px;
+          }
+        }
+      }
+
+      @media (min-width: 1024px) {
+        &:not(:last-child) {
+          &:after {
+            right: 4%;
+          }
+        }
+      }
+
+      @media (min-width: 1200px) {
+        &:not(:last-child) {
+          &:after {
+            right: -8%;
+          }
+        }
+      }
+
+      @media (min-width: 1440px) {
+        &:not(:last-child) {
+          &:after {
+            right: -12%;
+          }
+        }
+      }
+
     }
   }
   .slick-slide, .slick-slide *{ outline: none !important; }

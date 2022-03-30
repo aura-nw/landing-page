@@ -6,16 +6,13 @@
             />
         </div>
 
-        <div class="img-astronaut">
+        <div class="img-astronaut bonben-animation">
             <img src="../../../assets/imgs/pages/dashboard/astronaut_1@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_1@2x.png 2x" alt="" loading="lazy" />
         </div>
     </div>
 </section>
 <!--Introduction-->
 <section class="introduction pt-10 pt-md-8">
-    <div class="img--scale object-1">
-        <img src="../../../assets/imgs/pages/dashboard/object_1@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1@2x.png 2x" alt="" loading="lazy" />
-    </div>
     <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
@@ -37,7 +34,7 @@
     </div>
 </section>
 <!--Outstanding Feature-->
-<section class="mt-10 mt-lg-0 feature">
+<section class="mt-10 feature">
     <div class="padding-1">
         <div class="container px-4 px-lg-0">
             <!-- content -->
@@ -55,13 +52,13 @@
         <div class="container px-4 px-lg-0">
             <!-- card-list desktop -->
             <div class="aura-card-row mt-12">
-                <div class="row d-none d-lg-flex">
+                <div class="row d-none d-xl-flex">
                     <div class="col-md-4" *ngFor="let cardData of featureCardData">
                         <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
                     </div>
                 </div>
                 <!-- card-list mobile (carousel) -->
-                <div class="row d-lg-none card-mobile">
+                <div class="row d-xl-none card-mobile">
                     <ngx-slick-carousel class="carousel" [config]="featureSlideConfig">
                         <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
                             <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
@@ -150,37 +147,33 @@
 <!--road map-->
 <section class="road-map">
     <div class="d-flex align-items-center">
-        <div class="col-5 d-none d-xl-block">
-            <div class="img-astronaut">
-                <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x" alt="" loading="lazy" />
-            </div>
-        </div>
+        <div class="col-5 d-none d-xl-block"></div>
         <div class="col-12 col-xl-7 text-center">
-            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none" width="295" />
+            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none" width="343" />
             <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator" [config]="roadmapSlideConfig">
                 <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
-                    <div class="road-map-item text--white text-center">
+                    <div class="road-map-item text--white text-start">
                         <!-- <div class="road-map__img"><i class="icon {{data.icon}}"></i></div> -->
-                        <h3 class="road-map__time-line mt-2">{{data.date}}</h3>
-                        <div class="road-map__content mt-4 body">
-                            <div class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></div>
-                        </div>
+                        <h3 class="road-map__time-line text-start mt-2 d-inline">{{data.date}}</h3>
+                        <ul class="road-map__content mt-4 body">
+                            <li class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></li>
+                        </ul>
                     </div>
                 </div>
             </ngx-slick-carousel>
         </div>
     </div>
 </section>
-<div class="position-relative">
+<div class="position-relative organization">
     <!--advisor-->
-    <section class="team mt-lg-0" id="advisors">
+    <section class="team mt-20 mt-lg-0" id="advisors">
         <div>
             <!--content-->
             <div class="container px-4 px-lg-0">
                 <div class="row">
                     <div class="col-12 col-md-10 mx-auto text-center">
                         <h2 class="mb-5 h1 h3-mob">Advisory board</h2>
-                        <div class="body mb-6 text--neutrals-6">Top-notch leaders and strategic insights</div>
+                        <div class="sub-text body-mob mb-6 text--neutrals-6">Top-notch leaders and strategic insights</div>
                     </div>
                 </div>
             </div>
@@ -212,7 +205,7 @@
                 <div class="row">
                     <div class="col-12 col-md-10 mx-auto text-center">
                         <h2 class="mb-5 h1 h3-mob">Our Team</h2>
-                        <div class="body mb-6 text--neutrals-6">A diversified team of blockchain believers</div>
+                        <div class="sub-text body-mob mb-6 text--neutrals-6">A diversified team of blockchain believers</div>
                     </div>
                 </div>
             </div>
@@ -241,7 +234,9 @@
         <div class="row flex-xl-row-reverse justify-content-center">
             <div class="col-12 col-xl-6">
                 <div class="faq__contain px-2 px-md-0">
-                    <h2 class="d-inline-block">FAQs</h2>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <h2 class="d-inline-block">FAQs</h2>
+                    </div>
                     <div class="accordion mt-9">
                         <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
                             <div class="sub-text accordion-header" id="faq-{{i}}">

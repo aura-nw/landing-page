@@ -1,36 +1,31 @@
 footer {
   background-color: var(--aura-black);
+  border-top: 1px solid var(--aura-neutrals-3);
   .footer__blocks {
-    padding-left: 16px;
-    padding-right: 16px;
     @media (min-width: 992px) {
-      border-top: 1px solid var(--aura-neutrals-3);
-      border-bottom: 1px solid var(--aura-neutrals-3);
+      //border-top: 1px solid var(--aura-neutrals-3);
+      //border-bottom: 1px solid var(--aura-neutrals-3);
     }
-    //@media (min-width: 1400px) {
-    //  padding-left: 196px;
-    //  padding-right: 196px;
-    //}
     @media (min-width: 1400px) {
-      padding-left: 90px;
-      padding-right: 90px;
+      padding-left: 196px;
+      padding-right: 196px;
     }
   }
   .footer__menu {
+    padding: var(--spacer-10) var(--spacer-4);
     color: var(--aura-white);
-    padding-top: 40px;
     border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 992px) {
       border: none;
-      margin-bottom: 100px;
       padding-right: 40px;
       .title {
         font-weight: 600;
+        margin-bottom: var(--spacer-2);
       }
     }
     ul {
       li {
-        margin-top: var(--spacer-2);
+        margin-bottom: var(--spacer-2);
       }
     }
   }
@@ -48,8 +43,8 @@ footer {
     }
   }
   .footer__contact {
+    padding: var(--spacer-10) var(--spacer-4);
     flex: 0 1 100%;
-    padding: var(--spacer-10) 0;
     .footer__logo {
       width: 105px;
       height: 65px;
@@ -62,24 +57,20 @@ footer {
     }
     border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 992px) {
-      padding: var(--spacer-10) 20px;
       border-left: 1px solid var(--aura-neutrals-3);
       border-right: 1px solid var(--aura-neutrals-3);
-    }
-    @media (min-width: 1024.99px) {
-      padding: var(--spacer-10) 52px;
+      border-bottom: none;
     }
   }
   .footer__cta {
-    padding-top: 40px;
+    padding: var(--spacer-10) var(--spacer-4);
     color: var(--aura-white);
-    border-bottom: 1px solid var(--aura-neutrals-3);
     &-contain {
-      // max-width: 256px;
+      .content {
+        line-height: 24px !important;
+      }
     }
     @media (min-width: 992px) {
-      padding-left: 47px;
-      border: none;
       .footer__cta-contain {
         max-width: 350px;
       }
@@ -98,6 +89,8 @@ footer {
     }
   }
   .bottom-bar {
+    border-top: 1px solid var(--aura-neutrals-3);
+    border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 1400px) {
       padding-left: 196px;
       padding-right: 196px;

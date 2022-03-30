@@ -11,24 +11,21 @@ export class HeaderComponent implements OnInit {
   resourceShow = false;
   aboutShow = false;
   public innerWidth: any;
-  isContainer = false;
   ariaExpanded = false;
+  isFloatingButton = false;
   @ViewChild('headerNavbarMenu') headerNavbarMenu!: ElementRef;
   constructor() { }
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
-    this.isContainer = this.innerWidth > 1920;
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.innerWidth = window.innerWidth;
-    this.isContainer = this.innerWidth > 1920;
     this.ariaExpanded = !!this.headerNavbarMenu.nativeElement.classList.contains('expanded');
   }
   @HostListener('window:orientationchange', ['$event'])
   onOrientationChange(event) {
     this.innerWidth = window.innerWidth;
-    this.isContainer = this.innerWidth > 1920;
     this.ariaExpanded = !!this.headerNavbarMenu.nativeElement.classList.contains('expanded');
   }
 
@@ -37,4 +34,22 @@ export class HeaderComponent implements OnInit {
     el?.scrollIntoView({ behavior: 'smooth', block: position });
   }
 
-}
+  expandAria(): void {
+    this.ariaExpanded = !this.ariaExpanded;
+    const buttonFloat: HTMLElement | null =
+      document.getElementById('aura-button-float');
+
+    if (buttonFloat) {
+      this.isFloatingButton = this.isFloatingButton
+        ? true
+        : buttonFloat.classList.contains('show');
+
+      if (this.ariaExpanded) {
+        buttonFloat.classList.remove('show');
+      } else if (this.isFloatingButton) {
+        buttonFloat.classList.add('show');
+        this.isFloatingButton = false;
+      }
+    }
+  }
+} 
