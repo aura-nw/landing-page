@@ -155,13 +155,13 @@ section.partner {
         }
     }
     &#advisors {
-        margin-top: 40px;
+        // margin-top: 40px;
         @media (min-width: 992px) {
             margin-top: 200px;
         }
     }
     &#team {
-        margin-top: 40px;
+        // margin-top: 40px;
         @media (min-width: 992px) {
             margin-top: 300px;
         }
@@ -179,6 +179,11 @@ section.partner {
 
 .road-map {
     margin-top: 55px;
+
+    &__content {
+        list-style-type: unset;
+        text-align: start;
+    }
     @media (min-width: 992px) {
         margin-top: 106px;
     }
@@ -204,10 +209,14 @@ section.partner {
         padding: 0 16px;
         padding-right: 0;
         .slick-slide {
-            margin: 0 50px;
+            margin: 0 24px;
             @media (min-width: 992px) {
-                margin: 0 64px;
+                margin: 0 32px;
             }
+        }
+        ::ng-deep button.slick-arrow {
+            visibility: hidden;
+            opacity: 0;
         }
         ::ng-deep button.slick-prev.slick-arrow {
             left: 16px !important;
@@ -220,12 +229,13 @@ section.partner {
     }
     @media (min-width: 768px) {
         background: url("../../../assets/imgs/backgrounds/ROADMAP.png") center top no-repeat;
-        background-size: contain;
+        background-size: 90%;
         padding-top: 240px;
         .carousel {
             margin-top: 80px;
             .slick-slide {
                 width: 295px;
+                padding-left: 20px;
             }
         }
     }
@@ -238,14 +248,32 @@ section.partner {
         }
     }
     @media (min-width: 1200px) {
-        background-size: auto;
         .carousel {
             margin-top: 150px;
             transform: translateY(25%);
             .slick-slide {
                 width: 220px;
             }
+
+            ::ng-deep button.slick-arrow {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            ::ng-deep .slick-list {
+                padding-left: 16px;
+            }
+
+            ::ng-deep button.slick-arrow {
+                transform: translateY(-132px);
+            }
+            ::ng-deep button.slick-prev.slick-arrow {
+                left: -68px !important;
+            }
         }
+    }
+    @media (min-width: 1280px) {
+        background-size: auto;
     }
 }
 
@@ -257,7 +285,8 @@ section.partner {
         top: 0;
         content: "";
         width: 100%;
-        height: calc(100% + 100px);
+        // height: calc(100% + 100px);
+        height: 912px;
         transform: translateY(-100px);
         background: url("../../../assets/imgs/pages/dashboard/planet@1x.png") no-repeat;
         background-position-x: 30%;
@@ -357,7 +386,7 @@ ul.aura-list {
 }
 
 .padding-3 {
-    padding: 0 16px;
+    // padding: 0 16px;
     @media (min-width: 1400px) {
         padding: 0 160px;
     }
@@ -557,6 +586,8 @@ ul.aura-list {
         width: 100%;
         text-align: left;
         position: relative;
+
+        padding-right: 18px;
         &:after {
             content: "";
             position: absolute;
@@ -567,7 +598,11 @@ ul.aura-list {
             height: 10px;
             background: url("../../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
             background-size: contain;
-            transform: translateY(-50%);
+            transform: translateY(-50%);            
+        }
+
+        &.collapsed:after {
+            background: url("../../../assets/imgs/icons/basic/chevron-down.png") center;
         }
     }
 }

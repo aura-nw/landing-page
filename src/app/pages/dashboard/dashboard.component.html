@@ -149,15 +149,15 @@
     <div class="d-flex align-items-center">
         <div class="col-5 d-none d-xl-block"></div>
         <div class="col-12 col-xl-7 text-center">
-            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none" width="295" />
+            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none" width="343" />
             <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator" [config]="roadmapSlideConfig">
                 <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
-                    <div class="road-map-item text--white text-center">
+                    <div class="road-map-item text--white">
                         <!-- <div class="road-map__img"><i class="icon {{data.icon}}"></i></div> -->
-                        <h3 class="road-map__time-line mt-2">{{data.date}}</h3>
-                        <div class="road-map__content mt-4 body">
-                            <div class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></div>
-                        </div>
+                        <h3 class="road-map__time-line text-start mt-2">{{data.date}}</h3>
+                        <ul class="road-map__content mt-4 body">
+                            <li class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></li>
+                        </ul>
                     </div>
                 </div>
             </ngx-slick-carousel>
@@ -166,7 +166,7 @@
 </section>
 <div class="position-relative organization">
     <!--advisor-->
-    <section class="team mt-lg-0" id="advisors">
+    <section class="team mt-20 mt-lg-0" id="advisors">
         <div>
             <!--content-->
             <div class="container px-4 px-lg-0">
@@ -234,7 +234,9 @@
         <div class="row flex-xl-row-reverse justify-content-center">
             <div class="col-12 col-xl-6">
                 <div class="faq__contain px-2 px-md-0">
-                    <h2 class="d-inline-block">FAQs</h2>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <h2 class="d-inline-block">FAQs</h2>
+                    </div>
                     <div class="accordion mt-9">
                         <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
                             <div class="sub-text accordion-header" id="faq-{{i}}">
