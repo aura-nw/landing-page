@@ -2,9 +2,9 @@
   <img src="assets/imgs/pages/team/{{img}}" alt="{{name}}" class="card__image" loading="lazy">
   <div>
     <h3 class="card__title mt-8 mt-md-4">{{name}}</h3>
-    <div class="card__excerpt mt-2 small-text body-mob" *ngIf="position && company"
+    <div class="card__excerpt mt-2 small-body body-mob" *ngIf="position && company"
       [innerHTML]="position + (company !== '' ? (' | ' + company) : null)"></div>
-    <div class="card__excerpt mt-2 small-text body-mob" *ngIf="position && !company" [innerHTML]="position"></div>
+    <div class="card__excerpt mt-2 small-body body-mob" *ngIf="position && !company" [innerHTML]="position"></div>
     <div class="card__social-group my-3 d-flex justify-content-center" *ngIf="socialLink">
       <a href="{{socialLink.linkedIn}}" target="_blank" *ngIf="socialLink.linkedIn" class="icon--social px-1 d-flex">
         <i class="icon icon--switch-stage icon-linkedIn"></i>

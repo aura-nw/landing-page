@@ -39,7 +39,9 @@ h4,.h4 {
   @include mono-font-size(1.6, 2.4, 'SFProDisplay');
   font-weight: bold;
 }
-
+.small-body {
+  @include mono-font-size(1.4, 1.6, 'SFProDisplay')
+}
 .small-text{
   @include mono-font-size(1.2, 1.6, 'SFProDisplay')
 }
