@@ -72,6 +72,20 @@ export class DashboardComponent implements OnInit {
           slidesToScroll: 1,
           variableWidth: true,
         }
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 3000,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+        }
       }
     ]
   };
@@ -119,6 +133,22 @@ export class DashboardComponent implements OnInit {
         breakpoint: 1600,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 3000,
+        settings: {
+          slidesToShow: 6,
           slidesToScroll: 1,
           variableWidth: true,
         }

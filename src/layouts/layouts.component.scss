@@ -9,9 +9,13 @@
   }
   .object-1 {
     position: absolute;
-    left: -30%;
-    top: 15%;
+    left: -38%;
+    top: 14%;
     z-index: -1;
+    @media (min-width: 1440px) {
+      left: -30%;
+      top: 14%;
+    }
     @media (min-width: 1920px) {
       left: -15%;
     }
@@ -20,10 +24,42 @@
       top: 15%;
       z-index: 1;
     }
+    @media (min-width: 3000px) {
+      left: 0%;
+      top: 17%;
+    }
   }
-  .object-1 {
-    display: none;
+  .object-2 {
+    position: absolute;
+    left: -20%;
+    top: 51%;
     @media (min-width: 1366px) {
+      left: -15%;
+      top: 51%;
+    }
+    @media (min-width: 1440px) {
+      left: -11%;
+    }
+    @media (min-width: 1600px) {
+      left: -5%;
+      top: 51.6%;
+    }
+    @media (min-width: 1920px) {
+      left: 3%;
+      top: 52%;
+    }
+    @media (min-width: 2559.99px) {
+      left: 16%;
+      top: 52%;
+    }
+    @media (min-width: 3000px) {
+      left: 25%;
+      top: 53%;
+    }
+  }
+  .object-1, .object-2 {
+    display: none;
+    @media (min-width: 1200px) {
       display: block;
     }
   }
