@@ -4,29 +4,35 @@
       <div class="row">
         <div class="col-12 col-lg-3">
           <div class="footer__menu order-2 order-lg-1">
-            <div class="footer__logo d-none d-lg-block">
+            <div class="footer__logo">
               <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
                    src="../../assets/imgs/auraMainLogo-1x.png"
                    alt="Aura Logo">
             </div>
-            <div class="menu body mt-lg-3 d-flex d-lg-block">
-              <div class="body sub-text-mob mr-4 mr-lg-0 title">Headquarter</div>
-              <ul class="small-text">
-                <li>Qwomar Trading Complex,</li>
-                <li>Blackburne Road,</li>
-                <li>Port Purcell, Road Town, Tortola,</li>
-                <li>British Virgin Islands VG1110.</li>
-              </ul>
+            <div class="col">
+              <div class="container mt-lg-4">
+                <div class="row">
+                  <div class="col-6 col-md-3 col-lg-12 body-bold title">
+                    Headquarter
+                  </div>
+                  <ul class="col-6 col-md-9 col-lg-12 small-text small-body-mob">
+                    <li>Qwomar Trading Complex,</li>
+                    <li>Blackburne Road,</li>
+                    <li>Port Purcell, Road Town, Tortola,</li>
+                    <li>British Virgin Islands VG1110.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="footer__contact order-1 order-lg-2 d-flex d-lg-block">
-            <div class="footer__logo d-lg-none flex-shrink-0 flex-grow-1 mr-11">
+            <!-- <div class="footer__logo d-lg-none flex-shrink-0 flex-grow-1 mr-11">
               <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
                    src="../../assets/imgs/auraMainLogo-1x.png"
                    alt="Aura Logo">
-            </div>
+            </div> -->
             <div class="container">
               <div class="row">
                 <div class="col-6 col-md-3">
@@ -69,20 +75,10 @@
         <div class="col-12 col-lg-3">
           <div class="footer__cta order-3 pb-10 pb-lg-0 flex-xl-shrink-0 flex-xl-grow-1">
             <div class="footer__cta-contain">
-              <div class="sub-text text-gradient d-inline fw-semibold">Let's talk!</div>
-              <div class="small-text mt-2 mt-md-8 -max-width-256 content">
+              <div class="body-bold sub-text-mob text-gradient d-inline fw-semibold">Let's talk!</div>
+              <div class="small-text body-mob mt-2 mt-md-8">
                 We’d love to hear from you, we’re here to answer all your questions.
                 <a href="mailto:support@aura.network" class="text-decoration-underline text--green">support@aura.network -></a>
-              </div>
-              <div class="mt-6 -max-width-256">
-                <form #ctaForm="ngForm" (ngSubmit)="onSubmitCTAForm(); ctaForm.reset()" class="aura-form single-input-field">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter your email" [(ngModel)]="formData.email" name="inputEmail" #email="ngModel">
-                    <button class="button" type="submit">
-                      <img src="assets/imgs/backgrounds/circle-color.png" alt="" width="32" height="32">
-                    </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
