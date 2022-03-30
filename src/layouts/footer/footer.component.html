@@ -123,32 +123,6 @@
             >support@aura.network -></a
           >
         </div>
-        <div class="mt-6">
-          <form
-            #ctaForm="ngForm"
-            (ngSubmit)="onSubmitCTAForm(); ctaForm.reset()"
-            class="aura-form single-input-field"
-          >
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter your email"
-                [(ngModel)]="formData.email"
-                name="inputEmail"
-                #email="ngModel"
-              />
-              <button class="button" type="submit">
-                <img
-                  src="assets/imgs/backgrounds/circle-color.png"
-                  alt=""
-                  width="32"
-                  height="32"
-                />
-              </button>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
   </section>
@@ -156,7 +130,7 @@
     <div
       class="d-flex flex-column-reverse flex-lg-row justify-content-lg-between align-items-center"
     >
-      <div class="caption-2 mt-10 mt-lg-0">
+      <div class="caption-2 mt-5 mt-lg-0">
         Copyright © 2022 Aura Network. All rights reserved
       </div>
       <div class="d-flex">
