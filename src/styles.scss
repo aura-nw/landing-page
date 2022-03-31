@@ -83,6 +83,10 @@ body {
   }
 }
 
+.card-mobile .slick-dots li{
+  margin: 0;
+}
+
 .card-mobile .slick-dots li button:before {
   background: #fcfcfd;
   content: "";

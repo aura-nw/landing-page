@@ -7,8 +7,10 @@
   height: 100%;
   &--md {
     padding: var(--spacer-10) var(--spacer-8);
-    width: 340px;
+    // width: 340px;
+    width: calc(100vw - 30px);
     height: 437px;
+    max-width: 400px;
     @media (min-width: 992px) {
       padding: var(--spacer-10) var(--spacer-3);
       height: 520px;
