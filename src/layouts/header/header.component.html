@@ -12,7 +12,7 @@
             <i class="icon" [class.close]="ariaExpanded"></i>
         </button>
         <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-md-0" id="headerMenu" #headerMenu>
-            <div class="d-lg-flex justify-content-center justify-content-lg-start">
+            <div class="d-lg-flex">
                 <ul class="navbar-nav nav-menu align-items-center">
                     <li class="nav-item d-none d-lg-block">
                         <a class="navbar-brand p-0 m-0" href="#">
@@ -25,8 +25,8 @@
                     <li class="nav-item mx-4 mx-lg-12 d-none d-lg-block">
                         <div class="divider divider-vertical"></div>
                     </li>
-                    <li class="nav-item menu-item h4 h3-mob mb-12 mb-md-0 mr-md-8 dropdown">
-                        <button class="nav-link dropdown-toggle m-auto ps-0" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
+                    <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 mb-md-0 mr-md-8 dropdown w-25">
+                        <button class="nav-link dropdown-toggle ps-0" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
                           FEATURES
                         </button>
                         <ul class="dropdown-menu body sub-text-mob" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" aria-labelledby="dropdownMenuFeatures">
@@ -35,9 +35,9 @@
                             <li><a class="dropdown-item h4-mob" target="_blank" href="https://explorer.aura.network/">Explorer</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item menu-item h4 h3-mob mb-12 my-md-0 mr-md-8">
+                    <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 my-md-0 mr-md-8 w-25">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle m-auto ps-0"
+                            <button class="nav-link dropdown-toggle ps-0"
                                     [class.show]="partnerShow && innerWidth > 992" (mouseover)="partnerShow=true"
                                     (mouseout)="partnerShow=false" type="button" id="dropdownMenuPartners"
                                     data-bs-toggle="dropdown">
@@ -49,9 +49,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item menu-item h4 h3-mob mb-12 my-md-0 mr-md-8">
+                    <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 my-md-0 mr-md-8 w-25">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle m-auto ps-0"
+                            <button class="nav-link dropdown-toggle ps-0"
                                     [class.show]="resourceShow && innerWidth > 992" (mouseover)="resourceShow=true"
                                     (mouseout)="resourceShow=false" type="button" id="dropdownMenuResources"
                                     data-bs-toggle="dropdown">
@@ -66,9 +66,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item menu-item h4 h3-mob mb-12 my-md-0">
+                    <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 my-md-0 w-25">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle m-auto ps-0"
+                            <button class="nav-link dropdown-toggle ps-0"
                                     [class.show]="aboutShow && innerWidth > 992"
                                     (mouseover)="aboutShow=true" (mouseout)="aboutShow=false" type="button"
                                     id="dropdownMenuAbout" data-bs-toggle="dropdown">
