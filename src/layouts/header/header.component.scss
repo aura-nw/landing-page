@@ -68,12 +68,6 @@
                         transform: translateY(120%);
                     }
                 }
-                //&:hover {
-                //  &:after {
-                //    background: url("../../assets/imgs/icons/white/chevron-down.svg") center no-repeat;
-                //    background-size: contain;
-                //  }
-                //}
                 &.show {
                     &:after {
                         background: url("../../assets/imgs/icons-svg/white/chevron-up.svg") center no-repeat;
@@ -103,7 +97,7 @@
                 transition: all 0.35s ease-in-out;
                 &.show {
                     max-height: 300px;
-                    padding: var(--spacer-6) var(--spacer-5);
+                    //padding: var(--spacer-6) var(--spacer-5);
                     padding-right: 0;
                     opacity: 1;
                 }
@@ -116,15 +110,6 @@
                     }
                     @media (max-width: 991px) {
                         text-align: left;
-                        // &:after {
-                        //     content: "";
-                        //     position: absolute;
-                        //     left: 0;
-                        //     right: 0;
-                        //     height: 1px;
-                        //     width: 100%;
-                        //     background-color: var(--aura-neutrals-3);
-                        // }
                     }
                 }
                 .dropdown-item {

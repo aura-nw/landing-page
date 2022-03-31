@@ -25,10 +25,10 @@
                     <li class="nav-item mx-4 mx-lg-12 d-none d-lg-block">
                         <div class="divider divider-vertical"></div>
                     </li>
-                    <li class="nav-item menu-item h4 h3-mob mb-12 mb-md-0 mr-md-13 dropdown">
-                        <button class="nav-link dropdown-toggle m-auto" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
-              FEATURES
-            </button>
+                    <li class="nav-item menu-item h4 h3-mob mb-12 mb-md-0 mr-md-8 dropdown">
+                        <button class="nav-link dropdown-toggle m-auto ps-0" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
+                          FEATURES
+                        </button>
                         <ul class="dropdown-menu body sub-text-mob" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" aria-labelledby="dropdownMenuFeatures">
                             <li><a class="dropdown-item h4-mob" target="_blank" href="https://safe.aura.network/welcome">Safe</a></li>
                             <li><a class="dropdown-item h4-mob" target="_blank" href="https://docs.aura.network/">Docs</a></li>
@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mb-12 my-md-0 mr-md-8">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle m-auto"
+                            <button class="nav-link dropdown-toggle m-auto ps-0"
                                     [class.show]="partnerShow && innerWidth > 992" (mouseover)="partnerShow=true"
                                     (mouseout)="partnerShow=false" type="button" id="dropdownMenuPartners"
                                     data-bs-toggle="dropdown">
@@ -51,7 +51,7 @@
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mb-12 my-md-0 mr-md-8">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle m-auto"
+                            <button class="nav-link dropdown-toggle m-auto ps-0"
                                     [class.show]="resourceShow && innerWidth > 992" (mouseover)="resourceShow=true"
                                     (mouseout)="resourceShow=false" type="button" id="dropdownMenuResources"
                                     data-bs-toggle="dropdown">
@@ -68,7 +68,7 @@
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mb-12 my-md-0">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle m-auto"
+                            <button class="nav-link dropdown-toggle m-auto ps-0"
                                     [class.show]="aboutShow && innerWidth > 992"
                                     (mouseover)="aboutShow=true" (mouseout)="aboutShow=false" type="button"
                                     id="dropdownMenuAbout" data-bs-toggle="dropdown">
