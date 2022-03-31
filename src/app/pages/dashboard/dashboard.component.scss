@@ -104,7 +104,7 @@ section.partner {
     }
 }
 .organization {
-  margin-top: 100px;
+  margin-top: 30px;
   @media (min-width: 1200px) {
     margin-top: 500px;
   }
@@ -161,7 +161,7 @@ section.partner {
     &#team {
         // margin-top: 40px;
         @media (min-width: 992px) {
-            margin-top: 300px;
+            margin-top: 160px;
         }
     }
 }
@@ -181,6 +181,10 @@ section.partner {
     &__content {
         list-style-type: unset;
         text-align: start;
+    }
+    .img-road-map {
+        width: 100%;
+        padding: 0px 16px;
     }
     @media (min-width: 992px) {
         margin-top: 106px;
@@ -530,7 +534,7 @@ ul.aura-list {
 
 .object-15 {
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     left: 15%;
     width: 150px;
