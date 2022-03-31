@@ -443,12 +443,15 @@ ul.aura-list {
     @media (min-width: 992px) {
         position: absolute;
         max-width: 639px;
-        right: 20%;
+        right: 8%;
         bottom: -30%;
         z-index: -1;
         img {
             object-fit: contain;
         }
+    }
+    @media (min-width: 1600.99px) {
+        right: 20%;
     }
 }
 
