@@ -174,17 +174,17 @@ export class DashboardComponent implements OnInit {
   // MockData
   featureCardData = [
     {
-      icon: 'planet-rocket',
+      icon: 'PlanetRocket',
       title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers`,
       subTitle: 'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network'
     },
     {
-      icon: 'brands',
+      icon: 'Rocket',
       title: 'Brands renaissance',
       subTitle: 'Stay ahead of the game and provide new momentum with Aura Network framework, the innovative way to boost customers, users or fans engagement'
     },
     {
-      icon: 'tailored',
+      icon: 'Planet',
       title: 'Tailored for NFT owners',
       subTitle: 'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before!'
     }
