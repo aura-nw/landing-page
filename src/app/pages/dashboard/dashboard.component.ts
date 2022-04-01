@@ -34,31 +34,31 @@ export class DashboardComponent implements OnInit {
     arrows: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 767.9,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 991.99,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: true,
         }
       },
+      // {
+      //   breakpoint: 1199,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     slidesToScroll: 1,
+      //     variableWidth: true,
+      //   }
+      // },
       {
-        breakpoint: 991.99,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          variableWidth: true,
-        }
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          variableWidth: true,
-        }
-      },
-      {
-        breakpoint: 1400,
+        breakpoint: 1439.9,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -89,6 +89,7 @@ export class DashboardComponent implements OnInit {
       }
     ]
   };
+
   roadmapSlideConfig = {
     slidesToShow: 2,
     slidesToScroll: 1,

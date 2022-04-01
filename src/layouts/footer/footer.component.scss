@@ -1,16 +1,16 @@
 footer {
   background-color: var(--aura-black);
   border-top: 1px solid var(--aura-neutrals-3);
-  .footer__blocks {
-    @media (min-width: 992px) {
-      //border-top: 1px solid var(--aura-neutrals-3);
-      //border-bottom: 1px solid var(--aura-neutrals-3);
-    }
-    @media (min-width: 1400px) {
-      padding-left: 196px;
-      padding-right: 196px;
-    }
-  }
+  // .footer__blocks {
+  //   @media (min-width: 992px) {
+  //     //border-top: 1px solid var(--aura-neutrals-3);
+  //     //border-bottom: 1px solid var(--aura-neutrals-3);
+  //   }
+  //   @media (min-width: 1400px) {
+  //     padding-left: 196px;
+  //     padding-right: 196px;
+  //   }
+  // }
   .footer__menu {
     padding: var(--spacer-10) var(--spacer-4);
     color: var(--aura-white);

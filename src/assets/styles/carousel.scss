@@ -10,10 +10,10 @@
   }
   .carousel--has-arrows {
     .slick-prev {
-      left: 16px !important;
-      @media (min-width: 1440px) {
-        left: -100px !important;
-      }
+      // left: 16px !important;
+      // @media (min-width: 1440px) {
+      //   left: -100px !important;
+      // }
     }
     .slick-prev.slick-arrow,.slick-next.slick-arrow{
       opacity: 1;
@@ -50,14 +50,21 @@
       @media (min-width: 1024px) {
         top: 50%;
       }
+      // @media (min-width: 1439.9px) {
+      //   right: 0;
+      // }
     }
     .slick-prev.slick-arrow {
       &::before {
         transform: rotate(180deg);
       }
       top: 20%;
+      left: 13.5px;
       @media (min-width: 1024px) {
         top: 50%;
+      }
+      @media (min-width: 1439.9px) {
+        left: 0;
       }
     }
   }
