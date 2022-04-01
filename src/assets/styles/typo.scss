@@ -12,23 +12,28 @@ h1,
 .h1 {
   @include mono-font-size(9.6, 12, 0.01, "Redig");
   display: inline-block;
+  letter-spacing: 0.13rem !important;
 }
 h2,
 .h2 {
   @include mono-font-size(6.4, 8, 0.02, "Redig");
   display: inline-block;
+  letter-spacing: 0.13rem !important;
 }
 h3,
 .h3 {
   @include mono-font-size(4.8, 5.6, 0.02, "Redig");
+  letter-spacing: 0.13rem !important;
 }
 h4,
 .h4 {
   @include mono-font-size(3.2, 3.8, 0.02, "Redig");
+  letter-spacing: 0.13rem !important;
 }
 h5,
 .h5 {
   @include mono-font-size(2.4, auto, 0.02, "Redig");
+  letter-spacing: 0.13rem !important;
 }
 .title {
   @include mono-font-size(3.2, 4, -0.01, "SFProDisplay");
