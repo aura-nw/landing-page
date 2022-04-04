@@ -296,7 +296,7 @@ export class DashboardComponent implements OnInit {
       name: 'Giang Tran',
       img: 'GiangTran.png',
       position: `Founder`,
-      desc: `As a Forbes Technology Council member, Giang has deep expertise in Cloud and Enterprise Blockchain. He is the founder of akaChain and has guided many successful start-ups. Giang drives Aura's strategy adoption and equitable growth.`,
+      desc: `As a Forbes Technology Council member, Giang has deep expertise in Cloud and Blockchain. He is the ex-founder of akaChain and has guided many successful start-ups. Giang drives Aura's strategy adoption and equitable growth.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/',
         twitter: 'https://twitter.com/GiangTr41516054'
@@ -355,8 +355,7 @@ export class DashboardComponent implements OnInit {
       name: 'James Le',
       img: 'JamesLe.png',
       position: `Head of Business Development`,
-      desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. ' +
-        'He is in charge of developing Aura’s business integrations with the growing number of partners.',
+      desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. He is in charge of developing Aura’s business integrations with the growing number of partners.',
       link: {
         linkedIn: 'https://www.linkedin.com/in/duc-le-minh-akachain-consultant/'
       }
