@@ -1,5 +1,15 @@
 .slick-track {
   display: flex;
+  .slick-slide {
+    opacity: 1;
+    transition: opacity .35s ease-in-out;
+    &:not(.slick-active) {
+      opacity: 0.2;
+    }
+  }
+}
+.team .slick-track {
+  display: flex;
   overflow: visible;
   .slick-slide {
     opacity: 0;
@@ -31,13 +41,9 @@
       }
     }
   }
-
-  .slick-slide + .slick-current {
-    opacity: 1;
-  }
 }
 
-.slick-slider .slick-list {
+.team .slick-slider .slick-list {
   overflow: visible;
 }
 
