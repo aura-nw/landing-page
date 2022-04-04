@@ -43,7 +43,7 @@
   }
 }
 
-.team .slick-slider .slick-list {
+.slick-slider .slick-list {
   overflow: visible;
 }
 
@@ -117,20 +117,24 @@
       content: "";
       position: absolute;
       top: 0;
-      width: 62px;
+      width: 46px;
       height: 80px;
       background: url("../imgs/pages/slider-separator.png") center no-repeat;
       background-size: contain;
+      @media (min-width: 424) {
+        width: 62px;
+      }
       @media (min-width: 992px) {
         width: 80px;
         background-size: cover;
       }
     }
     &:before {
-      left: -16px;
+      // left: -16px;
+      display: none;
     }
     &:after {
-      right: -16px;
+      right: -32px;
     }
     &:first-child {
       &:before {

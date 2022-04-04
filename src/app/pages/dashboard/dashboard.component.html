@@ -171,26 +171,31 @@
 </section>
 -->
 <!--road map-->
-<section class="road-map">
-    <div class="d-flex align-items-center">
-        <div class="col-5 d-none d-xl-block"></div>
-        <div class="col-12 col-xl-7 text-center">
-            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy"
-                class="d-md-none img-road-map" />
-            <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator"
-                [config]="roadmapSlideConfig">
-                <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
-                    <div class="road-map-item text--white text-start">
-                        <!-- <div class="road-map__img"><i class="icon {{data.icon}}"></i></div> -->
-                        <h3 class="road-map__time-line text-start mt-2 d-inline">{{data.date}}</h3>
-                        <ul class="road-map__content mt-4 body">
-                            <li class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></li>
-                        </ul>
+<section class="road-map team">
+    <div class="container">
+        <div class="row align-items-end justify-content-end">
+            <div class="col-12 col-lg-8">
+                <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy"
+                    class="d-md-none img-road-map" />
+                <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator"
+                    [config]="roadmapSlideConfig" (beforeChange)="roadMapSlickChange($event)">
+                    <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
+                        <div class="road-map-item text--white text-start">
+                            <!-- <div class="road-map__img"><i class="icon {{data.icon}}"></i></div> -->
+                            <h3 class="road-map__time-line text-start mt-2 d-inline">{{data.date}}</h3>
+                            <ul class="road-map__content mt-4 body">
+                                <li class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </ngx-slick-carousel>
+                </ngx-slick-carousel>
+            </div>
         </div>
     </div>
+    <!-- <div class="d-flex align-items-center">
+        <div class="col-5 d-none d-xl-block"></div>
+        
+    </div> -->
 </section>
 <div class="position-relative organization">
     <!--advisor-->
@@ -214,7 +219,8 @@
                 <div class="row">
                     <div class="col-12">
                         <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig"
-                            (init)="advisoryInit($event)" (afterChange)="afterAdvisoryChange($event)" (beforeChange)="toggleAttribute($event)">
+                            (init)="advisoryInit($event)" (afterChange)="afterAdvisoryChange($event)"
+                            (beforeChange)="toggleAttribute($event)">
                             <div ngxSlickItem *ngFor="let data of advisorData" class="slide">
                                 <app-staff-card [isAdvisors]="true" [img]="data.img" [name]="data.name"
                                     [position]="data.position" [company]="data.company" [desc]="data.desc"
@@ -263,7 +269,8 @@
                 <div class="row">
                     <div class="col-12">
                         <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig"
-                        (init)="teamInit($event)" (afterChange)="afterTeamChange($event)" (beforeChange)="toggleAttribute($event)">
+                            (init)="teamInit($event)" (afterChange)="afterTeamChange($event)"
+                            (beforeChange)="toggleAttribute($event)">
                             <div ngxSlickItem *ngFor="let data of teamData" class="slide">
                                 <app-staff-card [isAdvisors]="false" [img]="data.img" [name]="data.name"
                                     [position]="data.position" [desc]="data.desc" [socialLink]="data.link">

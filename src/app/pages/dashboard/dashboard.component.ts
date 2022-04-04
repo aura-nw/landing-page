@@ -108,77 +108,13 @@ export class DashboardComponent implements OnInit {
     initialSlide: this.currentQuarter,
     responsive: [
       {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
         breakpoint: 992,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
           variableWidth: true,
         },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 1439,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 1920,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 2500,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 3000,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
+      }
     ],
   };
   // MockData
@@ -515,7 +451,6 @@ export class DashboardComponent implements OnInit {
     const slick = e.slick;
     let offset =
       +slick.breakpointSettings[slick.activeBreakpoint]?.slidesToShow - 1;
-    console.log(offset);
 
     Object.keys(slick['$slides']).forEach((element) => {
       if (isNaN(Number(element))) return;
@@ -524,6 +459,34 @@ export class DashboardComponent implements OnInit {
         +element === next - 1 ||
         +element === next ||
         (offset === 2 && +element === next + 1)
+      ) {
+        (slick['$slides'][element] as HTMLElement)?.setAttribute(
+          'data-active',
+          '1'
+        );
+      } else {
+        const data = +element > next ? 2 : 0;
+        (slick['$slides'][element] as HTMLElement)?.setAttribute(
+          'data-active',
+          data.toString()
+        );
+      }
+    });
+  }
+
+  roadMapSlickChange(e): void {
+    const next = e?.nextSlide;
+    const slick = e.slick;
+    let offset =
+      +slick.breakpointSettings[slick.activeBreakpoint]?.slidesToShow - 1;
+
+    Object.keys(slick['$slides']).forEach((element) => {
+      if (isNaN(Number(element))) return;
+
+      if (
+        +element === next ||
+        +element === next + 1 ||
+        (offset === 2 && +element === next + 2)
       ) {
         (slick['$slides'][element] as HTMLElement)?.setAttribute(
           'data-active',
