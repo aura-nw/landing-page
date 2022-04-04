@@ -89,17 +89,8 @@
       padding: var(--spacer-1) var(--spacer-6);
     }
     .card__desc {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      -webkit-line-clamp: 7;
-      height: 200px;
       max-width: 400px;
       margin: auto;
-      @media (min-width: 992px) {
-        -webkit-line-clamp: 6;
-        height: 220px;
-      }
     }
   }
 }
