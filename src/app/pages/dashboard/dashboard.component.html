@@ -210,10 +210,11 @@
                 </div>
             </div>
             <!--slider-->
-            <div class="container pr-0 mt-4 mt-md-12">
+            <div class="container mt-4 mt-md-12">
                 <div class="row">
                     <div class="col-12">
-                        <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig">
+                        <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig"
+                            (init)="advisoryInit($event)" (afterChange)="afterAdvisoryChange($event)" (beforeChange)="toggleAttribute($event)">
                             <div ngxSlickItem *ngFor="let data of advisorData" class="slide">
                                 <app-staff-card [isAdvisors]="true" [img]="data.img" [name]="data.name"
                                     [position]="data.position" [company]="data.company" [desc]="data.desc"
@@ -258,10 +259,11 @@
                 </div>
             </div>
             <!--slider-->
-            <div class="container pr-0 mt-4 mt-md-12">
+            <div class="container mt-4 mt-md-12">
                 <div class="row">
                     <div class="col-12">
-                        <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig">
+                        <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig"
+                        (init)="teamInit($event)" (afterChange)="afterTeamChange($event)" (beforeChange)="toggleAttribute($event)">
                             <div ngxSlickItem *ngFor="let data of teamData" class="slide">
                                 <app-staff-card [isAdvisors]="false" [img]="data.img" [name]="data.name"
                                     [position]="data.position" [desc]="data.desc" [socialLink]="data.link">
