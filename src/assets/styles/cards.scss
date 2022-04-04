@@ -8,7 +8,7 @@
   &--md {
     padding: var(--spacer-10) var(--spacer-8);
     // width: 340px;
-    width: calc(100vw - 30px);
+    width: calc(100vw - 32px);
     height: 437px;
     max-width: 400px;
     @media (min-width: 992px) {
@@ -20,6 +20,7 @@
       width: 100%;
       max-width: 95%;
       padding: var(--spacer-10) var(--spacer-8);
+      margin-right: 0;
     }
   }
   &--sm {
@@ -57,14 +58,12 @@
   }
   &-staff {
     background: transparent;
-    padding: var(--spacer-6) var(--spacer-15) 0 var(--spacer-15);
+    // padding: var(--spacer-6) var(--spacer-12) 0;
     border: none;
     box-shadow: none;
     display: block;
     text-align: center;
-    @media (min-width: 992px) {
-      width: fit-content;
-    }
+
     .card__image {
       width: 132px;
       height: 132px;
@@ -89,14 +88,15 @@
       padding: var(--spacer-1) var(--spacer-6);
     }
     .card__desc {
-      max-width: 400px;
+      // max-width: 400px;
+      width: 267px;
       margin: auto;
     }
   }
 }
 .aura-card-row {
-  margin-left: -2px;
-  margin-right: -2px;
+  // margin-left: -2px;
+  // margin-right: -2px;
   .aura-card {
     margin-right: 32px;
     @media (min-width: 1200px) {
