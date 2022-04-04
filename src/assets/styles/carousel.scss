@@ -14,7 +14,8 @@
       opacity: 0;
     }
 
-    &.slick-current {
+    &.slick-current,
+    &.slick-active {
       opacity: 1;
     }
 
