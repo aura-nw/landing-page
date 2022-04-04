@@ -529,12 +529,13 @@ export class DashboardComponent implements OnInit {
       ) {
         (slick['$slides'][element] as HTMLElement)?.setAttribute(
           'data-active',
-          'true'
+          '1'
         );
       } else {
+        const data = +element > next ? 2 : 0;
         (slick['$slides'][element] as HTMLElement)?.setAttribute(
           'data-active',
-          'false'
+          data.toString()
         );
       }
     });

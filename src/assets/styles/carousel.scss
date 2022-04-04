@@ -1,18 +1,31 @@
 .slick-track {
   display: flex;
+  overflow: visible;
   .slick-slide {
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
+
+    &[tabindex="0"],
+    &[tabindex="1"] {
+      opacity: 0.2;
+    }
+
+    &[tabindex="-1"] {
+      opacity: 0;
+    }
 
     &.slick-current {
       opacity: 1;
     }
 
     @media (min-width: 767.9px) {
-      &[data-active="true"] {
+      &[data-active="1"] {
         opacity: 1;
       }
-      &[data-active="false"] {
+      &[data-active="2"] {
+        opacity: 0.2;
+      }
+      &[data-active="0"] {
         opacity: 0;
       }
     }
@@ -22,6 +35,11 @@
     opacity: 1;
   }
 }
+
+.slick-slider .slick-list {
+  overflow: visible;
+}
+
 .carousel--has-arrows {
   .slick-prev {
     // left: 16px !important;

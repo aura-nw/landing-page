@@ -48,11 +48,11 @@
     position: relative;
     padding-top: 100px;
     @media (min-width: 992px) {
-      padding-bottom: 300px;
-      margin-top: 80px;
+        padding-bottom: 300px;
+        margin-top: 80px;
     }
     @media (min-width: 1200px) {
-      margin-top: 150px;
+        margin-top: 150px;
     }
 }
 
@@ -91,10 +91,10 @@ section.partner {
     }
 }
 .organization {
-  margin-top: 30px;
-  @media (min-width: 1200px) {
-    margin-top: 500px;
-  }
+    margin-top: 30px;
+    @media (min-width: 1200px) {
+        margin-top: 500px;
+    }
 }
 .team {
     position: relative;
@@ -137,7 +137,9 @@ section.partner {
         }
         .slick-list {
             margin: 0 -20px;
-
+            &.draggable {
+                overflow-x: visible !important;
+            }
         }
     }
     &#advisors {
@@ -211,8 +213,8 @@ section.partner {
         ::ng-deep button.slick-prev.slick-arrow {
             left: 16px !important;
         }
-        .road-map__time-line{
-            background: linear-gradient(108.46deg, #5EE6D0 12.51%, #BFC6FF 51.13%, #FFBA69 87.49%);
+        .road-map__time-line {
+            background: linear-gradient(108.46deg, #5ee6d0 12.51%, #bfc6ff 51.13%, #ffba69 87.49%);
             background-clip: text;
             color: transparent;
         }
@@ -282,9 +284,9 @@ section.partner {
         background-position-x: 30%;
         background-size: contain;
         z-index: -1;
-      @media (min-width: 3000px) {
-        background-position-x: 40%;
-      }
+        @media (min-width: 3000px) {
+            background-position-x: 40%;
+        }
     }
     &__contain {
         .aura-color-logo {
@@ -321,7 +323,6 @@ section.partner {
         min-height: 296px;
     }
 }
-
 
 /* Heading style */
 
@@ -390,7 +391,6 @@ ul.aura-list {
     animation-timing-function: ease-in;
     animation-duration: 1s;
 }
-
 
 /* Satellite Images */
 
@@ -570,7 +570,8 @@ ul.aura-list {
             border-bottom: 1px solid var(--aura-neutrals-3);
         }
     }
-    &-header {}
+    &-header {
+    }
     &-body {
         color: var(--aura-light-gray);
     }
@@ -592,7 +593,7 @@ ul.aura-list {
             background: url("../../../assets/imgs/icons-svg/basic/chevron-up.svg") center no-repeat;
             background-size: contain;
             transform: translateY(-50%);
-            transition: .5s .5s;
+            transition: 0.5s 0.5s;
             transition-delay: 0ms;
         }
         &.collapsed:after {
@@ -601,49 +602,48 @@ ul.aura-list {
     }
 }
 .bonben-animation {
-  animation: bonben 10s linear 2s infinite reverse;
+    animation: bonben 10s linear 2s infinite reverse;
 }
 
-
 @keyframes bonben {
-  0% {
-    // opacity: 0.1;
-    transform: translate(0%, 0%);
-  }
-  10% {
-    // opacity: 0.9;
-    transform: translate(1%, -1%);
-  }
-  20% {
-    // opacity: 1;
-    transform: translate(2%, 0%);
-  }
-  30% {
-    // opacity: 0.5;
-    transform: translate(1%, 1%);
-  }
-  40% {
-    // opacity: 1;
-    transform: translate(0%, 0%);
-  }
-  50% {
-    // opacity: 0.3;
-    transform: translate(-1%, -1%);
-  }
-  60% {
-    // opacity: 0.9;
-    transform: translate(-2%, 0%);
-  }
-  70% {
-    // opacity: 0.7;
-    transform: translate(-1%, -1%);
-  }
-  80% {
-    // opacity: 1;
-    transform: translate(0%, 0%);
-  }
-  90% {
-    // opacity: 0.5;
-    transform: translate(1%, 1%);
-  }
+    0% {
+        // opacity: 0.1;
+        transform: translate(0%, 0%);
+    }
+    10% {
+        // opacity: 0.9;
+        transform: translate(1%, -1%);
+    }
+    20% {
+        // opacity: 1;
+        transform: translate(2%, 0%);
+    }
+    30% {
+        // opacity: 0.5;
+        transform: translate(1%, 1%);
+    }
+    40% {
+        // opacity: 1;
+        transform: translate(0%, 0%);
+    }
+    50% {
+        // opacity: 0.3;
+        transform: translate(-1%, -1%);
+    }
+    60% {
+        // opacity: 0.9;
+        transform: translate(-2%, 0%);
+    }
+    70% {
+        // opacity: 0.7;
+        transform: translate(-1%, -1%);
+    }
+    80% {
+        // opacity: 1;
+        transform: translate(0%, 0%);
+    }
+    90% {
+        // opacity: 0.5;
+        transform: translate(1%, 1%);
+    }
 }
