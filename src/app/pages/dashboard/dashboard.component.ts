@@ -375,31 +375,31 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.advisorySlickSubject
-      .asObservable()
-      .pipe(delay(1))
-      .subscribe((type: 'next' | 'pre') => {
-        if (type === 'next') {
-          this.advisorySlick.slickNext();
-        } else {
-          this.advisorySlick.slickPrev();
-        }
-      });
-
-    this.teamSlickSubject
-      .asObservable()
-      .pipe(delay(1))
-      .subscribe((type: 'next' | 'pre') => {
-        if (type === 'next') {
-          this.teamSlick.slickNext();
-        } else {
-          this.teamSlick.slickPrev();
-        }
-      });
+    // this.advisorySlickSubject
+    //   .asObservable()
+    //   .pipe(delay(1))
+    //   .subscribe((type: 'next' | 'pre') => {
+    //     if (type === 'next') {
+    //       this.advisorySlick.slickNext();
+    //     } else {
+    //       this.advisorySlick.slickPrev();
+    //     }
+    //   });
+    //
+    // this.teamSlickSubject
+    //   .asObservable()
+    //   .pipe(delay(1))
+    //   .subscribe((type: 'next' | 'pre') => {
+    //     if (type === 'next') {
+    //       this.teamSlick.slickNext();
+    //     } else {
+    //       this.teamSlick.slickPrev();
+    //     }
+    //   });
   }
 
   afterAdvisoryChange(e): void {
-    this.slickChange(e, this.advisorData, this.advisorySlickSubject);
+    // this.slickChange(e, this.advisorData, this.advisorySlickSubject);
   }
 
   advisoryInit(e): void {
