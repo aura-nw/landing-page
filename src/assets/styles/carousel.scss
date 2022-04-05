@@ -10,35 +10,13 @@
 }
 .team .slick-track {
   display: flex;
-  overflow: visible;
+  //overflow: visible;
   .slick-slide {
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
-
-    &[tabindex="0"],
-    &[tabindex="1"] {
-      opacity: 0.2;
-    }
-
-    &[tabindex="-1"] {
-      opacity: 0;
-    }
-
     &.slick-current,
     &.slick-active {
       opacity: 1;
-    }
-
-    @media (min-width: 767.9px) {
-      &[data-active="1"] {
-        opacity: 1;
-      }
-      &[data-active="2"] {
-        opacity: 0.2;
-      }
-      &[data-active="0"] {
-        opacity: 0;
-      }
     }
   }
 }
@@ -48,12 +26,6 @@
 }
 
 .carousel--has-arrows {
-  .slick-prev {
-    // left: 16px !important;
-    // @media (min-width: 1440px) {
-    //   left: -100px !important;
-    // }
-  }
   .slick-prev.slick-arrow,
   .slick-next.slick-arrow {
     opacity: 1;
@@ -86,14 +58,12 @@
     height: 0;
   }
   .slick-next.slick-arrow {
-    right: 16px;
+    right: 0;
     top: 20%;
     @media (min-width: 1024px) {
       top: 50%;
+      transform: translateX(100%);
     }
-    // @media (min-width: 1439.9px) {
-    //   right: 0;
-    // }
   }
   .slick-prev.slick-arrow {
     &::before {
@@ -103,6 +73,7 @@
     left: 13.5px;
     @media (min-width: 1024px) {
       top: 50%;
+      transform: translateX(-100%);
     }
     @media (min-width: 1439.9px) {
       left: 0;

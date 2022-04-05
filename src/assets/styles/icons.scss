@@ -45,12 +45,14 @@
       background-size: contain;
       transition: background .35s ease-in-out;
     }
-    // &:hover {
-    //   &::before {
-    //     background: url("../imgs/icons-svg/color/#{$icon-name}.svg") no-repeat center;
-    //     background-size: contain;
-    //   }
-    // }
+    @media (min-width: 992px) {
+       &:hover {
+         &::before {
+           background: url("../imgs/icons-svg/color/#{$icon-name}.svg") no-repeat center;
+           background-size: contain;
+         }
+       }
+    }
     &:active {
       &::before {
         background: url("../imgs/icons-svg/color/#{$icon-name}.svg") no-repeat center;
