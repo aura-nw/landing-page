@@ -36,32 +36,31 @@ export class DashboardComponent implements OnInit {
     infinite: false,
     centerMode: true,
     arrows: true,
-    initialSlide: 1,
     centerPadding: '28px',
     responsive: [
       {
         breakpoint: 767.9,
         settings: {
           slidesToShow: 2,
-          centerMode: true,
-          // variableWidth: true
+          centerMode: false,
         },
       },
       {
-        breakpoint: 991.99,
-        settings: {
-          slidesToShow: 2,
-          centerMode: true,
-          // variableWidth: true
-        },
-      },
-      {
-        breakpoint: 1199,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          centerMode: true,
-          // variableWidth: true,
+          centerMode: false,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: false,
         },
       },
       // {
@@ -83,9 +82,10 @@ export class DashboardComponent implements OnInit {
       // {
       //   breakpoint: 1920,
       //   settings: {
-      //     slidesToShow: 3,
+      //     initialSlide: 2,
+      //     slidesToShow: 4,
       //     slidesToScroll: 1,
-      //     variableWidth: true,
+      //     centerMode: true,
       //   }
       // },
       // {
@@ -192,7 +192,7 @@ export class DashboardComponent implements OnInit {
       img: 'TruongGiaBinh.png',
       position: `Founder & Chairman`,
       company: 'FPT Corporation',
-      desc: "Dr. Binh supports Aura in expanding business relations and advancing Aura's goals by facilitating integrations with the growing number of industry partners.",
+      desc: 'Dr. Binh supports Aura in expanding business relations and advancing Aura\'s goals by facilitating integrations with the growing number of industry partners.',
       link: {
         linkedIn: 'https://www.linkedin.com/in/binh-truong-gia-9a9b2260/',
       },
@@ -225,7 +225,7 @@ export class DashboardComponent implements OnInit {
       position: `Former VP and Head of DT`,
       company: 'Airbus',
       desc:
-        "He led a regional team to implement Airbus's digital platform strategy Skywise, " +
+        'He led a regional team to implement Airbus\'s digital platform strategy Skywise, ' +
         'and developing strategic digital initiatives and optimize Airbus services. ' +
         'Frank advices Aura on growth strategy and global business development.',
       link: {
@@ -412,7 +412,7 @@ export class DashboardComponent implements OnInit {
   }
 
   afterTeamChange(e): void {
-    this.slickChange(e, this.teamData, this.teamSlickSubject);
+    // this.slickChange(e, this.teamData, this.teamSlickSubject);
   }
 
   teamInit(e): void {
@@ -426,9 +426,9 @@ export class DashboardComponent implements OnInit {
   slickChange(e, data, subject): void {
     const slick = e.slick;
 
-    if (!slick.activeBreakpoint) return;
+    if (!slick.activeBreakpoint) { return; }
 
-    let offset =
+    const offset =
       slick.breakpointSettings[slick.activeBreakpoint]?.slidesToShow - 1;
 
     if (e.currentSlide === data.length - offset) {
@@ -449,24 +449,24 @@ export class DashboardComponent implements OnInit {
   toggleAttribute(e): void {
     const next = e?.nextSlide || 1;
     const slick = e.slick;
-    let offset =
+    const offset =
       +slick.breakpointSettings[slick.activeBreakpoint]?.slidesToShow - 1;
 
-    Object.keys(slick['$slides']).forEach((element) => {
-      if (isNaN(Number(element))) return;
+    Object.keys(slick.$slides).forEach((element) => {
+      if (isNaN(Number(element))) { return; }
 
       if (
         +element === next - 1 ||
         +element === next ||
         (offset === 2 && +element === next + 1)
       ) {
-        (slick['$slides'][element] as HTMLElement)?.setAttribute(
+        (slick.$slides[element] as HTMLElement)?.setAttribute(
           'data-active',
           '1'
         );
       } else {
         const data = +element > next ? 2 : 0;
-        (slick['$slides'][element] as HTMLElement)?.setAttribute(
+        (slick.$slides[element] as HTMLElement)?.setAttribute(
           'data-active',
           data.toString()
         );
@@ -477,24 +477,24 @@ export class DashboardComponent implements OnInit {
   roadMapSlickChange(e): void {
     const next = e?.nextSlide;
     const slick = e.slick;
-    let offset =
+    const offset =
       +slick.breakpointSettings[slick.activeBreakpoint]?.slidesToShow - 1;
 
-    Object.keys(slick['$slides']).forEach((element) => {
-      if (isNaN(Number(element))) return;
+    Object.keys(slick.$slides).forEach((element) => {
+      if (isNaN(Number(element))) { return; }
 
       if (
         +element === next ||
         +element === next + 1 ||
         (offset === 2 && +element === next + 2)
       ) {
-        (slick['$slides'][element] as HTMLElement)?.setAttribute(
+        (slick.$slides[element] as HTMLElement)?.setAttribute(
           'data-active',
           '1'
         );
       } else {
         const data = +element > next ? 2 : 0;
-        (slick['$slides'][element] as HTMLElement)?.setAttribute(
+        (slick.$slides[element] as HTMLElement)?.setAttribute(
           'data-active',
           data.toString()
         );
