@@ -3,8 +3,15 @@
     background-size: cover;
     padding-top: 100px;
     @media (min-width: 992px) {
+        min-height: 1367px;
         background: url("../../../assets/imgs/backgrounds/bw_space_lineart.png") no-repeat center;
         background-size: cover;
+    }
+    @media (min-width: 2559.99px) {
+        min-height: 1467px;
+    }
+    @media (min-width: 3000px) {
+        min-height: 1700px;
     }
     position: relative;
     .img-contain {
