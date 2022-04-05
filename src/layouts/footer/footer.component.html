@@ -1,92 +1,68 @@
 <footer>
-  <section class="footer__blocks">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-3">
-          <div class="footer__menu">
-            <div class="row">
-              <div class="footer__logo col-12">
-                <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
-                  src="../../assets/imgs/auraMainLogo-1x.png" alt="Aura Logo">
+  <section class="container-fluid container-lg footer">
+    <div class="row">
+      <div class="col-12 col-lg-2">
+        <div class="footer__menu">
+          <div class="footer__logo">
+            <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
+              src="../../assets/imgs/auraMainLogo-1x.png" alt="Aura Logo">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="footer__contact">
+          <div class="row">
+            <div class="col-5 col-md-3">
+              <div class="body contact__title text--white">Features</div>
+              <div class="body mt-2 mt-md-10">
+                <div class="mb-4"><a target="_blank" href="https://safe.aura.network/welcome">Safe</a></div>
+                <div class="mb-4"><a target="_blank" href="https://docs.aura.network/">Docs</a></div>
+                <div class="mb-4"><a target="_blank" href="https://explorer.aura.network/">Explorer</a></div>
               </div>
-              <div class="col-12">
-                <div class="mt-lg-4">
-                  <!-- <div class="row">
-                    <div class="col-5 col-md-3 col-lg-12 body-bold title">
-                      Headquarter
-                    </div>
-                    <ul class="col col-lg-12 small-text small-body-mob">
-                      <li>Qwomar Trading Complex,</li>
-                      <li>Blackburne Road,</li>
-                      <li>Port Purcell, Road Town, Tortola,</li>
-                      <li>British Virgin Islands VG1110.</li>
-                    </ul>
-                  </div> -->
+            </div>
+            <div class="col-5 col-md-3">
+              <div class="body contact__title text--white">Partners</div>
+              <div class="body mt-2 mt-md-10">
+                <div class="mb-4"><button type="button" (click)="scroll('partner', 'center')">Partners</button></div>
+                <div class="mb-4"><button type="button" (click)="scroll('advisors', 'end')">Advisors</button></div>
+              </div>
+            </div>
+            <div class="col-5 col-md-3">
+              <div class="body contact__title text--white">Resources</div>
+              <div class="body mt-2 mt-md-10">
+                <!--              <div class="mb-4"><a target="_blank" href="#">Insights</a></div>-->
+                <div class="mb-4"><button type="button">Insights</button></div>
+                <div class="mb-4"><a target="_blank"
+                    href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf">Whitepaper</a>
                 </div>
+                <div class="mb-4"><a target="_blank" href="https://docs.aura.network/blog">Research</a></div>
+                <div class="mb-4"><button (click)="scroll('faqs', 'start')">FAQs</button></div>
+              </div>
+            </div>
+            <div class="col-5 col-md-3">
+              <div class="body contact__title text--white">About us</div>
+              <div class="body mt-2 mt-md-10">
+                <div class="mb-4"><button type="button" (click)="scroll('team', 'center')">Meet Our Team</button>
+                </div>
+                <div class="mb-4"><a target="_blank"
+                    href="https://aura-network.notion.site/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23">Careers</a>
+                </div>
+                <div class="mb-4"><a target="_blank"
+                    href="https://discord.com/login?redirect_to=%2Fchannels%2F925227249408557086%2F925227249408557089">Contact
+                    us</a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="footer__contact order-1 order-lg-2">
-            <!-- <div class="footer__logo d-lg-none flex-shrink-0 flex-grow-1 mr-11">
-              <img srcset="../../assets/imgs/auraMainLogo-1x.png 1x, ../../assets/imgs/auraMainLogo-2x.png 2x"
-                   src="../../assets/imgs/auraMainLogo-1x.png"
-                   alt="Aura Logo">
-            </div> -->
-            <div class="row">
-              <div class="col-5 col-md-3">
-                <div class="body contact__title">Features</div>
-                <div class="body mt-2 mt-md-10">
-                  <div class="mb-4"><a target="_blank" href="https://safe.aura.network/welcome">Safe</a></div>
-                  <div class="mb-4"><a target="_blank" href="https://docs.aura.network/">Docs</a></div>
-                  <div class="mb-4"><a target="_blank" href="https://explorer.aura.network/">Explorer</a></div>
-                </div>
-              </div>
-              <div class="col-5 col-md-3">
-                <div class="body contact__title">Partners</div>
-                <div class="body mt-2 mt-md-10">
-                  <div class="mb-4"><button type="button" (click)="scroll('partner', 'center')">Partners</button></div>
-                  <div class="mb-4"><button type="button" (click)="scroll('advisors', 'end')">Advisors</button></div>
-                </div>
-              </div>
-              <div class="col-5 col-md-3">
-                <div class="body contact__title">Resources</div>
-                <div class="body mt-2 mt-md-10">
-                  <!--              <div class="mb-4"><a target="_blank" href="#">Insights</a></div>-->
-                  <div class="mb-4"><button type="button">Insights</button></div>
-                  <div class="mb-4"><a target="_blank"
-                      href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf">Whitepaper</a>
-                  </div>
-                  <div class="mb-4"><a target="_blank" href="https://docs.aura.network/blog">Research</a></div>
-                  <div class="mb-4"><button (click)="scroll('faqs', 'start')">FAQs</button></div>
-                </div>
-              </div>
-              <div class="col-5 col-md-3">
-                <div class="body contact__title">About us</div>
-                <div class="body mt-2 mt-md-10">
-                  <div class="mb-4"><button type="button" (click)="scroll('team', 'center')">Meet Our Team</button>
-                  </div>
-                  <div class="mb-4"><a target="_blank"
-                      href="https://aura-network.notion.site/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23">Careers</a>
-                  </div>
-                  <div class="mb-4"><a target="_blank"
-                      href="https://discord.com/login?redirect_to=%2Fchannels%2F925227249408557086%2F925227249408557089">Contact
-                      us</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-3">
-          <div class="footer__cta order-3 pb-10 pb-lg-0 flex-xl-shrink-0 flex-xl-grow-1">
-            <div class="footer__cta-contain">
-              <div class="body-bold sub-text-mob text-gradient d-inline fw-semibold">Let's talk!</div>
-              <div class="small-text body-mob mt-2 mt-md-8">
-                We’d love to hear from you, we’re here to answer all your questions.
-                <a href="mailto:support@aura.network" class="text-decoration-underline text--green">support@aura.network
-                  -></a>
-              </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="footer__cta">
+          <div class="footer__cta-contain">
+            <div class="body-bold sub-text-mob text-gradient d-inline fw-semibold">Let's talk!</div>
+            <div class="small-text body-mob mt-2 mt-md-8">
+              We’d love to hear from you, we’re here to answer all your questions.
+              <a href="mailto:support@aura.network" class="text-decoration-underline text--green">support@aura.network
+                -></a>
             </div>
           </div>
         </div>
@@ -106,10 +82,10 @@
         <a href="https://t.me/auranw" target="_blank">
           <i class="icon icon--switch-stage icon-telegram"></i>
         </a>
-        <a href="https://www.facebook.com/AuraNetworkHQ/" target="_blank" >
+        <a href="https://www.facebook.com/AuraNetworkHQ/" target="_blank">
           <i class="icon icon--switch-stage icon-fb-circle"></i>
         </a>
-        <a href="https://www.linkedin.com/company/auranetwork/about/" target="_blank" >
+        <a href="https://www.linkedin.com/company/auranetwork/about/" target="_blank">
           <i class="icon icon--switch-stage icon-linkedIn"></i>
         </a>
       </div>
