@@ -95,42 +95,10 @@ section.partner {
     .carousel {
         .slick-slide {
             margin: 0 16px;
-            @media (min-width: 768px) {
-                width: 368px;
-            }
-            @media (min-width: 992px) {
-                width: 290px;
-            }
-            @media (min-width: 1024px) {
-                width: 295px;
-                margin: 0 20px;
-            }
-            @media (min-width: 1200px) {
-                width: 352px;
-            }
-            @media (min-width: 1366px) {
-                width: 415px;
-            }
-            @media (min-width: 1440px) {
-                width: 345px;
-            }
-            @media (min-width: 1600px) {
-                width: 390px;
-            }
-            @media (min-width: 1920px) {
-                width: 360px;
-            }
             display: inline-table;
-        }
-        .slick-list {
-            margin: 0 -20px;
-            &.draggable {
-                overflow-x: visible !important;
-            }
         }
     }
     &#advisors {
-        // margin-top: 40px;
         @media (min-width: 992px) {
             margin-top: 200px;
         }
@@ -161,7 +129,7 @@ section.partner {
     }
     .img-road-map {
         width: 100%;
-        padding: 0px 16px;
+        padding: 0 var(--spacer-2);
     }
     @media (min-width: 992px) {
         margin-top: 106px;
@@ -185,8 +153,6 @@ section.partner {
     .carousel {
         z-index: 2;
         margin-top: 18px;
-        padding: 0 16px;
-        padding-right: 0;
         .slick-slide {
             margin: 0 24px;
             @media (min-width: 992px) {
@@ -240,14 +206,15 @@ section.partner {
             }
 
             ::ng-deep .slick-list {
-                padding-left: 16px;
+              overflow: hidden;
+              padding-left: 16px;
             }
 
             ::ng-deep button.slick-arrow {
                 transform: translateY(-128px);
             }
             ::ng-deep button.slick-prev.slick-arrow {
-                left: -68px !important;
+                left: -15px !important;
             }
         }
     }
@@ -309,6 +276,12 @@ section.partner {
     .aura-card.aura-card--sm {
         min-height: 296px;
     }
+  .team .carousel .slick-list {
+    overflow: hidden;
+  }
+  .feature .carousel .slick-dots {
+    margin-bottom: -16px;
+  }
 }
 
 /* Heading style */

@@ -12,7 +12,7 @@
   display: flex;
   //overflow: visible;
   .slick-slide {
-    opacity: 0;
+    //opacity: 0;
     transition: opacity 0.35s ease-in-out;
     &.slick-current,
     &.slick-active {
@@ -62,6 +62,8 @@
     top: 20%;
     @media (min-width: 1024px) {
       top: 50%;
+    }
+    @media (min-width: 1366px) {
       transform: translateX(100%);
     }
   }
@@ -73,6 +75,8 @@
     left: 13.5px;
     @media (min-width: 1024px) {
       top: 50%;
+    }
+    @media (min-width: 1366px) {
       transform: translateX(-100%);
     }
     @media (min-width: 1439.9px) {
@@ -124,48 +128,20 @@
       }
       &:not(:last-child) {
         &:after {
-          right: -32px;
-          // transform: translateX(100%);
-        }
-      }
-    }
-
-    @media (min-width: 424px) {
-      &:not(:last-child) {
-        &:after {
-          right: -24px;
-        }
-      }
-    }
-
-    @media (min-width: 768px) {
-      &:not(:last-child) {
-        &:after {
-          right: 32px;
-        }
-      }
-    }
-
-    @media (min-width: 1024px) {
-      &:not(:last-child) {
-        &:after {
-          right: 4%;
-        }
-      }
-    }
-
-    @media (min-width: 1200px) {
-      &:not(:last-child) {
-        &:after {
-          right: -8%;
-        }
-      }
-    }
-
-    @media (min-width: 1440px) {
-      &:not(:last-child) {
-        &:after {
-          right: -12%;
+          right: 0;
+          transform: translateX(50%);
+          @media (min-width: 425px) {
+            transform: unset;
+          }
+          @media (min-width: 768px) {
+            transform: translateX(-50%);
+          }
+          @media (min-width: 1152px) {
+            transform: unset;
+          }
+          @media (min-width: 1200px) {
+            transform: translateX(50%);
+          }
         }
       }
     }
