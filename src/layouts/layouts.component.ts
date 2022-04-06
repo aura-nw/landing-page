@@ -8,6 +8,7 @@ import {ViewportScroller} from '@angular/common';
 })
 export class LayoutsComponent implements OnInit {
   pageYOffset = 0;
+  scrolling = false;
   @HostListener('window:scroll', ['$event']) onScroll(event){
     this.pageYOffset = window.pageYOffset;
   }
@@ -16,5 +17,7 @@ export class LayoutsComponent implements OnInit {
   ngOnInit(): void {}
   scrollToTop(){
     this.scroll.scrollToPosition([0, 0]);
+    this.scrolling = true;
+    setTimeout(() => {this.scrolling = !this.scrolling; }, 500);
   }
 }
