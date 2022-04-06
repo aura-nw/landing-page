@@ -110,9 +110,15 @@ export class DashboardComponent implements OnInit {
       {
         breakpoint: 992,
         settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1152,
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          variableWidth: true,
         },
       }
     ],
