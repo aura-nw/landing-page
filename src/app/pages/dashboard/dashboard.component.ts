@@ -356,10 +356,10 @@ export class DashboardComponent implements OnInit {
       quest: 'When is Aura Network’s mainnet?',
       anw: 'Aura Mainnet is going to be released at the end of the third quarter of 2022. Stay tuned!',
     },
-    {
-      quest: 'Will there be an Aura token?',
-      anw: 'It will be released by IEO',
-    },
+    // {
+    //   quest: 'Will there be an Aura token?',
+    //   anw: 'It will be released by IEO',
+    // },
     {
       quest: 'What is Aura safe?',
       anw: `Aura Safe is a user-friendly application that allows users to create multi-signature accounts with fine-grained access control for the Cosmos ecosystem.
