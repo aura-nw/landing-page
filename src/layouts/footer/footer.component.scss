@@ -5,16 +5,17 @@ footer {
   .footer {
     &__menu {
       color: var(--aura-white);
-      padding-top: 32px;
       @media (min-width: 992px) {
         border: none;
-        padding-right: 40px;
-        margin-left: 0;
-        padding-left: 0;
+        margin-top: 96px;
         .title {
           font-weight: 600;
           margin-bottom: var(--spacer-2);
         }
+      }
+
+      @media (min-width: 1200px) {
+        margin-top: 120px;
       }
       ul {
         li {
@@ -24,23 +25,15 @@ footer {
     }
 
     &__logo {
-      width: 160px;
-      height: 54px;
       display: block;
       img {
         width: 100%;
-      }
-
-      @media (min-width: 992px) {
-        width: 100%;
-        height: 100%;
       }
     }
   }
 
   .footer__contact {
     margin-left: 8px;
-    padding: var(--spacer-14) 0;
     border-bottom: 1px solid var(--aura-neutrals-3);
     @media (min-width: 992px) {
       margin-left: 32px;
@@ -83,7 +76,7 @@ footer {
 
     @media (min-width: 480px) {
       height: 100%;
-      padding: var(--spacer-14) 0;
+      padding: var(--spacer-8) 0;
       margin: 0;
       margin-left: 8px;
       &:before {
@@ -99,11 +92,13 @@ footer {
       }
     }
     @media (min-width: 992px) {
+      padding: var(--spacer-4) 0;
       .footer__cta-contain {
         padding: 24px 0 32px 16px;
       }
     }
     @media (min-width: 1200px) {
+      padding: var(--spacer-16) 0;
       .footer__cta-contain {
         padding: 24px 0 24px 24px;
       }

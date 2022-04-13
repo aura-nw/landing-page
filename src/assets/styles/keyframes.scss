@@ -1,4 +1,8 @@
 
+.bonben-animation {
+  animation: bonben 10s linear 2s infinite reverse;
+}
+
 @keyframes bonben {
   0% {
     // opacity: 0.1;
@@ -39,26 +43,5 @@
   90% {
     // opacity: 0.5;
     transform: translate(1%, 1%);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes zoominout {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.2, 1.2);
-  }
-  100% {
-    transform: scale(1, 1);
   }
 }
