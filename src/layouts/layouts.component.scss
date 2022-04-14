@@ -9,7 +9,7 @@
   }
   .object-1 {
     position: absolute;
-    left: calc(50% - 550px);
+    left: calc(50% - 408px);
     top: 15%;
     transform: translateX(-100%);
     z-index: -1;
@@ -24,6 +24,22 @@
       top: 18%;
     }
   }
+  .object-3 {
+    position: absolute;
+    left: calc(50% + 250px);
+    top: 19%;
+    transform: translateX(100%);
+    z-index: -1;
+    @media (min-width: 1400px) {
+      left: calc(50% + 200px);
+    }
+    @media (min-width: 2559.99px) {
+      top: 20%;
+    }
+    @media (min-width: 3000px) {
+      top: 22%;
+    }
+  }
   .object-2 {
     position: absolute;
     left: calc(50% - 200px);
@@ -36,7 +52,7 @@
       top: 54%;
     }
   }
-  .object-1, .object-2 {
+  .object-1, .object-2, .object-3 {
     display: none;
     @media (min-width: 1200px) {
       display: block;
