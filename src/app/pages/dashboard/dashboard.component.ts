@@ -324,15 +324,15 @@ export class DashboardComponent implements OnInit {
         linkedIn: 'https://www.linkedin.com/in/tai-nguyen-30595917a/',
       },
     },
-    {
-      name: 'Claire Nguyen',
-      img: 'ClaireNguyen.png',
-      position: `Marketing Lead`,
-      desc: `With five years of marketing management experience in Digital Banking and Enterprise Blockchain, Claire drives Aura's marketing communication development and execution.`,
-      link: {
-        linkedIn: 'https://www.linkedin.com/in/viet-chinh-nguyen/',
-      },
-    },
+    // {
+    //   name: 'Claire Nguyen',
+    //   img: 'ClaireNguyen.png',
+    //   position: `Marketing Lead`,
+    //   desc: `With five years of marketing management experience in Digital Banking and Enterprise Blockchain, Claire drives Aura's marketing communication development and execution.`,
+    //   link: {
+    //     linkedIn: 'https://www.linkedin.com/in/viet-chinh-nguyen/',
+    //   },
+    // },
   ];
   faqData = [
     {
