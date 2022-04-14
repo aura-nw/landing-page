@@ -365,7 +365,6 @@ ul.aura-list {
 /* Satellite Images */
 
 .object-1,
-.object-2,
 .object-3,
 .object-4,
 .object-7,
@@ -377,15 +376,6 @@ ul.aura-list {
     }
     &:before {
         padding-top: 100%;
-    }
-}
-
-.object-2 {
-    max-width: 305px;
-    right: 0;
-    top: 10px;
-    img {
-        transform: translateX(18px);
     }
 }
 
@@ -405,15 +395,12 @@ ul.aura-list {
     @media (min-width: 992px) {
         position: absolute;
         max-width: 639px;
-        right: 8%;
+        left: 46%;
         bottom: -30%;
         z-index: -1;
         img {
             object-fit: contain;
         }
-    }
-    @media (min-width: 1600.99px) {
-        right: 20%;
     }
 }
 
@@ -519,7 +506,6 @@ ul.aura-list {
 }
 
 .object-1,
-.object-2,
 .object-3,
 .object-7,
 .object-8,
