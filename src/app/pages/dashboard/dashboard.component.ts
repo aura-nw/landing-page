@@ -247,7 +247,7 @@ export class DashboardComponent implements OnInit {
       desc: `As a Forbes Technology Council member, Giang has deep expertise in Cloud and Blockchain. He is the ex-founder of akaChain and has guided many successful start-ups. Giang drives Aura's strategy adoption and equitable growth.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/',
-        twitter: 'https://twitter.com/GiangTr41516054',
+        twitter: 'https://twitter.com/GiangAura',
       },
     },
     {
