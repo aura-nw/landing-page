@@ -113,10 +113,6 @@ footer {
   .bottom-bar {
     border-top: 1px solid var(--aura-neutrals-3);
     border-bottom: 1px solid var(--aura-neutrals-3);
-    @media (min-width: 1400px) {
-      padding-left: 196px;
-      padding-right: 196px;
-    }
     .caption-2 {
       font-size: 12px;
       line-height: 20px;
