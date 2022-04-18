@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 15;
     background-color: var(--aura-black);
     .navbar-toggler {
         width: 34px;
@@ -21,11 +21,11 @@
             height: 100%;
         }
         i.icon:before {
-            background: url("../../assets/imgs/icons/color/burger.svg") center no-repeat;
+            background: url("../../assets/imgs/icons-svg/color/burger.svg") center no-repeat;
             background-size: 30px;
         }
         i.icon.close:before {
-            background: url("../../assets/imgs/icons/basic/close.svg") center no-repeat;
+            background: url("../../assets/imgs/icons-svg/basic/close.svg") center no-repeat;
             background-size: 30px;
         }
     }
@@ -49,31 +49,29 @@
                 padding-top: 0;
                 padding-bottom: 10px;
                 position: relative;
+                letter-spacing: 0.13rem !important;
                 &:after {
                     border: none;
-                    width: var(--spacer-5);
-                    height: var(--spacer-5);
-                    background: url("../../assets/imgs/icons/basic/chevron-down.png") center no-repeat;
+                    width: var(--spacer-3);
+                    height: var(--spacer-3);
+                    background: url("../../assets/imgs/icons-svg/basic/chevron-down.svg") center no-repeat;
                     background-size: contain;
                     margin-left: var(--spacer-2);
                     transition: background 0.45s ease-in-out;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
+
+                    transition-delay: 0ms;
+
                     @media (min-width: 992px) {
                         top: 0;
-                        transform: translateY(55%);
+                        transform: translateY(120%);
                     }
                 }
-                //&:hover {
-                //  &:after {
-                //    background: url("../../assets/imgs/icons/white/chevron-down.svg") center no-repeat;
-                //    background-size: contain;
-                //  }
-                //}
                 &.show {
                     &:after {
-                        background: url("../../assets/imgs/icons/white/chevron-up.png") center no-repeat;
+                        background: url("../../assets/imgs/icons-svg/white/chevron-up.svg") center no-repeat;
                         background-size: contain;
                     }
                 }
@@ -100,7 +98,8 @@
                 transition: all 0.35s ease-in-out;
                 &.show {
                     max-height: 300px;
-                    padding: var(--spacer-6) 0;
+                    //padding: var(--spacer-6) var(--spacer-5);
+                    padding-right: 0;
                     opacity: 1;
                 }
                 li {
@@ -108,18 +107,10 @@
                     text-align: center;
                     @media (min-width: 992px) {
                         text-align: left;
+                        margin-bottom: 16px;
                     }
                     @media (max-width: 991px) {
                         text-align: left;
-                        // &:after {
-                        //     content: "";
-                        //     position: absolute;
-                        //     left: 0;
-                        //     right: 0;
-                        //     height: 1px;
-                        //     width: 100%;
-                        //     background-color: var(--aura-neutrals-3);
-                        // }
                     }
                 }
                 .dropdown-item {
@@ -136,24 +127,26 @@
                 }
             }
             @media (min-width: 992px) {
-                .dropdown-menu {
-                    left: -24px;
-                    right: 0;
-                    background: rgba(20, 20, 22, 0.95);
-                    box-shadow: 0 10px 30px 20px rgba(0, 0, 0, 0.24);
-                }
+              .dropdown-menu {
+                  left: -24px;
+                  right: 0;
+                  background: rgba(20, 20, 22, 0.95);
+                  box-shadow: 0 10px 30px 20px rgba(0, 0, 0, 0.24);
+              }
+            }
+            @media (min-width: 1440px) {
+              &.menu-item {
+                padding: 0 var(--spacer-5);
+              }
             }
         }
-    }
-    &--container {
-        left: 50%;
-        transform: translateX(-50%);
     }
     &.expanded {
         bottom: 0;
         overflow-y: scroll;
         @media (min-width: 992px) {
-            bottom: unset;
+          bottom: unset;
+          overflow-y: unset;
         }
     }
     .aura-btn {
@@ -184,5 +177,8 @@
         //     box-shadow: none;
         //     color: white;
         //   }
+    }
+    #dropdownMenuFeatures + ul {
+      left: 0;
     }
 }

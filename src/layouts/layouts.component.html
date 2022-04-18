@@ -1,16 +1,26 @@
-<div [class.container]="isContainer" id="layout-wrapper">
+<div id="layout-wrapper">
     <!-- header -->
     <app-header></app-header>
     <div class="main-content" id="mainContent">
         <div class="page-content">
             <router-outlet></router-outlet>
+
+          <!--Satellite Images-->
+          <div class="object-1">
+            <img src="../../../assets/imgs/pages/dashboard/object_1-1@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_1-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1-1@2x.png 2x" alt="" loading="lazy" />
+          </div>
+          <div class="object-2">
+            <img class="bonben-animation"
+              src="../../../assets/imgs/pages/dashboard/astronaut_4-1@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_4-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x" alt="" loading="lazy" />
+          </div>
+          <div class="object-3">
+            <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png"
+                 srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x"
+                 alt="" loading="lazy" />
+          </div>
         </div>
         <!-- footer -->
         <app-footer></app-footer>
     </div>
-    <button class="button-float {{pageYOffset > 0 ? 'show' : ''}}" (click)="scrollToTop()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-up" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-      </svg>
-    </button>
+    <button class="button-float {{pageYOffset > 0 ? 'show' : ''}}" [class.active]="scrolling" (click)="scrollToTop()"></button>
 </div>
