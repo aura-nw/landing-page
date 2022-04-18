@@ -59,13 +59,14 @@ section.partner {
         margin: auto;
     }
     img {
-        padding: 0 14px;
+        padding: 0 12px;
         margin-bottom: var(--spacer-4);
-        height: 20px;
+        height: 30px;
         @media (min-width: 375.99px) {
-            height: auto;
+          padding: 0 14px;
         }
         @media (min-width: 992px) {
+            height: auto;
             padding: 0 24px;
             margin-bottom: var(--spacer-8);
         }
