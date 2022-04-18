@@ -227,6 +227,7 @@ section.partner {
 .faq {
     margin-top: var(--spacer-12);
     position: relative;
+    overflow: hidden;
     .faq-background {
         position: absolute;
         top: 0;
