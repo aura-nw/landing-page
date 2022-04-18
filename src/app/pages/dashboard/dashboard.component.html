@@ -2,38 +2,51 @@
 <section class="aura-hero px-4 px-lg-9">
     <div class="img-contain">
         <div class="img-title">
-            <img src="../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@1x.png" class="w-100" srcset="../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@1x.png 1x, ../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@2x.png 2x" alt="" loading="lazy"
-            />
+            <img src="../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@1x.png" class="w-100"
+                srcset="../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@1x.png 1x, ../../../assets/imgs/pages/dashboard/AURA_NETWORK_title@2x.png 2x"
+                alt="" loading="lazy" />
         </div>
 
         <div class="img-astronaut">
-            <img src="../../../assets/imgs/pages/dashboard/astronaut_1@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_1@2x.png 2x" alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/dashboard/astronaut_1@1x.png"
+                srcset="../../../assets/imgs/pages/dashboard/astronaut_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_1@2x.png 2x"
+                alt="" loading="lazy" />
         </div>
     </div>
 </section>
 <!--Introduction-->
 <section class="introduction pt-10 pt-md-8">
     <div class="img--scale object-1">
-        <img src="../../../assets/imgs/pages/dashboard/object_1@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1@2x.png 2x" alt="" loading="lazy" />
+        <img src="../../../assets/imgs/pages/dashboard/object_1@1x.png"
+            srcset="../../../assets/imgs/pages/dashboard/object_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_1@2x.png 2x"
+            alt="" loading="lazy" />
     </div>
     <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-md-12 col-xl-7 pl-xl-5 offset-xl-4 position-relative">
                 <h1 class="mb-5 h2-mob">Into the INTEROPERABLE future</h1>
                 <div class="sub-text body-mob mb-5 text--white pb-md-12">
-                    Aura Network is a <b>Layer-1 NFT-centric blockchain</b>, <br class="d-none d-md-block" />built to accelerate global NFTs adoption by the Internet <br class="d-none d-lg-block" /> of Blockchain.</div>
+                    Aura Network is a <b>Layer-1 NFT-centric blockchain</b>, <br class="d-none d-md-block" />built to
+                    accelerate global NFTs adoption by the Internet <br class="d-none d-lg-block" /> of Blockchain.
+                </div>
                 <!--        <a href="#" class="button button-outline d-inline-block">Learn more</a>-->
                 <div class="img--scale object-3">
-                    <img src="../../../assets/imgs/pages/dashboard/object_3@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_3@2x.png 2x" alt="" loading="lazy" />
+                    <img src="../../../assets/imgs/pages/dashboard/object_3@1x.png"
+                        srcset="../../../assets/imgs/pages/dashboard/object_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_3@2x.png 2x"
+                        alt="" loading="lazy" />
                 </div>
             </div>
         </div>
     </div>
     <div class="img--scale object-2">
-        <img src="../../../assets/imgs/pages/dashboard/object_2@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_2@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_2@2x.png 2x" alt="" loading="lazy" />
+        <img src="../../../assets/imgs/pages/dashboard/object_2@1x.png"
+            srcset="../../../assets/imgs/pages/dashboard/object_2@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_2@2x.png 2x"
+            alt="" loading="lazy" />
     </div>
     <div class="img--scale object-4">
-        <img src="../../../assets/imgs/pages/dashboard/astronaut_2-1@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_2-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_2-1@2x.png 2x" alt="" loading="lazy" />
+        <img src="../../../assets/imgs/pages/dashboard/astronaut_2-1@1x.png"
+            srcset="../../../assets/imgs/pages/dashboard/astronaut_2-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_2-1@2x.png 2x"
+            alt="" loading="lazy" />
     </div>
 </section>
 <!--Outstanding Feature-->
@@ -45,7 +58,8 @@
                 <div class="col-12 col-xl-7">
                     <h2 class="mb-5 mb-md-8">Crafting path</h2>
                     <div class="sub-text body-mob text--white">
-                        It doesn’t matter what your background is, we got you! <br/> Embrace the Metaverse and start now with our tools, guide, documentation, and more. Your NFTs infinite potential awaits!
+                        It doesn’t matter what your background is, we got you! <br /> Embrace the Metaverse and start
+                        now with our tools, guide, documentation, and more. Your NFTs infinite potential awaits!
                     </div>
                 </div>
             </div>
@@ -57,14 +71,16 @@
             <div class="aura-card-row mt-12">
                 <div class="row d-none d-lg-flex">
                     <div class="col-md-4" *ngFor="let cardData of featureCardData">
-                        <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
+                        <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title"
+                            [desc]="cardData.subTitle"></app-aura-card>
                     </div>
                 </div>
                 <!-- card-list mobile (carousel) -->
                 <div class="row d-lg-none">
                     <ngx-slick-carousel class="carousel" [config]="featureSlideConfig">
                         <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
-                            <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title" [desc]="cardData.subTitle"></app-aura-card>
+                            <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title"
+                                [desc]="cardData.subTitle"></app-aura-card>
                         </div>
                     </ngx-slick-carousel>
                 </div>
@@ -75,7 +91,8 @@
                     <!-- content -->
                     <h2>To NFT and Beyond</h2>
                     <div class="sub-text body-mob text--white my-8">
-                        Aura Network enhances efficiency through solving the scalability problem. Never cope with sharded chains or fragmented Layer 2 systems again!
+                        Aura Network enhances efficiency through solving the scalability problem. Never cope with
+                        sharded chains or fragmented Layer 2 systems again!
                     </div>
                     <!-- list -->
                     <ul class="aura-list sub-text body-mob text--white">
@@ -91,7 +108,9 @@
                 </div>
                 <div class="col d-none d-lg-block">
                     <div class="img--scale object-5">
-                        <img src="../../../assets/imgs/pages/dashboard/astronaut_3@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_3@2x.png 2x" alt="" loading="lazy" />
+                        <img src="../../../assets/imgs/pages/dashboard/astronaut_3@1x.png"
+                            srcset="../../../assets/imgs/pages/dashboard/astronaut_3@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_3@2x.png 2x"
+                            alt="" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -99,65 +118,91 @@
     </article>
 </section>
 <!--partner-->
-<!--
+
 <section class="text-center partner mx-4 mx-md-auto" id="partner">
-  <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
-  <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with Global partners network and IP owners.</div>
-  <div class="partner-group justify-content-center">
-    <div>
-      <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
-           srcset="../../../assets/imgs/pages/partner/coin98@1x.png 1x, ../../../assets/imgs/pages/partner/coin98@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/gbv@1x.png"
-           srcset="../../../assets/imgs/pages/partner/gbv@1x.png 1x, ../../../assets/imgs/pages/partner/gbv@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/avatar@1x.png"
-           srcset="../../../assets/imgs/pages/partner/avatar@1x.png 1x, ../../../assets/imgs/pages/partner/avatar@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/fpt@1x.png"
-           srcset="../../../assets/imgs/pages/partner/fpt@1x.png 1x, ../../../assets/imgs/pages/partner/fpt@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png"
-           srcset="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png 1x, ../../../assets/imgs/pages/partner/KuCoin_labs@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/kyber@1x.png"
-           srcset="../../../assets/imgs/pages/partner/kyber@1x.png 1x, ../../../assets/imgs/pages/partner/kyber@2x.png 2x"
-           alt="" loading="lazy"/>
+    <!-- <div class="title body-mob text--light-gray mb-6">Backed by top firms and industry leaders</div>
+    <div class="sub-text small-text-mob text--light-gray mb-6">We are proud to collaborate with Global partners network
+        and IP owners.</div> -->
+    <h2>Backers</h2>
+    <div class="sub-text body-mob text--light-gray mb-15 mt-5">We are proud to collaborate with global partners
+        network
     </div>
-    <div>
-      <img src="../../../assets/imgs/pages/partner/TPXVentures@1x.png"
-           srcset="../../../assets/imgs/pages/partner/TPXVentures@1x.png 1x, ../../../assets/imgs/pages/partner/TPXVentures@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/Vanda1x.png"
-           srcset="../../../assets/imgs/pages/partner/Vanda1x.png 1x, ../../../assets/imgs/pages/partner/Vanda2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/aha@1x.png"
-           srcset="../../../assets/imgs/pages/partner/aha@1x.png 1x, ../../../assets/imgs/pages/partner/aha@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/expand@1x.png"
-           srcset="../../../assets/imgs/pages/partner/expand@1x.png 1x, ../../../assets/imgs/pages/partner/expand@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/ecomobi@1x.png"
-           srcset="../../../assets/imgs/pages/partner/ecomobi@1x.png 1x, ../../../assets/imgs/pages/partner/ecomobi@2x.png 2x"
-           alt="" loading="lazy"/>
-      <img src="../../../assets/imgs/pages/partner/PENCIL_LOGO@1x.png"
-           srcset="../../../assets/imgs/pages/partner/PENCIL_LOGO@1x.png 1x, ../../../assets/imgs/pages/partner/PENCIL_LOGO@2x.png 2x"
-           alt="" loading="lazy"/>
+    <div class="partner-group justify-content-center">
+        <div>
+            <img src="../../../assets/imgs/pages/partner/coin98@1x.png"
+                srcset="../../../assets/imgs/pages/partner/coin98@1x.png 1x, ../../../assets/imgs/pages/partner/coin98@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/gbv@1x.png"
+                srcset="../../../assets/imgs/pages/partner/gbv@1x.png 1x, ../../../assets/imgs/pages/partner/gbv@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/fpt@1x.png"
+                srcset="../../../assets/imgs/pages/partner/fpt@1x.png 1x, ../../../assets/imgs/pages/partner/fpt@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/if@1x.png"
+                srcset="../../../assets/imgs/pages/partner/if@1x.png 1x, ../../../assets/imgs/pages/partner/if@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png"
+                srcset="../../../assets/imgs/pages/partner/KuCoin_labs@1x.png 1x, ../../../assets/imgs/pages/partner/KuCoin_labs@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/kyber@1x.png"
+                srcset="../../../assets/imgs/pages/partner/kyber@1x.png 1x, ../../../assets/imgs/pages/partner/kyber@2x.png 2x"
+                alt="" loading="lazy" />
+        </div>
+        <div>
+            <img src="../../../assets/imgs/pages/partner/g@1x.png"
+                srcset="../../../assets/imgs/pages/partner/g@1x.png 1x, ../../../assets/imgs/pages/partner/gbv@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/avatar@1x.png"
+                srcset="../../../assets/imgs/pages/partner/avatar@1x.png 1x, ../../../assets/imgs/pages/partner/avatar@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/me@1x.png"
+                srcset="../../../assets/imgs/pages/partner/me@1x.png 1x, ../../../assets/imgs/pages/partner/ne@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/TPXVentures@1x.png"
+                srcset="../../../assets/imgs/pages/partner/TPXVentures@1x.png 1x, ../../../assets/imgs/pages/partner/TPXVentures@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/Vanda1x.png"
+                srcset="../../../assets/imgs/pages/partner/Vanda1x.png 1x, ../../../assets/imgs/pages/partner/Vanda2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/red@1x.png"
+                srcset="../../../assets/imgs/pages/partner/red@1x.png 1x, ../../../assets/imgs/pages/partner/red@2x.png 2x"
+                alt="" loading="lazy" />
+        </div>
+        <div>
+            <img src="../../../assets/imgs/pages/partner/deo@1x.png"
+                srcset="../../../assets/imgs/pages/partner/deo@1x.png 1x, ../../../assets/imgs/pages/partner/deo@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/oig@1x.png"
+                srcset="../../../assets/imgs/pages/partner/oig@1x.png 1x, ../../../assets/imgs/pages/partner/oig@1x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/aha@1x.png"
+                srcset="../../../assets/imgs/pages/partner/aha@1x.png 1x, ../../../assets/imgs/pages/partner/aha@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/ecomobi@1x.png"
+                srcset="../../../assets/imgs/pages/partner/ecomobi@1x.png 1x, ../../../assets/imgs/pages/partner/ecomobi@2x.png 2x"
+                alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/partner/pe@1x.png"
+                srcset="../../../assets/imgs/pages/partner/pe@1x.png 1x, ../../../assets/imgs/pages/partner/pe@2x.png 2x"
+                alt="" loading="lazy" />
+        </div>
     </div>
-  </div>
 </section>
--->
+
 <!--road map-->
 <section class="road-map">
     <div class="d-flex align-items-center">
         <div class="col-5 d-none d-xl-block">
             <div class="img-astronaut">
-                <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png" srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x" alt="" loading="lazy" />
+                <img src="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png"
+                    srcset="../../../assets/imgs/pages/dashboard/astronaut_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_4@2x.png 2x"
+                    alt="" loading="lazy" />
             </div>
         </div>
         <div class="col-12 col-xl-7 text-center">
-            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none" width="295" />
-            <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator" [config]="roadmapSlideConfig">
+            <img src="../../../assets/imgs/backgrounds/ROADMAP-1-mob.png" alt="" loading="lazy" class="d-md-none"
+                width="295" />
+            <ngx-slick-carousel class="carousel carousel--has-arrows carousel--has-separator"
+                [config]="roadmapSlideConfig">
                 <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
                     <div class="road-map-item text--white text-center">
                         <!-- <div class="road-map__img"><i class="icon {{data.icon}}"></i></div> -->
@@ -188,20 +233,28 @@
             <div class="padding-3 pr-0 mt-4 mt-md-12">
                 <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig">
                     <div ngxSlickItem *ngFor="let data of advisorData" class="slide">
-                        <app-staff-card [isAdvisors]="true" [img]="data.img" [name]="data.name" [position]="data.position" [company]="data.company" [desc]="data.desc" [socialLink]="data.link"></app-staff-card>
+                        <app-staff-card [isAdvisors]="true" [img]="data.img" [name]="data.name"
+                            [position]="data.position" [company]="data.company" [desc]="data.desc"
+                            [socialLink]="data.link"></app-staff-card>
                     </div>
                 </ngx-slick-carousel>
             </div>
         </div>
         <!--Satellite Images-->
         <div class="img--scale object-7">
-            <img src="../../../assets/imgs/pages/dashboard/object_4@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_4@2x.png 2x" alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/dashboard/object_4@1x.png"
+                srcset="../../../assets/imgs/pages/dashboard/object_4@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_4@2x.png 2x"
+                alt="" loading="lazy" />
         </div>
         <div class="img--scale object-8">
-            <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x" alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png"
+                srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x"
+                alt="" loading="lazy" />
         </div>
         <div class="img--scale object-9">
-            <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x" alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png"
+                srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
+                alt="" loading="lazy" />
         </div>
     </section>
     <!--team-->
@@ -220,19 +273,26 @@
             <div class="padding-3 pr-0 mt-4 mt-md-12">
                 <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig">
                     <div ngxSlickItem *ngFor="let data of teamData" class="slide">
-                        <app-staff-card [isAdvisors]="false" [img]="data.img" [name]="data.name" [position]="data.position" [desc]="data.desc" [socialLink]="data.link"></app-staff-card>
+                        <app-staff-card [isAdvisors]="false" [img]="data.img" [name]="data.name"
+                            [position]="data.position" [desc]="data.desc" [socialLink]="data.link"></app-staff-card>
                     </div>
                 </ngx-slick-carousel>
             </div>
         </div>
         <!--Satellite Images-->
         <div class="img--scale object-17">
-            <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png" srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x" alt="" loading="lazy" />
+            <img src="../../../assets/imgs/pages/dashboard/object_5@1x.png"
+                srcset="../../../assets/imgs/pages/dashboard/object_5@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_5@2x.png 2x"
+                alt="" loading="lazy" />
         </div>
     </section>
     <!--Satellite Images-->
-    <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" class="object-15 d-none d-lg-block" srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x" alt="" loading="lazy" />
-    <img src="../../../assets/imgs/pages/dashboard/object_7@1x.png" class="object-16 d-none d-lg-block" srcset="../../../assets/imgs/pages/dashboard/object_7@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_7@2x.png 2x" alt="" loading="lazy" />
+    <img src="../../../assets/imgs/pages/dashboard/object_6@1x.png" class="object-15 d-none d-lg-block"
+        srcset="../../../assets/imgs/pages/dashboard/object_6@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_6@2x.png 2x"
+        alt="" loading="lazy" />
+    <img src="../../../assets/imgs/pages/dashboard/object_7@1x.png" class="object-16 d-none d-lg-block"
+        srcset="../../../assets/imgs/pages/dashboard/object_7@1x.png 1x, ../../../assets/imgs/pages/dashboard/object_7@2x.png 2x"
+        alt="" loading="lazy" />
 </div>
 <!-- FAQ -->
 <section class="faq" id="faqs">
@@ -245,11 +305,14 @@
                     <div class="accordion mt-9">
                         <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
                             <div class="sub-text accordion-header" id="faq-{{i}}">
-                                <button class="collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true" [attr.aria-controls]="'collapse-'+i">
-                                  {{faq.quest}}
+                                <button class="collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse"
+                                    [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true"
+                                    [attr.aria-controls]="'collapse-'+i">
+                                    {{faq.quest}}
                                 </button>
                             </div>
-                            <div id="collapse-{{i}}" class="accordion-collapse collapse" [attr.aria-labelledby]="'faq-'+i">
+                            <div id="collapse-{{i}}" class="accordion-collapse collapse"
+                                [attr.aria-labelledby]="'faq-'+i">
                                 <div class="accordion-body body pl-0" [innerHTML]="faq.anw"></div>
                             </div>
                         </div>
