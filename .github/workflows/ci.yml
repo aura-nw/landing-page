@@ -33,7 +33,7 @@ jobs:
           bucket-region: ${{ secrets.AWS_DEFAULT_REGION }}
           #dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           #invalidation: /
-          delete-removed: true
+          delete-removed: false
           no-cache: true
           private: true
 
