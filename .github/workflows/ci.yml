@@ -34,4 +34,4 @@ jobs:
         run: aws s3 sync ./dist/frontend s3://aura-landing-page
         
       - name: Invalidate dashboard cloudfront
-        run: aws cloudfront create-invalidation ${{ secrets.DIST_ID }} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
