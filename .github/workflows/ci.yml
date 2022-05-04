@@ -28,9 +28,9 @@ jobs:
       - name: Deploy
         uses: reggionick/s3-deploy@v3
         with:
-          folder: "dist/frontend"
-          bucket: ${{ secrets.AWS_BUCKET }}
-          bucket-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          folder: "./dist/frontend"
+          bucket: "aura-landing-page"
+          bucket-region: "ap-southeast-1"
           #dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           #invalidation: /
           delete-removed: false
