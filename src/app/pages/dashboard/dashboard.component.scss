@@ -53,59 +53,31 @@ section.partner {
     }
 }
 
-
 .partner-group {
-  margin: 0 -28px;
-  @media (min-width: 992px) {
-    margin: auto;
-  }
-  @media (min-width: 1280px) {
-    width: 1266px;
-    &__contain {
-      &:first-child {
-        display: flex;
-        justify-content: space-between;
-        img {
-          padding: 0 !important;
+    margin: 0 -28px;
+    @media (min-width: 992px) {
+        margin: auto;
+    }
+  ul.partner-group__contain {
+    li {
+      display: inline-block;
+      width: 120px;
+      margin-bottom: var(--spacer-8);
+      @media (min-width: 992px) {
+        margin: 0 20px var(--spacer-10);
+        &#guildfi {
+          margin: 0 0 var(--spacer-10);
         }
       }
     }
   }
-  img {
-    padding: 0 10px;
-    margin-bottom: var(--spacer-8);
-    height: 32px;
-    &#guildfi {
-      height: 44px;
+    img {
+      width: 100px;
+      height: auto;
+        @media (min-width: 992px) {
+          width: 100%;
+        }
     }
-    &#pencil {
-      transform: translateY(-20%);
-    }
-    @media (min-width: 375.99px) {
-      padding: 0 14px;
-    }
-    @media (min-width: 992px) {
-      height: 56px;
-      width: 176px;
-      object-fit: contain;
-      padding: 0 12px;
-      margin-bottom: var(--spacer-14);
-      &#guildfi {
-        width: 72px;
-        height: 72px;
-        object-fit: cover;
-      }
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  .partner-group__contain li {
-    display: inline-block;
-  }
 }
 .organization {
     margin-top: 30px;
