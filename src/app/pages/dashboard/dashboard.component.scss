@@ -58,33 +58,24 @@ section.partner {
     @media (min-width: 992px) {
         margin: auto;
     }
-    img {
-        padding: 0 10px;
-        margin-bottom: var(--spacer-8);
-        height: 32px;
+  ul.partner-group__contain {
+    li {
+      display: inline-block;
+      width: 120px;
+      margin-bottom: var(--spacer-8);
+      @media (min-width: 992px) {
+        margin: 0 20px var(--spacer-10);
         &#guildfi {
-          height: 44px;
+          margin: 0 0 var(--spacer-10);
         }
-        &#pencil {
-          transform: translateY(-20%);
-        }
-        @media (min-width: 375.99px) {
-          padding: 0 14px;
-        }
+      }
+    }
+  }
+    img {
+      width: 100px;
+      height: auto;
         @media (min-width: 992px) {
-            height: auto;
-            width: 176px;
-            padding: 0 12px;
-            margin-bottom: var(--spacer-8);
-            &#guildfi {
-              height: auto;
-            }
-        }
-        &:first-child {
-            margin-left: 0;
-        }
-        &:last-child {
-            margin-right: 0;
+          width: 100%;
         }
     }
 }
