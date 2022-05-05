@@ -201,7 +201,6 @@
                     [config]="roadmapSlideConfig" (beforeChange)="roadMapSlickChange($event)">
                     <div ngxSlickItem *ngFor="let data of roadmapData" class="slide">
                         <div class="road-map-item text--white text-start">
-                            <!-- <div class="road-map__img"><i class="icon {{data.icon}}"></i></div> -->
                             <h3 class="road-map__time-line text-start mt-2 d-inline">{{data.date}}</h3>
                             <ul class="road-map__content mt-4 body">
                                 <li class="content__info" *ngFor="let info of data.content" [innerHTML]="info"></li>
