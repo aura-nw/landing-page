@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 import 'slick-carousel';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,7 +28,6 @@ export class DashboardComponent implements OnInit {
       },
     ],
   };
-
   teamSlideConfig = {
     slidesToShow: 1,
     mobileFirst: true,
@@ -98,7 +96,6 @@ export class DashboardComponent implements OnInit {
       // }
     ],
   };
-
   roadmapSlideConfig = {
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -123,6 +120,7 @@ export class DashboardComponent implements OnInit {
       }
     ],
   };
+  partnerCollapse = true;
   // MockData
   featureCardData = [
     {
@@ -328,7 +326,8 @@ export class DashboardComponent implements OnInit {
     //   name: 'Claire Nguyen',
     //   img: 'ClaireNguyen.png',
     //   position: `Marketing Lead`,
-    //   desc: `With five years of marketing management experience in Digital Banking and Enterprise Blockchain, Claire drives Aura's marketing communication development and execution.`,
+    //   desc: `With five years of marketing management experience in Digital Banking and Enterprise Blockchain,
+    //   Claire drives Aura's marketing communication development and execution.`,
     //   link: {
     //     linkedIn: 'https://www.linkedin.com/in/viet-chinh-nguyen/',
     //   },
