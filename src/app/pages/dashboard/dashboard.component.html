@@ -193,7 +193,9 @@
            srcset="../../../assets/imgs/pages/partner/pencil_@1x.png 1x, ../../../assets/imgs/pages/partner/pencil_@2x.png 2x"
            alt="" loading="lazy" /></li>
     </ul>
-    <button id="btn-seemore" class="seemore text-gradient body d-lg-none" (click)="partnerCollapse = !partnerCollapse">{{ !partnerCollapse ? 'See less' : 'See more'}}</button>
+    <button class="seemore d-lg-none" (click)="partnerCollapse = !partnerCollapse">
+      <span class="text-gradient body">{{ !partnerCollapse ? 'See less' : 'See more'}}</span>
+    </button>
   </div>
 </section>
 
