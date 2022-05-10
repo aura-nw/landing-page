@@ -126,7 +126,7 @@
   <div class="sub-text body-mob text--light-gray mb-15 mt-5">We are proud to collaborate with global&nbsp;partners
   </div>
   <div class="partner-group">
-    <ul class="partner-group__contain">
+    <ul class="partner-group__contain" [class.collapsed]="partnerCollapse" id="partner-group__contain">
       <li><img src="../../../assets/imgs/pages/partner/coin98_@1x.png"
              srcset="../../../assets/imgs/pages/partner/coin98_@1x.png 1x, ../../../assets/imgs/pages/partner/coin98_@2x.png 2x"
              alt="" loading="lazy" /> </li>
@@ -145,15 +145,21 @@
       <li><img src="../../../assets/imgs/pages/partner/kyber_@1x.png"
                srcset="../../../assets/imgs/pages/partner/kyber_@1x.png 1x, ../../../assets/imgs/pages/partner/kyber_@2x.png 2x"
                alt="" loading="lazy" /></li>
-      <li id="guildfi"><img src="../../../assets/imgs/pages/partner/Guildfi_@1x.png"
-               srcset="../../../assets/imgs/pages/partner/Guildfi_@1x.png 1x, ../../../assets/imgs/pages/partner/Guildfi_@2x.png 2x"
+      <li><img src="../../../assets/imgs/pages/partner/snz_@1x.png"
+               srcset="../../../assets/imgs/pages/partner/snz_@1x.png 1x, ../../../assets/imgs/pages/partner/snz_@2x.png 2x"
                alt="" loading="lazy" /></li>
       <br class="d-none d-xl-block">
+      <li id="guildfi"><img src="../../../assets/imgs/pages/partner/Guildfi_@1x.png"
+                            srcset="../../../assets/imgs/pages/partner/Guildfi_@1x.png 1x, ../../../assets/imgs/pages/partner/Guildfi_@2x.png 2x"
+                            alt="" loading="lazy" /></li>
       <li><img src="../../../assets/imgs/pages/partner/Avatar_@1x.png"
                srcset="../../../assets/imgs/pages/partner/Avatar_@1x.png 1x, ../../../assets/imgs/pages/partner/Avatar_@2x.png 2x"
                alt="" loading="lazy" /></li>
       <li><img src="../../../assets/imgs/pages/partner/mexc_@1x.png"
            srcset="../../../assets/imgs/pages/partner/mexc_@1x.png 1x, ../../../assets/imgs/pages/partner/mexc_@2x.png 2x"
+           alt="" loading="lazy" /></li>
+      <li><img src="../../../assets/imgs/pages/partner/gatelabs_@1x.png"
+           srcset="../../../assets/imgs/pages/partner/gatelabs_@1x.png 1x, ../../../assets/imgs/pages/partner/gatelabs_@2x.png 2x"
            alt="" loading="lazy" /></li>
       <li><img src="../../../assets/imgs/pages/partner/TPX_@1x.png"
            srcset="../../../assets/imgs/pages/partner/TPX_@1x.png 1x, ../../../assets/imgs/pages/partner/TPX_@2x.png 2x"
@@ -164,13 +170,13 @@
       <li><img src="../../../assets/imgs/pages/partner/Vanda_@1x.png"
            srcset="../../../assets/imgs/pages/partner/Vanda_@1x.png 1x, ../../../assets/imgs/pages/partner/Vanda_@2x.png 2x"
            alt="" loading="lazy" /></li>
+      <br class="d-none d-xl-block">
       <li><img src="../../../assets/imgs/pages/partner/Redline_@1x.png"
-           srcset="../../../assets/imgs/pages/partner/Redline_@1x.png 1x, ../../../assets/imgs/pages/partner/Redline_@2x.png 2x"
-           alt="" loading="lazy" /></li>
+               srcset="../../../assets/imgs/pages/partner/Redline_@1x.png 1x, ../../../assets/imgs/pages/partner/Redline_@2x.png 2x"
+               alt="" loading="lazy" /></li>
       <li><img src="../../../assets/imgs/pages/partner/k300_@1x.png"
            srcset="../../../assets/imgs/pages/partner/k300_@1x.png 1x, ../../../assets/imgs/pages/partner/k300_@2x.png 2x"
            alt="" loading="lazy" /></li>
-      <br class="d-none d-xl-block">
       <li><img src="../../../assets/imgs/pages/partner/deo_@1x.png"
            srcset="../../../assets/imgs/pages/partner/deo_@1x.png 1x, ../../../assets/imgs/pages/partner/deo_@2x.png 2x"
            alt="" loading="lazy" /></li>
@@ -187,6 +193,9 @@
            srcset="../../../assets/imgs/pages/partner/pencil_@1x.png 1x, ../../../assets/imgs/pages/partner/pencil_@2x.png 2x"
            alt="" loading="lazy" /></li>
     </ul>
+    <button class="seemore d-lg-none" (click)="partnerCollapse = !partnerCollapse">
+      <span class="text-gradient body">{{ !partnerCollapse ? 'See less' : 'See more'}}</span>
+    </button>
   </div>
 </section>
 

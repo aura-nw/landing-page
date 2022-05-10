@@ -51,9 +51,22 @@ section.partner {
             font-weight: bold;
         }
     }
+  button.seemore {
+    background-color: transparent;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 50px;
+    margin: auto;
+    margin-top: -16px;
+    font-weight: 500;
+  }
 }
 
 .partner-group {
+  overflow: hidden;
     margin: 0 -28px;
     @media (min-width: 992px) {
         margin: auto;
@@ -62,12 +75,34 @@ section.partner {
     li {
       display: inline-block;
       width: 120px;
+      height: auto;
+      max-height: 80px;
+      opacity: 1;
       margin-bottom: var(--spacer-8);
+      transition: max-height .15s ease-in-out;
       @media (min-width: 992px) {
         margin: 0 20px var(--spacer-10);
         &#guildfi {
           margin: 0 0 var(--spacer-10);
         }
+      }
+    }
+    @media (max-width: 991.99px) {
+      overflow: hidden;
+      max-height: 900px;
+      transition: max-height .15s ease-in-out;
+      &.collapsed {
+        max-height: 280px;
+        li:not(:nth-child(-n+10)) {
+          width: 0;
+          max-height: 0;
+          opacity: 0;
+        }
+      }
+    }
+    @media (max-width: 413.99px) {
+      li {
+        display: inline-table;
       }
     }
   }

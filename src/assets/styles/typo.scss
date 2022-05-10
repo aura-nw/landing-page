@@ -117,7 +117,7 @@ $textColors: (
 }
 
 .text-gradient {
-  background: var(--aura-gradient-simple);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(108.46deg, #5ee6d0 12.51%, #bfc6ff 51.13%, #ffba69 87.49%);
+  background-clip: text;
+  color: transparent;
 }
