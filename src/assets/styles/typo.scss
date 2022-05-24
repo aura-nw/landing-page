@@ -63,11 +63,11 @@ h5,
 
 @media (max-width: 991.98px) {
   .h1-mob {
-    @include mono-font-size(9.6, 12, 0.01, "Redig");
+    @include mono-font-size(9.6, 9.6, 0.01, "Redig");
     display: inline-block;
   }
   .h2-mob {
-    @include mono-font-size(6.4, 8, 0.02, "Redig");
+    @include mono-font-size(6.4, 6.4, 0.02, "Redig");
     display: inline-block;
   }
   .h3-mob {
@@ -88,7 +88,6 @@ h5,
   .small-text-mob {
     @include mono-font-size(1.2, 1.6, 0, "SFProDisplay");
   }
-
   .small-body-mob {
     @include mono-font-size(1.4, 1.8, 0, "SFProDisplay");
   }

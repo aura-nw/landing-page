@@ -60,40 +60,7 @@ export class DashboardComponent implements OnInit {
           centerMode: false,
           infinite: false,
         },
-      },
-      // {
-      //   breakpoint: 1439,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     centerMode: true,
-      //     // variableWidth: true
-      //   },
-      // },
-      // {
-      //   breakpoint: 1600,
-      //   settings: {
-      //     slidesToShow: 4,
-      //     slidesToScroll: 1,
-      //     variableWidth: true,
-      //   }
-      // },
-      // {
-      //   breakpoint: 1920,
-      //   settings: {
-      //     initialSlide: 2,
-      //     slidesToShow: 4,
-      //     slidesToScroll: 1,
-      //     centerMode: true,
-      //   }
-      // },
-      // {
-      //   breakpoint: 3000,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     slidesToScroll: 1,
-      //     variableWidth: true,
-      //   }
-      // }
+      }
     ],
   };
   roadmapSlideConfig = {
@@ -140,6 +107,38 @@ export class DashboardComponent implements OnInit {
       title: 'Tailored for NFT owners',
       subTitle:
         'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before!',
+    },
+  ];
+  featureCardData2 = [
+    {
+      title: 'Pyxis Safe',
+      subTitle: 'Truly secured ',
+      content: `The most secure solution for multi-signature assets management.`,
+      buttonText: `Start now`,
+      buttonLink: 'https://safe.serenity.aura.network/welcome',
+    },
+    {
+      title: 'Aura Scan',
+      subTitle: 'Experience centric',
+      content: `Governing, staking, NFT notifications... your best blockchain explorer experience so far.`,
+      buttonText: `Serenity`,
+      buttonText2: `Halo`,
+      buttonLink: 'https://serenity.aurascan.io/',
+      buttonLink2: 'https://halo.aurascan.io/',
+    },
+    {
+      title: 'Playground',
+      subTitle: 'Easy peasy',
+      content: `The open-source web for smart contracts and dApp development. `,
+      buttonText: `Launch now`,
+      buttonLink: null,
+    },
+    {
+      title: 'NFT Hub',
+      subTitle: 'Powered up',
+      content: `Where community interacts with NFT and Metaverse like never before!`,
+      buttonText: `Learn More`,
+      buttonLink: null,
     },
   ];
   roadmapData = [
@@ -379,45 +378,13 @@ export class DashboardComponent implements OnInit {
     this.roadmapSlideConfig.initialSlide = this.currentQuarter;
   }
 
-  ngOnInit() {
-    // this.advisorySlickSubject
-    //   .asObservable()
-    //   .pipe(delay(1))
-    //   .subscribe((type: 'next' | 'pre') => {
-    //     if (type === 'next') {
-    //       this.advisorySlick.slickNext();
-    //     } else {
-    //       this.advisorySlick.slickPrev();
-    //     }
-    //   });
-    //
-    // this.teamSlickSubject
-    //   .asObservable()
-    //   .pipe(delay(1))
-    //   .subscribe((type: 'next' | 'pre') => {
-    //     if (type === 'next') {
-    //       this.teamSlick.slickNext();
-    //     } else {
-    //       this.teamSlick.slickPrev();
-    //     }
-    //   });
-  }
-
-  afterAdvisoryChange(e): void {
-    // this.slickChange(e, this.advisorData, this.advisorySlickSubject);
-  }
+  ngOnInit() {}
 
   advisoryInit(e): void {
     const nextArrow: HTMLElement = e.slick.$prevArrow[0];
     nextArrow?.classList.add('slick-disabled');
-
     this.advisorySlick = e.slick;
-
     this.toggleAttribute(e);
-  }
-
-  afterTeamChange(e): void {
-    // this.slickChange(e, this.teamData, this.teamSlickSubject);
   }
 
   teamInit(e): void {
