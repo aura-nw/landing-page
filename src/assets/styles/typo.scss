@@ -13,22 +13,26 @@ h1,
   @include mono-font-size(10, 9.6, 0.01, "Redig");
   display: inline-block;
   letter-spacing: 0.13rem !important;
+  font-weight: 400;
 }
 h2,
 .h2 {
   @include mono-font-size(6.4, 8, 0.02, "Redig");
   display: inline-block;
   letter-spacing: 0.13rem !important;
+  font-weight: 400;
 }
 h3,
 .h3 {
   @include mono-font-size(4.8, 5.6, 0.02, "Redig");
   letter-spacing: 0.13rem !important;
+  font-weight: 400;
 }
 h4,
 .h4 {
   @include mono-font-size(3.2, 3.8, 0.02, "Redig");
   letter-spacing: 0.13rem !important;
+  font-weight: 400;
 }
 h5,
 .h5 {
@@ -65,16 +69,20 @@ h5,
   .h1-mob {
     @include mono-font-size(10, 9.6, 0.01, "Redig");
     display: inline-block;
+    font-weight: 400;
   }
   .h2-mob {
     @include mono-font-size(6.4, 6.4, 0.02, "Redig");
     display: inline-block;
+    font-weight: 400;
   }
   .h3-mob {
     @include mono-font-size(4.8, 5.6, 0.02, "Redig");
+    font-weight: 400;
   }
   .h4-mob {
     @include mono-font-size(3.2, 3.8, 0.02, "Redig");
+    font-weight: 400;
   }
   .title-mob {
     @include mono-font-size(3.2, 4, -0.01, "SFProDisplay");
