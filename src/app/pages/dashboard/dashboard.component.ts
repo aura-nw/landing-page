@@ -92,21 +92,20 @@ export class DashboardComponent implements OnInit {
   featureCardData = [
     {
       icon: 'PlanetRocket',
-      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers`,
-      subTitle:
-        'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network',
+      title: `Vertical and horizontal scaling, powerful and easy for developers`,
+      subTitle: `Powered by Tendermint BFT consensus, supporting DeFi, GameFi and SocialFi. <br/>BUIDL just any NFT dApp on Aura Network.`
     },
     {
       icon: 'Rocket',
-      title: 'Brands renaissance',
+      title: 'NFT spacecraft for Brands',
       subTitle:
-        'Stay ahead of the game and provide new momentum with Aura Network framework, the innovative way to boost customers, users or fans engagement',
+        'Public and private blockchain ready. The NFT move your Brand was meant to take, starts right here!',
     },
     {
       icon: 'Planet',
-      title: 'Tailored for NFT owners',
+      title: 'Home of NFT owners',
       subTitle:
-        'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before!',
+        'Interchain connection and interoperability, NFT swapping and bridging were not possible before.',
     },
   ];
   featureCardData2 = [
@@ -300,27 +299,27 @@ export class DashboardComponent implements OnInit {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/',
       },
     },
-    {
-      name: 'James Le',
-      img: 'JamesLe.png',
-      position: `Head of Business Development`,
-      desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. He is in charge of developing Aura’s business integrations with the growing number of partners.',
-      link: {
-        linkedIn:
-          'https://www.linkedin.com/in/duc-le-minh-akachain-consultant/',
-      },
-    },
-    {
-      name: 'Tai Nguyen',
-      img: 'TaiNguyen.png',
-      position: `Head of Operation`,
-      desc:
-        'Tai has more than 10 years of experience as a product manager. ' +
-        'His main focus is building strong product delivery team, managing project activities such as planning, issues tracking and risk management.',
-      link: {
-        linkedIn: 'https://www.linkedin.com/in/tai-nguyen-30595917a/',
-      },
-    },
+    // {
+    //   name: 'James Le',
+    //   img: 'JamesLe.png',
+    //   position: `Head of Business Development`,
+    //   desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. He is in charge of developing Aura’s business integrations with the growing number of partners.',
+    //   link: {
+    //     linkedIn:
+    //       'https://www.linkedin.com/in/duc-le-minh-akachain-consultant/',
+    //   },
+    // },
+    // {
+    //   name: 'Tai Nguyen',
+    //   img: 'TaiNguyen.png',
+    //   position: `Head of Operation`,
+    //   desc:
+    //     'Tai has more than 10 years of experience as a product manager. ' +
+    //     'His main focus is building strong product delivery team, managing project activities such as planning, issues tracking and risk management.',
+    //   link: {
+    //     linkedIn: 'https://www.linkedin.com/in/tai-nguyen-30595917a/',
+    //   },
+    // },
     // {
     //   name: 'Claire Nguyen',
     //   img: 'ClaireNguyen.png',
