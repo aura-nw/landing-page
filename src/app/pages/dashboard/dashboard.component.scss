@@ -48,7 +48,7 @@ section.partner {
     height: 50px;
     margin: auto;
     margin-top: -16px;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 .partner-group {
@@ -122,6 +122,39 @@ section.partner {
     @media (min-width: 1200px) {
         margin-top: 200px;
     }
+  .team .carousel {
+    ::ng-deep .slick-next.slick-arrow,
+    ::ng-deep .slick-prev.slick-arrow {
+      top: 15%;
+      @media (min-width: 992px) {
+        top: 20%;
+      }
+    }
+    @media (max-width: 766.99px) {
+      ::ng-deep .slick-next.slick-arrow {
+        right: 10%;
+      }
+      ::ng-deep .slick-prev.slick-arrow {
+        left: 10%;
+      }
+    }
+    @media (min-width: 1024px) {
+      ::ng-deep .slick-next.slick-arrow {
+        right: -5%;
+      }
+      ::ng-deep .slick-prev.slick-arrow {
+        left: -5%;
+      }
+    }
+    @media (min-width: 1200px) {
+      ::ng-deep .slick-next.slick-arrow {
+        right: 0;
+      }
+      ::ng-deep .slick-prev.slick-arrow {
+        left: 0;
+      }
+    }
+  }
 }
 .team {
     position: relative;
@@ -133,10 +166,10 @@ section.partner {
         }
     }
     .carousel {
-        .slick-slide {
-            margin: 0 16px;
-            display: inline-table;
-        }
+      .slick-slide {
+          margin: 0 16px;
+          display: inline-table;
+      }
     }
     &#advisors {
         @media (min-width: 992px) {
@@ -151,6 +184,9 @@ section.partner {
 }
 .feature {
   &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--aura-gradient-simple);
     padding: var(--spacer-8);
     @media (min-width: 992px) {
@@ -186,10 +222,11 @@ section.partner {
       box-shadow: 0 64px 64px rgba(15, 15, 15, 0.1);
     }
     .divider.divider-vertical {
-      min-height: 16px;
+      height: 16px;
       background-color: var(--aura-light-gray);
     }
     &-content {
+      opacity: 0.7;
       min-height: 128px;
       @media (min-width: 992px) {
         min-height: 96px;
@@ -213,13 +250,12 @@ section.partner {
     z-index: -1;
     transform: translateX(10%);
     @media (min-width: 1400px) {
-      top: -175%;
+      top: -120%;
     }
   }
 }
 .road-map {
     margin-top: 55px;
-    //background: url("../../../assets/imgs/backgrounds/bw_space_lineart_lite-3.png");
 
     &__content {
         list-style-type: unset;
@@ -297,10 +333,10 @@ section.partner {
             }
 
             ::ng-deep button.slick-arrow {
-                transform: translateY(-128px);
+              transform: translateY(-155px);
             }
             ::ng-deep button.slick-prev.slick-arrow {
-                left: -15px !important;
+                left: -60px !important;
             }
         }
     }
@@ -311,7 +347,7 @@ section.partner {
 
 // Override component
 :host::ng-deep {
-    .aura-card.aura-card--sm {
+  .aura-card.aura-card--sm {
         min-height: 296px;
     }
   .team .carousel .slick-list {
@@ -321,7 +357,6 @@ section.partner {
     margin-bottom: -16px;
   }
 }
-
 /* Heading style */
 h1,h2 {
     background: var(--aura-gradient-simple);
