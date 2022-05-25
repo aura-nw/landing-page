@@ -11,6 +11,12 @@
     background-size: contain;
     background-position: calc(100vw / 4) bottom;
   }
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(-50%, -20%, 0);
+  }
 }
 .introduction {
     position: relative;
@@ -132,13 +138,12 @@ section.partner {
     }
     &#advisors {
         @media (min-width: 992px) {
-            margin-top: 200px;
+          margin-top: 160px;
         }
     }
     &#team {
-        // margin-top: 40px;
         @media (min-width: 992px) {
-            margin-top: 160px;
+          margin-top: 200px;
         }
     }
 }
