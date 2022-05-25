@@ -121,7 +121,7 @@ export class DashboardComponent implements OnInit {
       title: 'Aura Scan',
       subTitle: 'Experience centric',
       content: `Governing, staking, NFT notifications... your best blockchain explorer experience so far.`,
-      buttonText: `Serenity`,
+      buttonText: `Start now`,
       // buttonText2: `Halo`,
       buttonLink: 'https://serenity.aurascan.io/',
       // buttonLink2: 'https://halo.aurascan.io/',
