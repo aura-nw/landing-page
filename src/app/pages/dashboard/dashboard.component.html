@@ -3,12 +3,15 @@
     <div class="row pt-lg-6 pb-lg-18">
       <div class="col-12 col-lg-6 d-lg-flex px-4">
         <div class="m-lg-auto">
-          <h1 class="h2-mob">Aura Network - Building the Internet of&nbsp;NFTs</h1>
+          <h1 class="h2-mob position-relative">
+            Aura Network - Building the Internet of&nbsp;NFTs
+            <img src="../../../assets/imgs/pages/dashboard/Stars.png" alt="" width="35px" height="40px" class="stars d-none d-lg-block">
+          </h1>
           <div class="title-small body-mob mt-6 text--white">Aura Network is a scalable, agile and effortless Layer-1 blockchain&nbsp;with a
             comprehensive ecosystem built to accelerate global NFTs adoption.</div>
-          <button class="button button-outline mt-6 mt-lg-8">
+          <a href="https://docs.aura.network/" class="button button-outline mt-6 mt-lg-8 d-inline-block" target="_blank">
             <span class="text-gradient">Explore the ecosystem</span>
-          </button>
+          </a>
         </div>
       </div>
       <div class="col-12 col-lg-6 text-center">
@@ -106,9 +109,9 @@
                       <a href="https://serenity.aurascan.io/" class="button button-outline d-inline-flex" target="_blank">
                         <span class="text-gradient">Serenity</span>
                       </a>
-                      <a href="https://halo.aurascan.io/" class="button button-outline d-inline-flex ml-4" target="_blank">
-                        <span class="text-gradient">Halo</span>
-                      </a>
+<!--                      <a href="https://halo.aurascan.io/" class="button button-outline d-inline-flex ml-4" target="_blank">-->
+<!--                        <span class="text-gradient">Halo</span>-->
+<!--                      </a>-->
                     </div>
                 </div>
               </div>
@@ -159,9 +162,9 @@
                         <a href="{{cardData.buttonLink}}" target="_blank" class="button button-outline d-inline">
                           <span class="text-gradient">{{cardData.buttonText}}</span>
                         </a>
-                        <a href="{{cardData.buttonLink2}}" target="_blank" class="button button-outline d-inline ml-4" *ngIf="cardData.buttonText2 && cardData.buttonLink2">
-                          <span class="text-gradient">{{cardData.buttonText2}}</span>
-                        </a>
+<!--                        <a href="{{cardData.buttonLink2}}" target="_blank" class="button button-outline d-inline ml-4" *ngIf="cardData.buttonText2 && cardData.buttonLink2">-->
+<!--                          <span class="text-gradient">{{cardData.buttonText2}}</span>-->
+<!--                        </a>-->
                       </div>
                     </div>
                   </div>
@@ -286,9 +289,43 @@
         </div>
     </div>
 </section>
+<!--organization-->
 <div class="position-relative organization">
+    <!--team-->
+    <section class="team" id="team">
+      <div>
+        <!--content-->
+        <div class="container px-4 px-lg-0">
+          <div class="row justify-content-center">
+            <div class="col-8 col-lg-12 text-center">
+              <h2 class="mb-5 h1 h3-mob">Our Team</h2>
+            </div>
+            <div class="col-12 col-ld-4 text-center">
+              <div class="sub-text body-mob mb-6 text--neutrals-6">A diversified team of blockchain believers
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--slider-->
+        <div class="container mt-4 mt-md-12">
+          <div class="row">
+            <div class="col-12">
+              <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig"
+                                  (init)="teamInit($event)"
+                                  (beforeChange)="toggleAttribute($event)">
+                <div ngxSlickItem *ngFor="let data of teamData" class="slide">
+                  <app-staff-card [isAdvisors]="false" [img]="data.img" [name]="data.name"
+                                  [position]="data.position" [desc]="data.desc" [socialLink]="data.link">
+                  </app-staff-card>
+                </div>
+              </ngx-slick-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--advisor-->
-    <section class="team mt-20 mt-lg-0" id="advisors">
+    <section class="team" id="advisors">
         <div>
             <!--content-->
             <div class="container px-4 px-lg-0">
@@ -322,76 +359,4 @@
             </div>
         </div>
     </section>
-    <!--team-->
-    <section class="team" id="team">
-        <div>
-            <!--content-->
-            <div class="container px-4 px-lg-0">
-                <div class="row justify-content-center">
-                    <div class="col-8 col-lg-12 text-center">
-                        <h2 class="mb-5 h1 h3-mob">Our Team</h2>
-                    </div>
-                    <div class="col-12 col-ld-4 text-center">
-                        <div class="sub-text body-mob mb-6 text--neutrals-6">A diversified team of blockchain believers
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--slider-->
-            <div class="container mt-4 mt-md-12">
-                <div class="row">
-                    <div class="col-12">
-                        <ngx-slick-carousel class="carousel carousel--has-arrows" [config]="teamSlideConfig"
-                            (init)="teamInit($event)"
-                            (beforeChange)="toggleAttribute($event)">
-                            <div ngxSlickItem *ngFor="let data of teamData" class="slide">
-                                <app-staff-card [isAdvisors]="false" [img]="data.img" [name]="data.name"
-                                    [position]="data.position" [desc]="data.desc" [socialLink]="data.link">
-                                </app-staff-card>
-                            </div>
-                        </ngx-slick-carousel>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
-<!-- FAQ
-<section class="faq" id="faqs">
-    <div class="faq-background d-none d-xl-block"></div>
-    <div class="container">
-        <div class="row flex-xl-row-reverse justify-content-center">
-            <div class="col-12 col-xl-8">
-                <div class="faq__contain px-2 px-md-0">
-                    <div class="d-flex justify-content-center justify-content-lg-start">
-                        <h2 class="d-inline-block">FAQs</h2>
-                    </div>
-                    <div class="accordion mt-9">
-                        <div class="accordion-item" *ngFor="let faq of faqData; let i = index">
-                            <div class="sub-text accordion-header" id="faq-{{i}}">
-                                <button class="collapsed accordion__button pl-0" type="button" data-bs-toggle="collapse"
-                                    [attr.data-bs-target]="'#collapse-'+i" aria-expanded="true"
-                                    [attr.aria-controls]="'collapse-'+i">
-                                    {{faq.quest}}
-                                </button>
-                            </div>
-                            <div id="collapse-{{i}}" class="accordion-collapse collapse"
-                                [attr.aria-labelledby]="'faq-'+i">
-                                <div class="accordion-body body pl-0" [innerHTML]="faq.anw"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-4 text-end">
-            </div>
-        </div>
-    </div>
-
-  <div class="mt-5 faq__img d-md-none">
-    <img src="../../../assets/imgs/pages/dashboard/astronaut_2-1@1x.png"
-         srcset="../../../assets/imgs/pages/dashboard/astronaut_2-1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_2-1@2x.png 2x"
-         alt="" loading="lazy" />
-  </div>
-</section>
--->
