@@ -10,7 +10,7 @@ body {
 }
 h1,
 .h1 {
-  @include mono-font-size(9.6, 12, 0.01, "Redig");
+  @include mono-font-size(10, 9.6, 0.01, "Redig");
   display: inline-block;
   letter-spacing: 0.13rem !important;
 }
@@ -42,10 +42,10 @@ h5,
   @include mono-font-size(2.6, 3.2, -0.01, "SFProDisplay");
 }
 .title-small {
-  @include mono-font-size(2.4, 3.2, -0.01, "SFProDisplay");
+  @include mono-font-size(2, auto, -0.01, "SFProDisplay");
 }
 .sub-text {
-  @include mono-font-size(2, 2.5, 0.02, "SFProDisplay");
+  @include mono-font-size(2.4, 4, 0.02, "SFProDisplay");
 }
 .body {
   @include mono-font-size(1.6, 2.4, 0.05, "SFProDisplay");
@@ -63,7 +63,7 @@ h5,
 
 @media (max-width: 991.98px) {
   .h1-mob {
-    @include mono-font-size(9.6, 9.6, 0.01, "Redig");
+    @include mono-font-size(10, 9.6, 0.01, "Redig");
     display: inline-block;
   }
   .h2-mob {
@@ -80,7 +80,7 @@ h5,
     @include mono-font-size(3.2, 4, -0.01, "SFProDisplay");
   }
   .sub-text-mob {
-    @include mono-font-size(2, 2.5, 0.02, "SFProDisplay");
+    @include mono-font-size(2.4, 4, 0.02, "SFProDisplay");
   }
   .body-mob {
     @include mono-font-size(1.6, 2.4, 0.05, "SFProDisplay");

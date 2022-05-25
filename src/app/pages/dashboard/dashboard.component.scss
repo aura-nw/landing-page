@@ -1,8 +1,10 @@
 .hero {
   padding-top: 100px;
-  background: url("../../../assets/imgs/backgrounds/bw_space_lineart_lite.png") no-repeat;
-  background-size: 130%;
-  background-position: 30px bottom;
+  @media (min-width: 992px) {
+    background: url("../../../assets/imgs/backgrounds/bw_space_lineart_lite.png") no-repeat;
+    background-size: 130%;
+    background-position: 30px bottom;
+  }
   @media (min-width: 1950px) {
     background-size: contain;
     background-position: calc(100vw / 5.9) bottom;
@@ -196,6 +198,10 @@ section.partner {
         min-height: 64px;
       }
     }
+    &.aura-card--md {
+      height: 400px;
+      min-height: unset;
+    }
   }
   img.img-bg {
     position: absolute;
@@ -209,9 +215,6 @@ section.partner {
     @media (min-width: 1400px) {
       top: -175%;
     }
-  }
-  .aura-card--md {
-    height: 350px;
   }
 }
 .road-map {
@@ -334,17 +337,22 @@ h1,h2 {
 }
 
 ul.aura-list {
+  @media (min-width: 568px) {
+    display: grid;
+    width: max-content;
+    margin: auto;
+  }
     li {
         padding-left: var(--spacer-9);
         position: relative;
         margin-top: 16px;
+        display: inline-block;
         &:before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 0;
             right: 0;
-            transform: translateY(-50%);
             width: 24px;
             height: 24px;
             background: url("../../../assets/imgs/icons-svg/color/check-green.svg") no-repeat center;
