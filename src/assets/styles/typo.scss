@@ -10,7 +10,7 @@ body {
 }
 h1,
 .h1 {
-  @include mono-font-size(10, 9.6, 0.01, "Redig");
+  @include mono-font-size(10, 12, 0.01, "Redig");
   display: inline-block;
   letter-spacing: 0.13rem !important;
   font-weight: 400;
@@ -67,7 +67,7 @@ h5,
 
 @media (max-width: 991.98px) {
   .h1-mob {
-    @include mono-font-size(10, 9.6, 0.01, "Redig");
+    @include mono-font-size(10, 12, 0.01, "Redig");
     display: inline-block;
     font-weight: 400;
   }
