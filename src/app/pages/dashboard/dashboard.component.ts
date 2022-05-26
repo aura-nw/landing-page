@@ -190,7 +190,7 @@ export class DashboardComponent implements OnInit {
       icon: 'icon-sports-flag',
       date: 'Q2-2022',
       content: [
-        'Serenity & Halo <br> testnet release',
+        'Serenity & Halo <br> Testnet release',
         'Smart Contract &<br>DAPP SDK',
         'Aura Scan',
         'Pyxis Multi-Sig Safe',
@@ -205,7 +205,7 @@ export class DashboardComponent implements OnInit {
         'Mainnet Release',
         'Governance Tool',
         `Integrate with C98 ecosystem`,
-        'IBC enablement for<br>native token',
+        'IBC enablement for native&nbsp;token',
       ],
     },
     {
