@@ -60,40 +60,42 @@ export class DashboardComponent implements OnInit {
           centerMode: false,
           infinite: false,
         },
+      }
+    ],
+  };
+  advisorySlideConfig = {
+    slidesToShow: 1,
+    mobileFirst: true,
+    infinite: false,
+    centerMode: true,
+    arrows: true,
+    centerPadding: '28px',
+    responsive: [
+      {
+        breakpoint: 767.9,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
       },
-      // {
-      //   breakpoint: 1439,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     centerMode: true,
-      //     // variableWidth: true
-      //   },
-      // },
-      // {
-      //   breakpoint: 1600,
-      //   settings: {
-      //     slidesToShow: 4,
-      //     slidesToScroll: 1,
-      //     variableWidth: true,
-      //   }
-      // },
-      // {
-      //   breakpoint: 1920,
-      //   settings: {
-      //     initialSlide: 2,
-      //     slidesToShow: 4,
-      //     slidesToScroll: 1,
-      //     centerMode: true,
-      //   }
-      // },
-      // {
-      //   breakpoint: 3000,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     slidesToScroll: 1,
-      //     variableWidth: true,
-      //   }
-      // }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: false,
+        },
+      }
     ],
   };
   roadmapSlideConfig = {
@@ -125,21 +127,52 @@ export class DashboardComponent implements OnInit {
   featureCardData = [
     {
       icon: 'PlanetRocket',
-      title: `Built on Cosmos, powerful&nbsp;for&nbsp;developers`,
-      subTitle:
-        'Supporting both game-fi and social-fi, BUIDL any Dapps on Aura Network',
+      title: `Vertical and horizontal scaling, powerful and easy for developers`,
+      subTitle: `Powered by Tendermint BFT consensus, supporting DeFi, GameFi and SocialFi. <br/>BUIDL just any NFT dApp on Aura Network.`
     },
     {
       icon: 'Rocket',
-      title: 'Brands renaissance',
+      title: 'NFT spacecraft for Brands',
       subTitle:
-        'Stay ahead of the game and provide new momentum with Aura Network framework, the innovative way to boost customers, users or fans engagement',
+        'Public and private blockchain ready. The NFT move your Brand was meant to take, starts right here!',
     },
     {
       icon: 'Planet',
-      title: 'Tailored for NFT owners',
+      title: 'Home of NFT owners',
       subTitle:
-        'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before!',
+        'Interchain connection and interoperability, NFT swapping and bridging were not possible before.',
+    },
+  ];
+  featureCardData2 = [
+    {
+      title: 'Pyxis Safe',
+      subTitle: 'Truly secured ',
+      content: `The most secure solution for multi-signature assets management.`,
+      buttonText: `Start now`,
+      buttonLink: 'https://safe.serenity.aura.network/welcome',
+    },
+    {
+      title: 'Aura Scan',
+      subTitle: 'Experience centric',
+      content: `Governing, staking, NFT notifications... your best blockchain explorer experience so far.`,
+      buttonText: `Start now`,
+      // buttonText2: `Halo`,
+      buttonLink: 'https://serenity.aurascan.io/',
+      // buttonLink2: 'https://halo.aurascan.io/',
+    },
+    {
+      title: 'Playground',
+      subTitle: 'Easy peasy',
+      content: `The open-source web for smart contracts and dApp development. `,
+      buttonText: `Launch now`,
+      buttonLink: null,
+    },
+    {
+      title: 'NFT Hub',
+      subTitle: 'Powered up',
+      content: `Where community interacts with NFT and Metaverse like never before!`,
+      buttonText: `Learn More`,
+      buttonLink: null,
     },
   ];
   roadmapData = [
@@ -151,39 +184,40 @@ export class DashboardComponent implements OnInit {
     {
       icon: 'icon-target',
       date: 'Q1-2022',
-      content: ['Strategic Round'],
+      content: ['Seed Round'],
     },
     {
       icon: 'icon-sports-flag',
       date: 'Q2-2022',
       content: [
-        'Aura Testnet',
-        'Smart Contract & DAPP SDK',
+        'Serenity & Halo <br> testnet release',
+        'Smart Contract &<br>DAPP SDK',
+        'Aura Scan',
+        'Pyxis Multi-Sig Safe',
         'Aura Playground',
-        'Aura Explorer',
-        'Aura Multi-Sig Safe',
+        'Euphoria Staging net',
       ],
     },
     {
       icon: 'icon-globe',
       date: 'Q3-2022',
       content: [
-        'Aura Mainnet',
+        'Mainnet Release',
         'Governance Tool',
-        `Integrate with C98 ecosystem (Wallet, Marketplace)`,
-        'IBC enablement for native token',
+        `Integrate with C98 ecosystem`,
+        'IBC enablement for<br>native token',
       ],
     },
     {
       icon: 'icon-control-outline',
       date: 'Q4-2022',
-      content: ['NFT games support', `First NFT use case - NFT fan token`],
+      content: ['NFT games support', `First NFT use case`],
     },
     {
       icon: 'icon-people',
       date: '2023',
       content: [
-        'IBC enablement for NFTs',
+        'BC enablement for NFTs',
         'First Metaverse Integration',
         'Enterprise blockchain collaboration',
         'NFT games launch',
@@ -301,27 +335,27 @@ export class DashboardComponent implements OnInit {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/',
       },
     },
-    {
-      name: 'James Le',
-      img: 'JamesLe.png',
-      position: `Head of Business Development`,
-      desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. He is in charge of developing Aura’s business integrations with the growing number of partners.',
-      link: {
-        linkedIn:
-          'https://www.linkedin.com/in/duc-le-minh-akachain-consultant/',
-      },
-    },
-    {
-      name: 'Tai Nguyen',
-      img: 'TaiNguyen.png',
-      position: `Head of Operation`,
-      desc:
-        'Tai has more than 10 years of experience as a product manager. ' +
-        'His main focus is building strong product delivery team, managing project activities such as planning, issues tracking and risk management.',
-      link: {
-        linkedIn: 'https://www.linkedin.com/in/tai-nguyen-30595917a/',
-      },
-    },
+    // {
+    //   name: 'James Le',
+    //   img: 'JamesLe.png',
+    //   position: `Head of Business Development`,
+    //   desc: 'James has 7+ years of experience in business development in various domains including real estate, online marketing and value-added services. He is in charge of developing Aura’s business integrations with the growing number of partners.',
+    //   link: {
+    //     linkedIn:
+    //       'https://www.linkedin.com/in/duc-le-minh-akachain-consultant/',
+    //   },
+    // },
+    // {
+    //   name: 'Tai Nguyen',
+    //   img: 'TaiNguyen.png',
+    //   position: `Head of Operation`,
+    //   desc:
+    //     'Tai has more than 10 years of experience as a product manager. ' +
+    //     'His main focus is building strong product delivery team, managing project activities such as planning, issues tracking and risk management.',
+    //   link: {
+    //     linkedIn: 'https://www.linkedin.com/in/tai-nguyen-30595917a/',
+    //   },
+    // },
     // {
     //   name: 'Claire Nguyen',
     //   img: 'ClaireNguyen.png',
@@ -379,45 +413,13 @@ export class DashboardComponent implements OnInit {
     this.roadmapSlideConfig.initialSlide = this.currentQuarter;
   }
 
-  ngOnInit() {
-    // this.advisorySlickSubject
-    //   .asObservable()
-    //   .pipe(delay(1))
-    //   .subscribe((type: 'next' | 'pre') => {
-    //     if (type === 'next') {
-    //       this.advisorySlick.slickNext();
-    //     } else {
-    //       this.advisorySlick.slickPrev();
-    //     }
-    //   });
-    //
-    // this.teamSlickSubject
-    //   .asObservable()
-    //   .pipe(delay(1))
-    //   .subscribe((type: 'next' | 'pre') => {
-    //     if (type === 'next') {
-    //       this.teamSlick.slickNext();
-    //     } else {
-    //       this.teamSlick.slickPrev();
-    //     }
-    //   });
-  }
-
-  afterAdvisoryChange(e): void {
-    // this.slickChange(e, this.advisorData, this.advisorySlickSubject);
-  }
+  ngOnInit() {}
 
   advisoryInit(e): void {
     const nextArrow: HTMLElement = e.slick.$prevArrow[0];
     nextArrow?.classList.add('slick-disabled');
-
     this.advisorySlick = e.slick;
-
     this.toggleAttribute(e);
-  }
-
-  afterTeamChange(e): void {
-    // this.slickChange(e, this.teamData, this.teamSlickSubject);
   }
 
   teamInit(e): void {

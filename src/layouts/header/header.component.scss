@@ -95,7 +95,7 @@
                 opacity: 0;
                 min-width: fit-content;
                 background: transparent;
-                transition: all 0.35s ease-in-out;
+                transition: opacity 0.35s ease-in-out;
                 &.show {
                     max-height: 300px;
                     //padding: var(--spacer-6) var(--spacer-5);
