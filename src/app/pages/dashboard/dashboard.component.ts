@@ -63,6 +63,41 @@ export class DashboardComponent implements OnInit {
       }
     ],
   };
+  advisorySlideConfig = {
+    slidesToShow: 1,
+    mobileFirst: true,
+    infinite: false,
+    centerMode: true,
+    arrows: true,
+    centerPadding: '28px',
+    responsive: [
+      {
+        breakpoint: 767.9,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: false,
+        },
+      }
+    ],
+  };
   roadmapSlideConfig = {
     slidesToShow: 2,
     slidesToScroll: 1,
