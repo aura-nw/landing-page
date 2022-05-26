@@ -234,6 +234,9 @@ section.partner {
     &:hover {
       background: linear-gradient(108.46deg, rgba(94, 230, 208, 0.1) 12.51%, rgba(191, 198, 255, 0.1) 51.13%, rgba(255, 186, 105, 0.2) 87.49%);
       box-shadow: 0 64px 64px rgba(15, 15, 15, 0.1);
+      &::before { 
+        background: linear-gradient(108.46deg, rgba(94, 230, 208, 0.6) 12.51%, rgba(191, 198, 255, 0.6) 51.13%, rgba(255, 186, 105, 0.6) 87.49%);
+      }
     }
     .divider.divider-vertical {
       height: 16px;
