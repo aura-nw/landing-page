@@ -155,10 +155,13 @@
                         <h5 class="text--light-gray text-capitalize">{{cardData.subTitle}}</h5>
                       </div>
                       <div class="mt-4 sub-text feature__card-content">{{cardData.content}}</div>
-                      <div class="mt-8 d-flex" *ngIf="cardData.buttonLink">
-                        <a href="{{cardData.buttonLink}}" target="_blank" class="button button-outline d-inline">
+                      <div class="mt-8 d-flex">
+                        <a href="{{cardData.buttonLink}}" target="_blank" class="button button-outline d-inline" *ngIf="cardData.buttonLink">
                           <span class="text-gradient">{{cardData.buttonText}}</span>
                         </a>
+                        <button  class="button button-outline d-inline invisible" *ngIf="!cardData.buttonLink">
+                          <span class="text-gradient"></span>
+                        </button>
 <!--                        <a href="{{cardData.buttonLink2}}" target="_blank" class="button button-outline d-inline ml-4" *ngIf="cardData.buttonText2 && cardData.buttonLink2">-->
 <!--                          <span class="text-gradient">{{cardData.buttonText2}}</span>-->
 <!--                        </a>-->
