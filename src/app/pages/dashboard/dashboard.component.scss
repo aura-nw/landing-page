@@ -15,8 +15,8 @@
   }
   .stars {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -5px;
+    left: -5px;
     transform: translate3d(-50%, -20%, 0);
   }
 }
@@ -59,15 +59,27 @@ section.partner {
     }
   ul.partner-group__contain {
     overflow: hidden;
-    max-height: 900px;
-    transition: max-height .15s ease-in-out;
+    height: 620px;
+    @media (min-width: 456px) {
+      height: 500px;
+    }
+    @media (min-width: 568px) {
+      height: 420px;
+    }
+    @media (min-width: 992px) {
+      height: 600px;
+    }
+    @media (min-width: 1140px) {
+      height: 650px;
+    }
+    transition: height .15s ease-in-out;
     &.collapsed {
-      max-height: 300px;
-      @media (min-width: 575px) {
-        max-height: 200px;
+      height: 200px;
+      @media (min-width: 568px) {
+        height: 140px;
       }
       @media (min-width: 992px) {
-        max-height: 280px;
+        height: 260px;
       }
       li:not(:nth-child(-n+11)) {
         width: 0;
@@ -79,25 +91,27 @@ section.partner {
     li {
       display: inline-table;
       width: 100px;
+      max-height: 80px;
+      opacity: 1;
+      //transition: max-height .15s ease-in-out;
+      margin: 0 6px var(--spacer-8);
       @media (min-width: 992px) {
         width: 140px;
       }
-      height: auto;
-      max-height: 80px;
-      opacity: 1;
-      transition: max-height .15s ease-in-out;
-      margin: 0 6px var(--spacer-8);
       &#guildfi {
-        width: 70px;
+        width: 46px;
         @media (min-width: 992px) {
-          width: 84px;
+          width: 140px;
         }
       }
+      &#kucoin {
+        width: 114px;
+      }
       @media (min-width: 768px) {
-        margin: 0 20px var(--spacer-2);
+        margin: 0 20px var(--spacer-8);
       }
       @media (min-width: 992px) {
-        margin: 0 20px var(--spacer-2);
+        margin: 0 20px var(--spacer-8);
       }
       @media (min-width: 1140px) {
         margin: 0 40px var(--spacer-10);
@@ -108,7 +122,7 @@ section.partner {
 
       &#guildfi {
         @media (max-width: 768px) {
-          margin: 0 12px var(--spacer-8);
+          margin: 0 30px var(--spacer-8);
         }
       }
     }
@@ -345,6 +359,20 @@ section.partner {
     }
     @media (min-width: 1280px) {
         background-size: auto;
+    }
+    @media (min-width: 1600px) {
+      .carousel {
+        ::ng-deep button.slick-next.slick-arrow {
+          right: -80px !important;
+        }
+      }
+    }
+    @media (min-width: 1600px) {
+      .carousel {
+        ::ng-deep button.slick-next.slick-arrow {
+          right: -100px !important;
+        }
+      }
     }
 }
 
