@@ -338,6 +338,9 @@ section.partner {
             ::ng-deep button.slick-prev.slick-arrow {
                 left: -60px !important;
             }
+            ::ng-deep button.slick-next.slick-arrow {
+                right:-48px !important;
+            }
         }
     }
     @media (min-width: 1280px) {
