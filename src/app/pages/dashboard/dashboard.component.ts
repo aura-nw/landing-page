@@ -205,7 +205,7 @@ export class DashboardComponent implements OnInit {
         'Mainnet Release',
         'Governance Tool',
         `Integrate with C98 ecosystem`,
-        'IBC enablement for<br>native token',
+        'IBC enablement for native&nbsp;token',
       ],
     },
     {
