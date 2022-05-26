@@ -106,6 +106,9 @@ section.partner {
       }
       &#kucoin {
         width: 114px;
+        @media (min-width: 992px) {
+          width: 140px;
+        }
       }
       @media (min-width: 768px) {
         margin: 0 20px var(--spacer-8);
