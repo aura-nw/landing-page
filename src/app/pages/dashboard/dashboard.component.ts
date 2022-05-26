@@ -276,7 +276,9 @@ export class DashboardComponent implements OnInit {
       name: 'Giang Tran',
       img: 'GiangTran.png',
       position: `Founder`,
-      desc: `As a Forbes Technology Council member, Giang has deep expertise in Cloud and Blockchain. He is the ex-founder of akaChain and has guided many successful start-ups. Giang drives Aura's strategy adoption and equitable growth.`,
+      desc: `As a Forbes Technology Council member, Giang has deep expertise in Cloud and Enterprise Blockchain.
+      He is the founder of akaChain and has guided many successful start-ups.
+      Giang drives Aura's strategy adoption and equitable growth.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/hoang-giang-tran-078423b5/',
         twitter: 'https://twitter.com/GiangAura',
@@ -286,8 +288,9 @@ export class DashboardComponent implements OnInit {
       name: 'Yamato Tran',
       img: 'YamatoTran.png',
       position: `Co-founder`,
-      desc: `As a startup enthusiast with extensive experience as COO of FPT Software, Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.
-      Yamato leads Aura’s vision and expands its partnership network.`,
+      desc: `As a startup enthusiast with extensive experience as COO of FPT Software,
+      Yamato had led several RPA and blockchain incubators to spin off with successful fund investments.
+      Yamato leads Aura’s vision and expands its partnership network.  `,
       link: {
         linkedIn: 'https://www.linkedin.com/in/trandanghoa/',
       },
@@ -319,7 +322,10 @@ export class DashboardComponent implements OnInit {
       name: 'Long Nguyen',
       img: 'LongNguyen.png',
       position: `CTO`,
-      desc: `Graduated from Aalto University and Université de Lorraine, majoring in security and privacy. Long has been building consortium blockchain systems for international enterprises since 2018, he leads Aura’s technology strategy.`,
+      desc: `Graduated from Aalto University and Université de Lorraine,
+      majoring in security and privacy.
+      Long has been building consortium blockchain systems for international enterprises since 2018,
+      he leads Aura’s technology strategy.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/eledra/',
         twitter:
@@ -330,7 +336,8 @@ export class DashboardComponent implements OnInit {
       name: 'Thu Tran',
       img: 'ThuTran.png',
       position: `COO`,
-      desc: `Thu is the former marketing and partnership lead of a Southeast Asia IT services provider. She advances Aura's strategic planning and opportunities for growth acquisition of its ecosystem and partners community.`,
+      desc: `Thu is the former marketing and partnership lead of a Southeast Asia IT services provider.
+      She advances Aura's strategic planning and opportunities for growth acquisition of its ecosystem and partners community. `,
       link: {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/',
       },
