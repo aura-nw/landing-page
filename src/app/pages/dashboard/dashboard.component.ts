@@ -140,7 +140,7 @@ export class DashboardComponent implements OnInit {
       icon: 'Planet',
       title: 'Home of NFT owners',
       subTitle:
-        'Interchain connection and interoperability, NFT swapping and bridging were not possible before.',
+        'Interchain connection and interoperability, NFT swapping and bridging - things that were simply not possible before.',
     },
   ];
   featureCardData2 = [
@@ -217,7 +217,7 @@ export class DashboardComponent implements OnInit {
       icon: 'icon-people',
       date: '2023',
       content: [
-        'BC enablement for NFTs',
+        'IBC enablement for NFTs',
         'First Metaverse Integration',
         'Enterprise blockchain collaboration',
         'NFT games launch',
