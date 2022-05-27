@@ -59,12 +59,15 @@ section.partner {
     }
   ul.partner-group__contain {
     overflow: hidden;
-    height: 620px;
+    height: 550px;
     @media (min-width: 456px) {
-      height: 500px;
+      height: 450px;
     }
     @media (min-width: 568px) {
-      height: 420px;
+      height: 470px;
+    }
+    @media (min-width: 596px) {
+      height: 400px;
     }
     @media (min-width: 992px) {
       height: 600px;
@@ -94,7 +97,7 @@ section.partner {
       max-height: 80px;
       opacity: 1;
       //transition: max-height .15s ease-in-out;
-      margin: 0 6px var(--spacer-8);
+      margin: 0 4px var(--spacer-8);
       @media (min-width: 992px) {
         width: 140px;
       }
@@ -104,7 +107,7 @@ section.partner {
           width: 140px;
         }
       }
-      &#kucoin, &#tpx {
+      &.partner--md {
         width: 114px;
         @media (min-width: 992px) {
           width: 140px;
