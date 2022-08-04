@@ -46,7 +46,7 @@ footer {
   .footer__cta {
     margin: 32px 8px;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
     width: 100%;
     &-contain {
       background: url("../../assets/imgs/backgrounds/cta_mailbox.png") center left no-repeat;
@@ -62,18 +62,30 @@ footer {
       left: 0;
       object-fit: cover;
     }
+    &-contract {
+      position: absolute;
+      .button.button-circle {
+        width: 20px;
+        height: 20px;
+        img.button-icon {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
     &:before {
       content: "";
       display: block;
       padding-top: 49.56268221%;
     }
-
+    .cta {
+      max-width: 200px;
+    }
     @media (min-width: 414px) {
       .footer__cta-contain {
         padding: 24px 0 24px 48px;
       }
     }
-
     @media (min-width: 480px) {
       height: 100%;
       padding: var(--spacer-8) 0;
@@ -92,13 +104,11 @@ footer {
       }
     }
     @media (min-width: 992px) {
-      padding: var(--spacer-4) 0;
       .footer__cta-contain {
         padding: 24px 0 32px 16px;
       }
     }
     @media (min-width: 1200px) {
-      padding: var(--spacer-16) 0;
       .footer__cta-contain {
         padding: 24px 0 24px 24px;
       }

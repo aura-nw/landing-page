@@ -54,8 +54,14 @@
           </div>
           <div class="row d-lg-none">
             <div class="pt-4 pr-4">
-              <div class="body text--white">Contract</div>
-              <div class="body fw-semibold text-gradient d-inline-block">Binance Smart Chain</div>
+              <div class="d-flex body">
+                <div class="text--white mr-1">Contract:</div>
+                <div class="fw-semibold text-gradient d-inline-block">{{ env.contractName }}</div>
+                <a href="https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6" target="_blank"
+                   class="button button-circle ml-2">
+                  <img src="assets/imgs/icons-svg/basic/redirect.svg" alt="" class="button-icon">
+                </a>
+              </div>
               <div class="mt-4 contract-info d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/auraTitleLogo.png" alt="" width="20px" height="20px">
                 <span class="ml-1 small-body" id="popupCopy">
@@ -81,11 +87,32 @@
           <div class="footer__cta-contain">
             <div>
               <div class="h4 text-gradient d-inline">Let's Talk!</div>
-              <div class="small-text mt-2 text--light-gray">
-                We’d love to hear from you, we’re here<br/>to answer all your questions.
+              <div class="small-text mt-2 text--light-gray cta">
+                We’d love to hear from you, we’re here to answer all your questions.
               </div>
             </div>
             <a href="mailto:support@aura.network" class="small-body text--green">support@aura.network </a>
+          </div>
+          <div class="my-4 small-body d-none d-lg-block">
+            <span class="text--white">Contract: </span>
+            <span class="text-gradient">{{ env.contractName }}</span>
+          </div>
+          <div class="footer__cta-contract d-none d-lg-flex align-items-center">
+            <img src="assets/imgs/auraTitleLogo.png" alt="" width="20px" height="20px">
+            <span class="ml-1 text--gray-1 small-body">{{env.contractAddressShort}}</span>
+            <button class="button button-circle ml-2"
+                    matTooltip="Copied!"
+                    #tooltip1="matTooltip"
+                    (mouseenter)="$event.stopImmediatePropagation()"
+                    (mouseleave)="$event.stopImmediatePropagation()"
+                    [matTooltipClass]="'copyToolTip'"
+                    (click)="copyData(env.contractAddress); tooltip1.toggle()">
+              <img src="assets/imgs/icons-svg/basic/copy.svg" alt="" class="button-icon">
+            </button>
+            <a href="https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6" target="_blank"
+               class="button button-circle ml-2">
+              <img src="assets/imgs/icons-svg/basic/redirect.svg" alt="" class="button-icon">
+            </a>
           </div>
         </div>
       </div>

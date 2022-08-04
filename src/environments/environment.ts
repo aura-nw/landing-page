@@ -4,6 +4,7 @@
 
 export const environment = {
   production: true,
+  contractName: 'BNB Chain',
   contractAddress: '0x23c5D1164662758b3799103Effe19cC064d897D6',
   contractAddressShort: '0x23c5D1164...9cC064d897D6'
 };
