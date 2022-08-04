@@ -120,6 +120,10 @@ $textColors: (
     -webkit-text-fill-color: var(--aura-#{$color});
   }
 }
+.fw-500 {
+  font-weight: 500;
+}
+
 .fw-semibold {
   font-weight: 600;
 }
