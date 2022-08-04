@@ -1,0 +1,21 @@
+.contract-info {
+  border-radius: 40px;
+  background-color: #24262E;
+  height: 40px;
+  padding: 0 32px;
+  color: #868A97;
+  .button.button-circle {
+    background-color: #494C58;
+  }
+}
+.aura-dialog {
+  .mat-dialog-container {
+    background-color: #141416;
+    box-shadow: -1px 4px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    padding: 0;
+  }
+}
+#popupCopy {
+  color: #E5E7EA;
+}
