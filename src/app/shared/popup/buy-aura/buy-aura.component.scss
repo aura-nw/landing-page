@@ -10,3 +10,11 @@
   justify-content: center;
   margin: auto;
 }
+.button-group {
+  img {
+    max-width: 132px;
+    @media (min-width: 992px) {
+      max-width: 214px;
+    }
+  }
+}
