@@ -1,1 +1,25 @@
-<p>topbar works!</p>
+<section class="topbar">
+  <div class="container">
+    <div class="row">
+      <div class="col small-body pt-3 d-flex align-items-center">
+        <div>
+          <span class="text--white">Contract: </span>
+          <span class="text-gradient">Binance Smart Chain</span>
+        </div>
+        <div class="ml-6 d-flex align-items-center">
+          <img src="assets/imgs/auraTitleLogo.png" alt="" width="20px" height="20px">
+          <span class="ml-1" id="popupCopy">{{env.contractAddress}}</span>
+          <button class="button button-circle ml-2"
+                  matTooltip="Copied!"
+                  #tooltip1="matTooltip"
+                  (mouseenter)="$event.stopImmediatePropagation()"
+                  (mouseleave)="$event.stopImmediatePropagation()"
+                  [matTooltipClass]="'copyToolTip'"
+                  (click)="copyData(env.contractAddress); tooltip1.toggle()">
+            <img src="assets/imgs/icons-svg/basic/copy.svg" alt="" class="button-icon">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

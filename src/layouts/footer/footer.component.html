@@ -52,6 +52,28 @@
               </div>
             </div>
           </div>
+          <div class="row d-lg-none">
+            <div class="pt-4 pr-4">
+              <div class="body text--white">Contract</div>
+              <div class="body fw-semibold text-gradient d-inline-block">Binance Smart Chain</div>
+              <div class="mt-4 contract-info d-flex align-items-center justify-content-center">
+                <img src="assets/imgs/auraTitleLogo.png" alt="" width="20px" height="20px">
+                <span class="ml-1 small-body" id="popupCopy">
+                  <span class="d-sm-none">{{ env.contractAddressShort }}</span>
+                  <span class="d-none d-sm-inline-block">{{ env.contractAddress }}</span>
+                </span>
+                <button class="button button-circle ml-2"
+                        matTooltip="Copied!"
+                        #tooltip1="matTooltip"
+                        (mouseenter)="$event.stopImmediatePropagation()"
+                        (mouseleave)="$event.stopImmediatePropagation()"
+                        [matTooltipClass]="'copyToolTip'"
+                        (click)="copyData(env.contractAddress); tooltip1.toggle()">
+                  <img src="assets/imgs/icons-svg/basic/copy.svg" alt="" class="button-icon">
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-12 col-lg-3">

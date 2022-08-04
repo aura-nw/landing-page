@@ -11,7 +11,7 @@
             (click)="expandAria()">
             <i class="icon" [class.close]="ariaExpanded"></i>
         </button>
-        <div class="collapse navbar-collapse pt-10 pb-6 py-md-0 mt-md-0" id="headerMenu" #headerMenu>
+        <div class="collapse navbar-collapse py-6 py-md-0 mt-md-0" id="headerMenu" #headerMenu>
             <div class="d-lg-flex">
                 <ul class="navbar-nav nav-menu align-items-center">
                     <li class="nav-item d-none d-lg-block">
@@ -26,7 +26,7 @@
                         <div class="divider divider-vertical"></div>
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 mb-md-0 mr-md-8 dropdown w-25">
-                        <button class="nav-link dropdown-toggle ps-0" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
+                        <button class="nav-link dropdown-toggle ps-0 pb-0" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" type="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown">
                           FEATURES
                         </button>
                         <ul class="dropdown-menu body sub-text-mob" [class.show]="featureShow && innerWidth > 992" (mouseover)="featureShow=true" (mouseout)="featureShow=false" aria-labelledby="dropdownMenuFeatures">
@@ -38,7 +38,7 @@
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 my-md-0 mr-md-8 w-25">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle ps-0"
+                            <button class="nav-link dropdown-toggle ps-0 pb-0"
                                     [class.show]="partnerShow && innerWidth > 992" (mouseover)="partnerShow=true"
                                     (mouseout)="partnerShow=false" type="button" id="dropdownMenuPartners"
                                     data-bs-toggle="dropdown">
@@ -52,7 +52,7 @@
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 my-md-0 mr-md-8 w-25">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle ps-0"
+                            <button class="nav-link dropdown-toggle ps-0 pb-0"
                                     [class.show]="resourceShow && innerWidth > 992" (mouseover)="resourceShow=true"
                                     (mouseout)="resourceShow=false" type="button" id="dropdownMenuResources"
                                     data-bs-toggle="dropdown">
@@ -68,7 +68,7 @@
                     </li>
                     <li class="nav-item menu-item h4 h3-mob mx-auto mb-12 my-md-0 w-25">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle ps-0"
+                            <button class="nav-link dropdown-toggle ps-0 pb-0"
                                     [class.show]="aboutShow && innerWidth > 992"
                                     (mouseover)="aboutShow=true" (mouseout)="aboutShow=false" type="button"
                                     id="dropdownMenuAbout" data-bs-toggle="dropdown">
@@ -84,7 +84,7 @@
                 </ul>
             </div>
             <div class="d-flex w-100 flex-column-reverse align-items-center flex-lg-row justify-content-lg-end mt-md-0">
-                <ul class="d-flex align-items-center mt-10 mt-md-0 mb-0 pl-0">
+                <ul class="d-flex align-items-center mb-0 pl-0">
                     <li class="nav-item mr-half pr-6 pr-md-3 mr-lg-4 mr-xl-6">
                         <a href="https://twitter.com/AuraNetworkHQ" target="_blank"
                            class="nav-link icon--social p-0 d-flex">
@@ -114,9 +114,29 @@
                         </a>
                     </li>
                 </ul>
-                <a href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf"
-                   target="_blank"
-              class="aura-btn aura-btn-outline-gradient"><img src="assets/imgs/whitepaper.svg" /></a>
+                <div class="py-10 w-100 d-lg-none">
+                  <div class="body text--white">Contract</div>
+                  <div class="body fw-semibold text-gradient d-inline-block">Binance Smart Chain</div>
+                  <div class="mt-4 contract-info d-flex align-items-center justify-content-center">
+                    <img src="assets/imgs/auraTitleLogo.png" alt="" width="20px" height="20px">
+                    <span class="ml-1 small-body" id="popupCopy">
+                      <span class="d-sm-none">{{ env.contractAddressShort }}</span>
+                      <span class="d-none d-sm-inline-block">{{ env.contractAddress }}</span>
+                    </span>
+                    <button class="button button-circle ml-2"
+                            matTooltip="Copied!"
+                            #tooltip1="matTooltip"
+                            (mouseenter)="$event.stopImmediatePropagation()"
+                            (mouseleave)="$event.stopImmediatePropagation()"
+                            [matTooltipClass]="'copyToolTip'"
+                            (click)="copyData(env.contractAddress); tooltip1.toggle()">
+                      <img src="assets/imgs/icons-svg/basic/copy.svg" alt="" class="button-icon">
+                    </button>
+                  </div>
+                </div>
+                <button class="aura-btn aura-btn-outline-gradient" (click)="openModal()">
+                  <span class="text-uppercase">Buy Now</span>
+                </button>
             </div>
         </div>
     </div>

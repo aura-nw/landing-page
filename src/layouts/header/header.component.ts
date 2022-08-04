@@ -1,5 +1,7 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
-
+import {environment} from '../../environments/environment';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {BuyAuraComponent} from '../../app/shared/popup/buy-aura/buy-aura.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,8 +14,9 @@ export class HeaderComponent implements OnInit {
   aboutShow = false;
   public innerWidth: any;
   ariaExpanded = false;
+  env = environment;
   @ViewChild('headerNavbarMenu') headerNavbarMenu!: ElementRef;
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
   }
@@ -35,5 +38,25 @@ export class HeaderComponent implements OnInit {
 
   expandAria(): void {
     this.ariaExpanded = !this.ariaExpanded;
+  }
+
+  copyData(text: string): void {
+    const dummy = document.createElement('textarea');
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    // fake event click out side copy button
+    // this event for hidden tooltip
+    setTimeout( () => {
+      document.getElementById('popupCopy')?.click();
+    }, 800);
+  }
+  openModal() {
+    const dialogRef = this.dialog.open(BuyAuraComponent, {
+      width: '508px',
+      panelClass: 'aura-dialog'
+    });
   }
 }
