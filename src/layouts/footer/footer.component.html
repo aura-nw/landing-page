@@ -102,11 +102,11 @@
             <span class="ml-1 text--gray-1 small-body">{{env.contractAddressShort}}</span>
             <button class="button button-circle ml-2"
                     matTooltip="Copied!"
-                    #tooltip1="matTooltip"
+                    #tooltip2="matTooltip"
                     (mouseenter)="$event.stopImmediatePropagation()"
                     (mouseleave)="$event.stopImmediatePropagation()"
                     [matTooltipClass]="'copyToolTip'"
-                    (click)="copyData(env.contractAddress); tooltip1.toggle()">
+                    (click)="copyData(env.contractAddress); tooltip2.toggle()">
               <img src="assets/imgs/icons-svg/basic/copy.svg" alt="" class="button-icon">
             </button>
             <a href="https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6" target="_blank"
