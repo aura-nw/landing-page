@@ -2,7 +2,7 @@
     display: inline-block;
     padding: var(--spacer-3) var(--spacer-6) calc(var(--spacer-half) + var(--spacer-3)) var(--spacer-6);
     letter-spacing: 0.02em;
-    font-family: SFProDisplay;
+    font-family: SFPro;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -40,10 +40,6 @@
         background: var(--aura-light-gray);
         color: var(--aura-white);
         border-radius: 100px;
-        //&:hover, &.active {
-        //  background: var(--aura-gradient-simple);
-        //  color: var(--aura-neutrals-2);
-        //}
     }
     &.button-fixed {
         @media (max-width: 991.99px) {
@@ -132,5 +128,14 @@
   &.show {
       opacity: 1;
   }
-
 }
+.button-circle {
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #363843;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
