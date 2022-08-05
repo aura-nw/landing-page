@@ -64,14 +64,6 @@ footer {
     }
     &-contract {
       position: absolute;
-      .button.button-circle {
-        width: 20px;
-        height: 20px;
-        img.button-icon {
-          width: 12px;
-          height: 12px;
-        }
-      }
     }
     &:before {
       content: "";
