@@ -111,6 +111,9 @@
                     @media (min-width: 992px) {
                         text-align: left;
                         margin-bottom: 16px;
+                      &:first-child {
+                        margin-top: 16px;
+                      }
                     }
                     @media (max-width: 991px) {
                         text-align: left;
