@@ -497,6 +497,9 @@ ul.aura-list {
       padding: 16px !important;
     }
   }
+  .row.card-mobile {
+    margin: 0 -26px;
+  }
   img {
     width: 100%;
   }
@@ -508,7 +511,8 @@ ul.aura-list {
   }
   &__item--mob {
     display: block;
-    width: calc(100vw - 32px);
-    padding-right: 32px;
+    width: 100vw;
+    max-width: 414px;
+    padding: 0 16px;
   }
 }
