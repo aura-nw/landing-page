@@ -24,7 +24,15 @@
 .slick-slider .slick-list {
   overflow: visible;
 }
-
+.carousel--custom-dots {
+  .slick-dots li button:before {
+    background-color: #24262E !important;
+  }
+  .slick-dots li.slick-active button:before {
+    width: 16px;
+    border-radius: 104px;
+  }
+}
 .carousel--has-arrows {
   .slick-prev.slick-arrow,
   .slick-next.slick-arrow {

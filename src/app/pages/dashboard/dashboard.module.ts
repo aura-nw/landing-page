@@ -5,18 +5,20 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {SharedModule} from '../../shared/shared.module';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
+import {CooldownComponent} from '../cooldown/cooldown.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    CooldownComponent
   ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    MatTooltipModule,
-    SharedModule,
-    SlickCarouselModule
-  ]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        MatTooltipModule,
+        SharedModule,
+        SlickCarouselModule
+    ]
 })
 export class DashboardModule { }

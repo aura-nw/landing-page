@@ -9,11 +9,15 @@
           </h1>
           <div class="sub-text body-mob mt-6 text--white">Aura Network is a scalable, agile and effortless Layer-1 blockchain&nbsp;with&nbsp;a
             comprehensive ecosystem built to accelerate global NFTs adoption.</div>
-          <a href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf"
-             target="_blank"
-             class="button button-outline mt-6 mt-lg-8 d-inline-block">
-            <span class="text--white fw-500">Whitepaper</span>
-          </a>
+          <div>
+            <a href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf"
+               target="_blank"
+               class="button button-outline mt-6 mt-lg-8 d-inline-block">
+              <span class="text--white fw-500">Whitepaper</span>
+            </a>
+          </div>
+          <div class="h5-mob h4 mt-12 mt-lg-8 d-inline-block text--white mb-3">MAINNET LAUNCH STARTING IN</div>
+          <app-cooldown></app-cooldown>
         </div>
       </div>
       <div class="col-12 col-lg-5 text-center">
@@ -24,6 +28,36 @@
         </div>
       </div>
     </div>
+    <div class="row"></div>
+  </div>
+  <div class="container mt-8">
+    <div class="row">
+      <div class="col-12 text--white px-4">
+        <h4>Hot News</h4>
+        <div class="mt-4 hot-news">
+          <!-- card-list desktop -->
+          <div class="row row-des d-none d-xl-flex">
+            <div class="col-md-4" *ngFor="let cardData of hotNews">
+              <a href="{{ cardData.url }}" target="_blank" class="hot-news__item--des">
+                <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
+              </a>
+            </div>
+          </div>
+          <!-- card-list mobile (carousel) -->
+          <div class="row d-xl-none card-mobile">
+            <div class="col-12">
+              <ngx-slick-carousel class="carousel carousel--custom-dots" [config]="featureSlideConfig">
+                <div ngxSlickItem *ngFor="let cardData of hotNews" class="slide">
+                  <a href="{{ cardData.url }}" target="_blank" class="hot-news__item--mob">
+                    <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
+                  </a>
+                </div>
+              </ngx-slick-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <!--Outstanding Feature-->
@@ -31,7 +65,7 @@
     <div class="container">
         <!-- content -->
         <div class="row">
-            <div class="col-12 col-xl-7 px-4 text-center text-md-start">
+            <div class="col-12 col-xl-7 px-4">
                 <h2 class="mb-5 mb-md-8">To NFT and Beyond !</h2>
                 <div class="sub-text body-mob text--white">
                   Aura Network enhances efficiency by solving the scalability problem. Never cope with sharded chains or fragmented systems again!
@@ -40,8 +74,8 @@
         </div>
     </div>
     <div class="container px-4 px-lg-0">
-            <!-- card-list desktop -->
             <div class="mt-12 aura-card-row">
+              <!-- card-list desktop -->
                 <div class="row d-none d-xl-flex">
                     <div class="col-md-4" *ngFor="let cardData of featureCardData">
                         <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title"
@@ -51,7 +85,7 @@
                 <!-- card-list mobile (carousel) -->
                 <div class="row d-xl-none card-mobile">
                     <div class="col-12">
-                        <ngx-slick-carousel class="carousel" [config]="featureSlideConfig">
+                        <ngx-slick-carousel class="carousel carousel--custom-dots" [config]="featureSlideConfig">
                             <div ngxSlickItem *ngFor="let cardData of featureCardData" class="slide">
                                 <app-aura-card [size]="'md'" [icon]="cardData.icon" [title]="cardData.title"
                                     [desc]="cardData.subTitle"></app-aura-card>
