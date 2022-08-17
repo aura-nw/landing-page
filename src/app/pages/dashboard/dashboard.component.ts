@@ -400,6 +400,20 @@ export class DashboardComponent implements OnInit {
       <a href='https://github.com/aura-nw/safe-react' class="text--green">https://github.com/aura-nw/safe-react</a>`,
     },
   ];
+  hotNews = [
+    {
+      img: 'farming 1.png',
+      url: 'https://insight.aura.network/tutorial-how-to-farm-aura/'
+    },
+    {
+      img: 'staking 1.png',
+      url: 'https://insight.aura.network/tutorial-how-to-stake-aura/'
+    },
+    {
+      img: 'get-aura-impossible-baryon 1.png',
+      url: 'https://insight.aura.network/full-tutorial-how-to-buy-aura/'
+    }
+  ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
 
   advisorySlickSubject = new Subject<'next' | 'pre'>();
