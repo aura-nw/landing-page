@@ -38,7 +38,7 @@
           <!-- card-list desktop -->
           <div class="row row-des d-none d-xl-flex">
             <div class="col-md-4" *ngFor="let cardData of hotNews">
-              <a href="{{ cardData.url }}" class="hot-news__item--des">
+              <a href="{{ cardData.url }}" target="_blank" class="hot-news__item--des">
                 <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
               </a>
             </div>
@@ -48,7 +48,7 @@
             <div class="col-12">
               <ngx-slick-carousel class="carousel carousel--custom-dots" [config]="featureSlideConfig">
                 <div ngxSlickItem *ngFor="let cardData of hotNews" class="slide">
-                  <a href="{{ cardData.url }}" class="hot-news__item--mob">
+                  <a href="{{ cardData.url }}" target="_blank" class="hot-news__item--mob">
                     <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
                   </a>
                 </div>
