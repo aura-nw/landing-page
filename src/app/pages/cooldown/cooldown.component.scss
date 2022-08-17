@@ -1,0 +1,34 @@
+.countdown__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #24262E;
+  width: 64px;
+  height: 64px;
+  @media (min-width: 992px) {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+.countdown__timer, .countdown__separate {
+  font-family: BigShouldersDisplay;
+  font-size: 4.8rem;
+  font-weight: 700;
+  @media (min-width: 992px) {
+    font-size: 6.4rem;
+  }
+}
+.countdown__timer {
+  background: var(--aura-gradient-simple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.countdown__separate {
+  color: #24262E;
+  margin: -12px var(--spacer-2);
+}
+.text--gray-4 {
+  color: #9DA1AC;
+}
