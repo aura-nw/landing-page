@@ -28,6 +28,25 @@ export class DashboardComponent implements OnInit {
       },
     ],
   };
+  hotNewsSlideConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    infinite: false,
+    arrows: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          variableWidth: false,
+          dots: false,
+        },
+      },
+    ],
+  };
   teamSlideConfig = {
     slidesToShow: 1,
     mobileFirst: true,
@@ -202,7 +221,6 @@ export class DashboardComponent implements OnInit {
       icon: 'icon-globe',
       date: 'Q3-2022',
       content: [
-        'Mainnet Release',
         'Governance Tool',
         `Integrate with C98 ecosystem`,
         'IBC enablement for native&nbsp;token',
@@ -211,7 +229,11 @@ export class DashboardComponent implements OnInit {
     {
       icon: 'icon-control-outline',
       date: 'Q4-2022',
-      content: ['NFT games support', `First NFT use case`],
+      content: [
+        'Mainnet Release',
+        'NFT games support',
+        'First NFT use case'
+      ],
     },
     {
       icon: 'icon-people',

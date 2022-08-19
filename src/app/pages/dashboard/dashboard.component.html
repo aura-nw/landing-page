@@ -16,11 +16,11 @@
               <span class="text--white fw-500">Whitepaper</span>
             </a>
           </div>
-          <div class="h5-mob h4 mt-12 mt-lg-8 d-inline-block text--white mb-3">MAINNET LAUNCH STARTING IN</div>
+          <div class="h5-mob h4 mt-12 mt-lg-8 d-inline-block text--white mb-3 mb-lg-4">'Xstaxy' Mainnet Launch starting in</div>
           <app-cooldown></app-cooldown>
         </div>
       </div>
-      <div class="col-12 col-lg-5 text-center">
+      <div class="col-12 col-sm-9 col-lg-5 text-center m-auto">
         <div class="bonben-animation">
           <img src="../../../assets/imgs/pages/dashboard/astronaut_lite_1@1x.png"
                srcset="../../../assets/imgs/pages/dashboard/astronaut_lite_1@1x.png 1x, ../../../assets/imgs/pages/dashboard/astronaut_lite_1@2x.png 2x"
@@ -33,28 +33,15 @@
   <div class="container mt-8">
     <div class="row">
       <div class="col-12 text--white px-4">
-        <h4>Hot News</h4>
+        <h4>Campaigns happening now</h4>
         <div class="mt-4 hot-news">
-          <!-- card-list desktop -->
-          <div class="row row-des d-none d-xl-flex">
-            <div class="col-md-4" *ngFor="let cardData of hotNews">
-              <a href="{{ cardData.url }}" target="_blank" class="hot-news__item--des">
-                <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
-              </a>
-            </div>
-          </div>
-          <!-- card-list mobile (carousel) -->
-          <div class="row d-xl-none card-mobile">
-            <div class="col-12">
-              <ngx-slick-carousel class="carousel carousel--custom-dots" [config]="featureSlideConfig">
-                <div ngxSlickItem *ngFor="let cardData of hotNews" class="slide">
-                  <a href="{{ cardData.url }}" target="_blank" class="hot-news__item--mob">
-                    <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
-                  </a>
-                </div>
-              </ngx-slick-carousel>
-            </div>
-          </div>
+            <ngx-slick-carousel class="carousel carousel--custom-dots " [config]="hotNewsSlideConfig">
+              <div ngxSlickItem *ngFor="let cardData of hotNews" class="slide">
+                <a href="{{ cardData.url }}" target="_blank" class="hot-news__item">
+                  <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
+                </a>
+              </div>
+            </ngx-slick-carousel>
         </div>
       </div>
     </div>
