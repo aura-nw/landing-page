@@ -496,6 +496,7 @@ ul.aura-list {
 .hot-news {
     .slick-slide {
       padding: 0 16px;
+      aspect-ratio : 16 / 9;
     }
   ::ng-deep {
     .slick-list {
@@ -507,9 +508,22 @@ ul.aura-list {
   }
   img {
     width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
   }
   &__item {
+    padding: 2px;
     transition: box-shadow .35s ease-in-out;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    &.feature__card::before {
+      border-radius: 8px;
+    }
+    &.feature__card:hover {
+      box-shadow: none;
+    }
     @media (max-width: 991.98px) {
       display: block;
     }

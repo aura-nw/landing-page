@@ -424,17 +424,17 @@ export class DashboardComponent implements OnInit {
   ];
   hotNews = [
     {
-      img: 'farming 1.png',
+      img: 'get-aura.png',
+      url: 'https://insight.aura.network/full-tutorial-how-to-buy-aura/'
+    },
+    {
+      img: 'farming.png',
       url: 'https://insight.aura.network/tutorial-how-to-farm-aura/'
     },
     {
-      img: 'staking 1.png',
+      img: 'staking.png',
       url: 'https://insight.aura.network/tutorial-how-to-stake-aura/'
     },
-    {
-      img: 'get-aura-impossible-baryon 1.png',
-      url: 'https://insight.aura.network/full-tutorial-how-to-buy-aura/'
-    }
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
 
