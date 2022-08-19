@@ -16,7 +16,7 @@
               <span class="text--white fw-500">Whitepaper</span>
             </a>
           </div>
-          <div class="h5-mob h4 mt-12 mt-lg-8 d-inline-block text--white mb-3 mb-lg-4">'Xstaxy' Mainnet Launch starting in</div>
+          <div class="h5-mob h4 mt-12 mt-lg-8 d-inline-block text--white mb-3 mb-lg-4 text-capitalize">'Xstaxy' Mainnet Launch starting in</div>
           <app-cooldown></app-cooldown>
         </div>
       </div>
@@ -33,11 +33,11 @@
   <div class="container mt-8">
     <div class="row">
       <div class="col-12 text--white px-4">
-        <h4>Campaigns happening now</h4>
+        <h4 class="text-capitalize">Campaigns happening now</h4>
         <div class="mt-4 hot-news">
             <ngx-slick-carousel class="carousel carousel--custom-dots " [config]="hotNewsSlideConfig">
               <div ngxSlickItem *ngFor="let cardData of hotNews" class="slide">
-                <a href="{{ cardData.url }}" target="_blank" class="hot-news__item">
+                <a href="{{ cardData.url }}" target="_blank" class="hot-news__item feature__card">
                   <img src="assets/imgs/pages/hot-news/{{ cardData.img }}" alt="{{ cardData.url }}">
                 </a>
               </div>
