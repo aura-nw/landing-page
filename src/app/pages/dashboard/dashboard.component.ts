@@ -424,8 +424,8 @@ export class DashboardComponent implements OnInit {
   ];
   hotNews = [
     {
-      img: 'get-aura.png',
-      url: 'https://insight.aura.network/full-tutorial-how-to-buy-aura/'
+      img: 'game-of-harmony.jpg',
+      url: 'https://insight.aura.network/the-game-of-harmony-test-to-earn-150000-aura/'
     },
     {
       img: 'farming.png',
