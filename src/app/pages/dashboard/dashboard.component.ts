@@ -355,6 +355,19 @@ export class DashboardComponent implements OnInit {
       desc: `Thu is the former marketing and partnership lead of a Southeast Asia IT services provider. She advances Aura's strategic planning and opportunities for growth acquisition of its ecosystem and partners community.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/',
+        twitter:
+          'https://twitter.com/Thu_AuraNetwork',
+      },
+    },
+    {
+      name: 'Tuan Bui',
+      img: 'tuanBass.png',
+      position: `Head of Engineering`,
+      desc: `Tuan has nearly 20 years of experience in the technology field with previous positions such as Technical leader, Solution Architect, Product Development Lead at leading technology companies. Tuan continues his journey at Aura Network as a Head of Engineer.`,
+      link: {
+        linkedIn: 'https://www.linkedin.com/in/tuanba1/',
+        twitter:
+          'https://twitter.com/tuanbat',
       },
     },
     // {
