@@ -352,7 +352,7 @@ export class DashboardComponent implements OnInit {
       name: 'Thu Tran',
       img: 'ThuTran.png',
       position: `COO`,
-      desc: `Thu is the former marketing and partnership lead of a Southeast Asia IT services provider. She advances Aura's strategic planning and opportunities for growth acquisition of its ecosystem and partners community.`,
+      desc: `Thu is the former CMO of several start-ups in the field of Information Technology. With strong relationship and operation skills, she drives Aura's growth via breakthrough partnerships and marketing strategies.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/',
         twitter:
