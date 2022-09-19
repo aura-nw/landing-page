@@ -47,7 +47,6 @@ section.partner {
     width: 128px;
     height: 50px;
     margin: auto;
-    margin-top: -16px;
     font-weight: 400;
   }
 }
@@ -73,7 +72,7 @@ section.partner {
       height: 600px;
     }
     @media (min-width: 1140px) {
-      height: 650px;
+      height: 750px;
     }
     transition: height .15s ease-in-out;
     &.collapsed {
