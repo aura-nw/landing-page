@@ -351,7 +351,7 @@ export class DashboardComponent implements OnInit {
     {
       name: 'Thu Tran',
       img: 'ThuTran.png',
-      position: `CMO`,
+      position: `COO`,
       desc: `Thu is the former CMO of several start-ups in the field of Information Technology. With strong relationship and operation skills, she drives Aura's growth via breakthrough partnerships and marketing strategies.`,
       link: {
         linkedIn: 'https://www.linkedin.com/in/thu-tran-88708b163/',
@@ -441,11 +441,12 @@ export class DashboardComponent implements OnInit {
       url: 'https://insight.aura.network/the-game-of-harmony-test-to-earn-150000-aura/'
     },
     {
-      img: 'farming.png',
+      img: 'aura_farming_baryon.jpg',
       url: 'https://insight.aura.network/tutorial-how-to-farm-aura/'
     },
     {
-      img: 'staking.png',
+      img: 'aura_staking_baryon.jpg' +
+        '',
       url: 'https://insight.aura.network/tutorial-how-to-stake-aura/'
     },
   ];
