@@ -441,11 +441,12 @@ export class DashboardComponent implements OnInit {
       url: 'https://insight.aura.network/the-game-of-harmony-test-to-earn-150000-aura/'
     },
     {
-      img: 'farming.png',
+      img: 'aura_farming_baryon.jpg',
       url: 'https://insight.aura.network/tutorial-how-to-farm-aura/'
     },
     {
-      img: 'staking.png',
+      img: 'aura_staking_baryon.jpg' +
+        '',
       url: 'https://insight.aura.network/tutorial-how-to-stake-aura/'
     },
   ];
