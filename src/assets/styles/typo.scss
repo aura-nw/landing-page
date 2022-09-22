@@ -1,4 +1,4 @@
-@mixin mono-font-size($font-size, $line-height, $letter-spacing, $font: "SFPro") {
+@mixin mono-font-size($font-size, $line-height, $letter-spacing, $font: "Inter") {
   font-size: #{$font-size}rem !important;
   line-height: #{$line-height}rem !important;
   font-family: $font !important;
@@ -40,29 +40,29 @@ h5,
   letter-spacing: 0.13rem !important;
 }
 .title {
-  @include mono-font-size(3.2, 4, -0.01, "SFPro");
+  @include mono-font-size(3.2, 4, -0.01, "Inter");
 }
 .title-medium {
-  @include mono-font-size(2.6, 3.2, -0.01, "SFPro");
+  @include mono-font-size(2.6, 3.2, -0.01, "Inter");
 }
 .title-small {
-  @include mono-font-size(2, auto, -0.01, "SFPro");
+  @include mono-font-size(2, auto, -0.01, "Inter");
 }
 .sub-text {
-  @include mono-font-size(2.4, 4, 0.02, "SFPro");
+  @include mono-font-size(2.4, 4, 0.02, "Inter");
 }
 .body {
-  @include mono-font-size(1.6, 2.4, 0.05, "SFPro");
+  @include mono-font-size(1.6, 2.4, 0.05, "Inter");
 }
 .body-bold {
-  @include mono-font-size(1.6, 2.4, 0.02, "SFPro");
+  @include mono-font-size(1.6, 2.4, 0.02, "Inter");
   font-weight: bold;
 }
 .small-body {
-  @include mono-font-size(1.4, 1.6, 0, "SFPro");
+  @include mono-font-size(1.4, 1.6, 0, "Inter");
 }
 .small-text {
-  @include mono-font-size(1.2, 1.6, 0, "SFPro");
+  @include mono-font-size(1.2, 1.6, 0, "Inter");
 }
 
 @media (max-width: 991.98px) {
@@ -85,19 +85,19 @@ h5,
     font-weight: 400;
   }
   .title-mob {
-    @include mono-font-size(3.2, 4, -0.01, "SFPro");
+    @include mono-font-size(3.2, 4, -0.01, "Inter");
   }
   .sub-text-mob {
-    @include mono-font-size(2.4, 4, 0.02, "SFPro");
+    @include mono-font-size(2.4, 4, 0.02, "Inter");
   }
   .body-mob {
-    @include mono-font-size(1.6, 2.4, 0.05, "SFPro");
+    @include mono-font-size(1.6, 2.4, 0.05, "Inter");
   }
   .small-text-mob {
-    @include mono-font-size(1.2, 1.6, 0, "SFPro");
+    @include mono-font-size(1.2, 1.6, 0, "Inter");
   }
   .small-body-mob {
-    @include mono-font-size(1.4, 1.8, 0, "SFPro");
+    @include mono-font-size(1.4, 1.8, 0, "Inter");
   }
 }
 $textColors: (
