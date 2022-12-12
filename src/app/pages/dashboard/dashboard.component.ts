@@ -437,16 +437,15 @@ export class DashboardComponent implements OnInit {
   ];
   hotNews = [
     {
-      img: 'game-of-harmony-concept-new.jpg',
-      url: 'https://insight.aura.network/the-game-of-harmony-test-to-earn-150000-aura/'
+      img: 'Template-Trading-Camp-Social-Camp.png',
+      url: 'https://insight.aura.network/aura-network-trading-competition-2-0-trade-earn-up-to-250-000-aura-2/'
     },
     {
-      img: 'aura_farming_baryon.jpg',
-      url: 'https://insight.aura.network/tutorial-how-to-farm-aura/'
+      img: 'aura-farming-and-staking-pools.png',
+      url: 'https://insight.aura.network/extended-aura-farming-and-staking-pools/'
     },
     {
-      img: 'aura_staking_baryon.jpg' +
-        '',
+      img: 'aura_staking_baryon.jpg',
       url: 'https://insight.aura.network/tutorial-how-to-stake-aura/'
     },
   ];
