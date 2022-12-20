@@ -445,8 +445,8 @@ export class DashboardComponent implements OnInit {
       url: 'https://insight.aura.network/extended-aura-farming-and-staking-pools/'
     },
     {
-      img: 'aura_staking_baryon.jpg',
-      url: 'https://insight.aura.network/tutorial-how-to-stake-aura/'
+      img: 'vrace-kickoff-eng.jpg',
+      url: 'https://insight.aura.network/aura-network-officially-kick-off-v-race-the-bull-run-2022/'
     },
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
