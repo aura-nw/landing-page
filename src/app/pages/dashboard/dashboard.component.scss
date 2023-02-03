@@ -58,7 +58,10 @@ section.partner {
     }
   ul.partner-group__contain {
     overflow: hidden;
-    height: 570px;
+    height: 680px;
+    @media (min-width: 370px) {
+      height: 610px;
+    }
     @media (min-width: 468px) {
       height: 520px;
     }
@@ -108,7 +111,6 @@ section.partner {
         }
       }
       &#dwf {
-        width: 32px;
         @media (min-width: 992px) {
           width: 72px;
         }
