@@ -81,6 +81,40 @@
     }
   }
 }
+.icon.icon--switch-stage.icon-discords {
+  &::before {
+    background: url("../imgs/icons/basic/discord.png") no-repeat center;
+    background-size: contain;
+  }
+  &::after {
+    opacity: 0;
+    background: url("../imgs/icons/color/discord.png") no-repeat center;
+    background-size: contain;
+  }
+  @media (min-width: 992px) {
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &:active {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+
+
 //@each $icon-name in $icon-white-variables {
 //  .icon-#{$icon-name} {
 //    &::before {
