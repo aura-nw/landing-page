@@ -437,16 +437,16 @@ export class DashboardComponent implements OnInit {
   ];
   hotNews = [
     {
+      img: 'Mainnet-Campaign-Quest3.jpg',
+      url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
+    },
+    {
       img: 'Mainnet-Announcement-ENG.jpg',
       url: 'https://insight.aura.network/aura-network-to-announce-the-launch-date-of-xstaxy-mainnet/'
     },
     {
       img: 'M-Fundraising-1.jpg',
       url: 'https://insight.aura.network/aura-network-raised-4m-in-pre-series-a-funding-round-led-by-hashed-and-coin98/'
-    },
-    {
-      img: 'Mainnet-Campaign-Quest3.jpg',
-      url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
     },
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
