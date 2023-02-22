@@ -445,8 +445,8 @@ export class DashboardComponent implements OnInit {
       url: 'https://insight.aura.network/aura-network-raised-4m-in-pre-series-a-funding-round-led-by-hashed-and-coin98/'
     },
     {
-      img: 'aura-farming-and-staking-pools.png',
-      url: 'https://insight.aura.network/extended-aura-farming-and-staking-pools/'
+      img: 'Mainnet-Campaign-Quest3.jpg',
+      url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
     },
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
