@@ -21,7 +21,7 @@ export class CooldownComponent implements OnInit {
                 minute = second * 60,
                 hour = minute * 60,
                 day = hour * 24;
-              const countDown = new Date("Sat Oct 01 2022 10:10:00 GMT+07:00");
+              const countDown = new Date("Mon Mar 20 2023 20:00:00 GMT+07:00");
               x = setInterval(function() {
                 const now = new Date().getTime(),
                 distance = countDown - now;
