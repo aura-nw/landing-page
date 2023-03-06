@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           variableWidth: false,
           dots: false,
@@ -436,10 +436,6 @@ export class DashboardComponent implements OnInit {
     },
   ];
   hotNews = [
-    // {
-    //   img: 'Mainnet-Campaign-Quest3.jpg',
-    //   url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
-    // },
     {
       img: 'Mainnet-Announcement-ENG.jpg',
       url: 'https://insight.aura.network/aura-network-to-announce-the-launch-date-of-xstaxy-mainnet/'
@@ -447,6 +443,10 @@ export class DashboardComponent implements OnInit {
     {
       img: 'M-Fundraising-1.jpg',
       url: 'https://insight.aura.network/aura-network-raised-4m-in-pre-series-a-funding-round-led-by-hashed-and-coin98/'
+    },
+    {
+      img: 'Crypto-Partnership-v1.jpg',
+      url: 'https://insight.aura.network/strategic-partnership-aura-network-x-republic-crypto/'
     },
   ];
   @ViewChild('advisorSection') advisorSection!: ElementRef;
