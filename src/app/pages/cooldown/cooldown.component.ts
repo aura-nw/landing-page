@@ -21,14 +21,14 @@ export class CooldownComponent implements OnInit {
                 minute = second * 60,
                 hour = minute * 60,
                 day = hour * 24;
-              const countDown = new Date("Mon Mar 20 2023 20:00:00 GMT+07:00");
+                const countDown = new Date("Mon Mar 20 2023 20:00:00 GMT+07:00");
               x = setInterval(function() {
                 const now = new Date().getTime(),
                 distance = countDown - now;
-                document.getElementById("days").innerText = Math.floor(distance / (day)) < 10 ? "0" + Math.floor(distance / (day)) : Math.floor(distance / (day)) ,
-                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)) < 10 ? "0" + Math.floor((distance % (day)) / (hour)) : Math.floor((distance % (day)) / (hour)),
-                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)) < 10 ? "0" + Math.floor((distance % (hour)) / (minute)) : Math.floor((distance % (hour)) / (minute)),
-                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second) < 10 ? "0" + Math.floor((distance % (minute)) / second) : Math.floor((distance % (minute)) / second);
+                document.getElementById("days").innerText = Math.floor(distance / (day)) <= 0 ? "00" : (Math.floor(distance / (day)) < 10 ? "0" + Math.floor(distance / (day)) : Math.floor(distance / (day))) ,
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)) <= 0 ? "00" : (Math.floor((distance % (day)) / (hour)) < 10 ? "0" + Math.floor((distance % (day)) / (hour)) : Math.floor((distance % (day)) / (hour))),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)) <= 0 ? "00" : (Math.floor((distance % (hour)) / (minute)) < 10 ? "0" + Math.floor((distance % (hour)) / (minute)) : Math.floor((distance % (hour)) / (minute))),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second) <= 0 ? "00" : (Math.floor((distance % (minute)) / second) < 10 ? "0" + Math.floor((distance % (minute)) / second) : Math.floor((distance % (minute)) / second));
                 //seconds
               }, 0);
         `;
