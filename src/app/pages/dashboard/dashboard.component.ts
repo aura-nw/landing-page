@@ -39,8 +39,8 @@ export class DashboardComponent implements OnInit {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           variableWidth: false,
           dots: false,
         },
@@ -436,10 +436,10 @@ export class DashboardComponent implements OnInit {
     },
   ];
   hotNews = [
-    {
-      img: 'Mainnet-Campaign-Quest3.jpg',
-      url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
-    },
+    // {
+    //   img: 'Mainnet-Campaign-Quest3.jpg',
+    //   url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
+    // },
     {
       img: 'Mainnet-Announcement-ENG.jpg',
       url: 'https://insight.aura.network/aura-network-to-announce-the-launch-date-of-xstaxy-mainnet/'
