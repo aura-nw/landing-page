@@ -39,8 +39,8 @@ export class DashboardComponent implements OnInit {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           variableWidth: false,
           dots: false,
         },
@@ -436,10 +436,10 @@ export class DashboardComponent implements OnInit {
     },
   ];
   hotNews = [
-    {
-      img: 'Mainnet-Campaign-Quest3.jpg',
-      url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
-    },
+    // {
+    //   img: 'Mainnet-Campaign-Quest3.jpg',
+    //   url: 'https://insight.aura.network/quest3-campaign-celebrating-aura-networks-mainnet-announcement/'
+    // },
     {
       img: 'Mainnet-Announcement-ENG.jpg',
       url: 'https://insight.aura.network/aura-network-to-announce-the-launch-date-of-xstaxy-mainnet/'
@@ -456,13 +456,19 @@ export class DashboardComponent implements OnInit {
   advisorySlick: any;
   teamSlick: any;
 
+  showCountDown = false;
+
   constructor() {
     const today = new Date();
     this.currentQuarter = Math.floor((today.getMonth() + 3) / 3);
     this.roadmapSlideConfig.initialSlide = this.currentQuarter;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (!this.showCountDown) {
+      this.countDownToShowTimer();
+    }
+  }
 
   advisoryInit(e): void {
     const nextArrow: HTMLElement = e.slick.$prevArrow[0];
@@ -556,5 +562,20 @@ export class DashboardComponent implements OnInit {
         );
       }
     });
+  }
+
+  countDownToShowTimer() {
+    const countDown = new Date('Mon Mar 6 2023 20:00:00 GMT+07:00');
+    setInterval(() => {
+      if (this.showCountDown) {
+        return;
+      }
+      const now = new Date().getTime();
+      // @ts-ignore
+      const distance = countDown - now;
+      if (distance <= 0) {
+        this.showCountDown = true;
+      }
+    }, 0);
   }
 }
