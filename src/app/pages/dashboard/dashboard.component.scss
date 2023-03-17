@@ -79,10 +79,7 @@ section.partner {
     }
     transition: height .15s ease-in-out;
     &.collapsed {
-      height: 200px;
-      @media (min-width: 568px) {
-        height: 140px;
-      }
+      height: 180px;
       @media (min-width: 992px) {
         height: 260px;
       }
