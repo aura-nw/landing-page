@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Container from '../Container'
-import ArrowRight from '../../assets/images/arrow-right.png'
+import ArrowRight from '../../assets/images/arrow-right.svg'
 import Img1 from '../../assets/images/feature_1.svg'
 import Img2 from '../../assets/images/feature_2.svg'
 import Img3 from '../../assets/images/feature_3.svg'

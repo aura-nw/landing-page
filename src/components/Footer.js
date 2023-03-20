@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import AuraTokenImg from '../assets/images/aura-token.png'
+import AuraTokenImg from '../assets/images/aura-token.svg'
 import Discord from '../assets/images/Discord.svg'
 import Github from '../assets/images/Github.svg'
 import LinkedIn from '../assets/images/LinkedIn.svg'
