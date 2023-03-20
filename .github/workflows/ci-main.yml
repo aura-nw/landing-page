@@ -18,7 +18,7 @@ jobs:
       - name: Use Node.js 
         uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 18
       - name: Install dependencies
         run: npm install
       - run: |
@@ -34,7 +34,7 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
       - name: Deploy page to bucket
-        run: aws s3 sync ./dist/frontend s3://aura-landing-page
+        run: aws s3 sync ./build s3://aura-landing-page
         
       - name: Invalidate dashboard cloudfront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
