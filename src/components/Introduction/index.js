@@ -26,6 +26,13 @@ const Wrap = styled.div`
             font-size: 24px;
             line-height: 36px;
         }
+        min-height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        @media only screen and (max-width: 1000px) {
+            min-height: unset;
+        }
     }
     .btn {
         grid-area: btn;
@@ -51,9 +58,13 @@ const Wrap = styled.div`
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding: 40px 0px;
 
         .btn {
             margin: 16px 0px 40px;
+        }
+        .cd {
+            min-height: 18px;
         }
         .img {
             grid-area: img;

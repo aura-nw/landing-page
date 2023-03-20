@@ -15,7 +15,7 @@ const Wrap = styled.div`
     }
     @media only screen and (max-width: 1000px) {
         margin: 0px 6px 60px;
-        flex: 0 1 calc(50% - 12px);
+        height: 100%;
         > img {
             transform: translate(-50%, -50%) scale(0.8);
         }
@@ -35,6 +35,8 @@ const MainCard = styled.div`
     background-clip: content-box, border-box;
     > div {
         padding: 50px 30px 12px;
+        display: flex;
+        flex-direction: column;
         @media only screen and (max-width: 1000px) {
             padding: 42px 8px 12px;
         }
@@ -50,6 +52,7 @@ const MainCard = styled.div`
             font-weight: 400;
             font-size: 14px;
             line-height: 15px;
+            flex: 1;
         }
         > .text__color {
             background: linear-gradient(108.46deg, #5ee6d0 12.51%, #bfc6ff 51.13%, #ffba69 87.49%);
