@@ -61,7 +61,7 @@ export default function Advantage() {
                     </Card>
                 </div>
                 <Gap height={32} mHeight={16} />
-                <Button onClick={() => window.open('https://docs.aura.network/tutorials/Welcome')}>Build now</Button>
+                <Button onClick={() => window.open('https://docs.aura.network/developer/')}>Build now</Button>
             </Wrap>
         </Container>
     )

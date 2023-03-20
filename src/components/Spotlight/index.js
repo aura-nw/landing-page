@@ -19,7 +19,7 @@ export default function Spotlight() {
     return (
         <Container>
             <Wrap>
-                <Card backdrop={Backdrop1} logo={AuraLogo} onClick={() => window.open('https://euphoria.aurascan.io/')}>
+                <Card backdrop={Backdrop1} logo={AuraLogo} onClick={() => window.open('https://aurascan.io/')}>
                     <p className='title'>Aura Scan</p>
                     <p className='description'>The next generation blockchain explorer for Aura Network.</p>
                     <p className='text__color'>Experience →</p>
