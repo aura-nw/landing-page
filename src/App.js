@@ -19,17 +19,16 @@ function App() {
             <Header />
             <Gap height={64} mHeight={64} />
             <Introdution />
-            <Gap height={100} mHeight={0} />
             <Spotlight />
-            <Gap height={150} />
+            <Gap height={150} mHeight={64}/>
             <Feature />
-            <Gap height={150} />
+            <Gap height={150} mHeight={120}/>
             <Advantage />
-            <Gap height={200} mHeight={50} />
+            <Gap height={200} mHeight={120} />
             <Guide />
-            <Gap height={200} mHeight={50} />
+            <Gap height={200} mHeight={120} />
             <Roadmap />
-            <Gap height={200} mHeight={50}/>
+            <Gap height={200} mHeight={120}/>
             <Partner />
             <Gap height={150} mHeight={100} />
             <Footer />
