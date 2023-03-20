@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import AuraLogoImg from '../assets/images/aura-logo.png'
-import AuraTokenImg from '../assets/images/aura-token.png'
-import AuraToken from '../assets/images/aura-token__large.png'
+import AuraLogoImg from '../assets/images/aura-logo.svg'
+import AuraTokenImg from '../assets/images/aura-token.svg'
+import AuraToken from '../assets/images/aura-token__large.svg'
 import Baryon from '../assets/images/baryon.svg'
 import Impossible from '../assets/images/impossible.svg'
 import Mexc from '../assets/images/mexc.svg'
@@ -16,7 +16,8 @@ const Root = styled.div`
     z-index: 99;
 `
 const Wrap = styled.div`
-    background: #24262e;
+    background: rgb(36 38 46 / 82%);
+    backdrop-filter: blur(20px);
     border-radius: 0px 0px 24px 24px;
     display: flex;
     justify-content: space-between;
@@ -37,8 +38,10 @@ const Wrap = styled.div`
         }
     }
     @media only screen and (max-width: 1000px) {
-        > img {
-            height: 25px;
+        > a,
+        > img,
+        > a > img {
+            height: 28px;
         }
         > .nav-bar {
             > a {
