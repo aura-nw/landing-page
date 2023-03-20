@@ -1,0 +1,140 @@
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Thin.otf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Xlight.otf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Light.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Regular.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Medium.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ SemiBold.otf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Bold.otf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ XBold.otf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: SVN-Gilroy;
+    src: url('../src/assets/fonts/SVN-Gilroy\ Black.otf');
+    font-weight: 900;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #08071b;
+    position: fixed;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(108.46deg, #5ee6d0 12.51%, #bfc6ff 51.13%, #ffba69 87.49%);
+    border-radius: 4px;
+}
+.App {
+    background: #08071b;
+    color: #fff;
+    font-family: SVN-Gilroy;
+    overflow: hidden;
+}
+button {
+    font-family: SVN-Gilroy;
+}
+p {
+    margin: 0;
+}
+.color__f4 {
+    color: #f4f4f4;
+}
+.text__large {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 100%;
+    color: #ffffff;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.4);
+}
+.text__medium {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+}
+.desktop-only {
+    display: block !important;
+}
+.mobile-only {
+    display: none !important;
+}
+@media only screen and (max-width: 1000px) {
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: block !important;
+    }
+    .text__large {
+        font-size: 32px;
+    }
+    .text__medium {
+        font-size: 26px;
+    }
+}
+.popup-overlay {
+    background: #08071bb8;
+}
+.popup-content {
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    background-image: linear-gradient(rgba(10, 9, 29, 0.233), rgba(10, 9, 29, 0.568)),
+        linear-gradient(304.78deg, rgba(245, 251, 242, 0.185) -6.31%, rgba(245, 251, 242, 0) 110.8%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: show 0.3s ease;
+    margin: 80px auto auto !important;
+}
+@keyframes show {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.popup-content .close {
+    background-image: url('../src/assets/images/close.svg');
+    position: absolute;
+    top: 10px;
+    height: 16px;
+    width: 16px;
+    right: 10px;
+    cursor: pointer;
+}

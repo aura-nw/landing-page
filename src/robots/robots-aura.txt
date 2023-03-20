@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aura.network/sitemap.xml
