@@ -11,9 +11,7 @@ const Wrap = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @media only screen and (max-width: 1000px) {
-        justify-content: flex-start;
-    }
+    
 `
 export default function Spotlight() {
     return (
