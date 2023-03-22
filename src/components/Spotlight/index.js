@@ -4,9 +4,9 @@ import Card from './Card'
 
 import Backdrop1 from '../../assets/images/backdrop__1.png'
 
-import AuraLogo from '../../assets/images/aura.png'
-import HoroscopeLogo from '../../assets/images/horoscope.png'
-import PyxisLogo from '../../assets/images/pyxis.png'
+import AuraLogo from '../../assets/images/aura.svg'
+import HoroscopeLogo from '../../assets/images/horoscope.svg'
+import PyxisLogo from '../../assets/images/pyxis.svg'
 const Wrap = styled.div`
     display: flex;
     flex-wrap: wrap;

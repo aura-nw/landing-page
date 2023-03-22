@@ -11,6 +11,7 @@ const Wrap = styled.div`
         'cd img';
     padding: 86px 0px;
     grid-template-columns: 60% 40%;
+    margin-top: 32px;
     p {
         margin-bottom: 16px;
     }

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import Card from './Card'
-import IsolationImg from '../../assets/images/Isolation_Mode.png'
-import IsolationImg2 from '../../assets/images/Isolation_Mode_2.png'
-import IsolationImg3 from '../../assets/images/Isolation_Mode_3.png'
-import IsolationImg4 from '../../assets/images/Isolation_Mode_4.png'
+import IsolationImg from '../../assets/images/Isolation_Mode.svg'
+import IsolationImg2 from '../../assets/images/Isolation_Mode_2.svg'
+import IsolationImg3 from '../../assets/images/Isolation_Mode_3.svg'
+import IsolationImg4 from '../../assets/images/Isolation_Mode_4.svg'
 import Button from '../Button'
 const Wrap = styled.div`
     > p {

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import AuraBackdrop from '../../assets/images/aura__gray.png'
+import AuraBackdrop from '../../assets/images/aura__gray.svg'
 const Wrap = styled.div`
     background: linear-gradient(269.43deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
