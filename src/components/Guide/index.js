@@ -6,9 +6,10 @@ import IsolationImg3 from '../../assets/images/Isolation_Mode_3.svg'
 import IsolationImg4 from '../../assets/images/Isolation_Mode_4.svg'
 import Button from '../Button'
 const Wrap = styled.div`
-    > p {
+    > h2 {
         z-index: 1;
         position: relative;
+        text-align: center;
     }
     > div:not(.btns) {
         display: grid;
@@ -39,7 +40,7 @@ const Wrap = styled.div`
 export default function Guide() {
     return (
         <Wrap>
-            <p className='text__medium'>Build your DApp with Aura</p>
+            <h2 className='text__medium'>Build your DApp with Aura</h2>
             <div>
                 <Card>
                     <img src={IsolationImg} alt='' />

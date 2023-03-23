@@ -84,7 +84,7 @@ export default function Introdution() {
         <Container>
             <Wrap>
                 <div className='text'>
-                    <p className='text__large'>Driving toward mass NFT adoption</p>
+                    <h1 className='text__large'>Driving toward mass NFT adoption</h1>
                     <p className='color__f4'>A Permissioned Smart Contract Layer-1 Chain</p>
                 </div>
                 <div className='img'>

@@ -45,7 +45,7 @@ export default function Advantage() {
     return (
         <Container>
             <Wrap>
-                <p className='text__medium'>Powerful tools to BUIDL NFT projects</p>
+                <h2 className='text__medium'>Powerful tools to BUIDL NFT projects</h2>
                 <div>
                     <Card>
                         <p className='title'>Sovereign blockchain using Cosmos SDK, CosmWasm and IBC compatible</p>

@@ -12,7 +12,7 @@ const Wrap = styled.div`
             width: 100%;
         }
     }
-    > p {
+    > .title {
         font-weight: 600;
         font-size: 40px;
         line-height: 42px;
@@ -162,7 +162,7 @@ const Wrap = styled.div`
 export default function Roadmap() {
     return (
         <Wrap>
-            <p className='title'>2023 Roadmap</p>
+            <h3 className='title'>2023 Roadmap</h3>
             <div>
                 <img src={Roadmapbackground} alt='roadmap' className='roadmap desktop-only' />
                 <img src={MRoadmapbackground} alt='roadmap' className='roadmap mobile-only' />
