@@ -16,7 +16,7 @@ import mexc from '../../assets/images/mexc.png'
 import ngc from '../../assets/images/ngc.png'
 import snz from '../../assets/images/snz.png'
 const Wrap = styled.div`
-    > p {
+    > .title {
         font-weight: 600;
         font-size: 40px;
         line-height: 42px;
@@ -66,7 +66,7 @@ const Wrap = styled.div`
 export default function Partner() {
     return (
         <Wrap>
-            <p className='title'>Honored to be accompanied with</p>
+            <h3 className='title'>Honored to be accompanied with</h3>
             <div>
                 <img src={fpt} alt='' />
                 <img src={hashed} alt='' />

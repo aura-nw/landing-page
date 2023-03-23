@@ -100,7 +100,7 @@ export default function Feature() {
             <div className='desktop-only'>
                 <Wrap>
                     <div>
-                        <p className='text__medium'>One-stop destination to take the Web3 move</p>
+                        <h2 className='text__medium'>One-stop destination to take the Web3 move</h2>
                         <div
                             className={`feature-item ${index === 0 ? 'active' : ''}`}
                             onClick={() => sliderRef.current.slickGoTo(0)}>
