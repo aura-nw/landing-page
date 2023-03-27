@@ -25,6 +25,7 @@ import redline from '../../assets/images/redline.png'
 import dwf from '../../assets/images/dwf.png'
 import oig from '../../assets/images/oig.png'
 import pencil from '../../assets/images/pencil.png'
+import matchbox from '../../assets/images/matchbox.png'
 import { useState } from 'react'
 const Wrap = styled.div`
     > .title {
@@ -128,6 +129,7 @@ export default function Partner() {
                         <img src={dwf} alt='' />
                         <img src={oig} alt='' />
                         <img src={pencil} alt='' />
+                        <img src={matchbox} alt='' />
                     </div>
                 </>
             ) : (
