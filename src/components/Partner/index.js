@@ -15,6 +15,17 @@ import kyber from '../../assets/images/kyber.png'
 import mexc from '../../assets/images/mexc.png'
 import ngc from '../../assets/images/ngc.png'
 import snz from '../../assets/images/snz.png'
+import tpx from '../../assets/images/tpx.png'
+import kyros from '../../assets/images/kyros.png'
+import vanda from '../../assets/images/vanda.png'
+import deo from '../../assets/images/deo.png'
+import ecomobi from '../../assets/images/ecomobi.png'
+import ahamove from '../../assets/images/ahamove.png'
+import redline from '../../assets/images/redline.png'
+import dwf from '../../assets/images/dwf.png'
+import oig from '../../assets/images/oig.png'
+import pencil from '../../assets/images/pencil.png'
+import { useState } from 'react'
 const Wrap = styled.div`
     > .title {
         font-weight: 600;
@@ -34,7 +45,7 @@ const Wrap = styled.div`
         background-clip: text;
     }
     > div {
-        margin: 40px auto 0px;
+        margin: 0px auto ;
 
         width: 1008px;
         display: flex;
@@ -43,12 +54,24 @@ const Wrap = styled.div`
         > img {
             opacity: 0.6;
             transition: all 0.3s ease;
+            margin-top:35px ;
         }
         > img:hover {
             opacity: 1;
             -webkit-filter: drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 20px);
             filter: drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 20px);
         }
+    }
+    button {
+        border: 1px solid #494c58;
+        border-radius: 999px;
+        background: transparent;
+        color: #717582;
+        padding: 10px 24px;
+        cursor: pointer;
+        margin: auto;
+        display: flex;
+    margin-top: 40px;
     }
     @media only screen and (max-width: 1000px) {
         > div {
@@ -64,6 +87,7 @@ const Wrap = styled.div`
     }
 `
 export default function Partner() {
+    const [open, setOpen] = useState(false)
     return (
         <Wrap>
             <h3 className='title'>Honored to be accompanied with</h3>
@@ -81,14 +105,34 @@ export default function Partner() {
                 <img src={kyber} alt='' />
                 <img src={ngc} alt='' />
             </div>
-            <div>
-                <img src={kucoin} alt='' />
-                <img src={snz} alt='' />
-                <img src={k300} alt='' />
-                <img src={avatar} alt='' />
-                <img src={mexc} alt='' />
-                <img src={gateio} alt='' />
-            </div>
+            {open ? (
+                <>
+                    <div>
+                        <img src={kucoin} alt='' />
+                        <img src={snz} alt='' />
+                        <img src={k300} alt='' />
+                        <img src={avatar} alt='' />
+                        <img src={mexc} alt='' />
+                        <img src={gateio} alt='' />
+                    </div>
+                    <div>
+                        <img src={tpx} alt='' />
+                        <img src={kyros} alt='' />
+                        <img src={vanda} alt='' />
+                        <img src={deo} alt='' />
+                        <img src={ecomobi} alt='' />
+                    </div>
+                    <div>
+                        <img src={ahamove} alt='' />
+                        <img src={redline} alt='' />
+                        <img src={dwf} alt='' />
+                        <img src={oig} alt='' />
+                        <img src={pencil} alt='' />
+                    </div>
+                </>
+            ) : (
+                <button onClick={() => setOpen(!open)}>See all </button>
+            )}
         </Wrap>
     )
 }
