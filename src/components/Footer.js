@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import AuraTokenImg from '../assets/images/aura-token.svg'
+import AuraLogoImg from '../assets/images/aura-logo.svg'
 import Discord from '../assets/images/Discord.svg'
 import Github from '../assets/images/Github.svg'
 import LinkedIn from '../assets/images/LinkedIn.svg'
 import Telegram from '../assets/images/Telegram.svg'
 import Twitter from '../assets/images/Twitter.svg'
 import Container from './Container'
+
 const Wrap = styled.div`
     background: linear-gradient(269.9deg, rgba(34, 34, 34, 0.35) 0%, rgba(49, 49, 49, 0.35) 100.72%);
     backdrop-filter: blur(10px);
@@ -18,12 +19,11 @@ const Wrap = styled.div`
             flex-wrap: wrap;
         }
         .token-img {
-            width: 47px;
-            height: 47px;
+            width: 124px;
+            height: fit-content;
         }
         > .nav-bar {
             display: flex;
-            margin-right: 15%;
             @media only screen and (max-width: 1000px) {
                 margin-right: 0px;
             }
@@ -49,6 +49,7 @@ const Wrap = styled.div`
             a {
                 display: block;
                 color: #5578f1;
+                text-decoration: none;
                 @media only screen and (max-width: 1000px) {
                     font-size: 12px;
                     line-height: 20px;
@@ -72,8 +73,8 @@ const Wrap = styled.div`
         }
         > img:hover {
             opacity: 1;
-            -webkit-filter:  drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 20px);
-            filter:  drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 20px);
+            -webkit-filter: drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 20px);
+            filter: drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 20px);
         }
     }
 `
@@ -104,7 +105,7 @@ export default function Footer() {
         <Container>
             <Wrap>
                 <div>
-                    <img src={AuraTokenImg} alt='' className='token-img ' />
+                    <img src={AuraLogoImg} alt='' className='token-img ' />
                     <div className='nav-bar'>
                         <div className='nav-bar__col'>
                             <p>Developer</p>
