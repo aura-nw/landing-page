@@ -105,6 +105,7 @@ export default function Partner() {
                 <img src={crypto} alt='' />
             </div>
             <div>
+            <img src={matchbox} alt='' />
                 <img src={istari} alt='' />
                 <img src={impossible} alt='' />
                 <img src={gbv} alt='' />
@@ -134,7 +135,6 @@ export default function Partner() {
                         <img src={dwf} alt='' />
                         <img src={oig} alt='' />
                         <img src={pencil} alt='' />
-                        <img src={matchbox} alt='' />
                     </div>
                     <p>and many others</p>
                 </>
