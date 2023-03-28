@@ -46,7 +46,7 @@ const Wrap = styled.div`
         background-clip: text;
     }
     > div {
-        margin: 0px auto ;
+        margin: 0px auto;
 
         width: 1008px;
         display: flex;
@@ -55,7 +55,7 @@ const Wrap = styled.div`
         > img {
             opacity: 0.6;
             transition: all 0.3s ease;
-            margin-top:35px ;
+            margin-top: 35px;
         }
         > img:hover {
             opacity: 1;
@@ -72,7 +72,12 @@ const Wrap = styled.div`
         cursor: pointer;
         margin: auto;
         display: flex;
-    margin-top: 40px;
+        margin-top: 40px;
+    }
+    p {
+        margin-top: 40px;
+        color: #717582;
+        text-align: center;
     }
     @media only screen and (max-width: 1000px) {
         > div {
@@ -131,6 +136,7 @@ export default function Partner() {
                         <img src={pencil} alt='' />
                         <img src={matchbox} alt='' />
                     </div>
+                    <p>and many others</p>
                 </>
             ) : (
                 <button onClick={() => setOpen(!open)}>See all </button>
