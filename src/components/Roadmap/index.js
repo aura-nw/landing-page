@@ -80,12 +80,21 @@ const Wrap = styled.div`
                     rgba(87, 147, 236, 0.2) 42.82%,
                     rgba(85, 120, 241, 0.2) 76.44%
                 );
-                border-radius: 0px 0px 10px 10px;
                 > p {
                     background: linear-gradient(108.46deg, #5ee6d0 12.51%, #bfc6ff 51.13%, #ffba69 87.49%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
+                }
+            }
+        }
+        &.active:not(.flipped) {
+            > div:first-child {
+                border-radius: 10px 10px 0px 0px;
+            }
+            &.flipped {
+                > div:first-child {
+                    border-radius: 0px 0px 10px 10px;
                 }
             }
         }
@@ -166,7 +175,7 @@ export default function Roadmap() {
             <div>
                 <img src={Roadmapbackground} alt='roadmap' className='roadmap desktop-only' />
                 <img src={MRoadmapbackground} alt='roadmap' className='roadmap mobile-only' />
-                <div className='quarter quarter-i active fliped'>
+                <div className='quarter quarter-i fliped'>
                     <div>
                         <p>Quarter I</p>
                     </div>
@@ -178,7 +187,7 @@ export default function Roadmap() {
                         </ul>
                     </div>
                 </div>
-                <div className='quarter quarter-ii'>
+                <div className='quarter quarter-ii active'>
                     <div>
                         <p>Quarter II</p>
                     </div>
