@@ -12,28 +12,35 @@ import Introdution from './components/Introduction'
 import Partner from './components/Partner'
 import Roadmap from './components/Roadmap'
 import Spotlight from './components/Spotlight'
-const Wrap = styled.div``
+import StyledPointer from './components/StyledPointer'
+const Wrap = styled.div`
+    z-index: 2;
+    position: relative;
+`
 function App() {
     return (
-        <Wrap className='App'>
-            <Header />
-            <Gap height={64} mHeight={64} />
-            <Introdution />
-            <Spotlight />
-            <Gap height={150} mHeight={64}/>
-            <Feature />
-            <Gap height={150} mHeight={120}/>
-            <Advantage />
-            <Gap height={200} mHeight={120} />
-            <Guide />
-            <Gap height={200} mHeight={120} />
-            <Roadmap />
-            <Gap height={200} mHeight={120}/>
-            <Partner />
-            <Gap height={150} mHeight={100} />
-            <Footer />
-            <Gap height={50} />
-        </Wrap>
+        <>
+            <StyledPointer />
+            <Wrap className='App'>
+                <Header />
+                <Gap height={64} mHeight={64} />
+                <Introdution />
+                <Spotlight />
+                <Gap height={150} mHeight={64} />
+                <Feature />
+                <Gap height={150} mHeight={120} />
+                <Advantage />
+                <Gap height={200} mHeight={120} />
+                <Guide />
+                <Gap height={200} mHeight={120} />
+                <Roadmap />
+                <Gap height={200} mHeight={120} />
+                <Partner />
+                <Gap height={150} mHeight={100} />
+                <Footer />
+                <Gap height={50} />
+            </Wrap>
+        </>
     )
 }
 

@@ -1,17 +1,10 @@
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) -30.29%, rgba(255, 255, 255, 0) 144.92%);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    border: 1px solid transparent;
-    background-image: linear-gradient(rgb(10 9 29), rgb(10 9 29)),
-        linear-gradient(304.78deg, rgba(245, 251, 242, 0.13) -6.31%, rgba(245, 251, 242, 0) 110.8%);
-
-    background-origin: border-box;
-    background-clip: content-box, border-box;
     > div {
         padding: 19px 49px;
         @media only screen and (max-width: 1000px) {
@@ -29,6 +22,16 @@ const Wrap = styled.div`
             font-size: 14px;
             line-height: 15px;
         }
+    }&::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 15px;
+        background: linear-gradient(304.78deg, rgba(245, 251, 242, 0.44) -6.31%, rgba(245, 251, 242, 0) 110.8%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        padding: 1px;
     }
 `
 export default function Card({ children }) {
