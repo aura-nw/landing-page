@@ -36,7 +36,7 @@ const Blob = styled.div`
         rgb(255, 186, 105) 87.49%
     );
     animation: rotate 20s infinite;
-    opacity: 0.4;
+    opacity: 0.30;
 `
 export default function StyledPointer() {
     useEffect(() => {
@@ -50,7 +50,7 @@ export default function StyledPointer() {
                     left: `${clientX}px`,
                     top: `${clientY}px`,
                 },
-                { duration: 5000, fill: 'forwards' }
+                { duration: 6000, fill: 'forwards' }
             )
         }
     }, [])
