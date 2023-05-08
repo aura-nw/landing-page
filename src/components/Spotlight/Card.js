@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 const Wrap = styled.div`
     position: relative;
-    flex: 0 1 320px;
+    flex: 0 1 340px;
     margin: 40px 12px;
     cursor: pointer;
     > img {
@@ -27,10 +27,13 @@ const MainCard = styled.div`
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    height: 100%;
     > div {
         padding: 50px 30px 12px;
         display: flex;
         flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
         @media only screen and (max-width: 1000px) {
             padding: 42px 8px 12px;
         }
@@ -44,8 +47,8 @@ const MainCard = styled.div`
         > .description {
             margin-bottom: 8px;
             font-weight: 400;
-            font-size: 14px;
-            line-height: 15px;
+            font-size: 16px;
+            line-height: 20px;
             flex: 1;
         }
         > .text__color {
@@ -55,12 +58,11 @@ const MainCard = styled.div`
             background-clip: text;
 
             cursor: pointer;
-            font-size: 12px;
-            line-height: 13px;
+            font-size: 16px;
         }
     }
     &::before {
-        content: '';
+        content: "";
         background-image: url(${(props) => props.backdrop});
         width: 117px;
         height: 120px;
@@ -71,7 +73,7 @@ const MainCard = styled.div`
         top: -50%;
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
         border-radius: 15px;
@@ -88,7 +90,7 @@ export default function Card({ backdrop, children, logo, onClick }) {
             <MainCard backdrop={backdrop}>
                 <div>{children}</div>
             </MainCard>
-            <img src={logo} alt='logo' />
+            <img src={logo} alt="logo" />
         </Wrap>
     )
 }
