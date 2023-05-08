@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import AuraLogoImg from '../assets/images/aura-logo.svg'
-import Discord from '../assets/images/Discord.svg'
-import Github from '../assets/images/Github.svg'
-import LinkedIn from '../assets/images/LinkedIn.svg'
-import Telegram from '../assets/images/Telegram.svg'
-import Twitter from '../assets/images/Twitter.svg'
-import Container from './Container'
+import styled from "styled-components"
+import AuraLogoImg from "../assets/images/aura-logo.svg"
+import Discord from "../assets/images/Discord.svg"
+import Github from "../assets/images/Github.svg"
+import LinkedIn from "../assets/images/LinkedIn.svg"
+import Telegram from "../assets/images/Telegram.svg"
+import Twitter from "../assets/images/Twitter.svg"
+import Container from "./Container"
 
 const Wrap = styled.div`
     background: linear-gradient(269.9deg, rgba(34, 34, 34, 0.35) 0%, rgba(49, 49, 49, 0.35) 100.72%);
@@ -26,6 +26,7 @@ const Wrap = styled.div`
             display: flex;
             @media only screen and (max-width: 1000px) {
                 margin-right: 0px;
+                margin-top: 16px;
             }
             .nav-bar-item {
                 cursor: pointer;
@@ -105,71 +106,81 @@ export default function Footer() {
         <Container>
             <Wrap>
                 <div>
-                    <img src={AuraLogoImg} alt='' className='token-img ' />
-                    <div className='nav-bar'>
-                        <div className='nav-bar__col'>
+                    <img src={AuraLogoImg} alt="" className="token-img " />
+                    <div className="nav-bar">
+                        <div className="nav-bar__col">
                             <p>Developer</p>
                             <a
-                                href='https://docs.aura.network/'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-bar-item'>
+                                href="https://docs.aura.network/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
                                 Docs
                             </a>
                             <a
-                                href='https://docs.aura.network/developer/'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-bar-item'>
+                                href="https://docs.aura.network/developer/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
                                 Tools
                             </a>
                             <a
-                                href='https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-bar-item'>
-                                Contracts{' '}
+                                href="https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
+                                Contracts{" "}
                             </a>
                         </div>
-                        <div className='nav-bar__col'>
+                        <div className="nav-bar__col">
                             <p>Ecosystem</p>
                             <a
-                                href='https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-bar-item'>
+                                href="https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
                                 Whitepaper
                             </a>
                             <a
-                                href='https://docs.aura.network/overview/about/intro'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-bar-item'>
+                                href="https://docs.aura.network/overview/about/intro"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
                                 DApps
                             </a>
                             <a
-                                href='https://docs.aura.network/overview/about/tokenomic'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-bar-item'>
-                                Token{' '}
+                                href="https://docs.aura.network/overview/about/tokenomic"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
+                                Token{" "}
+                            </a>
+                        </div>
+                        <div className="nav-bar__col">
+                            <p>Career</p>
+                            <a
+                                href="https://www.notion.so/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="nav-bar-item">
+                                Jobs
                             </a>
                         </div>
                     </div>
-                    <div className='links'>
-                        <img onClick={() => window.open(' https://twitter.com/AuraNetworkHQ')} src={Twitter} alt='' />
+                    <div className="links">
+                        <img onClick={() => window.open(" https://twitter.com/AuraNetworkHQ")} src={Twitter} alt="" />
                         <img
-                            onClick={() => window.open('https://discord.com/invite/bzm3dyxJxR')}
+                            onClick={() => window.open("https://discord.com/invite/bzm3dyxJxR")}
                             src={Discord}
-                            alt=''
+                            alt=""
                         />
-                        <img onClick={() => window.open('https://t.me/AuraNetworkOfficial')} src={Telegram} alt='' />
+                        <img onClick={() => window.open("https://t.me/AuraNetworkOfficial")} src={Telegram} alt="" />
                         <img
-                            onClick={() => window.open('https://www.linkedin.com/company/auranetwork/')}
+                            onClick={() => window.open("https://www.linkedin.com/company/auranetwork/")}
                             src={LinkedIn}
-                            alt=''
+                            alt=""
                         />
-                        <img onClick={() => window.open('https://github.com/aura-nw')} src={Github} alt='' />
+                        <img onClick={() => window.open("https://github.com/aura-nw")} src={Github} alt="" />
                     </div>
                 </div>
                 <Copyright>© Aura Network {new Date().getFullYear()}.</Copyright>
