@@ -142,14 +142,14 @@ export default function Footer() {
                                 Whitepaper
                             </a>
                             <a
-                                href="https://docs.aura.network/overview/about/intro"
+                                href="https://docs.aura.network/overview/intro/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="nav-bar-item">
                                 DApps
                             </a>
                             <a
-                                href="https://docs.aura.network/overview/about/tokenomic"
+                                href="https://docs.aura.network/overview/tokenomic/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="nav-bar-item">
