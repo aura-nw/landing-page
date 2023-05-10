@@ -26,6 +26,7 @@ import dwf from '../../assets/images/dwf.png'
 import oig from '../../assets/images/oig.png'
 import pencil from '../../assets/images/pencil.png'
 import matchbox from '../../assets/images/matchbox.png'
+import ld from '../../assets/images/ld.png'
 import { useState } from 'react'
 const Wrap = styled.div`
     > .title {
@@ -56,6 +57,7 @@ const Wrap = styled.div`
             opacity: 0.6;
             transition: all 0.3s ease;
             margin-top: 35px;
+            max-width: 130px
         }
         > img:hover {
             opacity: 1;
@@ -103,6 +105,7 @@ export default function Partner() {
                 <img src={c98} alt='' />
                 <img src={guildfi} alt='' />
                 <img src={crypto} alt='' />
+                <img src={ld} alt='' />
             </div>
             <div>
             <img src={matchbox} alt='' />
