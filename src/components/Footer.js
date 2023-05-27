@@ -170,7 +170,7 @@ export default function Footer() {
                     <div className="links">
                         <img onClick={() => window.open(" https://twitter.com/AuraNetworkHQ")} src={Twitter} alt="" />
                         <img
-                            onClick={() => window.open("https://discord.com/invite/bzm3dyxJxR")}
+                            onClick={() => window.open("https://discord.com/invite/ZFHepmtZvr")}
                             src={Discord}
                             alt=""
                         />
