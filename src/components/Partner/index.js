@@ -123,11 +123,11 @@ export default function Partner() {
                         <img src={k300} alt='' />
                         <img src={avatar} alt='' />
                         <img src={mexc} alt='' />
-                        <img src={gateio} alt='' />
                     </div>
                     <div>
+                        <img src={gateio} alt='' />
                         <img src={tpx} alt='' />
-                        <img src={kyros} alt='' />
+                        {/* <img src={kyros} alt='' /> */}
                         <img src={vanda} alt='' />
                         <img src={deo} alt='' />
                         <img src={ecomobi} alt='' />
