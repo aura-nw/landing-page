@@ -142,14 +142,14 @@ export default function Footer() {
                                 Whitepaper
                             </a>
                             <a
-                                href="https://docs.aura.network/overview/about/intro"
+                                href="https://docs.aura.network/overview/intro/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="nav-bar-item">
                                 DApps
                             </a>
                             <a
-                                href="https://docs.aura.network/overview/about/tokenomic"
+                                href="https://docs.aura.network/overview/tokenomic/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="nav-bar-item">
@@ -170,7 +170,7 @@ export default function Footer() {
                     <div className="links">
                         <img onClick={() => window.open(" https://twitter.com/AuraNetworkHQ")} src={Twitter} alt="" />
                         <img
-                            onClick={() => window.open("https://discord.com/invite/bzm3dyxJxR")}
+                            onClick={() => window.open("https://discord.com/invite/ZFHepmtZvr")}
                             src={Discord}
                             alt=""
                         />
