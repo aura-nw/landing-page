@@ -141,7 +141,7 @@ export default function Feature() {
                         <div
                             className={`feature-item ${index === 2 ? "active" : ""}`}
                             onClick={() => sliderRef.current.slickGoTo(2)}>
-                            <p>Bussiness solution to transform to Web3</p>
+                            <p>Business solution to transform to Web3</p>
                             <img src={ArrowRight} alt="arrow-right" />
                         </div>
                         <div
@@ -179,7 +179,7 @@ export default function Feature() {
                             <Card>
                                 <div>
                                     <img src={Img3} alt="" />
-                                    <p className="title">Bussiness solution to transform to Web3</p>
+                                    <p className="title">Business solution to transform to Web3</p>
                                     <p className="des">
                                         Empower businesses to stay ahead of the curve and leverage the potential of Web3
                                     </p>

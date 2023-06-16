@@ -119,12 +119,12 @@ export default function MFeature() {
                     className={`feature-item ${index === 2 ? "active" : ""}`}
                     onClick={() => (index === 2 ? setIndex(-1) : setIndex(2))}>
                     <div className={`feature-banner `}>
-                        <p>Bussiness solution to transform to Web3</p>
+                        <p>Business solution to transform to Web3</p>
                         <img src={Arrow} alt="arrow-right" />
                     </div>
                     <Card className="feature-content">
                         <img src={Img3} alt="" />
-                        <p className="title">Bussiness solution to transform to Web3</p>
+                        <p className="title">Business solution to transform to Web3</p>
                         <p className="des">
                             Empower businesses to stay ahead of the curve and leverage the potential of Web3
                         </p>
