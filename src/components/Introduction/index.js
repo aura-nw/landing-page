@@ -66,6 +66,7 @@ const Wrap = styled.div`
     gap: 18px;
     padding: 6px 20px;
     border-radius: 20px;
+    z-index: 10;
     background: linear-gradient(108.46deg, #5ee6d01a 12.51%, #bfc6ff1a 51.13%, #ffba691a 87.49%);
     > span:first-child {
       background: linear-gradient(108.46deg, #5ee6d0 12.51%, #bfc6ff 51.13%, #ffba69 87.49%);
