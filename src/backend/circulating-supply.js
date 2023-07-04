@@ -16,3 +16,12 @@ app.get('/circulating-supply', async function(req, res) {
     ])
     res.send(String((resultTotalSupply.data.amount.amount - resultVestingSale.data.balance.amount - resultVestingTeam.data.balance.amount) * 1.0 / 1000000));
 })
+
+app.get('/total-supply', async function(req, res) {
+    var apiTotalSupply = 'https://lcd.aura.network/cosmos/bank/v1beta1/supply/uaura';
+
+    var [resultTotalSupply] = await Promise.all([
+        axios.get(apiTotalSupply)
+    ])
+    res.send(String((resultTotalSupply.data.amount.amount) * 1.0 / 1000000));
+})
