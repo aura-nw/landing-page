@@ -151,7 +151,7 @@ export default function Feature() {
                             <img src={ArrowRight} alt="arrow-right" />
                         </div>
                         <Gap height={40} />
-                        <Button onClick={() => window.open("https://docs.aura.network/overview/about/intro")}>
+                        <Button onClick={() => window.open("https://docs.aura.network/overview/intro")}>
                             Discover more
                         </Button>
                     </div>
