@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import avatar from '../../assets/images/avatar.png'
+import blizzard from "../../assets/images/blizzard.png"
 import c98 from '../../assets/images/c98.png'
 import crypto from '../../assets/images/crypto.png'
 import fpt from '../../assets/images/fpt.png'
@@ -16,7 +16,6 @@ import mexc from '../../assets/images/mexc.png'
 import ngc from '../../assets/images/ngc.png'
 import snz from '../../assets/images/snz.png'
 import tpx from '../../assets/images/tpx.png'
-// import kyros from '../../assets/images/kyros.png'
 import vanda from '../../assets/images/vanda.png'
 import deo from '../../assets/images/deo.png'
 import ecomobi from '../../assets/images/ecomobi.png'
@@ -121,13 +120,12 @@ export default function Partner() {
                         <img src={kucoin} alt='' />
                         <img src={snz} alt='' />
                         <img src={k300} alt='' />
-                        <img src={avatar} alt='' />
+                        <img src={blizzard} alt='' />
                         <img src={mexc} alt='' />
                     </div>
                     <div>
                         <img src={gateio} alt='' />
                         <img src={tpx} alt='' />
-                        {/* <img src={kyros} alt='' /> */}
                         <img src={vanda} alt='' />
                         <img src={deo} alt='' />
                         <img src={ecomobi} alt='' />
