@@ -1,25 +1,27 @@
 import styled from "styled-components"
 const Wrap = styled.div`
-    position: relative;
-    flex: 0 1 340px;
-    margin: 40px 12px;
-    cursor: pointer;
+  position: relative;
+  flex: 0 1 340px;
+  margin: 40px 12px;
+  cursor: pointer;
+  > img {
+    position: absolute;
+    top: 0%;
+    width: 64px;
+    height: 64px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    filter: brightness(1.2);
+  }
+  @media only screen and (max-width: 1000px) {
+    margin: 0px 6px 60px;
+    height: 100%;
     > img {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(0.8);
     }
-    &:hover {
-        filter: brightness(1.2);
-    }
-    @media only screen and (max-width: 1000px) {
-        margin: 0px 6px 60px;
-        height: 100%;
-        > img {
-            transform: translate(-50%, -50%) scale(0.8);
-        }
-    }
+  }
 `
 const MainCard = styled.div`
     backdrop-filter: blur(10px);
