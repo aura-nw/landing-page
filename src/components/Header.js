@@ -132,50 +132,50 @@ export default function Header() {
       <Root>
         <Container>
           <Wrap>
-            <a href="/" alt="">
-              <img src={AuraLogoImg} alt="" className="logo-img" />
+            <a href='/' alt=''>
+              <img src={AuraLogoImg} alt='' className='logo-img' />
             </a>
-            <div className="nav-bar">
-              <a href="https://docs.aura.network/" target="_blank" rel="noreferrer" className="nav-bar-item">
+            <div className='nav-bar'>
+              <a href='https://docs.aura.network/' target='_blank' rel='noreferrer' className='nav-bar-item'>
                 Ecosystem
               </a>
-              <a href="https://insight.aura.network/" target="_blank" rel="noreferrer" className="nav-bar-item">
+              <a href='https://insight.aura.network/' target='_blank' rel='noreferrer' className='nav-bar-item'>
                 Blog
               </a>
-              <a href="http://lnk.bio/auranetwork" target="_blank" rel="noreferrer" className="nav-bar-item">
-                Community{" "}
+              <a href='https://link3.to/auranetwork' target='_blank' rel='noreferrer' className='nav-bar-item'>
+                Community{' '}
               </a>
             </div>
-            <img onClick={() => setOpen(!open)} src={AuraTokenImg} alt="" className="token-img " />
-            <Popup modal={true} lockScroll={true} onClose={() => setOpen(false)} open={open} position="top center">
-              <span className="close" onClick={() => setOpen(false)}></span>
+            <img onClick={() => setOpen(!open)} src={AuraTokenImg} alt='' className='token-img ' />
+            <Popup modal={true} lockScroll={true} onClose={() => setOpen(false)} open={open} position='top center'>
+              <span className='close' onClick={() => setOpen(false)}></span>
               <PopupContent>
-                <img src={AuraToken} alt="" />
+                <img src={AuraToken} alt='' />
                 <p>Buy AURA Now On</p>
                 <div>
                   <div>
-                    <div onClick={() => window.open("https://bingx.com/en-us/spot/AURAUSDT/")}>
-                      <img src={Bingx} alt="" />
+                    <div onClick={() => window.open('https://bingx.com/en-us/spot/AURAUSDT/')}>
+                      <img src={Bingx} alt='' />
                     </div>
-                    <div onClick={() => window.open("https://halotrade.zone/swap")}>
-                      <img src={Halo} alt="" />
+                    <div onClick={() => window.open('https://halotrade.zone/swap')}>
+                      <img src={Halo} alt='' />
                     </div>
                   </div>
                 </div>
                 <div>
                   <div>
-                    <div onClick={() => window.open("https://www.mexc.com/exchange/AURA_USDT")}>
-                      <img src={Mexc} alt="" />
+                    <div onClick={() => window.open('https://www.mexc.com/exchange/AURA_USDT')}>
+                      <img src={Mexc} alt='' />
                     </div>
-                    <div onClick={() => window.open("https://goonus.io/")}>
-                      <img src={Onus} alt="" />
+                    <div onClick={() => window.open('https://goonus.io/')}>
+                      <img src={Onus} alt='' />
                     </div>
                   </div>
                 </div>
                 <a
-                  href="https://insight.aura.network/tag/listing/?_ga=2.209879250.616355991.1678432068-522954093.1678432068"
-                  target="_blank"
-                  rel="noreferrer">
+                  href='https://insight.aura.network/tag/listing/?_ga=2.209879250.616355991.1678432068-522954093.1678432068'
+                  target='_blank'
+                  rel='noreferrer'>
                   See more details
                 </a>
               </PopupContent>
