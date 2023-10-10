@@ -88,8 +88,8 @@ const MainCard = styled.div`
 `
 export default function Card({ backdrop, children, logo, onClick, id }) {
   return (
-    <Wrap onClick={onClick} id={id}>
-      <MainCard backdrop={backdrop}>
+    <Wrap onClick={onClick}>
+      <MainCard backdrop={backdrop} id={id}>
         <div>{children}</div>
       </MainCard>
       <img src={logo} alt='logo' />
