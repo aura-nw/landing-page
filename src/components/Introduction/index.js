@@ -138,8 +138,8 @@ export default function Introdution() {
           </span>
         </div>
         <div className="text">
-          <h1 className="text__large">Driving toward mass NFT adoption</h1>
-          <p className="color__f4">A Permissioned Smart Contract Layer-1 Chain</p>
+          <h1 className="text__large">The layer 1 for emerging countries</h1>
+          <p className="color__f4">Build and drive Blockchain mass adoption through modular tech stacks.</p>
         </div>
         <div className="img">
           <img className="aura-img" src={AuraTokenImg} alt="" />
