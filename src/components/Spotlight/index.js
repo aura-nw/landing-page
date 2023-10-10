@@ -20,27 +20,43 @@ export default function Spotlight() {
   return (
     <Container>
       <Wrap>
-        <Card backdrop={Backdrop1} logo={AuraLogo} onClick={() => window.open('https://aurascan.io/')}>
+        <Card id='aura_scan' backdrop={Backdrop1} logo={AuraLogo} onClick={() => window.open('https://aurascan.io/')}>
           <p className='title'>Aura Scan</p>
           <p className='description'>The next generation blockchain explorer for Aura Network.</p>
           <p className='text__color'>Experience →</p>
         </Card>
-        <Card backdrop={Backdrop1} logo={PyxisLogo} onClick={() => window.open('https://pyxis.aura.network/')}>
+        <Card
+          id='pyxis_safe'
+          backdrop={Backdrop1}
+          logo={PyxisLogo}
+          onClick={() => window.open('https://pyxis.aura.network/')}>
           <p className='title'>Pyxis Safe</p>
           <p className='description'>Multi-signature and fine-grain access control asset management tool.</p>
           <p className='text__color'>Experience →</p>
         </Card>
-        <Card backdrop={Backdrop1} logo={HoroscopeLogo} onClick={() => window.open('https://horoscope.aura.network')}>
+        <Card
+          id='horoscope'
+          backdrop={Backdrop1}
+          logo={HoroscopeLogo}
+          onClick={() => window.open('https://horoscope.aura.network')}>
           <p className='title'>Horoscope</p>
           <p className='description'>An indexing service to provide real-time data for Aura ecosystem.</p>
           <p className='text__color'>Experience →</p>
         </Card>
-        <Card backdrop={Backdrop2} logo={SeekHypeLogo} onClick={() => window.open('https://beta.seekhype.io/')}>
+        <Card
+          id='seekhype'
+          backdrop={Backdrop2}
+          logo={SeekHypeLogo}
+          onClick={() => window.open('https://beta.seekhype.io/')}>
           <p className='title'>SeekHYPE</p>
           <p className='description'>A personalized NFT marketplace powered by AI.</p>
           <p className='text__color'>Experience →</p>
         </Card>
-        <Card backdrop={Backdrop3} logo={HaloTradeLogo} onClick={() => window.open('https://halotrade.zone/')}>
+        <Card
+          id='halotrade'
+          backdrop={Backdrop3}
+          logo={HaloTradeLogo}
+          onClick={() => window.open('https://halotrade.zone/')}>
           <p className='title'>HaloTrade</p>
           <p className='description'>The first DEX built on Aura Network to swap, farm and earn.</p>
           <p className='text__color'>Experience →</p>
