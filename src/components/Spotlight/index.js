@@ -9,7 +9,7 @@ import Backdrop3 from '../../assets/images/backdrop__3.png'
 import AuraLogo from '../../assets/images/aura.svg'
 import HoroscopeLogo from '../../assets/images/horoscope.svg'
 import PyxisLogo from '../../assets/images/pyxis.svg'
-import SeekHypeLogo from '../../assets/images/seekhype.svg'
+import SeekHypeLogo from '../../assets/images/seekhype.png'
 import HaloTradeLogo from '../../assets/images/Halotrade.svg'
 const Wrap = styled.div`
   display: flex;
@@ -49,7 +49,9 @@ export default function Spotlight() {
           logo={SeekHypeLogo}
           onClick={() => window.open('https://beta.seekhype.io/')}>
           <p className='title'>SeekHYPE</p>
-          <p className='description'>A personalized NFT marketplace powered by AI.</p>
+          <p className='description'>
+            Enhance your seamless NFT experience while enjoying utility with premier Web2 brands
+          </p>
           <p className='text__color'>Experience →</p>
         </Card>
         <Card

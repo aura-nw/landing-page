@@ -7,8 +7,7 @@ const Wrap = styled.div`
   > img {
     position: absolute;
     top: 0%;
-    width: 64px;
-    height: 64px;
+    height: 48px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
