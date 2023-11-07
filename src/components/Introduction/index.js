@@ -129,28 +129,28 @@ export default function Introdution() {
   return (
     <Container>
       <Wrap>
-        <div className="noti">
-          <span>Aura Network token migration is available. Folow our guide to migrate now! </span>
+        <div className='noti'>
+          <span>Aura Network token migration is available. Follow our guide to migrate now! </span>
           <span>
-            <Button onClick={() => window.open("https://insight.aura.network/aura-network-token-migration-guide/")}>
+            <Button onClick={() => window.open('https://insight.aura.network/aura-network-token-migration-guide/')}>
               Migrate Now
             </Button>
           </span>
         </div>
-        <div className="text">
-          <h1 className="text__large">The layer 1 for emerging countries</h1>
-          <p className="color__f4">Build and drive Blockchain mass adoption through modular tech stacks.</p>
+        <div className='text'>
+          <h1 className='text__large'>The layer 1 for emerging countries</h1>
+          <p className='color__f4'>Build and drive Blockchain mass adoption through modular tech stacks.</p>
         </div>
-        <div className="img">
-          <img className="aura-img" src={AuraTokenImg} alt="" />
+        <div className='img'>
+          <img className='aura-img' src={AuraTokenImg} alt='' />
         </div>
-        <div className="btn">
-          <Button onClick={() => window.open(" https://docs.aura.network/")}>Discover more</Button>
+        <div className='btn'>
+          <Button onClick={() => window.open(' https://docs.aura.network/')}>Discover more</Button>
         </div>
-        <div className="cd">
-          {new Date("03-20-2023 20:00").getTime() > Date.now() ? (
+        <div className='cd'>
+          {new Date('03-20-2023 20:00').getTime() > Date.now() ? (
             <>
-              <p className="countdown-title color__f4">The Xstaxy Mainnet launch starting in:</p>
+              <p className='countdown-title color__f4'>The Xstaxy Mainnet launch starting in:</p>
               <CustomCountdown />
             </>
           ) : null}
