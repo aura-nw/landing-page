@@ -7,7 +7,7 @@ app.listen(3000, ()=>{
     }
 )
 app.get('/circulating-supply', async function(req, res) {
-    var apiTotalSupply = 'https://lcd.aura.network/cosmos/bank/v1beta1/supply/uaura';
+    var apiTotalSupply = 'https://lcd.aura.network/cosmos/bank/v1beta1/supply/by_denom?denom=uaura';
     var apiVestingSale = 'https://lcd.aura.network/cosmos/bank/v1beta1/balances/aura125gwrqglh495q729zzvraz4twx0fvjfm3c9m7t/by_denom?denom=uaura';
     var apiVestingTeam = 'https://lcd.aura.network/cosmos/bank/v1beta1/balances/aura1pqlh09f0zhszyaaq57ndf8djap4suth2hvl430/by_denom?denom=uaura';
 
@@ -18,7 +18,7 @@ app.get('/circulating-supply', async function(req, res) {
 })
 
 app.get('/total-supply', async function(req, res) {
-    var apiTotalSupply = 'https://lcd.aura.network/cosmos/bank/v1beta1/supply/uaura';
+    var apiTotalSupply = 'https://lcd.aura.network/cosmos/bank/v1beta1/supply/by_denom?denom=uaura';
 
     var [resultTotalSupply] = await Promise.all([
         axios.get(apiTotalSupply)
