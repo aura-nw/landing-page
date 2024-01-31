@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "../components/Header";
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Tutorials from "../sections/tutorials";
+import "./globals.css";
 
 const ppmori = localFont({ src: './../assets/fonts/PPMori-SemiBold.otf', variable: "--font-ppmori-semibold", })
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,9 @@ export default function RootLayout({
       <body className={`${inter.className} ${ppmori.variable}`}>
         <Header />
         {children}
+        <div className="mt-20 xl:mt-[120px]">
+          <Tutorials />
+        </div>
         <Footer />
       </body>
     </html>

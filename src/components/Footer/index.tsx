@@ -34,7 +34,7 @@ function Footer() {
     <footer className="">
       <div className="bg-[url('../assets/images/img_footer_mb.png')] bg-no-repeat bg-cover pt-[200px] md:pt-[320px] lg:bg-none lg:pt-0">
         <div className="flex flex-col gap-[50px] border-b border-[rgba(150,140,124,0.20)] justify-end px-6 pb-[120px] bg-black xl:px-[313px] xl:pt-16 xl:pb-[240px]">
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between">
             <div className="flex flex-col gap-6 lg:gap-8 xl:w-[378px]">
               <Image src={ic_logo} alt="logo" className="w-[117px] h-9" />
               <div className="flex gap-9">

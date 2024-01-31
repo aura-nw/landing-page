@@ -11,8 +11,25 @@ import ic_logo from "@/assets/images/img_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
+import { PAGE_ROUTE } from "../../common";
 
-const dropdownMenu = [
+const learnMenu = [
+    {
+        name: "Introduction",
+        link: PAGE_ROUTE.INTRODUCTION,
+    },
+    {
+        name: "Tech Stack",
+        link: "/",
+    },
+
+    {
+        name: "Docs",
+        link: "/",
+    }
+]
+
+const communityMenu = [
     {
         name: "Twitter",
         link: "/",
@@ -57,8 +74,28 @@ function Header() {
                     <Image className="lg:hidden nav-icon-close" src={ic_close} alt="ic_close" />
                 </label>
                 <div className="gap-1 hidden lg:flex">
-                    <Link href="/" className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Home</Link>
-                    <Link href="/" className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Learn</Link>
+                    <Link href={PAGE_ROUTE.HOME} className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Home</Link>
+                    <div className="flex justify-center items-center">
+                        <div className="group relative px-6 py-4 hover:bg-medium-charcoal rounded-2xl cursor-pointer">
+                            <div className="flex items-center gap-[10px]">
+                                <span className="text-lg">
+                                    Learn
+                                </span>
+                                <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
+                            </div>
+                            <div className="group-hover:block absolute hidden h-auto left-0">
+                                <div className="pt-5">
+                                    <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
+                                        {learnMenu.map((item) => (
+                                            <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
+                                                <Link href={item.link} className="block">{item.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <Link href="/" className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Build</Link>
                     <div className="flex justify-center items-center">
                         <div className="group relative px-6 py-4 hover:bg-medium-charcoal rounded-2xl cursor-pointer w-[175px]">
@@ -71,7 +108,7 @@ function Header() {
                             <div className="group-hover:block absolute hidden h-auto left-0">
                                 <div className="pt-5">
                                     <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
-                                        {dropdownMenu.map((item) => (
+                                        {communityMenu.map((item) => (
                                             <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
                                                 <Image className="w-5 h-5" src={item.icon} alt={item.name} />
                                                 <Link href={item.link} className="block">{item.name}</Link>
@@ -102,7 +139,7 @@ function Header() {
                             <div className="group-hover:block absolute hidden h-auto left-0">
                                 <div className="pt-5">
                                     <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
-                                        {dropdownMenu.map((item) => (
+                                        {communityMenu.map((item) => (
                                             <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
                                                 <Image className="w-5 h-5" src={item.icon} alt={item.name} />
                                                 <Link href={item.link} className="block ">{item.name}</Link>
