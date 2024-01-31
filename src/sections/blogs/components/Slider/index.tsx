@@ -1,15 +1,16 @@
 'use client'
 
-import Card from '../Card';
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import img_cosmos from '@/assets/images/img_cosmos.png';
+import img_gateio from '@/assets/images/img_gateio.png';
+import img_nft from '@/assets/images/img_nft.png';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import img_cosmos from '@/assets/images/img_cosmos.png';
-import img_gateio from '@/assets/images/img_gateio.png';
-import img_nft from '@/assets/images/img_nft.png';
+import { A11y, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import useWindowSize from '../../../../hooks/useWindowSize';
+import Card from '../Card';
 
 const blogsData = [{
     img: img_cosmos,
@@ -30,13 +31,15 @@ const blogsData = [{
 
 
 export default function BlogsSlider() {
+    const { isMobile } = useWindowSize()
     return (
         <Swiper
-            modules={[ Pagination, A11y]}
-            spaceBetween={16}
+            modules={[Navigation, Pagination, A11y]}
+            spaceBetween={isMobile ? 16 : 32}
             slidesPerView="auto"
             pagination={{
                 clickable: true,
+                enabled: isMobile
             }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}

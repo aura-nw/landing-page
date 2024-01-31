@@ -106,7 +106,7 @@ const partners = [
 
 function Parters() {
     return (
-        <div className="flex flex-col gap-[34px] w-full items-center">
+        <div className="flex flex-col gap-[34px] w-full items-center lg:pt-10 lg:pb-[100px]">
             <div className="flex flex-col gap-4 lg:gap-6 items-center">
                 <span className="text-light-yellow text-base lg:text-xl font-normal">Aura's Partners and investors</span>
                 <span className="font-ppmori-semibold text-[32px] lg:text-[48px] text-center font-semibold leading-[40px] lg:leading-[56px]">Backed by the best</span>

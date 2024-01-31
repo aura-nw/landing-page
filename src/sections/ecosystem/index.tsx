@@ -22,14 +22,14 @@ const ecosystemData = [{
 
 function Ecosystem() {
     return (
-        <div className="pt-14 pb-8 bg-ecosystem-gradient w-screen lg:w-full flex flex-col gap-6 items-center">
+        <div className="pt-14 pb-8 xl:py-24 bg-ecosystem-gradient w-screen flex flex-col gap-6 items-center lg:rounded-3xl lg:w-[98vw]">
             <div className="flex flex-col gap-4 items-center">
                 <div className="bg-[rgba(255,255,255,0.15)] border border-solid border-[rgba(255,255,255,0.20)] py-3 px-5 h-11 text-center rounded-full flex items-center">
                     <div className="font-semibold">Aura's Ecosystem</div>
                 </div>
-                <span className="font-ppmori-semibold text-[32px] text-center font-semibold leading-[40px]">Real world use case highlight</span>
+                <span className="font-ppmori-semibold text-[32px] text-center font-semibold leading-[40px] xl:text-[48px] xl:leading-[56px]">Real world use case highlight</span>
             </div>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 xl:flex-row'>
                 {ecosystemData.map((item, i) => (
                     <Card key={i} data={item} />
                 ))}

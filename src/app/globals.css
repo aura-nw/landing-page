@@ -49,6 +49,10 @@ body {
   .card {
     width: 272px;
   }
+
+  .swiper {
+    height: 358px !important;
+  }
 }
 
 @media screen and (min-width: 375px) {
@@ -84,6 +88,37 @@ body {
   }
   .navbar-container {
     border-radius: 32px !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main-container {
+    max-width: 960px;
+    margin: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .swiper {
+    height: 476px !important;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .main-container {
+    max-width: 1216px;
+    margin: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 1728px) {
+  .main-container {
+    max-width: 1408px;
+    margin: auto;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 
@@ -167,10 +202,6 @@ body {
 .swiper-pagination-bullet-active {
   height: 6px !important;
   width: 6px !important;
-}
-
-.swiper {
-  height: 358px !important;
 }
 
 .swiper-slide {

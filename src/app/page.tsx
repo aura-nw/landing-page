@@ -13,7 +13,7 @@ export default function Home() {
       <main className="main-container">
         <div className="flex min-h-screen flex-col items-center">
           <Introduction />
-          <div className="mt-[141px] flex flex-col gap-20 w-full items-center">
+          <div className="mt-[141px] lg:mt-[153px] flex flex-col gap-20 w-full items-center">
             <Parters />
             <Statistics />
             <Features />
