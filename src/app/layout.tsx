@@ -22,12 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${ppmori.variable}`}>
-        <Header />
-        {children}
-        <div className="mt-20 xl:mt-[120px]">
+        <div className="bg-[url('../assets/images/img_bg_mobile.png')] lg:bg-[url('../assets/images/img_bg_desktop.png')] bg-cover bg-no-repeat">
+          <Header />
+          {children}
           <Tutorials />
+          <Footer />
         </div>
-        <Footer />
       </body>
     </html>
   );

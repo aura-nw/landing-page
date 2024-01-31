@@ -51,7 +51,7 @@ body {
   }
 
   .swiper {
-    height: 358px !important;
+    height: 370px !important;
   }
 }
 
@@ -86,7 +86,7 @@ body {
   .nav-icon-close {
     display: none !important;
   }
-  .navbar-container {
+  .nav-container {
     border-radius: 32px !important;
   }
 }
@@ -198,6 +198,24 @@ body {
   box-shadow: 0px 68px 160px 0px rgba(0, 0, 0, 0.45);
 }
 
+.ecosystem-card-aha:hover {
+  background-image: url("../assets/images/img_bg_ahamove.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ecosystem-card-halotrade:hover {
+  background-image: url("../assets/images/img_bg_ht.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ecosystem-card-horoscope:hover {
+  background-image: url("../assets/images/img_bg_hs.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* Swiper */
 .swiper-pagination-bullet-active {
   height: 6px !important;
@@ -231,7 +249,7 @@ body {
   display: block;
 }
 
-.nav-input:checked~.navbar-container {
+.nav-input:checked~.nav-container {
   border-radius: 1rem 1rem 0 0;
 }
 
@@ -239,10 +257,10 @@ body {
   display: none;
 }
 
-.nav-input:checked~.navbar-container .nav-icon-menu {
+.nav-input:checked~.nav-container .nav-icon-menu {
   display: none;
 }
 
-.nav-input:checked~.navbar-container .nav-icon-close {
+.nav-input:checked~.nav-container .nav-icon-close {
   display: block;
 }

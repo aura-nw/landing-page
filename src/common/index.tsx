@@ -1,4 +1,5 @@
 export const enum PAGE_ROUTE {
     HOME = '/',
-    INTRODUCTION = 'introduction'
+    INTRODUCTION = 'introduction',
+    TECH_STACK = 'tech-stack'
 }

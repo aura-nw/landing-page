@@ -1,20 +1,23 @@
-import img_halotrade from '@/assets/images/img_halotrade.svg'
 import img_ahamove from '@/assets/images/img_ahamove.svg'
+import img_halotrade from '@/assets/images/img_halotrade.svg'
 import img_horoscope from '@/assets/images/img_horoscope.svg'
-import Card from './components/Card';
+import Card from './components/Card'
 
 const ecosystemData = [{
     img: img_halotrade,
+    name: "halotrade",
     title: "HaloTrade",
     description: "Experience the first DEX built on top of Aura to swap, farm, and earn."
 },
 {
     img: img_ahamove,
+    name: "aha",
     title: "Ahamove",
     description: "Read more about the first mainstream integration of Aura, with the largest transport app in Vietnam."
 },
 {
     img: img_horoscope,
+    name: "horoscope",
     title: "Horoscope",
     description: "Aura's native indexing protocol, the most advance indexing architecture in Cosmos."
 }]

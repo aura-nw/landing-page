@@ -7,7 +7,7 @@ import Statistics from "../sections/statistics";
 
 export default function Home() {
   return (
-    <div className="bg-[url('../assets/images/img_background.svg')] bg-no-repeat">
+    <div className="mb-20 xl:mb-[120px]">
         <div className="main-container">
           <div className="flex min-h-screen flex-col items-center">
             <Introduction />
