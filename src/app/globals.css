@@ -200,6 +200,8 @@ body {
   box-shadow: 0px 68px 160px 0px rgba(0, 0, 0, 0.45);
 }
 
+/* Ecosystem card */
+
 .ecosystem-card-aha:hover {
   background-image: url("../assets/images/img_bg_ahamove.png");
   background-size: cover;
@@ -243,7 +245,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 /* Navbar */

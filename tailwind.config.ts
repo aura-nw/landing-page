@@ -17,7 +17,6 @@ const config: Config = {
           "linear-gradient(339deg, rgba(255, 213, 105, 0.08) 23.57%, rgba(252, 142, 79, 0.08) 50.76%, rgba(255, 105, 123, 0.08) 76.37%)",
         "brand-gradient":
           "linear-gradient(339deg, #FFD569, #FC8E4F, #FF697B)",
-        "ecosystem-gradient": "linear-gradient(334deg, #EDBA37 -2.09%, #E8793A 49.81%, #F64C60 98.68%)",
         "brand-linear-gradient":
           "linear-gradient(339deg, #FFD569 23.57%, #FC8E4F 50.76%, #FF697B 76.37%)",
       },

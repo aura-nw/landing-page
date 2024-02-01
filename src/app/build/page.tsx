@@ -57,7 +57,7 @@ function Build() {
                         ))}
                     </div>
 
-                    <div className="pt-14 pb-8 px-6 xl:pt-[100px] xl:pb-[160px] xl:px-[200px] bg-ecosystem-gradient w-screen xl:w-full flex flex-col gap-6 items-center lg:rounded-[40px]">
+                    <div className="pt-14 pb-8 px-6 xl:pt-[100px] xl:pb-[160px] xl:px-[200px] bg-[url('../assets/images/img_bg_gradient_mask.png')] bg-cover bg-no-repeat w-screen xl:w-full flex flex-col gap-6 items-center lg:rounded-[40px]">
                         <div className="flex flex-col gap-4 items-center">
                             <div className="bg-[rgba(255,255,255,0.15)] border border-solid border-[rgba(255,255,255,0.20)] py-3 px-5 h-11 text-center rounded-full flex items-center">
                                 <div className="font-semibold">Aura's Ecosystem</div>

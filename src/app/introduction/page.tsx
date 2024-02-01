@@ -71,7 +71,7 @@ const tableContents = [
     }
 ]
 
-function Introduction() {    
+function Introduction() {   
     return (
         <div className="mb-[217px] xl:mb-[80px]">
             <div className="main-container">

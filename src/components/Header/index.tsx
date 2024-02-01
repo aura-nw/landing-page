@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PAGE_ROUTE } from "../../common";
 import Button from "../Button";
+import Item from "./Item";
 
 const learnMenu = [
     {
@@ -25,40 +26,40 @@ const learnMenu = [
 
     {
         name: "Docs",
-        link: "/",
+        link: PAGE_ROUTE.DOCS,
     }
 ]
 
 const communityMenu = [
     {
         name: "Twitter",
-        link: "/",
+        link: "/Twitter",
         icon: ic_x
     },
     {
         name: "Discord",
-        link: "/",
+        link: "/Discord",
         icon: ic_discord
     },
 
     {
         name: "GitHub",
-        link: "/",
+        link: "/GitHub",
         icon: ic_github
     },
     {
         name: "Telegram",
-        link: "/",
+        link: "/Telegram",
         icon: ic_telegram
     },
     {
         name: "LinkedIn",
-        link: "/",
+        link: "/LinkedIn",
         icon: ic_linkedIn
     },
     {
         name: "See more",
-        link: "/",
+        link: "/See",
         icon: ic_seeMore
     },
 ]
@@ -76,51 +77,10 @@ function Header() {
                     <Image className="lg:hidden nav-icon-close" src={ic_close} alt="ic_close" />
                 </label>
                 <div className="gap-1 hidden lg:flex">
-                    <Link href={PAGE_ROUTE.HOME} className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Home</Link>
-                    <div className="flex justify-center items-center">
-                        <div className="group relative px-6 py-4 hover:bg-medium-charcoal rounded-2xl cursor-pointer">
-                            <div className="flex items-center gap-[10px]">
-                                <span className="text-lg">
-                                    Learn
-                                </span>
-                                <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
-                            </div>
-                            <div className="group-hover:block absolute hidden h-auto left-0">
-                                <div className="pt-5">
-                                    <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
-                                        {learnMenu.map((item) => (
-                                            <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
-                                                <Link href={item.link} className="block">{item.name}</Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Link href={PAGE_ROUTE.BUILD} className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Build</Link>
-                    <div className="flex justify-center items-center">
-                        <div className="group relative px-6 py-4 hover:bg-medium-charcoal rounded-2xl cursor-pointer w-[175px]">
-                            <div className="flex items-center gap-[10px]">
-                                <span className="text-lg">
-                                    Community
-                                </span>
-                                <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
-                            </div>
-                            <div className="group-hover:block absolute hidden h-auto left-0">
-                                <div className="pt-5">
-                                    <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
-                                        {communityMenu.map((item) => (
-                                            <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
-                                                <Image className="w-5 h-5" src={item.icon} alt={item.name} />
-                                                <Link href={item.link} className="block">{item.name}</Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Item path={PAGE_ROUTE.HOME}>Home</Item>
+                    <Item subItems={learnMenu}>Learn</Item>
+                    <Item path={PAGE_ROUTE.BUILD}>Build</Item>
+                    <Item subItems={communityMenu}>Community</Item>
                 </div>
                 <div className="hidden lg:contents">
                     <Button>Buy AURA</Button>
@@ -128,49 +88,9 @@ function Header() {
             </div>
             <div className="hidden nav-menu lg:hidden">
                 <div className="bg-[#1D1A18] flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
-                    <div className="flex justify-center items-center border-b border-b-blur-grayish-brown">
-                        <div className="group relative dropdown p-6 cursor-pointer w-[175px]">
-                            <div className="flex items-center justify-center gap-[10px]">
-                                <span className="text-lg">
-                                    Learn
-                                </span>
-                                <Image className="arrow transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
-                            </div>
-                            <div className="group-hover:block absolute hidden h-auto left-0 z-[1]">
-                                <div className="pt-5">
-                                    <ul className="bg-medium-charcoal shadow rounded-2xl">
-                                        {learnMenu.map((item) => (
-                                            <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
-                                                <Link href={item.link} className="block">{item.name}</Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Link href="/" className="w-full p-6 text-lg flex justify-center items-center border-b border-b-blur-grayish-brown">Build</Link>
-                    <div className="flex justify-center items-center border-b border-b-blur-grayish-brown">
-                        <div className="group relative dropdown p-6 cursor-pointer w-[175px]">
-                            <div className="flex items-center justify-center  gap-[10px]">
-                                <span className="text-lg">
-                                    Community
-                                </span>
-                                <Image className="arrow transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
-                            </div>
-                            <div className="group-hover:block absolute hidden h-auto left-0">
-                                <div className="pt-5">
-                                    <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
-                                        {communityMenu.map((item) => (
-                                            <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
-                                                <Image className="w-5 h-5" src={item.icon} alt={item.name} />
-                                                <Link href={item.link} className="block ">{item.name}</Link>
-                                            </li>))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Item subItems={learnMenu}>Learn</Item>
+                    <Item path={PAGE_ROUTE.BUILD}>Build</Item>
+                    <Item subItems={communityMenu}>Community</Item>
                     <div className="p-6">
                         <Button>Buy AURA</Button>
                     </div>
