@@ -7,8 +7,9 @@ import img_hoz_universe from "@/assets/images/img_hoz_universe.png";
 import img_small_blocks from "@/assets/images/img_small_blocks.png";
 import img_universe_sun from "@/assets/images/img_universe_sun.png";
 import Image from "next/image";
-import GradientButton from "../../components/Button/GradientButton";
 import Link from "next/link";
+import { PAGE_ROUTE } from "../../common";
+import GradientButton from "../../components/Button/GradientButton";
 
 const contents = [
     {
@@ -48,33 +49,34 @@ const advantages = [
 
 const tableContents = [
     {
-        key: 1,
+        key: "",
         title: "Introducing Aura"
     },
     {
-        key: 2,
+        key: "our-advantages",
         title: "Our Advantages"
     },
     {
-        key: 3,
+        key: "tech-stack",
+        path: PAGE_ROUTE.TECH_STACK,
         title: "Aura Network Tech Stack"
     },
     {
-        key: 4,
+        key: "contract",
         title: "Foundation Contract Suite"
     },
     {
-        key: 5,
+        key: "dev-kit",
         title: "Development Kit"
     }
 ]
 
-function Introduction() {
+function Introduction() {    
     return (
         <div className="mb-[217px] xl:mb-[80px]">
             <div className="main-container">
                 <div className="flex flex-col items-center gap-16">
-                    <div className="max-w-[867px] flex flex-col gap-10 px-2">
+                    <div id="introducing" className="max-w-[867px] flex flex-col gap-10 px-2">
                         <div className="flex flex-col items-start lg:items-center">
                             <Image className="relative -left-[26px] lg:block" src={ic_labs} alt="ic_labs" />
                             <div className="flex flex-col gap-4 lg:gap-6 items-center">
@@ -90,8 +92,8 @@ function Introduction() {
                             <GradientButton>Contact Us</GradientButton>
                         </div>
                     </div>
-                    <div className="lg:pt-[140x] w-full flex flex-col xl:flex-row gap-5 xl:gap-[100px]">
-                        <div className="rounded-full w-full pl-6 pr-4 py-4 flex justify-between items-center bg-dark-charcoal lg:hidden">
+                    <div className="lg:pt-[140px] w-full flex flex-col xl:flex-row gap-5 xl:gap-[100px]">
+                        <div className="rounded-full w-full pl-6 pr-4 py-4 flex justify-between items-center bg-dark-charcoal xl:hidden">
                             <span className="text-medium-gray">Jump to</span>
                             <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
                         </div>
@@ -99,7 +101,7 @@ function Introduction() {
                             <span className="text-white font-ppmori-semibold text-xl font-semibold leading-8">Table of Contents</span>
                             <div>
                                 {tableContents.map((item, i) => (
-                                    <Link href={`#${item.key}`} key={i} className="flex flex-col py-2 px-6">
+                                    <Link href={item.path ?? `#${item.key}`} key={i} className="flex flex-col py-2 px-6">
                                         <span className="text-medium-gray font-ppmori-semibold text-base font-normal leading-8">{item.title}</span>
                                     </Link >
                                 ))}
@@ -136,7 +138,7 @@ function Introduction() {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col gap-8">
+                            <div id="our-advantages" className="flex flex-col gap-8">
                                 <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">Our Advantages</span>
                                 {advantages.map((item, i) => (
                                     <div key={i} className="flex flex-col gap-6 rounded-3xl bg-dark-charcoal p-8">

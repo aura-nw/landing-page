@@ -68,7 +68,9 @@ function Header() {
         <header className="w-full fixed lg:flex justify-center top-6 lg:top-10 left-0 right-0 px-6 z-[9999]">
             <input className="nav-input hidden" type="checkbox" id="nav-input" />
             <div className="w-full bg-blur-dark-charcoal border border-solid border-blur-grayish-brown backdrop-blur-[20px] lg:max-w-[1038px] flex justify-between rounded-[32px] nav-container lg:rounded-full h-[64px] lg:h-[70px] max-h-[70px] px-6 py-5 lg:py-2 lg:pl-[28px] lg:pr-2">
-                <Image src={ic_logo} alt="logo" className="max-md:w-fit" />
+                <Link href={PAGE_ROUTE.HOME} className="flex">
+                    <Image src={ic_logo} alt="logo" className="max-md:w-fit" />
+                </Link>
                 <label htmlFor="nav-input">
                     <Image className="lg:hidden nav-icon-menu" src={ic_menu} alt="menu" />
                     <Image className="lg:hidden nav-icon-close" src={ic_close} alt="ic_close" />
@@ -96,7 +98,7 @@ function Header() {
                             </div>
                         </div>
                     </div>
-                    <Link href="/" className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Build</Link>
+                    <Link href={PAGE_ROUTE.BUILD} className="w-24 px-6 py-4 hover:bg-medium-charcoal rounded-2xl text-lg flex justify-center items-center">Build</Link>
                     <div className="flex justify-center items-center">
                         <div className="group relative px-6 py-4 hover:bg-medium-charcoal rounded-2xl cursor-pointer w-[175px]">
                             <div className="flex items-center gap-[10px]">
