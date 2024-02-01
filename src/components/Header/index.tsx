@@ -10,8 +10,8 @@ import ic_x from "@/assets/icons/ic_x.svg";
 import ic_logo from "@/assets/images/img_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../Button";
 import { PAGE_ROUTE } from "../../common";
+import Button from "../Button";
 
 const learnMenu = [
     {
@@ -128,11 +128,31 @@ function Header() {
             </div>
             <div className="hidden nav-menu lg:hidden">
                 <div className="bg-[#1D1A18] flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
-                    <Link href="/" className="w-full p-6 text-lg flex justify-center items-center border-b border-b-blur-grayish-brown">Learn</Link>
+                    <div className="flex justify-center items-center border-b border-b-blur-grayish-brown">
+                        <div className="group relative dropdown p-6 cursor-pointer w-[175px]">
+                            <div className="flex items-center justify-center gap-[10px]">
+                                <span className="text-lg">
+                                    Learn
+                                </span>
+                                <Image className="arrow transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
+                            </div>
+                            <div className="group-hover:block absolute hidden h-auto left-0 z-[1]">
+                                <div className="pt-5">
+                                    <ul className="bg-medium-charcoal shadow rounded-2xl">
+                                        {learnMenu.map((item) => (
+                                            <li key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
+                                                <Link href={item.link} className="block">{item.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <Link href="/" className="w-full p-6 text-lg flex justify-center items-center border-b border-b-blur-grayish-brown">Build</Link>
                     <div className="flex justify-center items-center border-b border-b-blur-grayish-brown">
                         <div className="group relative dropdown p-6 cursor-pointer w-[175px]">
-                            <div className="flex items-center gap-[10px]">
+                            <div className="flex items-center justify-center  gap-[10px]">
                                 <span className="text-lg">
                                     Community
                                 </span>
