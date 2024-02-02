@@ -6,7 +6,7 @@ import BlogsSlider from "./components/Slider";
 function Blogs() {
     const sliderRef = useRef<any>();
     return (
-        <div className="flex flex-col gap-8 items-center xl:mt-10 xl:pl-10 xl:w-full">
+        <div className="flex flex-col gap-8 items-center xl:mt-10 xl:w-full">
             <div className="flex w-full justify-center">
                 <div className="flex flex-col gap-4 items-center px-10 xl:px-0 xl:w-full xl:items-start">
                     <span className="text-light-yellow font-normal text-center xl:text-start xl:text-xl">Aura's Blog</span>
