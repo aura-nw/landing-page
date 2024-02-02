@@ -233,7 +233,7 @@ body {
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0 !important;
-  height: 17px !important;
+  height: 18px !important;
 }
 
 /* Handle */
