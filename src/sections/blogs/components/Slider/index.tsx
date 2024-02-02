@@ -14,19 +14,19 @@ import useWindowSize from '../../../../hooks/useWindowSize';
 import Card from '../Card';
 
 const blogsData = [{
-    key: "1",
+    key: "cosmos",
     img: img_cosmos,
     title: "Announcement",
     description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
 },
 {
-    key: "2",
+    key: "nft",
     img: img_nft,
     title: "Announcement",
     description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
 },
 {
-    key: "3",
+    key: "gateio",
     img: img_gateio,
     title: "Announcement",
     description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
