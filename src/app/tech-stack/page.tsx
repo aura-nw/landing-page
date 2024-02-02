@@ -13,24 +13,24 @@ import React from "react";
 
 const tableContents = [
     {
-        key: 1,
-        title: "Introducing Aura"
-    },
-    {
-        key: 2,
-        title: "Our Advantages"
-    },
-    {
-        key: 3,
+        key: "tech-stack",
         title: "Aura Network Tech Stack"
     },
     {
-        key: 4,
+        key: "aura-daemon",
+        title: "Aura Daemon"
+    },
+    {
+        key: "foundation-contract",
         title: "Foundation Contract Suite"
     },
     {
-        key: 5,
-        title: "Development Kit"
+        key: "development-kit",
+        title: "Aura Software Development Kit"
+    },
+    {
+        key: "infrastructure-application",
+        title: "Infrastructure Application"
     }
 ]
 
@@ -67,7 +67,7 @@ function Introduction() {
             <div className="main-container">
                 <div className="flex flex-col items-center">
                     <div className="flex flex-col items-center gap-16">
-                        <div className="w-full xl:max-w-[867px] flex flex-col gap-10 px-2">
+                        <section id="tech-stack" className="section w-full xl:max-w-[867px] flex flex-col gap-10 px-2">
                             <div className="flex flex-col items-start lg:items-center">
                                 <Image className="relative -left-[26px] lg:block" src={ic_labs} alt="ic_labs" />
                                 <div className="flex flex-col gap-4 lg:gap-6 items-center">
@@ -82,18 +82,18 @@ function Introduction() {
                             <div className="flex lg:justify-center">
                                 <GradientButton>Contact Us</GradientButton>
                             </div>
-                        </div>
+                        </section>
                         <div className="xl:pt-[140px] w-full flex flex-col gap-5 xl:flex-row xl:gap-[100px]">
                             <div className="flex flex-col xl:flex-row">
                                 <div className="rounded-full w-full pl-6 pr-4 py-4 flex justify-between items-center bg-dark-charcoal xl:hidden">
                                     <span className="text-medium-gray">Jump to</span>
                                     <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
                                 </div>
-                                <div className="hidden xl:flex flex-col bg-dark-charcoal p-8 rounded-3xl h-fit min-w-[340px]">
+                                <div className="hidden xl:flex flex-col bg-dark-charcoal p-8 rounded-3xl h-fit min-w-[340px] sticky top-[140px]">
                                     <span className="text-white font-ppmori-semibold text-xl font-semibold leading-8">Table of Contents</span>
                                     <div>
                                         {tableContents.map((item, i) => (
-                                            <Link href={`#${item.key}`} key={i} className="flex flex-col py-2 px-6">
+                                            <Link href={`#${item.key}`} key={i} className="content_link flex flex-col py-2 pl-6 border-l-2 border-l-[#292521]">
                                                 <span className="text-medium-gray font-ppmori-semibold text-base font-normal leading-8">{item.title}</span>
                                             </Link >
                                         ))}
@@ -102,7 +102,7 @@ function Introduction() {
 
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex flex-col gap-6 xl:mt-0">
+                                <section id="tech-stack" className="section flex flex-col gap-6 xl:mt-0">
                                     <div className="flex flex-col gap-3 xl:gap-8">
                                         <Title>Aura Network Tech Stack</Title>
                                         <Description>The Aura infrastructure landscape has been revamped to fully adopt innovation in user experience and sustainable economics. We can divide the landscape into 4 major planes.</Description>
@@ -124,7 +124,7 @@ function Introduction() {
                                             <span className="text-white font-ppmori-semibold text-[13px] font-semibold left-5 xl:min-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">SDK</span>
                                             <div className="w-full flex gap-2 justify-between xl:gap-[18px] xl:justify-start">
                                                 {sdk.map((item, i) => {
-                                                    if (!item) return <div key={i} className="xl:basis-1/4 hidden" />
+                                                    if (!item) return <div key={i} className="xl:basis-1/4" />
                                                     return (
                                                         <div key={i} className="basis-1/2 xl:basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-5 text-center text-[13px] leading-6">{item}</div>
                                                     )
@@ -156,10 +156,10 @@ function Introduction() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </section>
 
                                 <div className="w-full flex flex-col mt-20 gap-20 xl:mt-[100px]">
-                                    <div className="flex flex-col gap-6">
+                                    <section id="aura-daemon" className="section flex flex-col gap-6">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Aura Daemon</Title>
                                             <Description>The main Aura node client. As this is implemented using the Cosmos SDK, Aura inherits the stability and security of the Cosmos stack. It is also IBC compatible, making Aura capable of directly communicating with more than 80 other Cosmos chains. Apart from the default Cosmos modules, there are 2 other modules implemented by Aura:</Description>
@@ -172,9 +172,9 @@ function Introduction() {
                                             <SubTitle>Fee Enforcement</SubTitle>
                                             <CardDescription>This is a native module that implements sustainable economic design that includes a new approach to charging fees, with fees being applied at the application level (fees on application revenue) as opposed to the usual way of only being limited to the blockchain layer (gas fees). Enforcement of this requirement, to our knowledge, has never been done among permissionless networks, and Aura will be pioneering its implementation. This can be understood as an income tax for dApps to contribute to the community pool as they are directly benefiting from the public infrastructure of Aura.</CardDescription>
                                         </Card>
-                                    </div>
+                                    </section>
 
-                                    <div className="flex flex-col gap-10">
+                                    <section id="foundation-contract" className="section flex flex-col gap-10">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Foundation Contract Suite</Title>
                                             <div className="flex flex-col gap-3 xl:gap-6">
@@ -201,9 +201,9 @@ function Introduction() {
                                             </div>
                                         </div>
                                         <Description>The foundation contract suite provides a highly modular approach to ecosystem wide features like AA and tax structure. The aim of this architecture is to be able to swap out, upgrade, and add modules as the protocol develops and swiftly accommodate demands for new requirements or adjustments. Accordingly, the design consists of many granular single-purpose logic units, starting from a runtime upgrade (aurad) and pushing the rest of the logic to application level (contract).</Description>
-                                    </div>
+                                    </section>
 
-                                    <div className="flex flex-col gap-6">
+                                    <section id="development-kit" className="section flex flex-col gap-6">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Aura Software Development Kit</Title>
                                             <Description>Client libraries for various dApps, web or mobile applications</Description>
@@ -214,9 +214,9 @@ function Introduction() {
                                         <div className="flex flex-col p-8 gap-6 bg-dark-charcoal rounded-3xl xl:py-14 xl:px-16">
                                             <CardDescription>Native Flutter implementations for client libraries are also very important for the development of native mobile applications.</CardDescription>
                                         </div>
-                                    </div>
+                                    </section>
 
-                                    <div className="flex flex-col gap-6">
+                                    <section id="infrastructure-application" className="section flex flex-col gap-6">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Infrastructure Application</Title>
                                             <Description>The signature infrastructure applications developed by the Aura team remains the same with the addition of Aura Pay, a custodial infrastructure for facilitating Web3 onboarding. They are:</Description>
@@ -251,9 +251,7 @@ function Introduction() {
                                                 </Card>
                                             </div>
                                         </div>
-
-                                    </div>
-
+                                    </section>
                                 </div>
                             </div>
 

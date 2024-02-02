@@ -76,7 +76,7 @@ function Introduction() {
         <div className="mb-[217px] xl:mb-[80px]">
             <div className="main-container">
                 <div className="flex flex-col items-center gap-16">
-                    <div id="introducing" className="max-w-[867px] flex flex-col gap-10 px-2">
+                    <section id="introduction" className="section max-w-[867px] flex flex-col gap-10 px-2">
                         <div className="flex flex-col items-start lg:items-center">
                             <Image className="relative -left-[26px] lg:block" src={ic_labs} alt="ic_labs" />
                             <div className="flex flex-col gap-4 lg:gap-6 items-center">
@@ -91,24 +91,24 @@ function Introduction() {
                         <div className="flex lg:justify-center">
                             <GradientButton>Contact Us</GradientButton>
                         </div>
-                    </div>
+                    </section>
                     <div className="lg:pt-[140px] w-full flex flex-col xl:flex-row gap-5 xl:gap-[100px]">
                         <div className="rounded-full w-full pl-6 pr-4 py-4 flex justify-between items-center bg-dark-charcoal xl:hidden">
                             <span className="text-medium-gray">Jump to</span>
                             <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
                         </div>
-                        <div className="hidden xl:flex flex-col bg-dark-charcoal p-8 rounded-3xl h-fit min-w-[340px]">
+                        <div className="hidden xl:flex flex-col bg-dark-charcoal p-8 rounded-3xl h-fit min-w-[340px] sticky top-[140px]">
                             <span className="text-white font-ppmori-semibold text-xl font-semibold leading-8">Table of Contents</span>
                             <div>
                                 {tableContents.map((item, i) => (
-                                    <Link href={item.path ?? `#${item.key}`} key={i} className="flex flex-col py-2 px-6">
+                                    <Link href={item.path ?? `#${item.key}`} key={i} className="content_link flex flex-col py-2 pl-6 border-l-2 border-l-[#292521]">
                                         <span className="text-medium-gray font-ppmori-semibold text-base font-normal leading-8">{item.title}</span>
                                     </Link >
                                 ))}
                             </div>
                         </div>
                         <div className="flex flex-col gap-[61px] xl:gap-[100px]">
-                            <div className="flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
+                            <section className="section flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
                                 <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                     <Image className="xl:w-[406px] xl:h-[300px]" src={contents[0].img} alt="img"></Image>
                                 </div>
@@ -116,7 +116,7 @@ function Introduction() {
                                     <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[0].title}</span>
                                     <span className="text-medium-gray text-[16px] leading-7">{contents[0].description}</span>
                                 </div>
-                            </div>
+                            </section>
 
                             <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
                                 <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
@@ -138,7 +138,7 @@ function Introduction() {
                                 </div>
                             </div>
 
-                            <div id="our-advantages" className="flex flex-col gap-8">
+                            <section id="our-advantages" className="section flex flex-col gap-8">
                                 <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">Our Advantages</span>
                                 {advantages.map((item, i) => (
                                     <div key={i} className="flex flex-col gap-6 rounded-3xl bg-dark-charcoal p-8">
@@ -149,7 +149,7 @@ function Introduction() {
                                         <span className="text-medium-gray text-[16px] leading-8">{item.description}</span>
                                     </div>
                                 ))}
-                            </div>
+                            </section>
                         </div>
                     </div>
                 </div>

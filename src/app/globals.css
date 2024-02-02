@@ -18,6 +18,10 @@
   --swiper-pagination-bullet-inactive-color: #2C2925;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -78,12 +82,15 @@ body {
     max-width: 748px;
     margin: auto;
   }
+
   .nav-menu {
     display: none !important;
   }
+
   .nav-icon-close {
     display: none !important;
   }
+
   .nav-container {
     border-radius: 32px !important;
   }
@@ -265,4 +272,11 @@ body {
 
 .nav-input:checked~.nav-container .nav-icon-close {
   display: block;
+}
+
+.active {
+  border-left: 2px solid #F7B85F;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
 }
