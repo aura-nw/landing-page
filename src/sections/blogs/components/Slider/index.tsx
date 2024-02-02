@@ -32,7 +32,6 @@ const blogsData = [{
     description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
 }]
 
-
 const BlogsSlider = forwardRef((props, ref: any) => {
     const { isMobile } = useWindowSize();
     const [sliderReach, setSliderReach] = useState<string>("start")
