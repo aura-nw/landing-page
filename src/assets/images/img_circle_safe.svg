@@ -1,0 +1,20 @@
+<svg width="64" height="65" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 427320526">
+<g id="Group 427320520">
+<rect id="Rectangle 857" y="0.234375" width="64" height="64" rx="32" fill="url(#paint0_linear_1156_7762)" fill-opacity="0.08"/>
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M34.9119 34.4744C37.8708 33.47 40 30.669 40 27.3706C40 23.2285 36.6421 19.8706 32.5 19.8706C28.3579 19.8706 25 23.2285 25 27.3706C25 30.9025 27.4413 33.8642 30.7286 34.6602L28.9499 42.664C28.6724 43.913 29.6228 45.0979 30.9023 45.0979H34.7795C36.059 45.0979 37.0094 43.913 36.7319 42.664L34.9119 34.4744Z" fill="url(#paint1_linear_1156_7762)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1156_7762" x1="44.5667" y1="50.8207" x2="28.9202" y2="10.0646" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD569"/>
+<stop offset="0.515056" stop-color="#FC8E4F"/>
+<stop offset="1" stop-color="#FF697B"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1156_7762" x1="35.4453" y1="39.8105" x2="27.0456" y2="26.8011" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD569"/>
+<stop offset="0.515056" stop-color="#FC8E4F"/>
+<stop offset="1" stop-color="#FF697B"/>
+</linearGradient>
+</defs>
+</svg>
