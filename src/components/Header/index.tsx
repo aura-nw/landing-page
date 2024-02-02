@@ -87,7 +87,7 @@ function Header() {
                 </div>
             </header>
             <div className="hidden nav-menu lg:hidden">
-                <div className="bg-[#1D1A18] flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
+                <div className="bg-[#1D1A18] relative top-[88px] flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
                     <Item subItems={learnMenu}>Learn</Item>
                     <Item path={PAGE_ROUTE.BUILD}>Build</Item>
                     <Item subItems={communityMenu}>Community</Item>

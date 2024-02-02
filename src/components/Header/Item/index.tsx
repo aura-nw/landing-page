@@ -26,10 +26,10 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
                         <div className="pt-5">
                             <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl">
                                 {subItems.map((item: any) => (
-                                    <a href={item.link} key={item.name} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
+                                    <Link href={item.link} key={item.nLinkme} className="px-6 py-5 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
                                         {item?.icon && <Image className="w-5 h-5" src={item.icon} alt={item.name} />}
                                         <span  className="block">{item.name}</span>
-                                    </a>
+                                    </Link>
                                 ))}
                             </ul>
                         </div>
