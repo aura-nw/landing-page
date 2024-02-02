@@ -98,7 +98,7 @@ body {
   }
 
   .swiper {
-    height: 476px !important;
+    height: fit-content !important;
   }
 }
 

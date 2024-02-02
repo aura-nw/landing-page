@@ -1,8 +1,6 @@
 'use client'
 
-import img_cosmos from '@/assets/images/img_cosmos.png';
-import img_gateio from '@/assets/images/img_gateio.png';
-import img_nft from '@/assets/images/img_nft.png';
+import GhostContentAPI from '@tryghost/content-api';
 import { forwardRef, useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,30 +9,13 @@ import 'swiper/css/scrollbar';
 import { A11y, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useWindowSize from '../../../../hooks/useWindowSize';
-import Card from '../Card';
-
-const blogsData = [{
-    key: "cosmos",
-    img: img_cosmos,
-    title: "Announcement",
-    description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
-},
-{
-    key: "nft",
-    img: img_nft,
-    title: "Announcement",
-    description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
-},
-{
-    key: "gateio",
-    img: img_gateio,
-    title: "Announcement",
-    description: "Monsterra, the first interchain GameFi on Cosmos via Aura Network"
-}]
+import Card, { Post } from '../Card';
 
 const BlogsSlider = forwardRef((props, ref: any) => {
     const { isMobile } = useWindowSize();
     const [sliderReach, setSliderReach] = useState<string>("start")
+    const [posts, setPosts] = useState<Post[]>([])
+
 
     useEffect(() => {
         const changeButtonStyle = (button: HTMLElement, isReached: boolean) => {
@@ -65,6 +46,32 @@ const BlogsSlider = forwardRef((props, ref: any) => {
         }
     }, [sliderReach]);
 
+    useEffect(() => {
+        const api = new GhostContentAPI({
+            url: 'https://auranetwork.ghost.io',
+            key: '7da9b49a6e62c20499683c684f',
+            version: "v5.0"
+        });
+
+        api.posts.browse({
+            limit: 5,
+            include: "tags"
+        })
+            .then((posts) => {
+                const listPosts = posts.map((post) => ({
+                    id: post.id ?? '',
+                    title: post.title ?? '',
+                    featureImage: post.feature_image ?? '',
+                    tag: post.tags ? (post.tags[0].name ?? '') : '',
+                    url: post.url ?? ''
+                }))
+                setPosts(listPosts)
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }, [])
+
     return (
         <Swiper
             modules={[Navigation, Pagination, A11y]}
@@ -86,8 +93,8 @@ const BlogsSlider = forwardRef((props, ref: any) => {
                 setSliderReach('end');
             }}
         >
-            {blogsData.map((blog, i) => (
-                <SwiperSlide key={i}><Card data={blog} /></SwiperSlide>
+            {posts.map((post: Post) => (
+                <SwiperSlide key={post.id}><Card post={post} /></SwiperSlide>
             ))}
         </Swiper>
     );
