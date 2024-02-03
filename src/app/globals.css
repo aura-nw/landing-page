@@ -52,6 +52,10 @@ body {
   padding-left: 24px;
 }
 
+.swiper {
+  width: 100vw;
+}
+
 @media screen and (min-width: 320px) {
   .card {
     width: 272px;
@@ -76,7 +80,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .main-container {
-    max-width: 748px;
     margin: auto;
   }
 }
@@ -84,7 +87,6 @@ body {
 @media only screen and (min-width: 1024px) {
   .main-container {
     padding-top: 250px;
-    max-width: 748px;
     margin: auto;
   }
 
@@ -103,13 +105,6 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
-  .main-container {
-    max-width: 960px;
-    margin: auto;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-
   .swiper {
     height: fit-content !important;
   }
