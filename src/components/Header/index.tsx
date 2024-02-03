@@ -66,9 +66,9 @@ const communityMenu = [
 
 function Header() {
     return (
-        <div>
+        <header className="header fixed z-[9999] top-6 lg:top-10 left-1/2 -translate-x-1/2 w-full lg:w-[1038px]">
             <input className="nav-input hidden" type="checkbox" id="nav-input" />
-            <header className="w-full fixed z-[9999] top-6 lg:top-10 bg-blur-dark-charcoal border border-solid border-blur-grayish-brown backdrop-blur-[20px] lg:max-w-[1038px] flex justify-between rounded-[32px] nav-container lg:rounded-full h-[64px] lg:h-[70px] max-h-[70px] px-6 py-5 lg:py-2 lg:pl-[28px] lg:pr-2 left-1/2 -translate-x-1/2">
+            <div className="w-full bg-blur-dark-charcoal border border-solid border-blur-grayish-brown backdrop-blur-[20px] flex justify-between rounded-[32px] nav-container lg:rounded-full h-[64px] lg:h-[70px] max-h-[70px] px-6 py-5 lg:py-2 lg:pl-[28px] lg:pr-2">
                 <Link href={PAGE_ROUTE.HOME} className="flex">
                     <Image src={ic_logo} alt="logo" className="max-md:w-fit" />
                 </Link>
@@ -85,9 +85,9 @@ function Header() {
                 <div className="hidden lg:contents">
                     <Button>Buy AURA</Button>
                 </div>
-            </header>
-            <div className="hidden nav-menu lg:hidden">
-                <div className="bg-[#1D1A18] relative top-[88px] flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
+            </div>
+            <div className="hidden w-full nav-menu lg:hidden">
+                <div className="bg-[#1D1A18] relative flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
                     <Item subItems={learnMenu}>Learn</Item>
                     <Item path={PAGE_ROUTE.BUILD}>Build</Item>
                     <Item subItems={communityMenu}>Community</Item>
@@ -96,7 +96,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 }
 

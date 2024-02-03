@@ -29,32 +29,6 @@ export default function RootLayout({
           <Tutorials />
           <Footer />
         </div>
-        <Script id="scrollspy">
-          {`const navLinkEls = document.querySelectorAll('.content_link')
-            const sectionEls = document.querySelectorAll('.section')
-            let currentSection = 'introduction'
-            function extractStringAfterHash(inputUrl) {
-              const hashIndex = inputUrl.indexOf('#');
-              if (hashIndex === -1) {
-                  return inputUrl;
-              }
-              const result = inputUrl.substring(hashIndex + 1);
-              return result;
-              }
-            window.addEventListener('scroll', () => {
-            sectionEls.forEach(sectionEl => {
-              if(window.scrollY >= (sectionEl.offsetTop - sectionEl.clientHeight / 5)) {
-                 currentSection = sectionEl.id
-              }
-            })
-            navLinkEls.forEach(navEl => {
-              if(extractStringAfterHash(navEl.href) === currentSection) {
-                document.querySelector('.active')?.classList.remove('active');
-                navEl.classList.add('active')
-              }
-            })
-          })`}
-        </Script>
       </body>
     </html>
   );

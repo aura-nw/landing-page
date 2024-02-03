@@ -19,7 +19,7 @@
 }
 
 html:focus-within {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +46,11 @@ body {
   padding-left: 24px;
 }
 
+.header {
+  margin: auto;
+  padding-right: 24px;
+  padding-left: 24px;
+}
 
 @media screen and (min-width: 320px) {
   .card {
@@ -83,7 +88,8 @@ body {
     margin: auto;
   }
 
-  .nav-menu {
+  .nav-menu,
+  .nav-icon-close {
     display: none !important;
   }
 
@@ -106,6 +112,10 @@ body {
 
   .swiper {
     height: fit-content !important;
+  }
+
+  .section-menu {
+    display: none !important;
   }
 }
 
@@ -272,6 +282,15 @@ body {
 
 .nav-input:checked~.nav-container .nav-icon-close {
   display: block;
+}
+
+/* Section selector */
+.section-selector:checked~.section-menu {
+  display: block;
+}
+
+.section-selector:checked~.section-selector-label {
+  border-radius: 1rem 1rem 0 0;
 }
 
 .active {
