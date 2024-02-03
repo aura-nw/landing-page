@@ -52,10 +52,6 @@ body {
   padding-left: 24px;
 }
 
-.swiper {
-  width: 100vw;
-}
-
 @media screen and (min-width: 320px) {
   .card {
     width: 272px;
