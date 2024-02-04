@@ -3,9 +3,8 @@ import { Inter } from "next/font/google";
 import localFont from 'next/font/local';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import "./globals.css";
 import Tutorials from "../sections/tutorials";
-import Script from "next/script";
+import "./globals.css";
 
 const ppmori = localFont({ src: './../assets/fonts/PPMori-SemiBold.otf', variable: "--font-ppmori-semibold", })
 const inter = Inter({ subsets: ["latin"] });
@@ -24,10 +23,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${ppmori.variable} scroll-smooth`}>
         <div>
+          <input className="nav-input hidden" type="checkbox" id="nav-input" />
           <Header />
           {children}
           <Tutorials />
           <Footer />
+          <label htmlFor="nav-input" className="nav-overlay"> </label>
         </div>
       </body>
     </html>

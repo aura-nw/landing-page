@@ -83,30 +83,19 @@ function Sections() {
                             </div>
                         </section>
                         <div className="xl:pt-[140px] w-full flex flex-col gap-5 xl:flex-row xl:gap-[100px]">
-                            <div className="flex flex-col xl:flex-row relative">
+                            <div className="flex flex-col xl:flex-row">
                                 <input className="section-selector hidden" type="checkbox" id="section-selector" />
                                 <label htmlFor="section-selector" className="section-selector-label rounded-full w-full pl-6 pr-4 py-4 flex justify-between items-center bg-dark-charcoal xl:hidden">
                                     <span className="text-medium-gray">Jump to</span>
                                     <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
                                 </label>
-                                <div className="hidden absolute top-14 w-full section-menu lg:hidden">
-                                    <div className="bg-dark-charcoal flex flex-col rounded-b-2xl">
-                                        {tableContents.map((item, i) => (
-                                            <Link href={`#${item.key}`} key={i} className="content_link flex flex-col py-2 pl-6">
-                                                <span className="text-medium-gray font-ppmori-semibold text-base font-normal leading-8">{item.title}</span>
-                                            </Link >
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="hidden xl:flex flex-col bg-dark-charcoal p-8 rounded-3xl h-fit min-w-[340px] sticky top-[140px]">
-                                    <span className="text-white font-ppmori-semibold text-xl font-semibold leading-8">Table of Contents</span>
-                                    <div>
-                                        {tableContents.map((item, i) => (
-                                            <Link href={`#${item.key}`} key={i} className="content_link flex flex-col py-2 pl-6 border-l-2 border-l-[#292521]">
-                                                <span className="text-medium-gray font-ppmori-semibold text-base font-normal leading-8">{item.title}</span>
-                                            </Link >
-                                        ))}
-                                    </div>
+                                <div className="hidden mt-2 w-full section-menu lg:flex xl:flex flex-col bg-dark-charcoal p-8 rounded-3xl xl:h-fit xl:min-w-[340px] xl:sticky xl:top-[140px]">
+                                    <span className="hidden xl:block text-white font-ppmori-semibold text-xl font-semibold leading-8">Table of Contents</span>
+                                    {tableContents.map((item, i) => (
+                                        <Link href={`#${item.key}`} key={i} className="content_link flex flex-col py-2 pl-6 border-l-2 border-l-[#292521]">
+                                            <span className="text-medium-gray font-ppmori-semibold text-base font-normal leading-8">{item.title}</span>
+                                        </Link >
+                                    ))}
                                 </div>
                             </div>
 
