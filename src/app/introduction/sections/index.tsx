@@ -1,3 +1,5 @@
+'use client'
+import { useEffect, useState } from "react";
 import ic_arrow from "@/assets/icons/ic_arrow.svg";
 import ic_book from "@/assets/icons/ic_book.svg";
 import ic_flag from "@/assets/icons/ic_flag.svg";
@@ -72,6 +74,42 @@ const tableContents = [
 ]
 
 function Sections() {
+    const [currentSection, setCurrentSection] = useState('');
+
+    const extractStringAfterHash = (path: string) => {
+        const hashIndex = path.indexOf('#');
+        if (hashIndex === -1) {
+            return path;
+        }
+        return path.substring(hashIndex + 1);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sectionEls = document.querySelectorAll('.section');
+            sectionEls.forEach((sectionEl) => {
+                if (window.scrollY >= (sectionEl as HTMLElement).offsetTop - sectionEl.clientHeight / 5) {
+                    setCurrentSection(sectionEl.id);
+                }
+            });
+
+            const navLinkEls = document.querySelectorAll('.content_link');
+            navLinkEls.forEach((navEl) => {
+                if (extractStringAfterHash((navEl as HTMLAnchorElement).href) === currentSection) {
+                    const activeEl = document.querySelector('.active');
+                    activeEl?.classList.remove('active');
+                    navEl.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [currentSection]);
+    
     return (
         <div className="mb-[217px] xl:mb-[80px]">
             <div className="main-container">
