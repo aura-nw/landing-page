@@ -5,6 +5,8 @@ import img_horoscope from '@/assets/images/img_horoscope.svg';
 import Image from "next/image";
 import GradientButton from "../../components/Button/GradientButton";
 import Card from "../../sections/statistics/components/Card";
+import { AURA_ECOSYSTEM } from "@/common";
+import Link from "next/link";
 
 const intro = [{
     value: "Integrate",
@@ -19,21 +21,25 @@ const intro = [{
 const ecosystemData = [{
     img: img_halotrade,
     title: "HaloTrade",
+    link: AURA_ECOSYSTEM.HALO_TRADE,
     description: "Deploy tokens and enable Aura users to swap and earn."
 },
 {
     img: img_horoscope,
     title: "Horoscope",
+    link: AURA_ECOSYSTEM.HOROSCOPE,
     description: "Start indexing tokens and data on Cosmos with Horoscope"
 },
 {
     img: img_circel_gradient_logo,
     title: "AuraScan",
+    link: AURA_ECOSYSTEM.AURA_SCAN,
     description: "Begin tracking wallets, active users, and other stats through AuraScan"
 },
 {
     img: img_circle_pyxis,
     title: "Pyxis",
+    link: AURA_ECOSYSTEM.PYXIS_SAFE,
     description: "Use fully customizable multi-sig infrastructure to protect your assets."
 }
 ]
@@ -68,13 +74,13 @@ function Build() {
                         </div>
                         <div className='flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:justify-between xl:gap-6'>
                             {ecosystemData.map((item, i) => (
-                                <div key={i} className={`bg-white rounded-3xl xl:basis-[calc(50%_-_12px)] border border-solid border-[rgba(254,119,108,0.16)] flex flex-col gap-8 lg:justify-between p-8`}>
+                                <Link href={item.link} target="_blank" key={i} className={`bg-white rounded-3xl xl:basis-[calc(50%_-_12px)] border border-solid border-[rgba(254,119,108,0.16)] flex flex-col gap-8 lg:justify-between p-8`}>
                                     <Image className="w-12 h-12 lg:w-16 lg:h-16 rounded-full" src={item.img} alt={item.title}></Image>
                                     <div className="flex flex-col gap-2">
                                         <span className="text-black font-ppmori-semibold font-semibold text-2xl leading-7">{item.title}</span>
                                         <span className="text-black text-lg leading-7">{item.description}</span>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

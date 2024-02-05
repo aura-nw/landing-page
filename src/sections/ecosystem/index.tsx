@@ -2,10 +2,12 @@ import img_ahamove from '@/assets/images/img_ahamove.svg'
 import img_halotrade from '@/assets/images/img_halotrade.svg'
 import img_horoscope from '@/assets/images/img_horoscope.svg'
 import Card from './components/Card'
+import { AURA_ECOSYSTEM } from '@/common'
 
 const ecosystemData = [{
     img: img_halotrade,
     name: "halotrade",
+    link: AURA_ECOSYSTEM.HALO_TRADE,
     title: "HaloTrade",
     description: "Experience the first DEX built on top of Aura to swap, farm, and earn."
 },
@@ -13,11 +15,13 @@ const ecosystemData = [{
     img: img_ahamove,
     name: "aha",
     title: "Ahamove",
+    link: AURA_ECOSYSTEM.AHA_MOVE,
     description: "Read more about the first mainstream integration of Aura, with the largest transport app in Vietnam."
 },
 {
     img: img_horoscope,
     name: "horoscope",
+    link: AURA_ECOSYSTEM.HOROSCOPE,
     title: "Horoscope",
     description: "Aura's native indexing protocol, the most advance indexing architecture in Cosmos."
 }]

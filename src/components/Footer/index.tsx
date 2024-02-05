@@ -3,13 +3,14 @@ import ic_medium from "@/assets/icons/ic_medium.svg";
 import ic_telegram from "@/assets/icons/ic_telegram_gray.svg";
 import ic_x from "@/assets/icons/ic_x.svg";
 import ic_logo from "@/assets/images/img_logo.svg";
+import { SOCIAL } from "@/common";
 import Image from "next/image";
 import Link from "next/link";
 
 const socials = [
   {
     name: "X",
-    link: "/",
+    link: SOCIAL.TWITTER,
     icon: ic_x
   },
   {
@@ -19,12 +20,12 @@ const socials = [
   },
   {
     name: "Discord",
-    link: "/",
+    link: SOCIAL.DISCORD,
     icon: ic_discord
   },
   {
     name: "Telegram",
-    link: "/",
+    link: SOCIAL.TELEGRAM,
     icon: ic_telegram
   },
 ]
@@ -38,7 +39,7 @@ function Footer() {
             <Image src={ic_logo} alt="logo" className="w-[117px] h-9" />
             <div className="flex gap-9">
               {socials.map((item) => (
-                <Link key={item.name} href={item.link} className="block">
+                <Link key={item.name} href={item.link} target="_blank" className="block">
                   <Image className="w-5 h-5" src={item.icon} alt={item.name} />
                 </Link>
               ))}
@@ -51,9 +52,9 @@ function Footer() {
                 Developer
               </span>
               <div className="flex flex-col gap-2">
-                <span className="text-medium-gray leading-6 font-normal">Docs</span>
-                <span className="text-medium-gray leading-6 font-normal">Tools</span>
-                <span className="text-medium-gray leading-6 font-normal">Contracts</span>
+                <Link href='https://docs.aura.network/' target="_blank" className="text-medium-gray leading-6 font-normal">Docs</Link>
+                <Link href='https://docs.aura.network/developer/' target="_blank" className="text-medium-gray leading-6 font-normal">Tools</Link>
+                <Link href='https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6' target="_blank" className="text-medium-gray leading-6 font-normal">Contracts</Link>
               </div>
             </div>
 
@@ -62,9 +63,9 @@ function Footer() {
                 Ecosystem
               </span>
               <div className="flex flex-col gap-2">
-                <span className="text-medium-gray leading-6 font-normal">Whitepaper</span>
-                <span className="text-medium-gray leading-6 font-normal">DApps</span>
-                <span className="text-medium-gray leading-6 font-normal">Token</span>
+                <Link href='https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf' target="_blank" className="text-medium-gray leading-6 font-normal">Whitepaper</Link>
+                <Link href='https://docs.aura.network/overview/intro/' target="_blank" className="text-medium-gray leading-6 font-normal">DApps</Link>
+                <Link href='https://docs.aura.network/overview/tokenomic/' target="_blank" className="text-medium-gray leading-6 font-normal">Token</Link>
               </div>
             </div>
 
@@ -84,7 +85,7 @@ function Footer() {
                 Career
               </span>
               <div className="flex flex-col gap-2">
-                <span className="text-medium-gray leading-6 font-normal">Jobs</span>
+                <Link href='https://www.notion.so/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23' target="_blank" className="text-medium-gray leading-6 font-normal">Jobs</Link>
               </div>
             </div>
           </div>

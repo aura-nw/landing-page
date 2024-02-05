@@ -26,9 +26,9 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
                         <div className="pt-5">
                             <ul className="w-[175px] bg-medium-charcoal shadow rounded-2xl p-1">
                                 {subItems.map((item: any, idx: number) => (
-                                    <Link href={item.link} key={idx} className="px-6 py-4 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
+                                    <Link href={item.pageRoute ?? item.link} target={item.pageRoute ? "_self" : "_blank"} key={idx} className="px-6 py-4 flex items-center hover:bg-light-charcoal rounded-2xl gap-[10px]">
                                         {item?.icon && <Image className="w-5 h-5" src={item.icon} alt={item.name} />}
-                                        <span  className="block">{item.name}</span>
+                                        <span className="block">{item.name}</span>
                                     </Link>
                                 ))}
                             </ul>

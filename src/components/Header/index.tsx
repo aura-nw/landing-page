@@ -1,4 +1,4 @@
-import ic_arrow from "@/assets/icons/ic_arrow.svg";
+import ic_twitter from "@/assets/icons/ic_twitter.svg";
 import ic_close from "@/assets/icons/ic_close.svg";
 import ic_discord from "@/assets/icons/ic_discord.png";
 import ic_github from "@/assets/icons/ic_github.png";
@@ -6,60 +6,59 @@ import ic_linkedIn from "@/assets/icons/ic_linkedIn.png";
 import ic_menu from "@/assets/icons/ic_menu.svg";
 import ic_seeMore from "@/assets/icons/ic_seeMore.svg";
 import ic_telegram from "@/assets/icons/ic_telegram.svg";
-import ic_x from "@/assets/icons/ic_x.svg";
 import ic_logo from "@/assets/images/img_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { PAGE_ROUTE } from "../../common";
+import { PAGE_ROUTE, SOCIAL } from "../../common";
 import Button from "../Button";
 import Item from "./Item";
 
 const learnMenu = [
     {
         name: "Introduction",
-        link: PAGE_ROUTE.INTRODUCTION,
+        pageRoute: PAGE_ROUTE.INTRODUCTION,
     },
     {
         name: "Tech Stack",
-        link: PAGE_ROUTE.TECH_STACK,
+        pageRoute: PAGE_ROUTE.TECH_STACK,
     },
 
     {
         name: "Docs",
-        link: PAGE_ROUTE.DOCS,
+        link: "https://docs.aura.network/"
     }
 ]
 
 const communityMenu = [
     {
         name: "Twitter",
-        link: "/Twitter",
-        icon: ic_x
+        link: SOCIAL.TWITTER,
+        icon: ic_twitter
     },
     {
         name: "Discord",
-        link: "/Discord",
+        link: SOCIAL.DISCORD,
         icon: ic_discord
     },
 
     {
         name: "GitHub",
-        link: "/GitHub",
+        link: SOCIAL.GIT_HUB,
         icon: ic_github
     },
     {
         name: "Telegram",
-        link: "/Telegram",
+        link: SOCIAL.TELEGRAM,
         icon: ic_telegram
     },
     {
         name: "LinkedIn",
-        link: "/LinkedIn",
+        link: SOCIAL.LINKEDIN,
         icon: ic_linkedIn
     },
     {
         name: "See more",
-        link: "/See",
+        link: SOCIAL.SEE_MORE,
         icon: ic_seeMore
     },
 ]

@@ -11,7 +11,7 @@ function Tutorials() {
                     <span className="text-white text-center font-ppmori-semibold text-[40px] font-semibold leading-[48px] xl:text-[72px] xl:leading-[80px]">
                         Build Your DApp With Aura
                     </span>
-                    <GradientButton>
+                    <GradientButton href="https://docs.aura.network/developer/">
                         See developer tutorials
                     </GradientButton>
                 </div>
