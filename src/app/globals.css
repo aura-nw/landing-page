@@ -192,7 +192,7 @@ body {
 }
 
 .statistic-card:hover {
-  background: url("../assets/images/mask.png"), #221F1C;
+  background: url("../assets/images/img_mask.webp"), #221F1C;
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid #FD9552;
