@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import ic_arrow from "@/assets/icons/ic_arrow.svg";
 import ic_labs from "@/assets/icons/ic_labs.svg";
-import img_block_trophy from "@/assets/images/img_block_trophy.png";
-import img_block_universe from "@/assets/images/img_block_universe.png";
+import img_block_trophy from "@/assets/images/img_block_trophy.svg";
+import img_block_universe from "@/assets/images/img_block_universe.svg";
 import img_circle_horo from "@/assets/images/img_circle_horo.svg";
 import img_circle_logo from "@/assets/images/img_circle_logo.png";
 import img_circle_safe from "@/assets/images/img_circle_safe.svg";
@@ -220,7 +220,7 @@ function Sections() {
                                             </div>
                                         </div>
                                         <div className="flex flex-col gap-6 xl:mt-[60px] xl:flex-row-reverse xl:gap-16 xl:items-center">
-                                            <div className="flex justify-center items-center bg-dark-charcoal rounded-2xl py-[34px] xl:basis-1/2">
+                                            <div className="flex justify-center items-center bg-dark-charcoal rounded-2xl py-[34px] xl:py-[42px] xl:h-[360px] xl:basis-1/2">
                                                 <Image src={img_block_trophy} alt="img_block_trophy" />
                                             </div>
                                             <div className="flex flex-col gap-3 xl:gap-8 xl:basis-1/2">
@@ -229,7 +229,7 @@ function Sections() {
                                             </div>
                                         </div>
                                         <div className="flex flex-col gap-6 xl:mt-[60px] xl:flex-row xl:gap-16 xl:items-center">
-                                            <div className="flex justify-center items-center bg-dark-charcoal rounded-2xl py-[34px] xl:basis-1/2">
+                                            <div className="flex justify-center items-center bg-dark-charcoal rounded-2xl py-[34px] xl:py-[42px] xl:h-[360px] pr-5 xl:basis-1/2">
                                                 <Image src={img_block_universe} alt="img_block_universe" />
                                             </div>
                                             <div className="flex flex-col gap-3 xl:gap-8 xl:basis-1/2">

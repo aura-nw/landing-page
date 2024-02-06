@@ -5,9 +5,9 @@ import ic_book from "@/assets/icons/ic_book.svg";
 import ic_flag from "@/assets/icons/ic_flag.svg";
 import ic_globe from "@/assets/icons/ic_globe.svg";
 import ic_labs from "@/assets/icons/ic_labs.svg";
-import img_hoz_universe from "@/assets/images/img_hoz_universe.png";
-import img_small_blocks from "@/assets/images/img_small_blocks.png";
-import img_universe_sun from "@/assets/images/img_universe_sun.png";
+import img_hoz_universe from "@/assets/images/img_hoz_universe.svg";
+import img_small_blocks from "@/assets/images/img_small_blocks.svg";
+import img_universe_sun from "@/assets/images/img_universe_sun.svg";
 import { PAGE_ROUTE } from "@/common";
 import GradientButton from "@/components/Button/GradientButton";
 import Image from "next/image";
@@ -148,8 +148,8 @@ function Sections() {
                         </div>
                         <div className="flex flex-col gap-[61px] xl:gap-[100px]">
                             <section className="section flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
-                                <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
-                                    <Image className="xl:w-[406px] xl:h-[300px]" src={contents[0].img} alt="img"></Image>
+                                <div className="h-[250px] xl:h-[304px] xl:max-w-[423px] xl:pl-6 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                    <Image src={contents[0].img} alt="img"></Image>
                                 </div>
                                 <div className="flex flex-col gap-3 xl:max-w-[374px]">
                                     <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[0].title}</span>
@@ -158,8 +158,8 @@ function Sections() {
                             </section>
 
                             <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
-                                <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
-                                    <Image className="xl:w-[406px] xl:h-[300px]" src={contents[1].img} alt="img"></Image>
+                                <div className="h-[250px] pl-6 xl:h-[304px] xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                    <Image className="max-h-[250px] xl:max-h-fit" src={contents[1].img} alt="img"></Image>
                                 </div>
                                 <div className="flex flex-col gap-3 xl:max-w-[374px]">
                                     <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[1].title}</span>
@@ -169,7 +169,7 @@ function Sections() {
 
                             <div className="flex flex-col gap-8 xl:flex-col-reverse">
                                 <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
-                                    <Image className="xl:w-[406px] xl:h-[300px]" src={contents[2].img} alt="img"></Image>
+                                    <Image src={contents[2].img} alt="img"></Image>
                                 </div>
                                 <div className="flex flex-col gap-3 xl:gap-8">
                                     <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[2].title}</span>
