@@ -32,7 +32,7 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
       - name: Deploy page to bucket
-        run: aws s3 sync ./build s3://aura-landing-page
+        run: aws s3 sync ./build s3://${{ secrets.AWS_BUCKET }}
         
-      - name: Invalidate dashboard cloudfront
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
+      # - name: Invalidate dashboard cloudfront
+      #   run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
