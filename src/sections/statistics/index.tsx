@@ -1,11 +1,11 @@
 import Card from "./components/Card";
 
 const statisticData = [{
-    value: "1.5B+",
+    value: "1.5M+",
     title: "Transactions"
 },
 {
-    value: "14.5M+",
+    value: "10,000+",
     title: "Deployed smart contract"
 },
 {

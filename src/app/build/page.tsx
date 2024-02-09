@@ -41,6 +41,18 @@ const ecosystemData = [{
     title: "Pyxis",
     link: AURA_ECOSYSTEM.PYXIS_SAFE,
     description: "Use fully customizable multi-sig infrastructure to protect your assets."
+},
+{
+    img: img_circle_pyxis,
+    title: "Seekhype",
+    link: AURA_ECOSYSTEM.PYXIS_SAFE,
+    description: "Enhance your seamless NFT experience while enjoying utility with premier Web2 brands"
+},
+{
+    img: img_circle_pyxis,
+    title: "Monsterra",
+    link: AURA_ECOSYSTEM.PYXIS_SAFE,
+    description: "Use fully customizable multi-sig infrastructure to protect your assets."
 }
 ]
 

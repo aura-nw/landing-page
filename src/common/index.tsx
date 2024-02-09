@@ -20,5 +20,5 @@ export const enum AURA_ECOSYSTEM {
     HOROSCOPE = 'https://horoscope.aura.network/',
     AURA_SCAN = 'https://aurascan.io/',
     PYXIS_SAFE = 'https://pyxis.aura.network/',
-    AHA_MOVE = '/'
+    AHA_MOVE = 'https://insight.aura.network/aura-network-and-ahamove-have-officially-signed-to-develop-ahafast-ride-2-earn/'
 }

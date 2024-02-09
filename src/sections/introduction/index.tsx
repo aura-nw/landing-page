@@ -18,7 +18,7 @@ function Introduction() {
             </div>
           </div>
           <div className="flex lg:justify-center">
-            <GradientButton>Learn more</GradientButton>
+            <GradientButton href="/introduction">Learn more</GradientButton>
           </div>
         </div>
     );

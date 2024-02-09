@@ -14,11 +14,6 @@ const socials = [
     icon: ic_x
   },
   {
-    name: "Medium",
-    link: "/",
-    icon: ic_medium
-  },
-  {
     name: "Discord",
     link: SOCIAL.DISCORD,
     icon: ic_discord
@@ -44,7 +39,7 @@ function Footer() {
                 </Link>
               ))}
             </div>
-            <span className="text-medium-gray font-normal leading-6">A scalable, agile and effortless Layer-1 blockchain with a comprehensive ecosystem to accelerate global NFTs adoption.</span>
+            <span className="text-medium-gray font-normal leading-6">a high performance Layer 1 ecosystem with built-in modularity, leading the mass adoption of Web3 in emerging markets.</span>
           </div>
           <div className="flex flex-wrap gap-16 xl:gap-[80px] justify-between">
             <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
@@ -54,7 +49,7 @@ function Footer() {
               <div className="flex flex-col gap-2">
                 <Link href='https://docs.aura.network/' target="_blank" className="text-medium-gray leading-6 font-normal">Docs</Link>
                 <Link href='https://docs.aura.network/developer/' target="_blank" className="text-medium-gray leading-6 font-normal">Tools</Link>
-                <Link href='https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6' target="_blank" className="text-medium-gray leading-6 font-normal">Contracts</Link>
+                {/* <Link href='https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6' target="_blank" className="text-medium-gray leading-6 font-normal">Contracts</Link> */}
               </div>
             </div>
 
@@ -69,7 +64,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
+            {/* <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
               <span className="font-ppmori-semibold font-semibold leading-5">
                 Legal
               </span>
@@ -78,7 +73,7 @@ function Footer() {
                 <span className="text-medium-gray leading-6 font-normal">Privacy policy</span>
                 <span className="text-medium-gray leading-6 font-normal">Legal terms</span>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto">
               <span className="font-ppmori-semibold font-semibold leading-5">
@@ -91,7 +86,7 @@ function Footer() {
           </div>
         </div>
         <div className="justify-center pt-8 hidden xl:flex xl:border-t border-[rgba(150,140,124,0.20)]">
-          <span className="text-medium-gray leading-6 font-normal text-center">© Aura Network 2023. All rights reserved</span>
+          <span className="text-medium-gray leading-6 font-normal text-center">© Aura Network 2024. All rights reserved</span>
         </div>
       </div>
     </footer>

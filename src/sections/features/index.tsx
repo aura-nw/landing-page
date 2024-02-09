@@ -11,13 +11,13 @@ const featuresData = [{
 },
 {
     img: img_blocks,
-    title: "Account Abstraction",
-    description: "Aura brings account abstraction to Cosmos for the first time, allowing developers and chains to build mainstream-friendly DApps and create unparalleled improvements in user experience."
+    title: "Modularity",
+    description: "DApps that are mainstream-friendly require significant customizations and complications. Aura's built-in modularity enables developers to build next-generation DApps and protocols."
 },
 {
     img: img_universe,
-    title: "Account Abstraction",
-    description: "Aura brings account abstraction to Cosmos for the first time, allowing developers and chains to build mainstream-friendly DApps and create unparalleled improvements in user experience."
+    title: "Emerging market",
+    description: "Southeast Asia has been the key catalyst of web3 adoption throughout the past decade. Aura's regional presence unlocks the potential of mass adoption."
 }]
 
 function Features() {
@@ -29,7 +29,7 @@ function Features() {
                         <span className="text-light-yellow font-normal text-center xl:text-start xl:text-xl">Aura's distinguished features</span>
                         <span className="font-ppmori-semibold text-[28px] text-center font-semibold leading-9 min-w-[313px] xl:text-start xl:text-[48px] xl:leading-[56px]">Breaking down the barriers to mass adoption</span>
                     </div>
-                    <GradientButton className='hidden xl:flex'>Learn more</GradientButton>
+                    <GradientButton className='hidden xl:flex' href='/introduction'>Learn more</GradientButton>
                 </div>
             </div>
             <div className='flex flex-col gap-6 items-center justify-center'>
@@ -38,7 +38,7 @@ function Features() {
                         <Card key={i} data={item} />
                     ))}
                 </div>
-                <GradientButton className='xl:hidden'>Learn more</GradientButton>
+                <GradientButton className='xl:hidden' href='/introduction'>Learn more</GradientButton>
             </div>
         </div>
     );

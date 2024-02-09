@@ -51,25 +51,20 @@ const advantages = [
 
 const tableContents = [
     {
-        key: "",
-        title: "Introducing Aura"
+        key: "adoption",
+        title: "Mass Adoption"
+    },
+    {
+        key: "modularity",
+        title: "Built-in modularity"
+    },
+    {
+        key: "emerging-market",
+        title: "Emerging Markets"
     },
     {
         key: "our-advantages",
         title: "Our Advantages"
-    },
-    {
-        key: "tech-stack",
-        path: PAGE_ROUTE.TECH_STACK,
-        title: "Aura Network Tech Stack"
-    },
-    {
-        key: "contract",
-        title: "Foundation Contract Suite"
-    },
-    {
-        key: "dev-kit",
-        title: "Development Kit"
     }
 ]
 
@@ -147,7 +142,7 @@ function Sections() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-[61px] xl:gap-[100px]">
-                            <section className="section flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
+                            <section id="adoption" className="section flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
                                 <div className="h-[250px] xl:h-[304px] xl:max-w-[423px] xl:pl-6 flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                     <Image src={contents[0].img} alt="img"></Image>
                                 </div>
@@ -157,25 +152,29 @@ function Sections() {
                                 </div>
                             </section>
 
-                            <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
-                                <div className="h-[250px] pl-6 xl:h-[304px] xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
-                                    <Image className="max-h-[250px] xl:max-h-fit" src={contents[1].img} alt="img"></Image>
+                            <section id="modularity">
+                                <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
+                                    <div className="h-[250px] pl-6 xl:h-[304px] xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                        <Image className="max-h-[250px] xl:max-h-fit" src={contents[1].img} alt="img"></Image>
+                                    </div>
+                                    <div className="flex flex-col gap-3 xl:max-w-[374px]">
+                                        <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[1].title}</span>
+                                        <span className="text-medium-gray text-[16px] leading-7">{contents[1].description}</span>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col gap-3 xl:max-w-[374px]">
-                                    <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[1].title}</span>
-                                    <span className="text-medium-gray text-[16px] leading-7">{contents[1].description}</span>
-                                </div>
-                            </div>
+                            </section>
 
-                            <div className="flex flex-col gap-8 xl:flex-col-reverse">
-                                <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
-                                    <Image src={contents[2].img} alt="img"></Image>
+                            <section id= "emerging-market">
+                                <div className="flex flex-col gap-8 xl:flex-col-reverse">
+                                    <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                        <Image src={contents[2].img} alt="img"></Image>
+                                    </div>
+                                    <div className="flex flex-col gap-3 xl:gap-8">
+                                        <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[2].title}</span>
+                                        <span className="text-medium-gray text-[16px] leading-7">{contents[2].description}</span>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col gap-3 xl:gap-8">
-                                    <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[2].title}</span>
-                                    <span className="text-medium-gray text-[16px] leading-7">{contents[2].description}</span>
-                                </div>
-                            </div>
+                            </section>
 
                             <section id="our-advantages" className="section flex flex-col gap-8">
                                 <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">Our Advantages</span>
