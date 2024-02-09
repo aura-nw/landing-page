@@ -2,6 +2,9 @@ import img_circel_gradient_logo from "@/assets/images/img_circel_gradient_logo.p
 import img_circle_pyxis from '@/assets/images/img_circle_pyxis.svg';
 import img_halotrade from '@/assets/images/img_halotrade.svg';
 import img_horoscope from '@/assets/images/img_horoscope.svg';
+import img_seekhype from '@/assets/images/img_seekhype.svg';
+import img_mstr from '@/assets/images/img_mstr.webp';
+
 import Image from "next/image";
 import GradientButton from "../../components/Button/GradientButton";
 import Card from "../../sections/statistics/components/Card";
@@ -43,16 +46,16 @@ const ecosystemData = [{
     description: "Use fully customizable multi-sig infrastructure to protect your assets."
 },
 {
-    img: img_circle_pyxis,
+    img: img_seekhype,
     title: "Seekhype",
-    link: AURA_ECOSYSTEM.PYXIS_SAFE,
+    link: AURA_ECOSYSTEM.SEEKHYPE,
     description: "Enhance your seamless NFT experience while enjoying utility with premier Web2 brands"
 },
 {
-    img: img_circle_pyxis,
+    img: img_mstr,
     title: "Monsterra",
-    link: AURA_ECOSYSTEM.PYXIS_SAFE,
-    description: "Use fully customizable multi-sig infrastructure to protect your assets."
+    link: AURA_ECOSYSTEM.MSTR,
+    description: "Multi-chain game inspired by the Axie Infinity game's pet world and the gameplay in Clash of Clan or Boom Beach of Supercell. "
 }
 ]
 

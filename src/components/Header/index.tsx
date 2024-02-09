@@ -81,7 +81,7 @@ function Header() {
                     <Item subItems={communityMenu}>Community</Item>
                 </div>
                 <div className="hidden lg:contents">
-                    <Button>Buy AURA</Button>
+                    <Button>Get AURA</Button>
                 </div>
             </div>
             <div className="hidden w-full nav-menu lg:hidden">
@@ -96,7 +96,7 @@ function Header() {
                         <Item subItems={communityMenu}>Community</Item>
                     </div>
                     <div className="p-6">
-                        <Button>Buy AURA</Button>
+                        <Button>Get AURA</Button>
                     </div>
                 </div>
             </div>
