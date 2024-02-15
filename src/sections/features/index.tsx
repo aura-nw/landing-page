@@ -5,16 +5,19 @@ import Card from './components/Card';
 import GradientButton from '../../components/Button/GradientButton';
 
 const featuresData = [{
+    index: 1,
     img: img_coins,
     title: "Account Abstraction",
     description: "Aura brings account abstraction to Cosmos for the first time, allowing developers and chains to build mainstream-friendly DApps and create unparalleled improvements in user experience."
 },
 {
+    index: 2,
     img: img_blocks,
     title: "Modularity",
     description: "DApps that are mainstream-friendly require significant customizations and complications. Aura's built-in modularity enables developers to build next-generation DApps and protocols."
 },
 {
+    index: 3,
     img: img_universe,
     title: "Emerging market",
     description: "Southeast Asia has been the key catalyst of web3 adoption throughout the past decade. Aura's regional presence unlocks the potential of mass adoption."
