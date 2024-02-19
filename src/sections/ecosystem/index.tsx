@@ -13,7 +13,7 @@ const ecosystemData = [{
 },
 {
     img: img_ahamove,
-    name: "aha",
+    name: "ahamove",
     title: "Ahamove",
     link: AURA_ECOSYSTEM.AHA_MOVE,
     description: "Read more about the first mainstream integration of Aura, with the largest transport app in Vietnam."

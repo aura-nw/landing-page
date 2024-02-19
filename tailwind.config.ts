@@ -18,7 +18,7 @@ const config: Config = {
         "brand-gradient":
           "linear-gradient(339deg, #FFD569, #FC8E4F, #FF697B)",
         "brand-linear-gradient":
-          "linear-gradient(339deg, #FFD569 23.57%, #FC8E4F 50.76%, #FF697B 76.37%)",
+          "linear-gradient(0deg, rgba(255, 213, 105, 1), rgba(252, 142, 79, 1), rgba(255, 105, 123, 1))",
       },
       colors: {
         "black-charcoal": "var(--black-charcoal)",

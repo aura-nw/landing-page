@@ -201,7 +201,7 @@ body {
 
 /* Ecosystem card */
 
-.ecosystem-card-aha:hover {
+.ecosystem-card-ahamove:hover {
   background-image: url("../assets/images/img_bg_ahamove.png");
   background-size: cover;
   background-repeat: no-repeat;
