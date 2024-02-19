@@ -21,7 +21,7 @@ function Card({ post }: CardProps) {
                 <Image className="rounded-t-2xl h-[168px] object-cover xl:h-[303px]" width={539} height={303} src={featureImage} alt='img_blog'></Image>
             </Link>
             <div className="flex flex-col gap-2 p-6 xl:px-10 xl:pt-8 xl:pb-12">
-                <span className="bg-brand-linear-gradient bg-clip-text text-transparent font-normal leading-6">{tag}</span>
+                <span className="text-[rgba(253,149,82,1)] font-normal leading-6">{tag}</span>
                 <Link href={url} target="_blank" className="text-white font-ppmori-semibold text-[22px] font-semibold leading-8 hover:underline">{title}</Link>
             </div>
         </div>
