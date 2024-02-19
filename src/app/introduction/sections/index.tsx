@@ -83,7 +83,7 @@ function Sections() {
         const handleScroll = () => {
             const sectionEls = document.querySelectorAll('.section');
             sectionEls.forEach((sectionEl) => {
-                if (window.scrollY >= (sectionEl as HTMLElement).offsetTop - sectionEl.clientHeight / 5) {
+                if (window.scrollY >= (sectionEl as HTMLElement).offsetTop - sectionEl.clientHeight / 2) {
                     setCurrentSection(sectionEl.id);
                 }
             });
@@ -152,7 +152,7 @@ function Sections() {
                                 </div>
                             </section>
 
-                            <section id="modularity">
+                            <section id="modularity" className="section">
                                 <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
                                     <div className="h-[250px] pl-6 xl:h-[304px] xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                         <Image className="max-h-[250px] xl:max-h-fit" src={contents[1].img} alt="img"></Image>
@@ -164,7 +164,7 @@ function Sections() {
                                 </div>
                             </section>
 
-                            <section id= "emerging-market">
+                            <section id= "emerging-market" className="section">
                                 <div className="flex flex-col gap-8 xl:flex-col-reverse">
                                     <div className="h-[250px] xl:h-[304px] flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                         <Image src={contents[2].img} alt="img"></Image>

@@ -11,8 +11,9 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
     const pathname = usePathname()
 
     if (subItems) {
-        const listPaths = subItems.map((e: any) => e.link)
-        const isActive = listPaths.includes(pathname)
+        const listPaths = subItems.map((e: any) => e.pageRoute)
+        const isActive = listPaths.includes(pathname.slice(0, -1))
+        
         return (
             <div className="flex justify-center items-center">
                 <div className={`group relative px-6 py-3 hover:bg-medium-charcoal ${isActive ? 'bg-medium-charcoal' : ''} rounded-2xl cursor-pointer`}>
@@ -41,7 +42,7 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
 
     return (
         <div className="flex justify-center items-center">
-            <Link href={path ?? PAGE_ROUTE.HOME} className={`w-24 px-6 py-3 hover:bg-medium-charcoal ${pathname === path ? 'bg-medium-charcoal' : ''} rounded-2xl text-lg flex justify-center items-center`}>{children}</Link>
+            <Link href={path ?? PAGE_ROUTE.HOME} className={`w-24 px-6 py-3 hover:bg-medium-charcoal ${pathname.slice(0, -1) === path ? 'bg-medium-charcoal' : ''} rounded-2xl text-lg flex justify-center items-center`}>{children}</Link>
         </div>
     )
 

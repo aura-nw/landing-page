@@ -3,7 +3,8 @@ import Image from "next/image";
 type Card = {
   img: string,
   title: string,
-  description: string
+  description: string,
+  index: number
 }
 
 type CardProps = {
@@ -11,9 +12,9 @@ type CardProps = {
 }
 
 function Card({ data }: CardProps) {
-  const { img, description, title } = data
+  const { img, description, title, index } = data
   return (
-    <div className="pt-6 pb-8 px-8 xl:px-16 xl:pb-16 flex flex-col gap-8 justify-between rounded-2xl bg-dark-charcoal border border-solid border-blur-grayish-brown max-w-[344px] max-h-[484px] xl:max-h-[636px] xl:max-w-[679px] lg:w-[679px] card">
+    <div className={`pt-6 pb-8 px-8 xl:px-16 xl:pb-16 flex flex-col gap-8 justify-between rounded-2xl bg-dark-charcoal border border-solid border-blur-grayish-brown max-w-[344px] max-h-[484px] xl:max-h-[636px] xl:max-w-[679px] lg:w-[679px] card lg:sticky lg:top-[120px] lg:z-[${index}]`}>
       <div className="h-[184px] xl:h-[352px] flex justify-center items-center">
         <Image className="xl:w-[406px] xl:h-[300px]" src={img} alt="img_feature"></Image>
       </div>

@@ -1,5 +1,4 @@
 import ic_discord from "@/assets/icons/ic_discord_none_bg.svg";
-import ic_medium from "@/assets/icons/ic_medium.svg";
 import ic_telegram from "@/assets/icons/ic_telegram_gray.svg";
 import ic_x from "@/assets/icons/ic_x.svg";
 import ic_logo from "@/assets/images/img_logo.svg";
@@ -39,7 +38,7 @@ function Footer() {
                 </Link>
               ))}
             </div>
-            <span className="text-medium-gray font-normal leading-6">a high performance Layer 1 ecosystem with built-in modularity, leading the mass adoption of Web3 in emerging markets.</span>
+            <span className="text-medium-gray font-normal leading-6">A high performance Layer 1 ecosystem with built-in modularity, leading the mass adoption of Web3 in emerging markets.</span>
           </div>
           <div className="flex flex-wrap gap-16 xl:gap-[80px] justify-between">
             <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">

@@ -35,7 +35,7 @@ function Features() {
             <div className='flex flex-col gap-6 items-center justify-center'>
                 <div className='flex flex-col gap-4 items-center justify-center'>
                     {featuresData.map((item, i) => (
-                        <Card key={i} data={item} />
+                        <Card key={i} data={{ ...item, index: i }} />
                     ))}
                 </div>
                 <GradientButton className='xl:hidden' href='/introduction'>Learn more</GradientButton>

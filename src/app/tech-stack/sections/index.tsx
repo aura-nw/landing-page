@@ -78,7 +78,7 @@ function Sections() {
         const handleScroll = () => {
             const sectionEls = document.querySelectorAll('.section');
             sectionEls.forEach((sectionEl) => {
-                if (window.scrollY >= (sectionEl as HTMLElement).offsetTop - sectionEl.clientHeight / 5) {
+                if (window.scrollY >= (sectionEl as HTMLElement).offsetTop - sectionEl.clientHeight / 3) {
                     setCurrentSection(sectionEl.id);
                 }
             });
