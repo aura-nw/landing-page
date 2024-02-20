@@ -26,11 +26,11 @@ const socials = [
 
 function Footer() {
   return (
-    <footer className="bg-[url('../assets/images/img_bg_footer_mb.png')] bg-cover bg-no-repeat pt-[200px] md:pt-[320px] lg:pt-0">
+    <footer className="bg-[url('../assets/images/img_bg_footer_mb.png')] bg-cover bg-no-repeat pt-[200px] md:pt-[320px] lg:pt-0 lg:bg-none">
       <div className="flex flex-col gap-[50px] border-b border-[rgba(150,140,124,0.20)] justify-end px-6 pb-[120px] bg-black xl:px-[313px] xl:pt-16 xl:pb-[240px]">
         <div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between">
           <div className="flex flex-col gap-6 lg:gap-8 xl:w-[378px]">
-            <Image src={ic_logo} alt="logo" className="w-[117px] h-9" />
+            <Image src={ic_logo} alt="logo" height={36}/>
             <div className="flex gap-9">
               {socials.map((item) => (
                 <Link key={item.name} href={item.link} target="_blank" className="block">

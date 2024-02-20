@@ -1,8 +1,10 @@
 import img_ahamove from '@/assets/images/img_ahamove.svg'
 import img_halotrade from '@/assets/images/img_halotrade.svg'
 import img_horoscope from '@/assets/images/img_horoscope.svg'
+import img_bg_gradient_mask from '@/assets/images/img_bg_gradient_mask.webp'
 import Card from './components/Card'
 import { AURA_ECOSYSTEM } from '@/common'
+import BgImage from '../../components/Image/BgImage'
 
 const ecosystemData = [{
     img: img_halotrade,
@@ -29,8 +31,9 @@ const ecosystemData = [{
 
 function Ecosystem() {
     return (
-        <div className="pt-14 pb-8 xl:py-24 bg-[url('../assets/images/img_bg_gradient_mask.webp')] bg-cover bg-no-repeat w-screen flex flex-col gap-6 items-center lg:rounded-3xl lg:w-[96vw] min-[2560px]:w-[80vw]">
-            <div className="flex flex-col gap-4 items-center">
+        <div className="pt-14 pb-8 xl:py-24 relative w-screen flex flex-col gap-6 items-center lg:w-[96vw] min-[2560px]:w-[80vw]">
+            <BgImage fill alt='' src={img_bg_gradient_mask} className='lg:rounded-3xl'/>
+            <div className="flex flex-col gap-4 items-center relative">
                 <div className="bg-[rgba(255,255,255,0.15)] border border-solid border-[rgba(255,255,255,0.20)] py-3 px-5 h-11 text-center rounded-full flex items-center">
                     <div className="font-semibold">Aura's Ecosystem</div>
                 </div>
