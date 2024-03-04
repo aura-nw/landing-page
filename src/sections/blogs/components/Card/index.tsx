@@ -18,7 +18,7 @@ function Card({ post }: CardProps) {
     return (
         <div className="flex flex-col w-[323px] h-[335px] xl:h-[474px] xl:w-[540px] items-start rounded-2xl border border-solid border-[rgba(254,119,108,0.12)] bg-[#181614]">
             <Link href={url} target="_blank">
-                <div className="w-[538px] h-[168px] xl:h-[303px] relative">
+                <div className="w-[321px] xl:w-[538px] h-[168px] xl:h-[303px] relative">
                     <BlurImage fill className="rounded-t-2xl" src={featureImage} alt='img_blog' />
                 </div>
             </Link>

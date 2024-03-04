@@ -8,7 +8,7 @@ function Introduction() {
     return (
         <div className="max-w-[867px] flex flex-col gap-8 lg:gap-12 px-2">
           <div className="flex flex-col items-center gap-10 lg:gap-6">
-            <div className="flex flex-col gap-4 lg:gap-6 items-center">
+            <div className="flex flex-col gap-4 lg:gap-6 items-center lg:w-[876px]">
               <h1 className="text-white self-stretch text-start lg:text-center text-[48px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
                 The first blockchain for mass adoption with built-in modularity
               </h1>

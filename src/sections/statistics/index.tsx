@@ -19,7 +19,7 @@ function Statistics() {
                 <span className="text-light-yellow text-base lg:text-xl font-normal">Aura in numbers</span>
                 <span className="font-ppmori-semibold self-stretch text-[28px] lg:text-[48px] text-center font-semibold leading-9 lg:leading-[56px] max-w-[659px] min-w-[313px]">The most thriving blockchain in emerging countries</span>
             </div>
-            <div className="flex flex-col xl:flex-row gap-6 w-full items-center justify-center">
+            <div className="flex flex-col gap-3 xl:flex-row xl:gap-6 w-full items-center justify-center">
                 {statisticData.map((item, i) => (
                     <Card key={i} data={item} />
                 ))}

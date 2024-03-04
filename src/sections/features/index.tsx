@@ -22,7 +22,7 @@ const featuresData = [{
 
 function Features() {
     return (
-        <div className="w-full flex flex-col lg:flex-row gap-6 lg:justify-between lg:px-10 lg:py-[80px]">
+        <div className="w-full flex flex-col lg:flex-row gap-6 lg:justify-between lg:px-10 lg:pt-[160px] lg:pb-[80px]">
             <div>
                 <div className="flex flex-col gap-12 justify-center items-center self-stretch lg:items-start lg:justify-start lg:pt-20 lg:w-[540px] sticky top-[140px]">
                     <div className='flex flex-col gap-4 justify-center items-center self-stretch xl:items-start'>

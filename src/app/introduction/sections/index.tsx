@@ -143,21 +143,21 @@ function Sections() {
                         </div>
                         <div className="flex flex-col gap-[61px] xl:gap-[100px]">
                             <section id="adoption" className="section flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
-                                <div className="h-[250px] xl:h-[304px] xl:max-w-[423px] xl:pl-6 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                <div className="h-[250px] xl:h-[304px] xl:min-w-[423px] xl:pl-6 flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                     <Image src={contents[0].img} alt="img"></Image>
                                 </div>
-                                <div className="flex flex-col gap-3 xl:max-w-[374px]">
+                                <div className="flex flex-col gap-3">
                                     <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[0].title}</span>
                                     <span className="text-medium-gray text-[16px] leading-7">{contents[0].description}</span>
                                 </div>
                             </section>
 
                             <section id="modularity" className="section">
-                                <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
-                                    <div className="h-[250px] pl-6 xl:h-[304px] xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between h-full">
+                                    <div className="h-[250px] xl:min-w-[423px] pl-6 xl:h-full xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                         <Image className="max-h-[250px] xl:max-h-fit" src={contents[1].img} alt="img"></Image>
                                     </div>
-                                    <div className="flex flex-col gap-3 xl:max-w-[374px]">
+                                    <div className="flex flex-col gap-3">
                                         <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[1].title}</span>
                                         <span className="text-medium-gray text-[16px] leading-7">{contents[1].description}</span>
                                     </div>

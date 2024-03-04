@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from "react";
 import ic_arrow from "@/assets/icons/ic_arrow.svg";
 import ic_labs from "@/assets/icons/ic_labs.svg";
 import img_block_trophy from "@/assets/images/img_block_trophy.svg";
@@ -12,6 +11,7 @@ import img_circle_wallet from "@/assets/images/img_circle_wallet.svg";
 import GradientButton from "@/components/Button/GradientButton";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const tableContents = [
     {
@@ -139,55 +139,55 @@ function Sections() {
                             </div>
 
                             <div className="flex flex-col">
-                                <section id="tech-stack" className="section flex flex-col gap-6 xl:mt-0">
+                                <section id="tech-stack" className="section flex flex-col gap-6 xl:gap-8 xl:mt-0">
                                     <div className="flex flex-col gap-3 xl:gap-8">
                                         <Title>Aura Network Tech Stack</Title>
                                         <Description>The Aura infrastructure landscape has been revamped to fully adopt innovation in user experience and sustainable economics. We can divide the landscape into 4 major planes.</Description>
                                     </div>
-                                    <div className="flex flex-col mt-6 gap-6 xl:gap-[30px]">
+                                    <div className="flex flex-col gap-6 xl:gap-[30px]">
                                         <div className="flex flex-col gap-2 w-full xl:flex-row xl:gap-[46px]">
-                                            <span className="text-white font-ppmori-semibold text-[13px] font-semibold left-5 xl:min-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">Infra Applications</span>
+                                            <span className="text-white font-ppmori-semibold text-[13px] lg:text-base font-semibold left-5 xl:min-w-[150px] xl:max-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">Infra Applications</span>
                                             <div className="w-full flex gap-2 justify-between xl:gap-[18px] xl:justify-start">
                                                 {infraApps.map((item, i) => {
                                                     if (!item) return <div key={i} className="xl:basis-1/4" />
                                                     return (
-                                                        <div key={i} className="basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-5 text-center text-[13px] leading-6">{item}</div>
+                                                        <div key={i} className="basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-[18px] px-3 xl:max-h-[72px] text-center text-[13px] lg:text-base leading-6 text-light-yellow">{item}</div>
                                                     )
                                                 })}
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col gap-2 w-full xl:flex-row xl:gap-[46px]">
-                                            <span className="text-white font-ppmori-semibold text-[13px] font-semibold left-5 xl:min-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">SDK</span>
+                                            <span className="text-white font-ppmori-semibold text-[13px] lg:text-base font-semibold left-5 xl:min-w-[150px] xl:max-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">SDK</span>
                                             <div className="w-full flex gap-2 justify-between xl:gap-[18px] xl:justify-start">
                                                 {sdk.map((item, i) => {
                                                     if (!item) return <div key={i} className="xl:basis-1/4" />
                                                     return (
-                                                        <div key={i} className="basis-1/2 xl:basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-5 text-center text-[13px] leading-6">{item}</div>
+                                                        <div key={i} className="basis-1/2 xl:basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-[18px] px-3 xl:max-h-[72px] text-center text-[13px] lg:text-base leading-6 text-light-yellow">{item}</div>
                                                     )
                                                 })}
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col gap-2 w-full xl:flex-row xl:gap-[46px]">
-                                            <span className="text-white font-ppmori-semibold text-[13px] font-semibold left-5 xl:min-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">Foundation Contract Suite</span>
+                                            <span className="text-white font-ppmori-semibold text-[13px] lg:text-base font-semibold left-5 xl:min-w-[150px] xl:max-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">Foundation Contract Suite</span>
                                             <div className="w-full flex gap-2 justify-between xl:gap-[18px] xl:justify-start">
                                                 {contracts.map((item, i) => {
                                                     if (!item) return <div key={i} className="xl:basis-1/4" />
                                                     return (
-                                                        <div key={i} className="basis-1/3 xl:basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-5 text-center text-[13px] leading-6">{item}</div>
+                                                        <div key={i} className="basis-1/3 xl:basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-[18px] px-3 xl:max-h-[72px] text-center text-[13px] lg:text-base leading-6 text-light-yellow">{item}</div>
                                                     )
                                                 })}
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col gap-2 w-full xl:flex-row xl:gap-[46px]">
-                                            <span className="text-white font-ppmori-semibold text-[13px] font-semibold left-5 xl:min-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">Aurad</span>
+                                            <span className="text-white font-ppmori-semibold text-[13px] lg:text-base font-semibold left-5 xl:min-w-[150px] xl:max-w-[150px] xl:text-center xl:p-[10px] xl:min-h-[72px] xl:bg-dark-charcoal xl:rounded-md xl:flex xl:justify-center xl:items-center">Aurad</span>
                                             <div className="w-full flex gap-2 justify-between xl:gap-[18px] xl:justify-start">
                                                 {aurad.map((item, i) => {
                                                     if (!item) return <div key={i} className="xl:basis-1/4" />
                                                     return (
-                                                        <div key={i} className="basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-5 text-center text-[13px] leading-6">{item}</div>
+                                                        <div key={i} className="basis-1/4 flex items-center justify-center rounded-md bg-blur-brand-linear-gradient py-[18px] px-3 xl:max-h-[72px] text-center text-[13px] lg:text-base leading-6 text-light-yellow">{item}</div>
                                                     )
                                                 })}
                                             </div>
@@ -196,7 +196,7 @@ function Sections() {
                                 </section>
 
                                 <div className="w-full flex flex-col mt-20 gap-20 xl:mt-[100px]">
-                                    <section id="aura-daemon" className="section flex flex-col gap-6">
+                                    <section id="aura-daemon" className="section flex flex-col gap-6 xl:gap-8">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Aura Daemon</Title>
                                             <Description>The main Aura node client. As this is implemented using the Cosmos SDK, Aura inherits the stability and security of the Cosmos stack. It is also IBC compatible, making Aura capable of directly communicating with more than 80 other Cosmos chains. Apart from the default Cosmos modules, there are 2 other modules implemented by Aura:</Description>
@@ -237,23 +237,31 @@ function Sections() {
                                                 <Description>A collection of contracts that captures value from various dApps deployed on top of Aura.</Description>
                                             </div>
                                         </div>
-                                        <Description>The foundation contract suite provides a highly modular approach to ecosystem wide features like AA and tax structure. The aim of this architecture is to be able to swap out, upgrade, and add modules as the protocol develops and swiftly accommodate demands for new requirements or adjustments. Accordingly, the design consists of many granular single-purpose logic units, starting from a runtime upgrade (aurad) and pushing the rest of the logic to application level (contract).</Description>
+                                        <div className="xl:mt-[60px]">
+                                            <Description>The foundation contract suite provides a highly modular approach to ecosystem wide features like AA and tax structure. The aim of this architecture is to be able to swap out, upgrade, and add modules as the protocol develops and swiftly accommodate demands for new requirements or adjustments. Accordingly, the design consists of many granular single-purpose logic units, starting from a runtime upgrade (aurad) and pushing the rest of the logic to application level (contract).</Description>
+                                        </div>
                                     </section>
 
-                                    <section id="development-kit" className="section flex flex-col gap-6">
+                                    <section id="development-kit" className="section flex flex-col gap-6 xl:gap-8">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Aura Software Development Kit</Title>
-                                            <Description>Client libraries for various dApps, web or mobile applications</Description>
+                                            <div className="flex flex-col gap-3 xl:gap-6">
+                                                <Description>Client libraries for various dApps, web or mobile applications</Description>
+                                                <div className="flex flex-col gap-3 xl:gap-8">
+                                                    <div className="flex flex-col p-8 gap-6 bg-dark-charcoal rounded-3xl xl:py-14 xl:px-16">
+                                                        <CardDescription>AuraJS remains to be the most popular client side library for front-end (javascript) to interact with Aura. All logic on how to construct transactions that interact with EOA or Smart Account are abstracted away from the client side.</CardDescription>
+                                                    </div>
+                                                    <div className="flex flex-col p-8 gap-6 bg-dark-charcoal rounded-3xl xl:py-14 xl:px-16">
+                                                        <CardDescription>Native Flutter implementations for client libraries are also very important for the development of native mobile applications.</CardDescription>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                        <div className="flex flex-col p-8 gap-6 bg-dark-charcoal rounded-3xl xl:py-14 xl:px-16">
-                                            <CardDescription>AuraJS remains to be the most popular client side library for front-end (javascript) to interact with Aura. All logic on how to construct transactions that interact with EOA or Smart Account are abstracted away from the client side.</CardDescription>
-                                        </div>
-                                        <div className="flex flex-col p-8 gap-6 bg-dark-charcoal rounded-3xl xl:py-14 xl:px-16">
-                                            <CardDescription>Native Flutter implementations for client libraries are also very important for the development of native mobile applications.</CardDescription>
-                                        </div>
+
                                     </section>
 
-                                    <section id="infrastructure-application" className="section flex flex-col gap-6">
+                                    <section id="infrastructure-application" className="section flex flex-col gap-6 xl:gap-8">
                                         <div className="flex flex-col gap-3 xl:gap-8">
                                             <Title>Infrastructure Application</Title>
                                             <Description>The signature infrastructure applications developed by the Aura team remains the same with the addition of Aura Pay, a custodial infrastructure for facilitating Web3 onboarding. They are:</Description>
