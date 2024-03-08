@@ -35,9 +35,9 @@ function Ecosystem() {
             <BgImage fill alt='' src={img_bg_gradient_mask} className='lg:rounded-3xl'/>
             <div className="flex flex-col gap-4 items-center relative">
                 <div className="bg-[rgba(255,255,255,0.15)] border border-solid border-[rgba(255,255,255,0.20)] py-3 px-5 h-11 text-center rounded-full flex items-center">
-                    <div className="font-semibold">Aura's Ecosystem</div>
+                    <h4 className="font-semibold">Aura's Ecosystem</h4>
                 </div>
-                <span className="font-ppmori-semibold text-[32px] text-center font-semibold leading-[40px] xl:text-[48px] xl:leading-[56px]">Real world use case highlight</span>
+                <h3 className="font-ppmori-semibold text-[32px] text-center font-semibold leading-[40px] xl:text-[48px] xl:leading-[56px]">Real world use case highlight</h3>
             </div>
             <div className='flex flex-col gap-4 xl:flex-row'>
                 {ecosystemData.map((item, i) => (

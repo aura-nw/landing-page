@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Learn about Aura Network Tech Stack",
+    description: "Explore Aura Network's tech stack including Found Contract Suite, Pyxis Smart Account, Fee Registry, Software Development Kit and Infrastructure Application.",
+};
+
 export default function Layout({
     children,
 }: Readonly<{

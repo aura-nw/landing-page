@@ -11,9 +11,9 @@ function Tutorials() {
             <div className="flex flex-col justify-start items-center relative h-[472px] xl:w-[548px]">
                 <Image className="xl:w-[480px]" src={img_gradientLogo} alt="img_gradientLogo" />
                 <div className="flex flex-col gap-8 xl:gap-14 items-center w-[284px] absolute top-[242px] xl:w-full xl:top-[336px]">
-                    <span className="text-white text-center font-ppmori-semibold text-[40px] font-semibold leading-[48px] xl:text-[72px] xl:leading-[80px]">
+                    <h2 className="text-white text-center font-ppmori-semibold text-[40px] font-semibold leading-[48px] xl:text-[72px] xl:leading-[80px]">
                         Build Your DApp With Aura
-                    </span>
+                    </h2>
                     <GradientButton href="https://docs.aura.network/developer/">
                         Tutorials
                     </GradientButton>

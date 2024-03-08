@@ -27,7 +27,7 @@ function Features() {
                 <div className="flex flex-col gap-12 justify-center items-center self-stretch lg:items-start lg:justify-start lg:pt-20 lg:w-[540px] sticky top-[140px]">
                     <div className='flex flex-col gap-4 justify-center items-center self-stretch xl:items-start'>
                         <span className="text-light-yellow font-normal text-center xl:text-start xl:text-xl">Aura's distinguished features</span>
-                        <span className="font-ppmori-semibold text-[28px] text-center font-semibold leading-9 min-w-[313px] xl:text-start xl:text-[48px] xl:leading-[56px]">Breaking down the barriers to mass adoption</span>
+                        <h2 className="font-ppmori-semibold text-[28px] text-center font-semibold leading-9 min-w-[313px] xl:text-start xl:text-[48px] xl:leading-[56px]">Breaking down the barriers to mass adoption</h2>
                     </div>
                     <GradientButton className='hidden xl:flex' href='/introduction'>Learn more</GradientButton>
                 </div>
