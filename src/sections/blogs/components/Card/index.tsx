@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import BlurImage from "../../../../components/Image/BlurImage";
 
 export type Post = {
     id: string,
@@ -18,7 +18,9 @@ function Card({ post }: CardProps) {
     return (
         <div className="flex flex-col w-[323px] h-[335px] xl:h-[474px] xl:w-[540px] items-start rounded-2xl border border-solid border-[rgba(254,119,108,0.12)] bg-[#181614]">
             <Link href={url} target="_blank">
-                <Image className="rounded-t-2xl h-[168px] object-cover xl:h-[303px]" width={539} height={303} src={featureImage} alt='img_blog'></Image>
+                <div className="w-[321px] xl:w-[538px] h-[168px] xl:h-[303px] relative">
+                    <BlurImage fill className="rounded-t-2xl" src={featureImage} alt='img_blog' />
+                </div>
             </Link>
             <div className="flex flex-col gap-2 p-6 xl:px-10 xl:pt-8 xl:pb-12">
                 <span className="text-[rgba(253,149,82,1)] font-normal leading-6">{tag}</span>

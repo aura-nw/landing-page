@@ -65,9 +65,9 @@ function Build() {
             <div className="main-container">
                 <div className="flex flex-col items-center gap-16 mt-[14px]">
                     <div className="xl:max-w-[867px] flex flex-col gap-10 px-2 items-center">
-                        <div className="text-white self-stretch text-center lg:text-center text-[48px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
+                        <h1 className="text-white self-stretch text-center lg:text-center text-[48px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
                             Build Modular Applications
-                        </div>
+                        </h1>
                         <div className="flex lg:justify-center">
                             <GradientButton>Contact Us</GradientButton>
                         </div>
@@ -83,9 +83,9 @@ function Build() {
                             <div className="bg-[rgba(255,255,255,0.15)] border border-solid border-[rgba(255,255,255,0.20)] py-3 px-5 h-11 text-center rounded-full flex items-center">
                                 <div className="font-semibold">Aura's Ecosystem</div>
                             </div>
-                            <span className="font-ppmori-semibold text-[32px] text-center font-semibold leading-[40px] xl:text-[48px] xl:leading-[56px]">
+                            <h2 className="font-ppmori-semibold text-[32px] text-center font-semibold leading-[40px] xl:text-[48px] xl:leading-[56px]">
                                 Select an Aura-Native Application to Integrate
-                            </span>
+                            </h2>
                         </div>
                         <div className='flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:justify-between xl:gap-6'>
                             {ecosystemData.map((item, i) => (

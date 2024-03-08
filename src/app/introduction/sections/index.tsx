@@ -113,12 +113,12 @@ function Sections() {
                         <div className="flex flex-col items-start lg:items-center">
                             <Image className="relative -left-[26px] lg:block" src={ic_labs} alt="ic_labs" />
                             <div className="flex flex-col gap-4 lg:gap-6 items-center">
-                                <div className="text-white self-stretch text-start lg:text-center text-[48px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
+                                <h1 className="text-white self-stretch text-start lg:text-center text-[48px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
                                     Introducing Aura
-                                </div>
-                                <div className="text-medium-gray text-start lg:text-center text-xl font-normal leading-8 max-w-[557px]">
+                                </h1>
+                                <h3 className="text-medium-gray text-start lg:text-center text-xl font-normal leading-8 max-w-[557px]">
                                     Aura Network is a high performance Layer 1 ecosystem with built-in modularity, leading the mass adoption of Web3 in emerging markets.
-                                </div>
+                                </h3>
                             </div>
                         </div>
                         <div className="flex lg:justify-center">
@@ -143,22 +143,22 @@ function Sections() {
                         </div>
                         <div className="flex flex-col gap-[61px] xl:gap-[100px]">
                             <section id="adoption" className="section flex flex-col gap-8 xl:flex-row-reverse xl:gap-16 justify-between">
-                                <div className="h-[250px] xl:h-[304px] xl:max-w-[423px] xl:pl-6 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                <div className="h-[250px] xl:h-[304px] xl:min-w-[423px] xl:pl-6 flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                     <Image src={contents[0].img} alt="img"></Image>
                                 </div>
-                                <div className="flex flex-col gap-3 xl:max-w-[374px]">
-                                    <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[0].title}</span>
+                                <div className="flex flex-col gap-3">
+                                    <h4 className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[0].title}</h4>
                                     <span className="text-medium-gray text-[16px] leading-7">{contents[0].description}</span>
                                 </div>
                             </section>
 
                             <section id="modularity" className="section">
-                                <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between">
-                                    <div className="h-[250px] pl-6 xl:h-[304px] xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
+                                <div className="flex flex-col gap-8 xl:flex-row xl:gap-16 justify-between h-full">
+                                    <div className="h-[250px] xl:min-w-[423px] pl-6 xl:h-full xl:pl-8 flex justify-center items-center rounded-3xl bg-dark-charcoal">
                                         <Image className="max-h-[250px] xl:max-h-fit" src={contents[1].img} alt="img"></Image>
                                     </div>
-                                    <div className="flex flex-col gap-3 xl:max-w-[374px]">
-                                        <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[1].title}</span>
+                                    <div className="flex flex-col gap-3">
+                                        <h4 className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[1].title}</h4>
                                         <span className="text-medium-gray text-[16px] leading-7">{contents[1].description}</span>
                                     </div>
                                 </div>
@@ -170,19 +170,19 @@ function Sections() {
                                         <Image src={contents[2].img} alt="img"></Image>
                                     </div>
                                     <div className="flex flex-col gap-3 xl:gap-8">
-                                        <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[2].title}</span>
+                                        <h4 className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{contents[2].title}</h4>
                                         <span className="text-medium-gray text-[16px] leading-7">{contents[2].description}</span>
                                     </div>
                                 </div>
                             </section>
 
                             <section id="our-advantages" className="section flex flex-col gap-8">
-                                <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">Our Advantages</span>
+                                <h4 className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">Our Advantages</h4>
                                 {advantages.map((item, i) => (
                                     <div key={i} className="flex flex-col gap-6 rounded-3xl bg-dark-charcoal p-8">
                                         <div className="flex flex-col gap-4">
                                             <Image src={item.img} alt="img"></Image>
-                                            <span className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{item.title}</span>
+                                            <h4 className="text-white font-ppmori-semibold text-2xl font-semibold leading-10">{item.title}</h4>
                                         </div>
                                         <span className="text-medium-gray text-[16px] leading-8">{item.description}</span>
                                     </div>

@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Build your DApps with Aura Network",
+    description: "Learn how to build modular applications with Aura Network. Explore resources and tools to build DApps for emerging markets.",
+};
+
 export default function Layout({
     children,
 }: Readonly<{

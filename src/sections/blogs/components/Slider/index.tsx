@@ -92,6 +92,11 @@ const BlogsSlider = forwardRef((props, ref: any) => {
             onReachEnd={() => {
                 setSliderReach('end');
             }}
+            onSlideChange={(element) => {
+                if (!element.isBeginning && !element.isEnd) {
+                    setSliderReach('');
+                }
+            }}
         >
             {posts.map((post: Post) => (
                 <SwiperSlide key={post.id}><Card post={post} /></SwiperSlide>
