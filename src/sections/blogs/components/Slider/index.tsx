@@ -49,7 +49,7 @@ const BlogsSlider = forwardRef((props, ref: any) => {
     useEffect(() => {
         const api = new GhostContentAPI({
             url: 'https://auranetwork.ghost.io',
-            key: '7da9b49a6e62c20499683c684f',
+            key: 'fdf46d36e3502cde83a5021c73',
             version: "v5.0"
         });
 
