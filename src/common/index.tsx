@@ -8,7 +8,7 @@ export const enum PAGE_ROUTE {
 
 export const enum SOCIAL {
     TWITTER = 'https://twitter.com/AuraNetworkHQ',
-    DISCORD = 'https://discord.com/invite/ZFHepmtZvr',
+    DISCORD = 'https://discord.com/invite/Y3RZDrregV',
     TELEGRAM = 'https://t.me/AuraNetworkOfficial',
     LINKEDIN = 'https://www.linkedin.com/company/auranetwork/',
     GIT_HUB = 'https://github.com/aura-nw',
