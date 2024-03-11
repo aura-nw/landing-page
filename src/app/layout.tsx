@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Aura Network - The Layer 1 for emerging countries",
   description: "Aura Network is the Layer 1 for emerging countries, providing public infrastructure through modular tech stacks. Build and drive Blockchain mass adoption.",
   openGraph: {
-    images: '/img_thumb.png',
+    images: 'https://aura.network/img_thumb.png',
   },
 };
 
