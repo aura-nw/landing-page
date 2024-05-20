@@ -2,14 +2,14 @@ import img_circel_gradient_logo from "@/assets/images/img_circel_gradient_logo.p
 import img_circle_pyxis from '@/assets/images/img_circle_pyxis.svg';
 import img_halotrade from '@/assets/images/img_halotrade.svg';
 import img_horoscope from '@/assets/images/img_horoscope.svg';
-import img_seekhype from '@/assets/images/img_seekhype.svg';
 import img_mstr from '@/assets/images/img_mstr.webp';
+import img_seekhype from '@/assets/images/img_seekhype.svg';
 
+import { AURA_ECOSYSTEM } from "@/common";
 import Image from "next/image";
+import Link from "next/link";
 import GradientButton from "../../components/Button/GradientButton";
 import Card from "../../sections/statistics/components/Card";
-import { AURA_ECOSYSTEM } from "@/common";
-import Link from "next/link";
 
 const intro = [{
     value: "Integrate",
@@ -23,6 +23,7 @@ const intro = [{
 
 const ecosystemData = [{
     img: img_halotrade,
+    isCircle: true,
     title: "HaloTrade",
     link: AURA_ECOSYSTEM.HALO_TRADE,
     description: "Deploy tokens and enable Aura users to swap and earn."
@@ -30,32 +31,37 @@ const ecosystemData = [{
 {
     img: img_horoscope,
     title: "Horoscope",
+    isCircle: true,
     link: AURA_ECOSYSTEM.HOROSCOPE,
-    description: "Start indexing tokens and data on Cosmos with Horoscope"
+    description: "Start indexing tokens and data on Cosmos with Horoscope."
 },
 {
     img: img_circel_gradient_logo,
     title: "AuraScan",
+    isCircle: true,
     link: AURA_ECOSYSTEM.AURA_SCAN,
-    description: "Begin tracking wallets, active users, and other stats through AuraScan"
+    description: "Begin tracking wallets, active users, and other stats through AuraScan."
 },
 {
     img: img_circle_pyxis,
     title: "Pyxis",
+    isCircle: true,
     link: AURA_ECOSYSTEM.PYXIS_SAFE,
     description: "Use fully customizable multi-sig infrastructure to protect your assets."
 },
 {
     img: img_seekhype,
-    title: "Seekhype",
+    title: "SeekHYPE",
+    isCircle: false,
     link: AURA_ECOSYSTEM.SEEKHYPE,
-    description: "Enhance your seamless NFT experience while enjoying utility with premier Web2 brands"
+    description: "Enhance your seamless NFT experience while enjoying utility with premier Web2 brands."
 },
 {
     img: img_mstr,
     title: "Monsterra",
+    isCircle: true,
     link: AURA_ECOSYSTEM.MSTR,
-    description: "Multi-chain game inspired by the Axie Infinity game's pet world and the gameplay in Clash of Clan or Boom Beach of Supercell. "
+    description: "Multi-chain game inspired by the Axie Infinity game's pet world and the gameplay in Clash of Clan or Boom Beach of Supercell."
 }
 ]
 
@@ -89,13 +95,13 @@ function Build() {
                         </div>
                         <div className='flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:justify-between xl:gap-6'>
                             {ecosystemData.map((item, i) => (
-                                <Link href={item.link} target="_blank" key={i} className={`bg-white rounded-3xl xl:basis-[calc(50%_-_12px)] border border-solid border-[rgba(254,119,108,0.16)] flex flex-col gap-8 lg:justify-between p-8`}>
-                                    <Image className="w-12 h-12 lg:w-16 lg:h-16 rounded-full" src={item.img} alt={item.title}></Image>
+                                <div key={i} className={`bg-white rounded-3xl xl:basis-[calc(50%_-_12px)] border border-solid border-[rgba(254,119,108,0.16)] flex flex-col gap-8 p-8`}>
+                                    <Image className={`w-12 h-12 lg:w-16 lg:h-16 ${item.isCircle ? 'rounded-full' : ''}`} src={item.img} alt={item.title}></Image>
                                     <div className="flex flex-col gap-2">
-                                        <span className="text-black font-ppmori-semibold font-semibold text-2xl leading-7">{item.title}</span>
+                                        <Link href={item.link} target="_blank" className="text-black font-ppmori-semibold font-semibold text-2xl leading-7 w-fit">{item.title}</Link>
                                         <span className="text-black text-lg leading-7">{item.description}</span>
                                     </div>
-                                </Link>
+                                </div>
                             ))}
                         </div>
                     </div>
