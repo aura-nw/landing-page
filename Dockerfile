@@ -1,4 +1,4 @@
-FROM node:18.17 as build-stage
+FROM node:18.18 as build-stage
 RUN mkdir -p /data/app
 WORKDIR /data/app
 COPY . /data/app
