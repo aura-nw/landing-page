@@ -117,7 +117,7 @@ function WalletConnectEVM() {
           </div>
           {!_account?.address ? (
             <div className="get-more-aura-box">
-              <div className="text-white self-stretch text-center lg:text-center font-ppmori-semibold" style={{ fontSize: "36px" }}>
+              <div className="text-white self-stretch text-center lg:text-center font-ppmori-semibold description">
                 More ways to get AURA
               </div>
 
