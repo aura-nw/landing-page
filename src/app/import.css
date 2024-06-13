@@ -29,6 +29,15 @@
   .info {
     flex-direction: column;
   }
+
+  .get-more-aura-box {
+    flex-direction: column;
+    padding: 56px 24px !important;
+  }
+
+  .get-more-aura-box .description {
+    font-size: 32px;
+  }
 }
 
 .address-small-text {
@@ -110,6 +119,10 @@
   align-self: stretch;
   border-radius: 40px;
   background: #171513;
+}
+
+.get-more-aura-box .description {
+  font-size: 36px;
 }
 
 .button-border-gradient {
