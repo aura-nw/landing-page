@@ -3,7 +3,8 @@ export const enum PAGE_ROUTE {
     INTRODUCTION = '/introduction',
     TECH_STACK = '/tech-stack',
     BUILD = '/build',
-    DOCS = '/docs'
+    DOCS = '/docs',
+    GET_AURA = '/get-aura'
 }
 
 export const enum SOCIAL {
