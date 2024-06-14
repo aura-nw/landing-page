@@ -10,6 +10,8 @@
 @media only screen and (max-width: 767px) {
   .address {
     font-size: 1.5rem;
+    line-height: 32px;
+    word-break: break-all;
   }
 
   .introduce-title {
@@ -143,4 +145,40 @@
   align-items: center;
   gap: 12px;
   padding: 16px 32px;
+}
+
+.grey-text {
+  color: var(--Text, #968c7c);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.evm-address-cut {
+  color: var(--White, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.note-text {
+  color: var(--White, #fff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+}
+
+.note-text-2 {
+  color: var(--White, #fff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.24px;
 }
