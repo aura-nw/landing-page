@@ -86,16 +86,16 @@ function WalletConnectEVM() {
   return (
     <div className="mb-[80px]">
       <div className="main-container">
-        <div className="flex flex-col items-center gap-16 mt-[14px]">
+        <div className="flex flex-col items-center gap-6 lg:gap-16 mt-[14px]">
           <div className="xl:max-w-[867px] flex flex-col gap-10 px-2 items-center">
             {!_account?.address ? (
               <div className="flex flex-col">
-                <h1 className="text-white self-stretch text-center lg:text-center text-[48px] lg:text-[48px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">Your Journey Start Here</h1>
-                <div className="text-medium-gray text-start lg:text-center text-xl lg:text-[20px] font-normal leading-8 max-w-[717px]">But first, let’s get you some AURA</div>
+                <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[48px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">Your Journey Start Here</h1>
+                <div className="text-medium-gray text-center text-xl lg:text-[20px] font-normal leading-8 max-w-[717px]">But first, let’s get you some AURA</div>
               </div>
             ) : (
               <div className="flex flex-col">
-                <h1 className="text-white self-stretch text-center lg:text-center text-[48px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">Welcome</h1>
+                <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">Welcome</h1>
                 <div className="flex gap-8 items-center justify-center">
                   <div className="address">{cutText(_account?.address)}</div>
                   <Image data-tooltip-id="disconnect" data-tooltip-content="Disconnect wallet" className="cursor-pointer" src={copyLogo} alt="copy" height={32} onClick={() => disconnect()} />
