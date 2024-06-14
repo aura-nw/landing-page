@@ -1,0 +1,146 @@
+.address {
+  color: var(--Pri, #fd9552);
+  /* font-family: "PP Mori"; */
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+}
+
+@media only screen and (max-width: 767px) {
+  .address {
+    font-size: 1.5rem;
+  }
+
+  .introduce-title {
+    font-size: 20px;
+  }
+
+  .partner.gap-8 {
+    gap: 12px;
+  }
+
+  .partner-button {
+    min-width: unset !important;
+    max-width: unset !important;
+    padding: 16px 20px !important;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .get-more-aura-box {
+    flex-direction: column;
+    padding: 56px 24px !important;
+  }
+
+  .get-more-aura-box .description {
+    font-size: 32px;
+  }
+}
+
+.address-small-text {
+  color: var(--Pri, #fd9552);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.24px;
+  word-break: break-all;
+}
+
+.introduce-title {
+  color: #968c7c;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+
+.partner-button {
+  display: flex;
+  max-width: 180px;
+  min-width: 180px;
+  padding: 24px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 6px;
+
+  background: linear-gradient(339deg, rgba(255, 213, 105, 0.08) 23.57%, rgba(252, 142, 79, 0.08) 50.76%, rgba(255, 105, 123, 0.08) 76.37%);
+}
+
+.partner-button:hover {
+  border: 1px solid #ffd569;
+
+  background: linear-gradient(339deg, rgba(255, 213, 105, 0.16) 23.57%, rgba(252, 142, 79, 0.16) 50.76%, rgba(255, 105, 123, 0.16) 76.37%);
+}
+
+.text-tutorial {
+  color: var(--White, #fff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.24px;
+}
+
+.aura-address-box {
+  display: flex;
+  padding: 36px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  align-self: stretch;
+
+  border-radius: 12px;
+  border: 1px solid var(--Strock, rgba(160, 150, 114, 0.15));
+  background: #171513;
+}
+
+.aura-address-box-2 {
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  background: #000;
+}
+
+.get-more-aura-box {
+  display: flex;
+  padding: 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  border-radius: 40px;
+  background: #171513;
+}
+
+.get-more-aura-box .description {
+  font-size: 36px;
+}
+
+.button-border-gradient {
+  position: relative;
+  border-radius: 9999px;
+  background: linear-gradient(339deg, #ffd569, #fc8e4f, #ff697b);
+  padding: 1px;
+  cursor: pointer;
+}
+
+.button-border-gradient-inside {
+  background: #171513;
+  color: white;
+  padding: 2rem;
+  border-radius: 999px;
+  display: flex;
+  padding: 1px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+}
