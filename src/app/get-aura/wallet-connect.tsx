@@ -89,7 +89,7 @@ function WalletConnectEVM() {
               {tabOpen === "" && (
                 <div className="flex flex-col">
                   <div className="title-choose-action">What are you up to?</div>
-                  <div className="flex gap-12 mb-40">
+                  <div className="flex gap-12 mb-40 flex-col lg:flex-row">
                     <div
                       className="card-tab-wrapper"
                       onClick={() => {

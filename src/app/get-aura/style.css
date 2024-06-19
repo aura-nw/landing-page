@@ -169,6 +169,11 @@
   cursor: pointer;
   border: 1px solid transparent;
 }
+@media only screen and (max-width: 767px) {
+  .card-tab-wrapper {
+    width: 100%;
+  }
+}
 .card-tab-wrapper:hover {
   border: 1px solid #ffd569;
 }
@@ -185,7 +190,11 @@
 .width {
   width: 752px;
 }
-
+@media only screen and (max-width: 767px) {
+  .width {
+    width: 100%;
+  }
+}
 .form-custom {
   .form-label {
     color: var(--White, #fff);
@@ -202,7 +211,6 @@
     border: 1px solid var(--Strock, rgba(160, 150, 114, 0.15));
     background: #292523;
     display: flex;
-    width: 752px;
     overflow: hidden;
     align-items: center;
     gap: 10px;
@@ -324,7 +332,7 @@
   flex-shrink: 0;
   position: relative;
 }
-.header {
+.header-abc {
   display: flex;
   flex-direction: row;
   gap: 0px;
