@@ -6,147 +6,42 @@ import depositGate from "@/assets/images/deposit_gate.svg";
 import depositMexc from "@/assets/images/deposit_mexc.svg";
 import { FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
-import { useAccount, useWalletClient } from "wagmi";
-import { fromBech32, toBech32 } from "@cosmjs/encoding";
-//@ts-ignore
-import { stripHexPrefix } from "crypto-addr-codec";
+import { useAccount, useSendTransaction, useBalance } from "wagmi";
 import TableHistory from "./table";
-import { stringToHex, parseEther, createWalletClient, custom } from "viem";
-import { aura } from "@/common/aura-chain";
+import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
+import { useForm, Controller } from "react-hook-form";
 function Deposit() {
   const [tutType, setTutType] = useState<string>("");
-  const [cosmosAcc, setCosmosAcc] = useState<string>();
-  const [copyAuraAddress, setCopyAuraAddress] = useState<boolean>(false);
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const cutText = (value: string) => {
-    if (value) {
-      return (
-        value?.substring(0, 8) +
-        "..." +
-        value?.substring(value?.length - 8, value?.length)
-      );
-    }
+  const { sendTransaction } = useSendTransaction();
+
+  const {
+    handleSubmit,
+    getValues,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const account = useAccount();
+  const balance = useBalance({
+    address: account.address,
+  });
+  const _amount = formatUnits(balance?.data?.value as bigint, 18);
+
+  const addMaxAmount = () => {
+    const values = getValues();
+    reset({ ...values, amount: _amount });
   };
 
-  const makeBech32Encoder = (prefix: string) => {
-    return (data: Buffer) => toBech32(prefix, data);
+  const onSubmit = async (data: any) => {
+    return sendTransaction({
+      to: "0xaf41083482dc220518f95993b48e8b012e782d01",
+      value: parseEther(data.amount),
+      data: stringToHex(data.address),
+    });
   };
-
-  const makeBech32Decoder = (currentPrefix: string) => {
-    return (input: string) => {
-      const { prefix, data } = fromBech32(input);
-      if (prefix !== currentPrefix) {
-        throw Error("Unrecognised address format");
-      }
-      return Buffer.from(data);
-    };
-  };
-
-  const makeChecksummedHexDecoder = () => {
-    return (data: string) => {
-      return Buffer.from(stripHexPrefix(data), "hex");
-    };
-  };
-  const convertEvmAddressToBech32Address = (
-    prefix: string,
-    ethAddress: string
-  ): string => {
-    let result = ethAddress;
-    if (result.startsWith("0x")) {
-      try {
-        const data = makeChecksummedHexDecoder()(ethAddress);
-        result = makeBech32Encoder(prefix)(data);
-      } catch (err) {
-        return "";
-      }
-    }
-    return result?.toLowerCase();
-  };
-  const transferAddress = (prefix: string, address: string) => {
-    if (address?.startsWith(prefix) && address?.length >= 63) {
-      return {
-        accountEvmAddress: null,
-        accountAddress: address,
-      };
-    }
-
-    if (address?.startsWith("0x")) {
-      return {
-        accountEvmAddress: address?.toLowerCase(),
-        accountAddress: convertEvmAddressToBech32Address(prefix, address),
-      };
-    }
-  };
-  const _account = useAccount();
-  useEffect(() => {
-    setCosmosAcc(
-      transferAddress("aura", _account?.address as string)?.accountAddress
-    );
-  }, [_account]);
-
-  const [address, setAddress] = useState("");
-  const [amount, setAmount] = useState("");
-  const [errors, setErrors] = useState({ address: "", amount: "" });
-  const [isFormValid, setIsFormValid] = useState(false);
-  //   useEffect(() => {
-  //     validateForm();
-  //   }, [address, amount]);
-  //   const validateForm = () => {
-  //     if (!address) {
-  //       errors.address = "address is required.";
-  //     }
-
-  //     if (!amount) {
-  //       errors.amount = "amount is required.";
-  //     }
-  //     setErrors(errors);
-  //     setIsFormValid(Object.keys(errors).length === 0);
-  //   };
-  const checkValidate = (type: string, value: string) => {
-    if (type === "address" && value.trim() === "") {
-      errors.address = "address is required.";
-    } else {
-      errors.address = "";
-      setAddress(value);
-    }
-    if (type === "amount" && value.trim() === "") {
-      errors.amount = "amount is required.";
-    } else {
-      errors.amount = "";
-      setAmount(value);
-    }
-    setErrors(errors);
-    setIsFormValid(Object.keys(errors).length === 0);
-  };
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setIsLoading(true);
-
-    if (isFormValid) {
-      console.log("Form submitted successfully!");
-    } else {
-      console.log("Form has errors. Please correct them.");
-    }
-  }
-//   const account = useAccount();
-
-
-//   async function send() {
-//     const [account] = await window.ethereum!.request({ method: 'eth_requestAccounts' })
-
-//     const walletClient = createWalletClient({
-//         account, 
-//         chain: aura,
-//         transport: http()
-//     });
-
-//     const hash = await walletClient.sendTransaction({
-//       data: "0xaf41083482dc220518f95993b48e8b012e782d01",
-//       account,
-//       to: stringToHex(address),
-//       value: parseEther(amount),
-//     });
-//   }
 
   return (
     <div className="flex flex-col">
@@ -163,7 +58,6 @@ function Deposit() {
             }
             onClick={() => {
               setTutType("bingx");
-              setCopyAuraAddress(false);
             }}
           >
             <Image src={bingx} alt="bingx" height={24} />
@@ -176,7 +70,6 @@ function Deposit() {
             }
             onClick={() => {
               setTutType("gateio");
-              setCopyAuraAddress(false);
             }}
           >
             <Image src={gateio} alt="gate.io" height={24} />
@@ -189,7 +82,6 @@ function Deposit() {
             }
             onClick={() => {
               setTutType("mexc");
-              setCopyAuraAddress(false);
             }}
           >
             <Image src={mexc} alt="mexc" height={24} />
@@ -222,55 +114,83 @@ function Deposit() {
                 First, go to the Deposit section on your BingX account, and
                 select AURA to retrieve the deposit address.
               </div>
-              <form onSubmit={onSubmit} className="form-custom">
+              <form onSubmit={handleSubmit(onSubmit)} className="form-custom">
                 <label className="form-label">
                   Enter <span className="orange">Deposit address </span>here
                 </label>
+
                 <div className="flex flex-col mb-6 mt-2">
                   <div className="form-input mb-1">
-                    <input
-                      type="text"
+                    <Controller
                       name="address"
-                      placeholder="Enter your deposit address from CEX"
-                      onChange={(event) =>
-                        checkValidate("address", event.target.value)
-                      }
+                      control={control}
+                      defaultValue=""
+                      rules={{
+                        required: true,
+                        pattern: {
+                          value: /^aura.{39}$/,
+                          message: "Invalid address",
+                        },
+                      }}
+                      render={({ field }) => (
+                        <input
+                          {...field}
+                          placeholder="Enter your deposit address from CEX"
+                        />
+                      )}
                     />
                   </div>
                   {errors.address && (
-                    <div className="form-error">{errors.address}</div>
+                    <div className="form-error">
+                      {errors.address.message?.toString()}
+                    </div>
                   )}
                 </div>
                 <label className="form-label">Enter amount of AURA</label>
+
                 <div className="flex flex-col mb-8 mt-2">
                   <div className="form-input flex mb-1">
-                    <input
-                      type="number"
+                    <Controller
                       name="amount"
-                      placeholder="Amount"
-                      onChange={(event) =>
-                        checkValidate("amount", event.target.value)
-                      }
+                      control={control}
+                      defaultValue=""
+                      rules={{
+                        required: true,
+                        pattern: {
+                          value: /\d+\.\d+/,
+                          message: "Amount must be a positive number",
+                        },
+                      }}
+                      render={({ field }) => (
+                        <input type="number" placeholder="Amount" {...field} />
+                      )}
                     />
-                    <button type="button" className="pr-4">
+                    <button
+                      type="button"
+                      className="pr-4"
+                      onClick={() => addMaxAmount()}
+                    >
                       max
                     </button>
                   </div>
                   {errors.amount && (
-                    <div className="form-error">{errors.amount}</div>
+                    <div className="form-error">
+                      {errors.amount.message?.toString()}
+                    </div>
                   )}
-
-                  <span className="form-text-des">Balance: 4867 Aura</span>
+                  <span className="form-text-des">
+                    Balance: {_amount?.toString()} Aura
+                  </span>
                 </div>
-
                 <div className="mb-9">
                   <button
                     type="submit"
                     className="button-border-gradient bg-brand-gradient"
-                    disabled={isLoading}
+                    // disabled={isLoading}
                   >
                     <div className="button-border-gradient-inside">
-                      {isLoading ? "Loading..." : "Confirm & Deposit"}
+                      {/* {isLoading ? "Loading..." : "Confirm & Deposit"} */}
+                      Confirm & Deposit
                     </div>
                   </button>
                 </div>
