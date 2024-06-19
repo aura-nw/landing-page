@@ -7,7 +7,6 @@ import Header from "../components/Header";
 import Tutorials from "../sections/tutorials";
 import "./globals.css";
 import '@rainbow-me/rainbowkit/styles.css';
-import "./import.css";
 
 const ppmori = localFont({ src: "./../assets/fonts/PPMori-SemiBold.otf", variable: "--font-ppmori-semibold" });
 const inter = Inter({ subsets: ["latin"] });
