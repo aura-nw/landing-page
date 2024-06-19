@@ -18,9 +18,8 @@ function Deposit() {
 
   const {
     handleSubmit,
-    getValues,
+    setValue,
     control,
-    reset,
     formState: { errors },
   } = useForm();
 
@@ -31,8 +30,9 @@ function Deposit() {
   const _amount = formatUnits(balance?.data?.value as bigint, 18);
 
   const addMaxAmount = () => {
-    const values = getValues();
-    reset({ ...values, amount: _amount });
+    if (_amount && Number(_amount) && Number(_amount) > 0) {
+      setValue("amount", Number(_amount));
+    }
   };
 
   const onSubmit = async (data: any) => {
@@ -157,7 +157,7 @@ function Deposit() {
                       rules={{
                         required: true,
                         pattern: {
-                          value: /\d+\.\d+/,
+                          value: /\d+\.?\d+/,
                           message: "Amount must be a positive number",
                         },
                       }}
