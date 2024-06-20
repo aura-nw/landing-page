@@ -19,28 +19,23 @@ export default function TableHistory() {
   // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
-  const [activityHistories, setActivityHistories] = useState<TableItemProps[]>(
-    []
-  );
-  useEffect(() => {
-    useActivityHistory(account?.address?.toLowerCase() || "").then((res) => {
-      if (res?.length > 0) {
-        const mappedList = res?.map((item) => {
-          const status =
-            item?.status === "completed" ? "success" : item?.status;
-          return {
-            txTime: item.created_at,
-            evmTxHash: item.incoming_tx_hash,
-            cosmosTxHash: item.outgoing_tx_hash,
-            depAddress: item.cex_address,
-            amount: Number(item.amount),
-            status: status?.charAt(0).toUpperCase() + status?.slice(1),
-          };
-        });
-        setActivityHistories(mappedList);
-      }
-    });
-  }, []);
+  const [activityHistories, setActivityHistories] = useState<TableItemProps[]>([]);
+  useActivityHistory(account?.address?.toLowerCase() || "").then((res) => {
+    if (res?.length > 0) {
+      const mappedList = res?.map((item) => {
+        const status = item?.status === "completed" ? "success" : item?.status;
+        return {
+          txTime: item.created_at,
+          evmTxHash: item.incoming_tx_hash,
+          cosmosTxHash: item.outgoing_tx_hash,
+          depAddress: item.cex_address,
+          amount: Number(item.amount),
+          status: status?.charAt(0).toUpperCase() + status?.slice(1),
+        };
+      });
+      setActivityHistories(mappedList);
+    }
+  });
 
   if (isMobile) {
     return (
@@ -49,7 +44,7 @@ export default function TableHistory() {
 
         {activityHistories?.length > 0 ? (
           activityHistories?.map((item) => (
-            <div className="frame-29779 mt-6">
+            <div className="frame-29779 mt-6" key={item?.evmTxHash}>
               <MobileTableItem tableItem={item} />
             </div>
           ))
@@ -84,11 +79,7 @@ export default function TableHistory() {
             <div className="title">Status</div>
           </div>
         </div>
-        {activityHistories?.length > 0 ? (
-          activityHistories?.map((item) => <TableItem tableItem={item} />)
-        ) : (
-          <div className="w-full text-center p-16">No history yet</div>
-        )}
+        {activityHistories?.length > 0 ? activityHistories?.map((item) => <TableItem tableItem={item} key={item?.evmTxHash} />) : <div className="w-full text-center p-16">No history yet</div>}
       </div>
     </div>
   );
