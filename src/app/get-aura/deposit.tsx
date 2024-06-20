@@ -10,6 +10,17 @@ import { useAccount, useSendTransaction, useBalance } from "wagmi";
 import TableHistory from "./table";
 import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
 import { useForm, Controller } from "react-hook-form";
+import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+
+interface TableItemProps {
+  txTime: string;
+  evmTxHash: string;
+  cosmosTxHash: string;
+  depAddress: string;
+  amount: number;
+  status: string;
+}
+
 function Deposit() {
   const [tutType, setTutType] = useState<string>("");
 
@@ -24,6 +35,7 @@ function Deposit() {
   } = useForm();
 
   const account = useAccount();
+  // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
   const balance = useBalance({
     address: account.address,
   });
@@ -46,6 +58,41 @@ function Deposit() {
     const inputValue = event.target.value;
     setValue("amount", inputValue.replace(/[^0-9]/g, ""));
   };
+
+  const getActivityHistory = (fromAddress: string): Promise<DepositHistory[]> => {
+    const url = "https://cex.staging.aura.network/public/DepositService/deposits";
+
+    const request: AxiosRequestConfig = {
+      url: url,
+      method: "get",
+      params: {
+        from: fromAddress,
+      },
+    };
+
+    const res: Promise<AxiosResponse<DepositHistory[]>> = axios.request(request);
+    return res.then((response) => response.data);
+  };
+
+  const [activityHistories, setActivityHistories] = useState<TableItemProps[]>([]);
+  useEffect(() => {
+    getActivityHistory(account?.address?.toLowerCase() || "").then((res) => {
+      if (res?.length > 0) {
+        const mappedList = res?.map((item) => {
+          const status = item?.status === "completed" ? "success" : item?.status;
+          return {
+            txTime: item.created_at,
+            evmTxHash: item.incoming_tx_hash,
+            cosmosTxHash: item.outgoing_tx_hash,
+            depAddress: item.cex_address,
+            amount: Number(item.amount),
+            status: status?.charAt(0).toUpperCase() + status?.slice(1),
+          };
+        });
+        setActivityHistories(mappedList);
+      }
+    });
+  }, [account]);
 
   if (!account?.address) {
     return <div></div>;
@@ -157,7 +204,7 @@ function Deposit() {
         </div>
       )}
       <div className="mt-12">
-        <TableHistory></TableHistory>
+        <TableHistory activityHistories={activityHistories}></TableHistory>
       </div>
     </div>
   );

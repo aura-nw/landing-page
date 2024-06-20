@@ -15,45 +15,12 @@ interface TableItemProps {
   status: string;
 }
 
-export default function TableHistory() {
-  const account = useAccount();
-  // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
+type ActivityHistoryProp = {
+  activityHistories: TableItemProps[];
+}
+
+export default function TableHistory({activityHistories} : ActivityHistoryProp) {
   const isMobile = useMediaQuery({ maxWidth: 600 });
-
-  const getActivityHistory = (fromAddress: string): Promise<DepositHistory[]> => {
-    const url = "https://cex.staging.aura.network/public/DepositService/deposits";
-
-    const request: AxiosRequestConfig = {
-      url: url,
-      method: "get",
-      params: {
-        from: fromAddress,
-      },
-    };
-
-    const res: Promise<AxiosResponse<DepositHistory[]>> = axios.request(request);
-    return res.then((response) => response.data);
-  };
-
-  const [activityHistories, setActivityHistories] = useState<TableItemProps[]>([]);
-  useEffect(() => {
-    getActivityHistory(account?.address?.toLowerCase() || "").then((res) => {
-      if (res?.length > 0) {
-        const mappedList = res?.map((item) => {
-          const status = item?.status === "completed" ? "success" : item?.status;
-          return {
-            txTime: item.created_at,
-            evmTxHash: item.incoming_tx_hash,
-            cosmosTxHash: item.outgoing_tx_hash,
-            depAddress: item.cex_address,
-            amount: Number(item.amount),
-            status: status?.charAt(0).toUpperCase() + status?.slice(1),
-          };
-        });
-        setActivityHistories(mappedList);
-      }
-    });
-  }, []);
 
   if (isMobile) {
     return (
