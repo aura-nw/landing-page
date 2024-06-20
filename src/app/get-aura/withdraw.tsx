@@ -84,6 +84,11 @@ function Withdraw() {
       transferAddress("aura", _account?.address as string)?.accountAddress
     );
   }, [_account]);
+
+  if (!_account?.address) {
+    return <div></div>;
+  }
+
   return (
     <div className="main-container sub-container flex flex-col">
       <div className="flex flex-col">
