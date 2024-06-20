@@ -4,6 +4,7 @@ import Ecosystem from "../sections/ecosystem";
 import Parters from "../sections/partners";
 import Statistics from "../sections/statistics";
 import dynamic from "next/dynamic";
+import Tutorials from "@/sections/tutorials";
 const Blogs = dynamic(() => import("../sections/blogs"));
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Tutorials />
     </div>
   );
 }

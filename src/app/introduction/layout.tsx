@@ -1,3 +1,4 @@
+import Tutorials from "@/sections/tutorials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function Layout({
     return (
         <div className="bg-[#000]">
             {children}
+            <Tutorials />
         </div>
     );
 }
