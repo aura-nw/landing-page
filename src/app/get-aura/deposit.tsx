@@ -76,7 +76,7 @@ function Deposit() {
     });
   const onSubmit = async (data: any) => {
     return sendTransaction({
-      to: "0xaf41083482dc220518f95993b48e8b012e782d01",
+      to: "0xdc38aea1ed6a9c224e622e27986645d3cc4f609d",
       value: parseEther(data.amount),
       data: stringToHex(data.address),
     });
@@ -97,7 +97,7 @@ function Deposit() {
 
   const getActivityHistory = (fromAddress: string) => {
     const url =
-      "https://cex.staging.aura.network/public/DepositService/deposits";
+      "https://cex.aura.network/public/DepositService/deposits";
 
     const request: AxiosRequestConfig = {
       url: url,
