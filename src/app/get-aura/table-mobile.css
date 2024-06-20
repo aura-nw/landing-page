@@ -290,3 +290,8 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+.expanded {
+  transform: rotate(180deg);
+  animation: 0.3s ease-in-out all;
+}

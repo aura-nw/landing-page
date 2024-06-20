@@ -45,7 +45,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
               setExpand(!expand);
             }}
           >
-            <Image src={carretUp} alt="gate.io" height={16} />
+            <Image src={carretUp} className={expand ? 'expanded': ''} alt="" height={16} />
           </div>
         </div>
         {expand && (
