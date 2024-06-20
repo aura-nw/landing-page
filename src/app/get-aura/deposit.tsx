@@ -31,7 +31,7 @@ function Deposit() {
 
   const addMaxAmount = () => {
     if (_amount && Number(_amount) && Number(_amount) > 0) {
-      setValue("amount", Number(_amount));
+      setValue("amount", Math.round(Number(_amount)));
     }
   };
 
@@ -42,7 +42,10 @@ function Deposit() {
       data: stringToHex(data.address),
     });
   };
-
+  const handleChange = (event: any) => {
+    const inputValue = event.target.value;
+    setValue("amount", inputValue.replace(/[^0-9]/g, ""));
+  };
   return (
     <div className="flex flex-col">
       <div className="flex flex-col">
@@ -157,12 +160,17 @@ function Deposit() {
                       rules={{
                         required: true,
                         pattern: {
-                          value: /\d+\.?\d+/,
+                          value: /^\d+$/,
                           message: "Amount must be a positive number",
                         },
                       }}
                       render={({ field }) => (
-                        <input type="number" placeholder="Amount" {...field} />
+                        <input
+                          type="text"
+                          placeholder="Amount"
+                          {...field}
+                          onChange={handleChange}
+                        />
                       )}
                     />
                     <button

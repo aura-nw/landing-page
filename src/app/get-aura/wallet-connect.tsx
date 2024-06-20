@@ -104,7 +104,7 @@ function WalletConnectEVM() {
                         />
                       </div>
                       <div className="text-white self-stretch font-ppmori-semibold description lg:text-[32px] mb-8">
-                        Withdraw AURA from CEXes
+                        Withdraw AURA from exchanges
                       </div>
                       <div className="flex items-center gap-2 cursor-pointer">
                         <span className="orange">Go</span>
@@ -129,7 +129,7 @@ function WalletConnectEVM() {
                         />
                       </div>
                       <div className="text-white self-stretch font-ppmori-semibold description lg:text-[32px] mb-8">
-                        Deposit AURA to CEXes
+                        Deposit AURA from exchanges
                       </div>
                       <div className="flex items-center gap-2 cursor-pointer">
                         <span className="orange">Go</span>
