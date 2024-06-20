@@ -49,10 +49,8 @@ export default function TableHistory() {
 
         {activityHistories?.length > 0 ? (
           activityHistories?.map((item) => (
-            <div className="table mt-6">
-              <div className="frame-29612">
-                <MobileTableItem tableItem={item} />
-              </div>
+            <div className="frame-29779 mt-6">
+              <MobileTableItem tableItem={item} />
             </div>
           ))
         ) : (

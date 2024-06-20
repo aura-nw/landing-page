@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { formatUnits } from "viem";
 import "./table-mobile.css";
 import carretUp from "@/assets/icons/ic_carret_up.svg";
+import clock from "@/assets/icons/ic_clock.svg";
 import Image from "next/image";
 
 interface MobileTableItemProps {
@@ -31,7 +32,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
             </div>
             <div className="time-and-message">
               <div className="time">
-                <img className="icons-clock-line" src="icons-clock-line0.svg" />
+              <Image src={clock} alt="" height={14} />
                 <div className="cell-text2">{dayjs(tableItem.txTime).format("HH:mm:ss DD/MM/YYYY")}</div>
               </div>
             </div>
@@ -49,7 +50,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
           </div>
         </div>
         {expand && (
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full gap-2">
             <div className="line-18"></div>
             <div className="frame-29708">
               <div className="amount">Amount</div>

@@ -29,7 +29,7 @@ const Address: React.FC<AddressProps> = ({
 
   const handleClick = () => {
     if (link) {
-      window.open(`https://aurascan.io/transaction/${address}`);
+      window.open(`https://aurascan.io/tx/${address}`);
     }
   };
 
