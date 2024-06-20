@@ -11,7 +11,7 @@ export default function Layout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="bg-[url('../assets/images/img_bg_mask_mb.png')] lg:bg-[url('../assets/images/img_bg_gradient.png')] lg:bg-cover bg-no-repeat">
+        <div className="bg-[#000]">
             {children}
         </div>
     );
