@@ -19,12 +19,15 @@ export default function TableHistory() {
   // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
-  const [activityHistories, setActivityHistories] = useState<TableItemProps[]>([]);
+  const [activityHistories, setActivityHistories] = useState<TableItemProps[]>(
+    []
+  );
   useEffect(() => {
     useActivityHistory(account?.address?.toLowerCase() || "").then((res) => {
       if (res?.length > 0) {
         const mappedList = res?.map((item) => {
-          const status = item?.status === "completed" ? "success" : item?.status;
+          const status =
+            item?.status === "completed" ? "success" : item?.status;
           return {
             txTime: item.created_at,
             evmTxHash: item.incoming_tx_hash,
@@ -39,14 +42,25 @@ export default function TableHistory() {
     });
   }, []);
 
-  // if (isMobile) {
-  //   return (
-  //     <div className="table">
-  //       <div className="history">History</div>
-  //       <div className="frame-29612">{activityHistories?.length > 0 ? activityHistories?.map((item) => <MobileTableItem tableItem={item} />) : <div className="w-full text-center p-16">No history yet</div>}</div>
-  //     </div>
-  //   );
-  // }
+  if (isMobile) {
+    return (
+      <div className="flex flex-col">
+        <div className="history">History</div>
+
+        {activityHistories?.length > 0 ? (
+          activityHistories?.map((item) => (
+            <div className="table mt-6">
+              <div className="frame-29612">
+                <MobileTableItem tableItem={item} />
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="w-full text-center p-16">No history yet</div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="table">
@@ -72,7 +86,11 @@ export default function TableHistory() {
             <div className="title">Status</div>
           </div>
         </div>
-        {activityHistories?.length > 0 ? activityHistories?.map((item) => <TableItem tableItem={item} />) : <div className="w-full text-center p-16">No history yet</div>}
+        {activityHistories?.length > 0 ? (
+          activityHistories?.map((item) => <TableItem tableItem={item} />)
+        ) : (
+          <div className="w-full text-center p-16">No history yet</div>
+        )}
       </div>
     </div>
   );

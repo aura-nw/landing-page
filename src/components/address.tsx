@@ -7,8 +7,19 @@ interface AddressProps {
   color?: string;
 }
 
-const Address: React.FC<AddressProps> = ({ address, link = false, ellipsis = false, color }) => {
-  const formattedAddress = ellipsis ? `${address.slice(0, 8)}...${address.slice(-8)}` : address;
+const Address: React.FC<AddressProps> = ({
+  address,
+  link = false,
+  ellipsis = false,
+  color,
+}) => {
+  if (!address) {
+    return "";
+  }
+
+  const formattedAddress = ellipsis
+    ? `${address?.slice(0, 8)}...${address?.slice(-8)}`
+    : address;
 
   const addressStyle = {
     color,
@@ -18,13 +29,16 @@ const Address: React.FC<AddressProps> = ({ address, link = false, ellipsis = fal
 
   const handleClick = () => {
     if (link) {
-      // Handle click event for the address link
-      // Example: window.open(`https://etherscan.io/address/${address}`);
+      window.open(`https://aurascan.io/transaction/${address}`);
     }
   };
 
   return (
-    <span className="efa-8892-c-2-c-9-a-8-e-63" style={addressStyle} onClick={handleClick}>
+    <span
+      className="efa-8892-c-2-c-9-a-8-e-63"
+      style={addressStyle}
+      onClick={handleClick}
+    >
       {formattedAddress}
     </span>
   );
