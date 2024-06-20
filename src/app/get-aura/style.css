@@ -128,7 +128,9 @@
   gap: 12px;
   padding: 16px 32px;
 }
-
+.button-border-gradient:disabled .button-border-gradient-inside {
+  background: #a19c9c;
+}
 .grey-text {
   color: var(--Text, #968c7c);
   text-align: center;

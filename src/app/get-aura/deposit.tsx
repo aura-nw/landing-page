@@ -1,7 +1,7 @@
 import bingx from "@/assets/images/img_bingx_logo.svg";
 import mexc from "@/assets/images/img_mexc_logo.svg";
 import gateio from "@/assets/images/img_gateio_logo.svg";
-import depositBingx from "@/assets/images/deposit_bingx.svg";
+import depositBingx from "@/assets/images/deposit_bingx.jpg";
 import depositGate from "@/assets/images/deposit_gate.jpg";
 import depositMexc from "@/assets/images/deposit_mexc.jpg";
 import Image from "next/image";
@@ -74,7 +74,7 @@ function Deposit() {
       notify();
       setTimeout(() => {
         getActivityHistory(account?.address || "");
-      }, 5000);
+      }, 3000);
     }
   }, [isConfirmed]);
   const handleChange = (event: any) => {
@@ -215,10 +215,14 @@ function Deposit() {
                   <span className="form-text-des">Balance: {_amount?.toString()} Aura</span>
                 </div>
                 <div className="mb-9">
-                  <button type="submit" className="button-border-gradient bg-brand-gradient" disabled={isPending}>
-                    <div className="button-border-gradient-inside">{isPending ? "Confirming..." : "Deposit"}</div>
+                  <button type="submit" className="button-border-gradient bg-brand-gradient" disabled={isPending || isConfirming}>
+                    <div className="button-border-gradient-inside">{isPending ? "Confirming..." : isConfirming ? "Waiting for confirmation..." : "Deposit"}</div>
                   </button>
-                  {isConfirming && <div className="text-noti mt-2">Waiting for confirmation...</div>}
+                  {/* {isConfirming && (
+                    <div className="text-noti mt-2">
+                      Waiting for confirmation...
+                    </div>
+                  )} */}
                   {/* {isConfirmed && <div>Transaction confirmed.</div>} */}
                   {error && <div>Error: {(error as BaseError).shortMessage || error.message}</div>}
                   <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"></ToastContainer>
