@@ -1,7 +1,7 @@
 import bingx from "@/assets/images/img_bingx_logo.svg";
 import mexc from "@/assets/images/img_mexc_logo.svg";
 import gateio from "@/assets/images/img_gateio_logo.svg";
-import depositBingx from "@/assets/images/deposit_bingx.svg";
+import depositBingx from "@/assets/images/deposit_bingx.jpg";
 import depositGate from "@/assets/images/deposit_gate.jpg";
 import depositMexc from "@/assets/images/deposit_mexc.jpg";
 import Image from "next/image";
@@ -292,17 +292,21 @@ function Deposit() {
                   <button
                     type="submit"
                     className="button-border-gradient bg-brand-gradient"
-                    disabled={isPending}
+                    disabled={isPending || isConfirming}
                   >
                     <div className="button-border-gradient-inside">
-                      {isPending ? "Confirming..." : "Deposit"}
+                      {isPending
+                        ? "Confirming..."
+                        : isConfirming
+                        ? "Waiting for confirmation..."
+                        : "Deposit"}
                     </div>
                   </button>
-                  {isConfirming && (
+                  {/* {isConfirming && (
                     <div className="text-noti mt-2">
                       Waiting for confirmation...
                     </div>
-                  )}
+                  )} */}
                   {/* {isConfirmed && <div>Transaction confirmed.</div>} */}
                   {error && (
                     <div>
