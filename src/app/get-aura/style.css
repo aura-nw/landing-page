@@ -64,6 +64,13 @@
   line-height: 24px; /* 150% */
   letter-spacing: -0.24px;
 }
+.text-noti {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 150% */
+  letter-spacing: -0.24px;
+}
 
 .aura-address-box {
   display: flex;

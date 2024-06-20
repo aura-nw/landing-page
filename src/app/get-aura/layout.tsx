@@ -2,7 +2,6 @@
 import { aura } from "@/common/aura-chain";
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Metadata } from "next";
 import { WagmiProvider } from "wagmi";
 import WalletConnectEVM from "./wallet-connect";
 

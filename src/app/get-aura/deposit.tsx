@@ -2,15 +2,17 @@ import bingx from "@/assets/images/img_bingx_logo.svg";
 import mexc from "@/assets/images/img_mexc_logo.svg";
 import gateio from "@/assets/images/img_gateio_logo.svg";
 import depositBingx from "@/assets/images/deposit_bingx.svg";
-import depositGate from "@/assets/images/deposit_gate.svg";
-import depositMexc from "@/assets/images/deposit_mexc.svg";
-import { FormEvent, useEffect, useState } from "react";
+import depositGate from "@/assets/images/deposit_gate.jpg";
+import depositMexc from "@/assets/images/deposit_mexc.jpg";
 import Image from "next/image";
-import { useAccount, useSendTransaction, useBalance } from "wagmi";
+import { useAccount, useSendTransaction, useBalance, useWaitForTransactionReceipt, BaseError } from "wagmi";
 import TableHistory from "./table";
 import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
 import { useForm, Controller } from "react-hook-form";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface TableItemProps {
   txTime: string;
@@ -23,14 +25,16 @@ interface TableItemProps {
 
 function Deposit() {
   const [tutType, setTutType] = useState<string>("");
-
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { sendTransaction } = useSendTransaction();
+  const { sendTransaction, data: hash, isPending, error } = useSendTransaction();
+  const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransactionReceipt({
+    hash,
+  });
 
   const {
     handleSubmit,
     setValue,
     control,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -46,7 +50,17 @@ function Deposit() {
       setValue("amount", Math.round(Number(_amount)));
     }
   };
-
+  const notify = () =>
+    toast.success("Transaction confirmed.", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   const onSubmit = async (data: any) => {
     return sendTransaction({
       to: "0xaf41083482dc220518f95993b48e8b012e782d01",
@@ -54,6 +68,15 @@ function Deposit() {
       data: stringToHex(data.address),
     });
   };
+  useEffect(() => {
+    if (isConfirmed) {
+      reset();
+      notify();
+      setTimeout(() => {
+        getActivityHistory(account?.address || "");
+      }, 5000);
+    }
+  }, [isConfirmed]);
   const handleChange = (event: any) => {
     const inputValue = event.target.value;
     setValue("amount", inputValue.replace(/[^0-9]/g, ""));
@@ -101,7 +124,7 @@ function Deposit() {
   return (
     <div className="main-container sub-container flex flex-col">
       <div className="flex flex-col">
-        <div className="introduce-title">Let’s get some AURA from one of our beloved partners below:</div>
+        <div className="introduce-title">Let’s deposit some AURA to your desired CEX below::</div>
         <div className="flex gap-8 items-center justify-center mt-6 partner">
           <div
             className={tutType === "bingx" ? "active partner-button cursor-pointer" : "partner-button cursor-pointer"}
@@ -186,16 +209,13 @@ function Deposit() {
                   <span className="form-text-des">Balance: {_amount?.toString()} Aura</span>
                 </div>
                 <div className="mb-9">
-                  <button
-                    type="submit"
-                    className="button-border-gradient bg-brand-gradient"
-                    // disabled={isLoading}
-                  >
-                    <div className="button-border-gradient-inside">
-                      {/* {isLoading ? "Loading..." : "Confirm & Deposit"} */}
-                      Confirm & Deposit
-                    </div>
+                  <button type="submit" className="button-border-gradient bg-brand-gradient" disabled={isPending}>
+                    <div className="button-border-gradient-inside">{isPending ? "Confirming..." : "Deposit"}</div>
                   </button>
+                  {isConfirming && <div className="text-noti mt-2">Waiting for confirmation...</div>}
+                  {/* {isConfirmed && <div>Transaction confirmed.</div>} */}
+                  {error && <div>Error: {(error as BaseError).shortMessage || error.message}</div>}
+                  <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"></ToastContainer>
                 </div>
               </form>
               <div className="text-tutorial">Note: Direct deposit AURA to CEXes through the Hex address format is under construction, thus this page exists. Your AURA will be sent to an address that is operated by Aura Network, and we will sent it to your deposit address.</div>
