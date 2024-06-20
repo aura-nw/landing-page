@@ -46,6 +46,11 @@ function Deposit() {
     const inputValue = event.target.value;
     setValue("amount", inputValue.replace(/[^0-9]/g, ""));
   };
+
+  if (!account?.address) {
+    return <div></div>;
+  }
+
   return (
     <div className="main-container sub-container flex flex-col">
       <div className="flex flex-col">
@@ -124,14 +129,7 @@ function Deposit() {
                           message: "Amount must be a positive number",
                         },
                       }}
-                      render={({ field }) => (
-                        <input
-                          type="text"
-                          placeholder="Amount"
-                          {...field}
-                          onChange={handleChange}
-                        />
-                      )}
+                      render={({ field }) => <input type="text" placeholder="Amount" {...field} onChange={handleChange} />}
                     />
                     <button type="button" className="pr-4" onClick={() => addMaxAmount()}>
                       max
