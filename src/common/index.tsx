@@ -4,7 +4,9 @@ export const enum PAGE_ROUTE {
     TECH_STACK = '/tech-stack',
     BUILD = '/build',
     DOCS = '/docs',
-    GET_AURA = '/get-aura'
+    GET_AURA = '/get-aura',
+    DEPOSIT_AURA = '/get-aura/deposit-aura',
+    WITHDRAW_AURA = '/get-aura/withdraw-aura',
 }
 
 export const enum SOCIAL {
