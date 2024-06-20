@@ -44,7 +44,7 @@ function Deposit() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="main-container sub-container flex flex-col">
       <div className="flex flex-col">
         <div className="introduce-title">Let’s get some AURA from one of our beloved partners below:</div>
         <div className="flex gap-8 items-center justify-center mt-6 partner">

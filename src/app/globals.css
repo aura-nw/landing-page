@@ -46,6 +46,10 @@ body {
   padding-left: 24px;
 }
 
+.main-container.sub-container {
+  padding-top: 0;
+}
+
 .header {
   margin: auto;
   padding-right: 24px;
