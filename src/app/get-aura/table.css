@@ -231,7 +231,7 @@
   width: 120px;
   position: relative;
 }
-.pending {
+.pending, .processing {
   color: var(--global-grayscale-grey-1, #e5e7ea);
   text-align: left;
   font-family: var(--desktop-body-s-r-font-family, "Inter-Regular", sans-serif);

@@ -94,11 +94,7 @@
 .cell-text2 {
   color: var(--global-grayscale-grey-05, #f2f3f5);
   text-align: left;
-  font-family: var(
-    --desktop-body-xs-r-font-family,
-    "Inter-Regular",
-    sans-serif
-  );
+  font-family: var(--desktop-body-xs-r-font-family, "Inter-Regular", sans-serif);
   font-size: var(--desktop-body-xs-r-font-size, 12px);
   line-height: var(--desktop-body-xs-r-line-height, 16px);
   font-weight: var(--desktop-body-xs-r-font-weight, 400);
@@ -122,14 +118,50 @@
 .in {
   color: var(--success, #67c091);
   text-align: left;
-  font-family: var(
-    --desktop-body-xs-sb-font-family,
-    "Inter-SemiBold",
-    sans-serif
-  );
+  font-family: var(--desktop-body-xs-sb-font-family, "Inter-SemiBold", sans-serif);
   font-size: var(--desktop-body-xs-sb-font-size, 12px);
   line-height: var(--desktop-body-xs-sb-line-height, 16px);
   font-weight: var(--desktop-body-xs-sb-font-weight, 600);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pending,
+.processing {
+  color: var(--global-grayscale-grey-1, #e5e7ea);
+  text-align: left;
+  font-family: var(--desktop-body-s-r-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--desktop-body-s-r-font-size, 14px);
+  line-height: var(--desktop-body-s-r-line-height, 18px);
+  letter-spacing: var(--desktop-body-s-r-letter-spacing, 0.01em);
+  font-weight: var(--desktop-body-s-r-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.success {
+  color: var(--success, #67c091);
+  text-align: left;
+  font-family: var(--desktop-body-s-r-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--desktop-body-s-r-font-size, 14px);
+  line-height: var(--desktop-body-s-r-line-height, 18px);
+  letter-spacing: var(--desktop-body-s-r-letter-spacing, 0.01em);
+  font-weight: var(--desktop-body-s-r-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.failed {
+  color: var(--error, #d5625e);
+  text-align: left;
+  font-family: var(--desktop-body-s-r-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--desktop-body-s-r-font-size, 14px);
+  line-height: var(--desktop-body-s-r-line-height, 18px);
+  letter-spacing: var(--desktop-body-s-r-letter-spacing, 0.01em);
+  font-weight: var(--desktop-body-s-r-font-weight, 400);
   position: relative;
   display: flex;
   align-items: center;

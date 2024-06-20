@@ -82,7 +82,7 @@ function Deposit() {
     setValue("amount", inputValue.replace(/[^0-9]/g, ""));
   };
 
-  const getActivityHistory = (fromAddress: string): Promise<DepositHistory[]> => {
+  const getActivityHistory = (fromAddress: string) => {
     const url = "https://cex.staging.aura.network/public/DepositService/deposits";
 
     const request: AxiosRequestConfig = {
@@ -94,28 +94,34 @@ function Deposit() {
     };
 
     const res: Promise<AxiosResponse<DepositHistory[]>> = axios.request(request);
-    return res.then((response) => response.data);
+    return res
+      .then((response) => response.data)
+      .then((res) => {
+        if (res?.length > 0) {
+          const mappedList = res?.map((item) => {
+            const status = item?.status === "completed" ? "success" : item?.status;
+            return {
+              txTime: item.created_at,
+              evmTxHash: item.incoming_tx_hash,
+              cosmosTxHash: item.outgoing_tx_hash,
+              depAddress: item.cex_address,
+              amount: Number(item.amount),
+              status: status?.charAt(0).toUpperCase() + status?.slice(1),
+            };
+          });
+          setActivityHistories(mappedList);
+        } else {
+          setActivityHistories([]);
+        }
+      });
   };
 
   const [activityHistories, setActivityHistories] = useState<TableItemProps[]>([]);
   useEffect(() => {
-    getActivityHistory(account?.address?.toLowerCase() || "").then((res) => {
-      if (res?.length > 0) {
-        const mappedList = res?.map((item) => {
-          const status = item?.status === "completed" ? "success" : item?.status;
-          return {
-            txTime: item.created_at,
-            evmTxHash: item.incoming_tx_hash,
-            cosmosTxHash: item.outgoing_tx_hash,
-            depAddress: item.cex_address,
-            amount: Number(item.amount),
-            status: status?.charAt(0).toUpperCase() + status?.slice(1),
-          };
-        });
-        setActivityHistories(mappedList);
-      }
-    });
-  }, [account]);
+    if (account?.address) {
+      getActivityHistory(account?.address?.toLowerCase() || "");
+    }
+  }, [account?.address]);
 
   if (!account?.address) {
     return <div></div>;

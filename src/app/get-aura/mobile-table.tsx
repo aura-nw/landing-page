@@ -37,7 +37,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
               </div>
             </div>
             <div className="in-out">
-              <div className="in">{tableItem.status}</div>
+              <div className={tableItem?.status?.toLowerCase()}>{tableItem.status}</div>
             </div>
           </div>
           <div
