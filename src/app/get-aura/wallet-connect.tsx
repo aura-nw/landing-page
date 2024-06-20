@@ -22,18 +22,12 @@ function WalletConnectEVM() {
           <div className="xl:max-w-[867px] flex flex-col gap-10 px-2 items-center">
             {!_account?.address ? (
               <div className="flex flex-col">
-                <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[48px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
-                  Your Journey Start Here
-                </h1>
-                <div className="text-medium-gray text-center text-xl lg:text-[20px] font-normal leading-8 max-w-[717px]">
-                  But first, let’s get you some AURA
-                </div>
+                <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[48px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">Your Journey Start Here</h1>
+                <div className="text-medium-gray text-center text-xl lg:text-[20px] font-normal leading-8 max-w-[717px]">But first, let’s get you some AURA</div>
               </div>
             ) : (
               <div className="flex flex-col">
-                <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
-                  Welcome
-                </h1>
+                <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[80px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">Welcome</h1>
                 <div className="flex gap-8 items-center justify-center">
                   <div className="address">{_account?.address}</div>
                   <Image
@@ -56,10 +50,7 @@ function WalletConnectEVM() {
               {({ account, openConnectModal }) => {
                 if (!account) {
                   return (
-                    <button
-                      onClick={openConnectModal}
-                      className={`w-fit rounded-full bg-brand-gradient hover:text-[#FD9552] hover:bg-dark-charcoal hover:bg-none hover:border hover:border-[#262320] py-4 px-8 font-semibold text-black text-lg leading-normal h-[54px] flex items-center`}
-                    >
+                    <button onClick={openConnectModal} className={`w-fit rounded-full bg-brand-gradient hover:text-[#FD9552] hover:bg-dark-charcoal hover:bg-none hover:border hover:border-[#262320] py-4 px-8 font-semibold text-black text-lg leading-normal h-[54px] flex items-center`}>
                       Connect wallet
                     </button>
                   );
@@ -69,15 +60,9 @@ function WalletConnectEVM() {
           </div>
           {!_account?.address ? (
             <div className="get-more-aura-box">
-              <div className="text-white self-stretch text-center lg:text-center font-ppmori-semibold description">
-                More ways to get AURA
-              </div>
+              <div className="text-white self-stretch text-center lg:text-center font-ppmori-semibold description">More ways to get AURA</div>
 
-              <a
-                href="https://insight.aura.network/full-tutorial-how-to-buy-aura/"
-                target="_blank"
-                className="button-border-gradient bg-brand-gradient"
-              >
+              <a href="https://insight.aura.network/full-tutorial-how-to-buy-aura/" target="_blank" className="button-border-gradient bg-brand-gradient">
                 <div className="button-border-gradient-inside">
                   Read article
                   <Image src={arrowRight} alt="gate.io" height={20} />
@@ -85,7 +70,7 @@ function WalletConnectEVM() {
               </a>
             </div>
           ) : (
-            <div>
+            <div className={tabOpen === "deposit" ? "w-full" : ""}>
               {tabOpen === "" && (
                 <div className="flex flex-col">
                   <div className="title-choose-action">What are you up to?</div>
@@ -97,22 +82,12 @@ function WalletConnectEVM() {
                       }}
                     >
                       <div className="mb-12">
-                        <Image
-                          src={withdrawIcon}
-                          alt="withdrawIcon"
-                          height={withdrawIcon?.height}
-                        />
+                        <Image src={withdrawIcon} alt="withdrawIcon" height={withdrawIcon?.height} />
                       </div>
-                      <div className="text-white self-stretch font-ppmori-semibold description lg:text-[32px] mb-8">
-                        Withdraw AURA from CEXes
-                      </div>
+                      <div className="text-white self-stretch font-ppmori-semibold description lg:text-[32px] mb-8">Withdraw AURA from CEXes</div>
                       <div className="flex items-center gap-2 cursor-pointer">
                         <span className="orange">Go</span>
-                        <Image
-                          src={arrowRight_orange}
-                          alt="gate.io"
-                          height={20}
-                        />
+                        <Image src={arrowRight_orange} alt="gate.io" height={20} />
                       </div>
                     </div>
                     <div
@@ -122,35 +97,19 @@ function WalletConnectEVM() {
                       }}
                     >
                       <div className="mb-12">
-                        <Image
-                          src={depositIcon}
-                          alt="depositIcon"
-                          height={depositIcon?.height}
-                        />
+                        <Image src={depositIcon} alt="depositIcon" height={depositIcon?.height} />
                       </div>
-                      <div className="text-white self-stretch font-ppmori-semibold description lg:text-[32px] mb-8">
-                        Deposit AURA to CEXes
-                      </div>
+                      <div className="text-white self-stretch font-ppmori-semibold description lg:text-[32px] mb-8">Deposit AURA to CEXes</div>
                       <div className="flex items-center gap-2 cursor-pointer">
                         <span className="orange">Go</span>
-                        <Image
-                          src={arrowRight_orange}
-                          alt="gate.io"
-                          height={20}
-                        />
+                        <Image src={arrowRight_orange} alt="gate.io" height={20} />
                       </div>
                     </div>
                   </div>
                   <div className="get-more-aura-box">
-                    <div className="text-white self-stretch text-center lg:text-center font-ppmori-semibold description">
-                      More ways to get AURA
-                    </div>
+                    <div className="text-white self-stretch text-center lg:text-center font-ppmori-semibold description">More ways to get AURA</div>
 
-                    <a
-                      href="https://insight.aura.network/full-tutorial-how-to-buy-aura/"
-                      target="_blank"
-                      className="button-border-gradient bg-brand-gradient"
-                    >
+                    <a href="https://insight.aura.network/full-tutorial-how-to-buy-aura/" target="_blank" className="button-border-gradient bg-brand-gradient">
                       <div className="button-border-gradient-inside">
                         Read article
                         <Image src={arrowRight} alt="gate.io" height={20} />
