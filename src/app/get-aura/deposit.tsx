@@ -11,6 +11,7 @@ import {
   useBalance,
   useWaitForTransactionReceipt,
   BaseError,
+  useReconnect,
 } from "wagmi";
 import TableHistory from "./table";
 import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
@@ -18,7 +19,7 @@ import { useForm, Controller } from "react-hook-form";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation";
 
 interface TableItemProps {
   txTime: string;
@@ -50,7 +51,8 @@ function Deposit() {
     formState: { errors },
   } = useForm();
 
-  const { address, isConnected } = useAccount();
+  const { address, isConnected, isConnecting, isDisconnected, isReconnecting } =
+    useAccount();
   // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
   const balance = useBalance({
     address: address,
@@ -130,58 +132,67 @@ function Deposit() {
       getActivityHistory(address?.toLowerCase() || "");
     }
   }, [address]);
+  const { reconnect } = useReconnect();
 
-  if (!isConnected) {
-    redirect('/');
+  useEffect(() => {
+    if (!isConnected) {
+      reconnect();
+      console.log('-----------reconnect')
+    }
+  }, [isConnected]);
+
+  if (isDisconnected) {
+    redirect("/get-aura");
   }
 
   return (
     <div className="main-container sub-container flex flex-col">
-      <div className="flex flex-col">
-        <div className="introduce-title">
-          Let’s deposit some AURA to your desired CEX below:
+      {!isConnected && (
+        <div className="flex flex-col">
+          <div className="introduce-title">
+            Let’s deposit some AURA to your desired CEX below:
+          </div>
+          <div className="flex gap-8 items-center justify-center mt-6 partner">
+            <div
+              className={
+                tutType === "bingx"
+                  ? "active partner-button cursor-pointer"
+                  : "partner-button cursor-pointer"
+              }
+              onClick={() => {
+                setTutType("bingx");
+              }}
+            >
+              <Image src={bingx} alt="bingx" height={24} />
+            </div>
+            <div
+              className={
+                tutType === "gateio"
+                  ? "active partner-button cursor-pointer"
+                  : "partner-button cursor-pointer"
+              }
+              onClick={() => {
+                setTutType("gateio");
+              }}
+            >
+              <Image src={gateio} alt="gate.io" height={24} />
+            </div>
+            <div
+              className={
+                tutType === "mexc"
+                  ? "active partner-button cursor-pointer"
+                  : "partner-button cursor-pointer"
+              }
+              onClick={() => {
+                setTutType("mexc");
+              }}
+            >
+              <Image src={mexc} alt="mexc" height={24} />
+            </div>
+          </div>
         </div>
-        <div className="flex gap-8 items-center justify-center mt-6 partner">
-          <div
-            className={
-              tutType === "bingx"
-                ? "active partner-button cursor-pointer"
-                : "partner-button cursor-pointer"
-            }
-            onClick={() => {
-              setTutType("bingx");
-            }}
-          >
-            <Image src={bingx} alt="bingx" height={24} />
-          </div>
-          <div
-            className={
-              tutType === "gateio"
-                ? "active partner-button cursor-pointer"
-                : "partner-button cursor-pointer"
-            }
-            onClick={() => {
-              setTutType("gateio");
-            }}
-          >
-            <Image src={gateio} alt="gate.io" height={24} />
-          </div>
-          <div
-            className={
-              tutType === "mexc"
-                ? "active partner-button cursor-pointer"
-                : "partner-button cursor-pointer"
-            }
-            onClick={() => {
-              setTutType("mexc");
-            }}
-          >
-            <Image src={mexc} alt="mexc" height={24} />
-          </div>
-        </div>
-      </div>
-
-      {tutType != "" && (
+      )}
+      {tutType != "" && isConnected && (
         <div className="info flex gap-20 mt-15" style={{ marginTop: "60px" }}>
           {tutType === "bingx" && (
             <Image
