@@ -2,7 +2,7 @@ import Address from "@/components/address";
 import dayjs from "dayjs";
 import React from "react";
 import { formatUnits } from "viem";
-import { formatNumber } from "../utils/numbers";
+import { formatNumber } from "../../utils/numbers";
 
 interface TableItemProps {
   txTime: string;

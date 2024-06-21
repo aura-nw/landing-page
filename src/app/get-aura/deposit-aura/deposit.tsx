@@ -12,13 +12,12 @@ import {
   useWaitForTransactionReceipt,
   BaseError,
 } from "wagmi";
-import TableHistory from "./table";
-import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
+import TableHistory from "../table-history/table";
+import { stringToHex, parseEther, formatUnits } from "viem";
 import { useForm, Controller } from "react-hook-form";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 interface TableItemProps {
   txTime: string;
@@ -50,10 +49,9 @@ function Deposit() {
     formState: { errors },
   } = useForm();
 
-  const account = useAccount();
-  // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
+  const { address, isConnected } = useAccount();
   const balance = useBalance({
-    address: account.address,
+    address: address,
   });
   const _amount = formatUnits(BigInt(balance?.data?.value || 0), 18);
   const _symbol = balance?.data?.symbol;
@@ -63,8 +61,7 @@ function Deposit() {
       setValue("amount", Math.floor(Number(_amount)));
     }
   };
-  const notify = () =>
-    toast.success("Transaction confirmed.");
+  const notify = () => toast.success("Transaction confirmed.");
   const onSubmit = async (data: any) => {
     return sendTransaction({
       to: "0xdc38aea1ed6a9c224e622e27986645d3cc4f609d",
@@ -77,7 +74,7 @@ function Deposit() {
       reset();
       notify();
       setTimeout(() => {
-        getActivityHistory(account?.address || "");
+        getActivityHistory(address || "");
       }, 3000);
     }
   }, [isConfirmed]);
@@ -127,62 +124,59 @@ function Deposit() {
     []
   );
   useEffect(() => {
-    if (account?.address) {
-      getActivityHistory(account?.address?.toLowerCase() || "");
+    if (address) {
+      getActivityHistory(address?.toLowerCase() || "");
     }
-  }, [account?.address]);
-
-  if (!account?.address) {
-    return <div></div>;
-  }
+  }, [address]);
 
   return (
     <div className="main-container sub-container flex flex-col">
-      <div className="flex flex-col">
-        <div className="introduce-title">
-          Let’s deposit some AURA to your desired CEX below:
+      {isConnected && (
+        <div className="flex flex-col">
+          <div className="introduce-title">
+            Let’s deposit some AURA to your desired CEX below:
+          </div>
+          <div className="flex gap-8 items-center justify-center mt-6 partner">
+            <div
+              className={
+                tutType === "bingx"
+                  ? "active partner-button cursor-pointer"
+                  : "partner-button cursor-pointer"
+              }
+              onClick={() => {
+                setTutType("bingx");
+              }}
+            >
+              <Image src={bingx} alt="bingx" height={24} />
+            </div>
+            <div
+              className={
+                tutType === "gateio"
+                  ? "active partner-button cursor-pointer"
+                  : "partner-button cursor-pointer"
+              }
+              onClick={() => {
+                setTutType("gateio");
+              }}
+            >
+              <Image src={gateio} alt="gate.io" height={24} />
+            </div>
+            <div
+              className={
+                tutType === "mexc"
+                  ? "active partner-button cursor-pointer"
+                  : "partner-button cursor-pointer"
+              }
+              onClick={() => {
+                setTutType("mexc");
+              }}
+            >
+              <Image src={mexc} alt="mexc" height={24} />
+            </div>
+          </div>
         </div>
-        <div className="flex gap-8 items-center justify-center mt-6 partner">
-          <div
-            className={
-              tutType === "bingx"
-                ? "active partner-button cursor-pointer"
-                : "partner-button cursor-pointer"
-            }
-            onClick={() => {
-              setTutType("bingx");
-            }}
-          >
-            <Image src={bingx} alt="bingx" height={24} />
-          </div>
-          <div
-            className={
-              tutType === "gateio"
-                ? "active partner-button cursor-pointer"
-                : "partner-button cursor-pointer"
-            }
-            onClick={() => {
-              setTutType("gateio");
-            }}
-          >
-            <Image src={gateio} alt="gate.io" height={24} />
-          </div>
-          <div
-            className={
-              tutType === "mexc"
-                ? "active partner-button cursor-pointer"
-                : "partner-button cursor-pointer"
-            }
-            onClick={() => {
-              setTutType("mexc");
-            }}
-          >
-            <Image src={mexc} alt="mexc" height={24} />
-          </div>
-        </div>
-      </div>
-
-      {tutType != "" && (
+      )}
+      {tutType != "" && isConnected && (
         <div className="info flex gap-20 mt-15" style={{ marginTop: "60px" }}>
           {tutType === "bingx" && (
             <Image
@@ -277,7 +271,11 @@ function Deposit() {
                     </div>
                   )}
                   <span className="form-text-des">
-                    Balance: {_amount?.toString()} {_symbol?.toString()}
+                    Balance: {_amount?.toString()}{" "}
+                    {_symbol
+                      ? _symbol?.toString().charAt(0).toUpperCase() +
+                        _symbol?.toString().slice(1)
+                      : ""}
                   </span>
                 </div>
                 <div className="mb-9">

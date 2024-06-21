@@ -6,7 +6,7 @@ import "./table-mobile.css";
 import carretUp from "@/assets/icons/ic_carret_up.svg";
 import clock from "@/assets/icons/ic_clock.svg";
 import Image from "next/image";
-import { formatNumber } from "../utils/numbers";
+import { formatNumber } from "../../utils/numbers";
 
 interface MobileTableItemProps {
   txTime: string;
