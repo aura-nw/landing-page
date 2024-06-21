@@ -6,7 +6,7 @@ import { WagmiProvider } from "wagmi";
 import WalletConnectEVM from "./wallet-connect";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
-
+import "react-toastify/dist/ReactToastify.css";
 // export const metadata: Metadata = {
 //   title: "Get Aura with Aura Network",
 //   description: "",
@@ -44,7 +44,7 @@ export default function Layout({
       <ToastContainer
         position="top-right"
         autoClose={3000}
-        hideProgressBar={false}
+        hideProgressBar={true}
         newestOnTop={false}
         closeOnClick
         rtl={false}
