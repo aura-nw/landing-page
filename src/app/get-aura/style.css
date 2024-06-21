@@ -251,6 +251,7 @@
     line-height: 16px; /* 133.333% */
   }
 }
+
 @media only screen and (max-width: 767px) {
   .address {
     font-size: 1.5rem;
@@ -274,6 +275,7 @@
 
   .info {
     flex-direction: column;
+    align-items: center;
   }
 
   .get-more-aura-box {
