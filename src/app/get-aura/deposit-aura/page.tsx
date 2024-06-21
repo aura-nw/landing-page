@@ -5,8 +5,12 @@ import {
 } from "wagmi";
 import WalletConnectEVM from "../wallet-connect";
 import Deposit from "./deposit";
+import { useEffect } from "react";
 
 function DepositAura() {
+  useEffect(() => {
+    document.title = "Deposit AURA to exchanges";
+  }, []);
   const { isConnected, address } = useAccount();
   return (
     <div>

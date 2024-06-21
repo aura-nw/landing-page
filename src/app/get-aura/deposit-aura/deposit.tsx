@@ -30,6 +30,7 @@ interface TableItemProps {
 
 function Deposit() {
   const [tutType, setTutType] = useState<string>("gateio");
+
   const {
     sendTransaction,
     data: hash,

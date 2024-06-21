@@ -7,6 +7,7 @@ import carretUp from "@/assets/icons/ic_carret_up.svg";
 import clock from "@/assets/icons/ic_clock.svg";
 import Image from "next/image";
 import { formatNumber } from "../../utils/numbers";
+import { useAccount, useBalance } from "wagmi";
 
 interface MobileTableItemProps {
   txTime: string;
@@ -23,22 +24,36 @@ type props = {
 
 const MobileTableItem: React.FC<props> = ({ tableItem }) => {
   const [expand, setExpand] = useState(false);
+  const { address, isConnected } = useAccount();
+  const balance = useBalance({
+    address: address,
+  });
+  const _symbol = balance?.data?.symbol;
+
   return (
     <div className="frame-29681">
       <div className="frame-29779">
         <div className="heading">
           <div className="title">
             <div className="frame-1000002280">
-              <Address address={tableItem?.evmTxHash} link={true} ellipsis={true} />
+              <Address
+                address={tableItem?.evmTxHash}
+                link={true}
+                ellipsis={true}
+              />
             </div>
             <div className="time-and-message">
               <div className="time">
                 <Image src={clock} alt="" height={14} />
-                <div className="cell-text2">{dayjs(tableItem.txTime).format("HH:mm:ss DD/MM/YYYY")}</div>
+                <div className="cell-text2">
+                  {dayjs(tableItem.txTime).format("HH:mm:ss DD/MM/YYYY")}
+                </div>
               </div>
             </div>
             <div className="in-out">
-              <div className={tableItem?.status?.toLowerCase()}>{tableItem.status}</div>
+              <div className={tableItem?.status?.toLowerCase()}>
+                {tableItem.status}
+              </div>
             </div>
           </div>
           <div
@@ -47,7 +62,12 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
               setExpand(!expand);
             }}
           >
-            <Image src={carretUp} className={expand ? "expanded" : ""} alt="" height={16} />
+            <Image
+              src={carretUp}
+              className={expand ? "expanded" : ""}
+              alt=""
+              height={16}
+            />
           </div>
         </div>
         {expand && (
@@ -55,18 +75,28 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
             <div className="line-18"></div>
             <div className="frame-29708">
               <div className="amount">Amount</div>
-              <div className="_200-aura">{formatNumber(formatUnits(BigInt(tableItem?.amount), 18))} AURA</div>
+              <div className="_200-aura">
+                {formatNumber(formatUnits(BigInt(tableItem?.amount), 18))} {_symbol?.toString()}
+              </div>
             </div>
             <div className="frame-29707">
               <div className="cosmos-tx-hash">Cosmos TX hash</div>
               <div className="frame-3099">
-                <Address address={tableItem?.cosmosTxHash} link={true} ellipsis={true} />
+                <Address
+                  address={tableItem?.cosmosTxHash}
+                  link={true}
+                  ellipsis={true}
+                />
               </div>
             </div>
             <div className="frame-29705">
               <div className="deposit-address">Deposit address</div>
               <div className="content">
-                <Address address={tableItem?.depAddress} link={true} ellipsis={true} />
+                <Address
+                  address={tableItem?.depAddress}
+                  link={true}
+                  ellipsis={true}
+                />
               </div>
             </div>
           </div>

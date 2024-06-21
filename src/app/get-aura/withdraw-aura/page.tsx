@@ -6,9 +6,12 @@ import {
 } from "wagmi";
 import WalletConnectEVM from "../wallet-connect";
 import Withdraw from "./withdraw";
+import { useEffect } from "react";
 
 function WithdrawAura() {
-  // return <Withdraw></Withdraw>;
+  useEffect(() => {
+    document.title = "Withdraw AURA from exchanges";
+  }, []);
   const { isConnected, address } = useAccount();
   return (
     <div>
