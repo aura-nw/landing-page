@@ -17,7 +17,8 @@ import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
 import { useForm, Controller } from "react-hook-form";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { redirect } from 'next/navigation'
 
 interface TableItemProps {
   txTime: string;
@@ -49,10 +50,10 @@ function Deposit() {
     formState: { errors },
   } = useForm();
 
-  const account = useAccount();
+  const { address, isConnected } = useAccount();
   // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
   const balance = useBalance({
-    address: account.address,
+    address: address,
   });
   const _amount = formatUnits(BigInt(balance?.data?.value || 0), 18);
   const _symbol = balance?.data?.symbol;
@@ -62,8 +63,7 @@ function Deposit() {
       setValue("amount", Math.floor(Number(_amount)));
     }
   };
-  const notify = () =>
-    toast.success("Transaction confirmed.");
+  const notify = () => toast.success("Transaction confirmed.");
   const onSubmit = async (data: any) => {
     return sendTransaction({
       to: "0xaf41083482dc220518f95993b48e8b012e782d01",
@@ -76,7 +76,7 @@ function Deposit() {
       reset();
       notify();
       setTimeout(() => {
-        getActivityHistory(account?.address || "");
+        getActivityHistory(address || "");
       }, 3000);
     }
   }, [isConfirmed]);
@@ -126,13 +126,13 @@ function Deposit() {
     []
   );
   useEffect(() => {
-    if (account?.address) {
-      getActivityHistory(account?.address?.toLowerCase() || "");
+    if (address) {
+      getActivityHistory(address?.toLowerCase() || "");
     }
-  }, [account?.address]);
+  }, [address]);
 
-  if (!account?.address) {
-    return <div></div>;
+  if (!isConnected) {
+    redirect('/');
   }
 
   return (
