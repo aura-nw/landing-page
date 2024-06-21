@@ -9,7 +9,7 @@ function WalletConnectEVM() {
   const _account = useAccount();
   const { disconnect } = useDisconnect();
   const toastConnected = () => toast.success("Connected.");
-  const toastDisconnect = () => toast.success("Disconnected.");
+  const toastDisconnect = () => toast.error("Disconnected.");
   useAccountEffect({
     onConnect(data) {
       toastConnected();
