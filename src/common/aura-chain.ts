@@ -91,11 +91,11 @@ import { defineChain, zeroAddress } from "viem";
 // })
 export const aura = /*#__PURE__*/ defineChain({
   id: 6322,
-  name: "Aura EVM",
+  name: "Aura Mainnet",
   nativeCurrency: {
     decimals: 18,
-    name: "aura",
-    symbol: "aura",
+    name: "Aura",
+    symbol: "AURA",
   },
   rpcUrls: {
     default: {
@@ -104,7 +104,7 @@ export const aura = /*#__PURE__*/ defineChain({
   },
   blockExplorers: {
     default: {
-      name: "Aura EVM Block Explorer",
+      name: "Aura Mainnet Block Explorer",
       url: "https://aurascan.io",
     },
   },
@@ -112,8 +112,8 @@ export const aura = /*#__PURE__*/ defineChain({
     {
       chainId: 6322,
       address: zeroAddress,
-      symbol: "aura",
-      name: "aura",
+      symbol: "AURA",
+      name: "Aura",
       decimals: 18,
     },
   ],
