@@ -16,7 +16,7 @@ import { Tooltip } from "react-tooltip";
 //@ts-ignore
 import { stripHexPrefix } from "crypto-addr-codec";
 function Withdraw() {
-  const [tutType, setTutType] = useState<string>("");
+  const [tutType, setTutType] = useState<string>("gateio");
   const [cosmosAcc, setCosmosAcc] = useState<string>();
   const [copyAuraAddress, setCopyAuraAddress] = useState<boolean>(false);
   const cutText = (value: string) => {

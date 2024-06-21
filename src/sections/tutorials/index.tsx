@@ -6,7 +6,7 @@ import BgImage from "../../components/Image/BgImage";
 
 function Tutorials() {
     return (
-        <div className="w-full relative lg:h-[600px] xl:h-[850px] min-[2560px]:h-[990px] flex justify-center">
+        <div className="w-full relative lg:h-[600px] xl:h-[850px] min-[2560px]:h-[990px] flex justify-center tutorial">
             <BgImage fill alt="" src={img_bg_footer_pc} className="hidden lg:block" />
             <div className="flex flex-col justify-start items-center relative h-[472px] xl:w-[548px]">
                 <Image className="xl:w-[480px]" src={img_gradientLogo} alt="img_gradientLogo" />

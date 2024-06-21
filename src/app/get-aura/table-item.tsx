@@ -2,6 +2,7 @@ import Address from "@/components/address";
 import dayjs from "dayjs";
 import React from "react";
 import { formatUnits } from "viem";
+import { formatNumber } from "../utils/numbers";
 
 interface TableItemProps {
   txTime: string;
@@ -33,7 +34,7 @@ const TableItem: React.FC<props> = ({ tableItem }) => {
           <Address address={tableItem?.depAddress} link={true} ellipsis={true} />
         </div>
         <div className="frame-561">
-          <div className="_20-aura">{formatUnits(BigInt(tableItem?.amount), 18)} AURA</div>
+          <div className="_20-aura">{formatNumber(formatUnits(BigInt(tableItem?.amount), 18))} AURA</div>
         </div>
         <div className="frame-572">
           <div className={tableItem?.status?.toLowerCase()}>{tableItem?.status}</div>

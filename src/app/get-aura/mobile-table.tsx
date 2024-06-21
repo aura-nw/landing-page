@@ -6,6 +6,7 @@ import "./table-mobile.css";
 import carretUp from "@/assets/icons/ic_carret_up.svg";
 import clock from "@/assets/icons/ic_clock.svg";
 import Image from "next/image";
+import { formatNumber } from "../utils/numbers";
 
 interface MobileTableItemProps {
   txTime: string;
@@ -32,7 +33,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
             </div>
             <div className="time-and-message">
               <div className="time">
-              <Image src={clock} alt="" height={14} />
+                <Image src={clock} alt="" height={14} />
                 <div className="cell-text2">{dayjs(tableItem.txTime).format("HH:mm:ss DD/MM/YYYY")}</div>
               </div>
             </div>
@@ -46,7 +47,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
               setExpand(!expand);
             }}
           >
-            <Image src={carretUp} className={expand ? 'expanded': ''} alt="" height={16} />
+            <Image src={carretUp} className={expand ? "expanded" : ""} alt="" height={16} />
           </div>
         </div>
         {expand && (
@@ -54,7 +55,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
             <div className="line-18"></div>
             <div className="frame-29708">
               <div className="amount">Amount</div>
-              <div className="_200-aura">{formatUnits(BigInt(tableItem.amount), 18)} AURA</div>
+              <div className="_200-aura">{formatNumber(formatUnits(BigInt(tableItem?.amount), 18))} AURA</div>
             </div>
             <div className="frame-29707">
               <div className="cosmos-tx-hash">Cosmos TX hash</div>
