@@ -271,7 +271,11 @@ function Deposit() {
                     </div>
                   )}
                   <span className="form-text-des">
-                    Balance: {_amount?.toString()} {_symbol?.toString()}
+                    Balance: {_amount?.toString()}{" "}
+                    {_symbol
+                      ? _symbol?.toString().charAt(0).toUpperCase() +
+                        _symbol?.toString().slice(1)
+                      : ""}
                   </span>
                 </div>
                 <div className="mb-9">
