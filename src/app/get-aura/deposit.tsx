@@ -132,7 +132,7 @@ function Deposit() {
   }, [address]);
 
   if (!isConnected) {
-    redirect('/');
+    redirect('/get-aura');
   }
 
   return (
