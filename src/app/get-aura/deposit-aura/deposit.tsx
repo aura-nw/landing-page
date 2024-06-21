@@ -11,15 +11,13 @@ import {
   useBalance,
   useWaitForTransactionReceipt,
   BaseError,
-  useReconnect,
 } from "wagmi";
 import TableHistory from "../table-history/table";
-import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
+import { stringToHex, parseEther, formatUnits } from "viem";
 import { useForm, Controller } from "react-hook-form";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { redirect } from "next/navigation";
 
 interface TableItemProps {
   txTime: string;
@@ -51,9 +49,7 @@ function Deposit() {
     formState: { errors },
   } = useForm();
 
-  const { address, isConnected, isConnecting, isDisconnected, isReconnecting } =
-    useAccount();
-  // const test = "0x7c698F755Cf38b71dEef73B77E0F1438EecA99F2";
+  const { address, isConnected } = useAccount();
   const balance = useBalance({
     address: address,
   });
@@ -132,22 +128,10 @@ function Deposit() {
       getActivityHistory(address?.toLowerCase() || "");
     }
   }, [address]);
-  const { reconnect } = useReconnect();
-
-  useEffect(() => {
-    if (!isConnected) {
-      reconnect();
-      console.log('-----------reconnect')
-    }
-  }, [isConnected]);
-
-  // if (isDisconnected) {
-  //   redirect("/get-aura");
-  // }
 
   return (
     <div className="main-container sub-container flex flex-col">
-      {!isConnected && (
+      {isConnected && (
         <div className="flex flex-col">
           <div className="introduce-title">
             Let’s deposit some AURA to your desired CEX below:
