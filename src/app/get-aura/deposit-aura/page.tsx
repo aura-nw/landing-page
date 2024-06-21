@@ -1,5 +1,8 @@
 "use client";
-import Deposit from "../deposit";
+
+import dynamic from "next/dynamic";
+
+const Deposit = dynamic(() => import("../deposit"), { ssr: false });
 
 function DepositAura() {
   return <Deposit></Deposit>;
