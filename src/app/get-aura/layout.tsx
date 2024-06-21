@@ -33,26 +33,12 @@ export default function Layout({
 
   return (
     <div className="bg-[#000] pb-24">
-      <WagmiProvider config={configWallet}>
-        <QueryClientProvider client={queryClient}>
-          <RainbowKitProvider>
-            <WalletConnectEVM></WalletConnectEVM>
-            {children}
-          </RainbowKitProvider>
-        </QueryClientProvider>
-      </WagmiProvider>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      ></ToastContainer>
+      <RainbowKitProvider>
+        <WalletConnectEVM></WalletConnectEVM>
+        {children}
+      </RainbowKitProvider>
+
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"></ToastContainer>
     </div>
   );
 }
