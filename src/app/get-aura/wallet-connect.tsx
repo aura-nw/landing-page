@@ -1,10 +1,16 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount, useAccountEffect, useDisconnect } from "wagmi";
+import {
+  useAccount,
+  useAccountEffect,
+  useDisconnect,
+  useReconnect,
+} from "wagmi";
 import copyLogo from "@/assets/images/img_copy_logo.svg";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
 import "./style.css";
 import { toast } from "react-toastify";
+import { useEffect } from "react";
 function WalletConnectEVM() {
   const { isConnected, address } = useAccount();
   const { disconnect } = useDisconnect();
@@ -18,6 +24,14 @@ function WalletConnectEVM() {
       toastDisconnect();
     },
   });
+  const { reconnect } = useReconnect();
+  useEffect(() => {
+    if (!isConnected) {
+      reconnect();
+      console.log("-----------reconnect");
+    }
+  }, [isConnected]);
+
   return (
     <div className="mb-[80px]">
       <div className="main-container">

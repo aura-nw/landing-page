@@ -11,6 +11,7 @@ import {
   useBalance,
   useWaitForTransactionReceipt,
   BaseError,
+  useReconnect,
 } from "wagmi";
 import TableHistory from "./table";
 import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
@@ -131,6 +132,14 @@ function Deposit() {
       getActivityHistory(address?.toLowerCase() || "");
     }
   }, [address]);
+  const { reconnect } = useReconnect();
+
+  useEffect(() => {
+    if (!isConnected) {
+      reconnect();
+      console.log('-----------reconnect')
+    }
+  }, [isConnected]);
 
   if (isDisconnected) {
     redirect("/get-aura");
