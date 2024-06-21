@@ -1,9 +1,5 @@
-import useActivityHistory from "@/hooks/useActivityHistory";
-import { useEffect, useState } from "react";
-import { useAccount } from "wagmi";
 import "./table.css";
 import { useMediaQuery } from "react-responsive";
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import MobileTableItem from "./mobile-table";
 import TableItem from "./table-item";
 interface TableItemProps {
