@@ -13,7 +13,7 @@ import {
   BaseError,
   useReconnect,
 } from "wagmi";
-import TableHistory from "./table";
+import TableHistory from "../table-history/table";
 import { stringToHex, parseEther, parseUnits, formatUnits } from "viem";
 import { useForm, Controller } from "react-hook-form";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";

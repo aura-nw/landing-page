@@ -2,13 +2,10 @@
 
 import dynamic from "next/dynamic";
 import {
-  useAccount,
-  useAccountEffect,
-  useDisconnect,
-  useReconnect,
+  useAccount
 } from "wagmi";
 import WalletConnectEVM from "../wallet-connect";
-const Withdraw = dynamic(() => import("../withdraw"), { ssr: false });
+import Withdraw from "./withdraw";
 
 function WithdrawAura() {
   // return <Withdraw></Withdraw>;

@@ -1,13 +1,10 @@
 "use client";
 import dynamic from "next/dynamic";
 import {
-  useAccount,
-  useAccountEffect,
-  useDisconnect,
-  useReconnect,
+  useAccount
 } from "wagmi";
 import WalletConnectEVM from "../wallet-connect";
-const Deposit = dynamic(() => import("../deposit"), { ssr: false });
+import Deposit from "./deposit";
 
 function DepositAura() {
   const { isConnected, address } = useAccount();
