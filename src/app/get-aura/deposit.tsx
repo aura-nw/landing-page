@@ -30,7 +30,7 @@ interface TableItemProps {
 }
 
 function Deposit() {
-  const [tutType, setTutType] = useState<string>("");
+  const [tutType, setTutType] = useState<string>("gateio");
   const {
     sendTransaction,
     data: hash,
@@ -60,20 +60,11 @@ function Deposit() {
 
   const addMaxAmount = () => {
     if (_amount && Number(_amount) && Number(_amount) > 0) {
-      setValue("amount", Math.round(Number(_amount)));
+      setValue("amount", Math.floor(Number(_amount)));
     }
   };
   const notify = () =>
-    toast.success("Transaction confirmed.", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+    toast.success("Transaction confirmed.");
   const onSubmit = async (data: any) => {
     return sendTransaction({
       to: "0xaf41083482dc220518f95993b48e8b012e782d01",
@@ -149,7 +140,7 @@ function Deposit() {
     <div className="main-container sub-container flex flex-col">
       <div className="flex flex-col">
         <div className="introduce-title">
-          Let’s deposit some AURA to your desired CEX below::
+          Let’s deposit some AURA to your desired CEX below:
         </div>
         <div className="flex gap-8 items-center justify-center mt-6 partner">
           <div
@@ -315,18 +306,6 @@ function Deposit() {
                       {(error as BaseError).shortMessage || error.message}
                     </div>
                   )}
-                  <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="dark"
-                  ></ToastContainer>
                 </div>
               </form>
               <div className="text-tutorial">

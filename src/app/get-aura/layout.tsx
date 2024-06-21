@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 import WalletConnectEVM from "./wallet-connect";
 import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 
 // export const metadata: Metadata = {
 //   title: "Get Aura with Aura Network",
@@ -40,6 +41,18 @@ export default function Layout({
           </RainbowKitProvider>
         </QueryClientProvider>
       </WagmiProvider>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      ></ToastContainer>
     </div>
   );
 }
