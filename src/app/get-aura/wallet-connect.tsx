@@ -24,13 +24,6 @@ function WalletConnectEVM() {
       toastDisconnect();
     },
   });
-  const { reconnect } = useReconnect();
-  useEffect(() => {
-    if (!isConnected) {
-      reconnect();
-      console.log("-----------reconnect");
-    }
-  }, [isConnected]);
 
   return (
     <div className="mb-[80px]">

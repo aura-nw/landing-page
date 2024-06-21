@@ -141,9 +141,9 @@ function Deposit() {
     }
   }, [isConnected]);
 
-  if (isDisconnected) {
-    redirect("/get-aura");
-  }
+  // if (isDisconnected) {
+  //   redirect("/get-aura");
+  // }
 
   return (
     <div className="main-container sub-container flex flex-col">

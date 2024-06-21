@@ -21,7 +21,6 @@ export default function Layout({
   return (
     <div className="bg-[#000] pb-24">
       <RainbowKitProvider>
-        <WalletConnectEVM></WalletConnectEVM>
         {children}
       </RainbowKitProvider>
 
