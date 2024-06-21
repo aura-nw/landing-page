@@ -1,7 +1,8 @@
 "use client";
-import Withdraw from "../withdraw";
 
-;
+import dynamic from "next/dynamic";
+
+const Withdraw = dynamic(() => import("../withdraw"), { ssr: false });
 
 function WithdrawAura() {
   return <Withdraw></Withdraw>;
