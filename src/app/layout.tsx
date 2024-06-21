@@ -12,6 +12,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 import { aura } from "@/common/aura-chain";
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ppmori = localFont({
   src: "./../assets/fonts/PPMori-SemiBold.otf",
@@ -42,39 +44,54 @@ export default function RootLayout({
   return (
     <WagmiProvider config={configWallet}>
       <QueryClientProvider client={queryClient}>
-        
-          <html lang="en">
-            <Script
-              id="gtm-script"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <html lang="en">
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-K3NWXQS');`,
+            }}
+          />
+          <body
+            className={`${inter.className} ${ppmori.variable} scroll-smooth`}
+          >
+            <div>
+              <input
+                className="nav-input hidden"
+                type="checkbox"
+                id="nav-input"
+              />
+              <Header />
+              <RainbowKitProvider>{children}</RainbowKitProvider>
+              <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={true}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+              ></ToastContainer>
+              <Footer />
+              <label htmlFor="nav-input" className="nav-overlay">
+                {" "}
+              </label>
+            </div>
+            <noscript
+              dangerouslySetInnerHTML={{
+                __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3NWXQS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
               }}
             />
-            <body className={`${inter.className} ${ppmori.variable} scroll-smooth`}>
-              <div>
-                <input className="nav-input hidden" type="checkbox" id="nav-input" />
-                <Header />
-                <RainbowKitProvider>
-                {children}
-                </RainbowKitProvider>
-                <Footer />
-                <label htmlFor="nav-input" className="nav-overlay">
-                  {" "}
-                </label>
-              </div>
-              <noscript
-                dangerouslySetInnerHTML={{
-                  __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3NWXQS"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-                }}
-              />
-            </body>
-          </html>
+          </body>
+        </html>
       </QueryClientProvider>
     </WagmiProvider>
   );

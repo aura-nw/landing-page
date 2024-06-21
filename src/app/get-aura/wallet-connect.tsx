@@ -35,7 +35,7 @@ function WalletConnectEVM() {
                     Your Journey Start Here
                   </h1>
                   <div className="text-medium-gray text-center text-xl lg:text-[20px] font-normal leading-8 max-w-[717px]">
-                    But first, let’s get you some AURA
+                    But first, let's connect your wallet
                   </div>
                 </div>
                 <ConnectButton.Custom>
