@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="bg-[url('../assets/images/img_bg_mobile.png')] lg:bg-[url('../assets/images/img_bg_desktop_2.png')] bg-cover bg-no-repeat overflow-x-hidden">
+    <div className="bg-[url('../assets/images/img_bg_mobile.png')] lg:bg-[url('../assets/images/img_bg_desktop_2.png')] bg-cover bg-no-repeat">
       <div className="main-container">
         <div className="flex min-h-screen flex-col items-center mb-20 xl:mb-[120px]">
           <Introduction />
