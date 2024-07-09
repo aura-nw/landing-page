@@ -16,7 +16,7 @@ function Statistics() {
     return (
         <div className="flex flex-col gap-6 w-full items-center lg:gap-14">
             <div className="flex flex-col gap-4 items-center">
-                <span className="text-light-yellow text-base lg:text-xl font-normal">Aura in numbers</span>
+                <span className="text-light-yellow text-sm lg:text-xl font-normal font-jetBrains-mono">AURA IN NUMBERS</span>
                 <h2 className="font-ppmori-semibold self-stretch text-[28px] lg:text-[48px] text-center font-semibold leading-9 lg:leading-[56px] max-w-[659px] min-w-[313px]">The most thriving blockchain in emerging countries</h2>
             </div>
             <div className="flex flex-col gap-3 xl:flex-row xl:gap-6 w-full items-center justify-center">

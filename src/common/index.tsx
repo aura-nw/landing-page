@@ -3,10 +3,11 @@ export const enum PAGE_ROUTE {
     INTRODUCTION = '/introduction',
     TECH_STACK = '/tech-stack',
     BUILD = '/build',
-    DOCS = '/docs',
+    DOCS = 'https://docs.aura.network/',
     GET_AURA = '/get-aura',
     DEPOSIT_AURA = '/get-aura/deposit-aura',
     WITHDRAW_AURA = '/get-aura/withdraw-aura',
+    ECOSYSTEM = '/ecosystem',
 }
 
 export const enum SOCIAL {

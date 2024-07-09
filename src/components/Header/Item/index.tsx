@@ -18,10 +18,10 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
             <div className="flex justify-center items-center">
                 <div className={`group relative px-6 py-3 hover:bg-medium-charcoal ${isActive ? 'bg-medium-charcoal' : ''} rounded-2xl cursor-pointer`}>
                     <div className="flex items-center gap-[10px]">
-                        <span className="text-lg">
+                        <span className="text-lg text-medium-gray">
                             {children}
                         </span>
-                        <Image className="group-hover:rotate-180 transition duration-200 ease-in" src={ic_arrow} alt="ic_arrow" />
+                        <Image className="group-hover:rotate-180 transition duration-200 ease-in hidden lg:block" src={ic_arrow} alt="ic_arrow" />
                     </div>
                     <div className="group-hover:block absolute hidden h-auto left-0 z-[1]">
                         <div className="pt-5">
@@ -42,7 +42,7 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
 
     return (
         <div className="flex justify-center items-center">
-            <Link href={path ?? PAGE_ROUTE.HOME} className={`w-24 px-6 py-3 hover:bg-medium-charcoal ${(pathname === PAGE_ROUTE.HOME ? pathname : pathname.slice(0, -1)) === path ? 'bg-medium-charcoal' : ''} rounded-2xl text-lg flex justify-center items-center`}>{children}</Link>
+            <Link href={path ?? PAGE_ROUTE.HOME} className={`px-6 py-3 hover:bg-medium-charcoal text-medium-gray ${(pathname === PAGE_ROUTE.HOME ? pathname : pathname.slice(0, -1)) === path ? 'bg-medium-charcoal' : ''} rounded-2xl text-lg flex justify-center items-center`}>{children}</Link>
         </div>
     )
 

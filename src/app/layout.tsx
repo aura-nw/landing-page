@@ -1,6 +1,6 @@
 "use client";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 import Footer from "../components/Footer";
@@ -20,6 +20,11 @@ const ppmori = localFont({
   variable: "--font-ppmori-semibold",
 });
 const inter = Inter({ subsets: ["latin"] });
+
+const jetBrains_mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: "--font-jetBrains-mono",
+})
 
 // export const metadata: Metadata = {
 //   title: "Aura Network - The Layer 1 for emerging countries",
@@ -57,7 +62,7 @@ export default function RootLayout({
             }}
           />
           <body
-            className={`${inter.className} ${ppmori.variable} scroll-smooth`}
+            className={`${inter.className} ${ppmori.variable} ${jetBrains_mono.variable} scroll-smooth`}
           >
             <div>
               <input
