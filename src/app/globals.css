@@ -55,6 +55,14 @@ body {
       transform: translateX(-100%);
     }
   }
+
+  .border-gradient {
+    border-width: 1px;
+    border-style: solid;
+    border-image-source: linear-gradient(180deg, rgba(160, 150, 114, 0.2) 0%, rgba(160, 150, 114, 0) 100%);
+    border-image-slice: 1;
+    border-radius: 8px;
+  }
 }
 
 .main-container {

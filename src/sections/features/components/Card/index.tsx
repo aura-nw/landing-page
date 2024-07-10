@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 type Card = {
-  img: string,
-  subImg?: string,
+  img: any,
+  subImg?: any,
   title: string,
   description: string,
   index: number

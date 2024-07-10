@@ -1,6 +1,6 @@
-import img_coins from '@/assets/images/img_coins.svg'
-import img_blocks from '@/assets/images/img_blocks.svg'
-import img_universe from '@/assets/images/img_universe.svg'
+import img_coins from '@/assets/images/img_coins_2.png'
+import img_blocks from '@/assets/images/img_blocks_2.png'
+import img_universe from '@/assets/images/img_universe_2.png'
 import Card from './components/Card';
 import GradientButton from '../../components/Button/GradientButton';
 
