@@ -21,6 +21,7 @@ import metamask from "@/assets/images/ecosystem/metamask.png";
 import mexc from "@/assets/images/ecosystem/mexc.png";
 import micro3 from "@/assets/images/ecosystem/micro3.png";
 import monsterra from "@/assets/images/ecosystem/monsterra.png";
+import yooldo from "@/assets/images/ecosystem/yooldo.png";
 import nois from "@/assets/images/ecosystem/nois.png";
 import onus from "@/assets/images/ecosystem/onus.png";
 import pyxis from "@/assets/images/ecosystem/pyxis.png";
@@ -128,7 +129,7 @@ const data = [
         title: 'Yooldo',
         description: 'Yooldo is a gaming platform renowned for its innovative Anti abuse system, Jury DAO',
         tag: 'Web3 Game',
-        img: monsterra
+        img: yooldo
     },
     {
         title: 'AhaFast Ride 2 Earn',
@@ -243,15 +244,15 @@ const data = [
 function Ecosystem() {
     const { isMobile } = useWindowSize();
     const [selectedTag, setSelectedTag] = useState<string>('All');
-    const [displayedItems, setDisplayedItems] = useState<number>(4);
-    const [visibleItems, setVisibleItems] = useState(data.slice(0, 4));
+    const [displayedItems, setDisplayedItems] = useState<number>(6);
+    const [visibleItems, setVisibleItems] = useState(data.slice(0, 6));
 
     const filteredData = selectedTag && selectedTag !== 'All'
         ? data.filter(item => item.tag === selectedTag)
         : data;
 
     useEffect(() => {
-        setDisplayedItems(isMobile ? 4 : 12);
+        setDisplayedItems(isMobile ? 6 : 12);
     }, [isMobile]);
 
     useEffect(() => {
@@ -260,11 +261,11 @@ function Ecosystem() {
 
     const handleSelect = (option: string) => {
         setSelectedTag(option);
-        setDisplayedItems(4);
+        setDisplayedItems(6);
     };
 
     const loadMore = () => {
-        setDisplayedItems(prev => prev + 4);
+        setDisplayedItems(prev => prev + 6);
     };
 
 

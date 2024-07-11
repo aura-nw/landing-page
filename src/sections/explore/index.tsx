@@ -8,6 +8,7 @@ import img_catze_2 from '@/assets/images/img_catze_2.png';
 import img_creek_river from '@/assets/images/img_creek_river.png';
 import img_crescentshine from '@/assets/images/img_crescentshine.png';
 import img_depip_2 from '@/assets/images/img_depip_2.png';
+import img_depip from '@/assets/images/img_depip.png';
 import img_keplr from '@/assets/images/img_keplr.png';
 import img_klever from '@/assets/images/img_klever.png';
 import img_layer_zero from '@/assets/images/img_layer_zero.png';
@@ -126,7 +127,7 @@ function Explore() {
                     </div>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative'>
                         <div className='h-[120px]'>
-                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_story_protocol} />
+                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_depip} />
                         </div>
                         <div className='flex flex-col absolute top-[84px] gap-6 px-6 pb-6'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
