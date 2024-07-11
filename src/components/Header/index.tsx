@@ -1,4 +1,3 @@
-import ic_twitter from "@/assets/icons/ic_twitter.svg";
 import ic_close from "@/assets/icons/ic_close.svg";
 import ic_discord from "@/assets/icons/ic_discord.png";
 import ic_github from "@/assets/icons/ic_github.png";
@@ -6,6 +5,7 @@ import ic_linkedIn from "@/assets/icons/ic_linkedIn.png";
 import ic_menu from "@/assets/icons/ic_menu.svg";
 import ic_seeMore from "@/assets/icons/ic_seeMore.svg";
 import ic_telegram from "@/assets/icons/ic_telegram.svg";
+import ic_twitter from "@/assets/icons/ic_twitter.svg";
 import ic_logo from "@/assets/images/img_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -76,8 +76,8 @@ function Header() {
         </label>
         <div className="gap-1 hidden lg:flex">
           <Item path={PAGE_ROUTE.HOME}>Home</Item>
-          <Item subItems={learnMenu}>Learn</Item>
-          <Item path={PAGE_ROUTE.BUILD}>Build</Item>
+          <Item path={PAGE_ROUTE.ECOSYSTEM}>Ecosystem</Item>
+          <Item path={PAGE_ROUTE.DOCS} target="_blank">Docs</Item>
           <Item subItems={communityMenu}>Community</Item>
         </div>
         <div className="hidden lg:contents">
@@ -89,10 +89,13 @@ function Header() {
       <div className="hidden w-full nav-menu lg:hidden">
         <div className="bg-[#1D1A18] relative flex flex-col border border-solid border-blur-grayish-brown rounded-b-2xl">
           <div className="border-b border-b-blur-grayish-brown py-3">
-            <Item subItems={learnMenu}>Learn</Item>
+            <Item path={PAGE_ROUTE.HOME}>Home</Item>
           </div>
           <div className="border-b border-b-blur-grayish-brown py-3">
-            <Item path={PAGE_ROUTE.BUILD}>Build</Item>
+            <Item path={PAGE_ROUTE.ECOSYSTEM}>Ecosystem</Item>
+          </div>
+          <div className="border-b border-b-blur-grayish-brown py-3">
+            <Item path={PAGE_ROUTE.DOCS}>Docs</Item>
           </div>
           <div className="border-b border-b-blur-grayish-brown py-3">
             <Item subItems={communityMenu}>Community</Item>
@@ -104,7 +107,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </header >
   );
 }
 
