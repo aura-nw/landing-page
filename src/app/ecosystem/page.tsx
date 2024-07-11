@@ -31,6 +31,7 @@ import stakify from "@/assets/images/ecosystem/stakify.png";
 import sub_wallet from "@/assets/images/ecosystem/sub_wallet.png";
 import tc_network from "@/assets/images/ecosystem/tc_network.png";
 import the_data_nerd from "@/assets/images/ecosystem/the_data_nerd.png";
+import larking from "@/assets/images/ecosystem/larking.png";
 
 import { useEffect, useState } from "react";
 import Card from "../../components/Card";
@@ -219,7 +220,7 @@ const data = [
         title: 'Larking on the Blockchain',
         description: 'This collection is the result of a collaboration between GM Vietnam and Jay Tran to accelerate the Vietnamese blockchain ecosystem globally.',
         tag: 'NFT',
-        img: kimetsu
+        img: larking
     },
     {
         title: 'Band Protocol',
@@ -295,7 +296,7 @@ function Ecosystem() {
                     <div className="lg:flex lg:gap-10 w-full">
                         <div className="hidden lg:flex lg:flex-col min-w-[354px]">
                             {options.map((e, i) => (
-                                <div key={i} className={`p-4 h-16 text-medium-gray text-[20px] rounded-lg leading-8 ${selectedTag === e.value ? 'bg-[#171513]' : ''}`} onClick={() => handleSelect(e.value)}>
+                                <div key={i} className={`p-4 cursor-pointer h-16 text-medium-gray text-[20px] rounded-lg leading-8 ${selectedTag === e.value ? 'bg-[#171513]' : ''}`} onClick={() => handleSelect(e.value)}>
                                     {e.label}
                                 </div>
                             ))}
