@@ -1,7 +1,7 @@
 type Card = {
     value: string,
     title: string
-    img: JSX.Element
+    img?: any
 
 }
 
