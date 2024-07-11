@@ -210,7 +210,7 @@ function Parters() {
                 <span className="font-ppmori-semibold text-[32px] lg:text-[48px] text-center font-semibold leading-[40px] lg:leading-[56px]">Backed by the best</span>
             </div>
             <div className="relative overflow-hidden w-full">
-                <div className="flex gap-10 px-2 justify-center items-center lg:gap-16 lg:px-10 xl:flex-nowrap scrolling hover:paused">
+                <div className="flex gap-10 px-2 justify-center items-center lg:gap-16 lg:px-10 xl:flex-nowrap scrolling lg:hover:paused">
                     {partners.map((item) => (
                         <div key={item.name} className="flex-shrink-0">
                             <div key={item.name} className="icon">{item.img}</div>

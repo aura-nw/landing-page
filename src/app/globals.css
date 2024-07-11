@@ -125,33 +125,8 @@ body {
   .nav-container {
     border-radius: 32px !important;
   }
-}
 
-@media only screen and (min-width: 1280px) {
-  .swiper {
-    height: fit-content !important;
-  }
-}
-
-@media only screen and (min-width: 1536px) {
-  .main-container {
-    max-width: 1216px;
-    margin: auto;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
-@media only screen and (min-width: 1728px) {
-  .main-container {
-    max-width: 1408px;
-    margin: auto;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
-/* Coin98 icon */
+  /* Coin98 icon */
 .icon:hover #coin98 path {
   fill: url(#paint0_linear_561_9462);
 }
@@ -262,6 +237,32 @@ body {
 .icon:hover #finance path {
   fill: white;
 }
+}
+
+@media only screen and (min-width: 1280px) {
+  .swiper {
+    height: fit-content !important;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .main-container {
+    max-width: 1216px;
+    margin: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 1728px) {
+  .main-container {
+    max-width: 1408px;
+    margin: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
 
 
 /* Statistic card */

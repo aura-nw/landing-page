@@ -144,7 +144,7 @@ const data = [
         description: 'The #1 non-custodial, multi-chain wallet, and DeFi gateway, designed to seamlessly connect users to the crypto world in a safe and secure manner.',
         tag: 'Wallet',
         img: c98,
-        link: 'https://wallet.coin98.com/'
+        link: 'https://coin98.com/wallet'
     },
     {
         title: 'Keplr',
@@ -168,15 +168,8 @@ const data = [
         link: 'https://www.subwallet.app/'
     },
     {
-        title: 'Metamask',
-        description: 'A non-custodial Web3 Wallet',
-        tag: 'Wallet',
-        img: metamask,
-        link: 'https://metamask.io/'
-    },
-    {
         title: 'Klever',
-        description: 'A non-custodial Web3 Wallet',
+        description: 'The Ultimate Crypto Wallet for Your Digital Assets',
         tag: 'Wallet',
         img: klever,
         link: 'https://www.klever.io/'
@@ -204,7 +197,7 @@ const data = [
     },
     {
         title: 'SeekHYPE',
-        description: 'The Simplest NFT Marketplace',
+        description: 'NFT Marketplace for IP',
         tag: 'NFT',
         img: seekhype,
         link: 'https://beta.seekhype.io/'
