@@ -293,8 +293,8 @@ function Ecosystem() {
                     />
                     <div className="lg:flex lg:gap-10 w-full">
                         <div className="hidden lg:flex lg:flex-col min-w-[354px]">
-                            {options.map((e) => (
-                                <div className={`p-4 h-16 text-medium-gray text-[20px] rounded-lg leading-8 ${selectedTag === e.value ? 'bg-[#171513]' : ''}`} onClick={() => handleSelect(e.value)}>
+                            {options.map((e, i) => (
+                                <div key={i} className={`p-4 h-16 text-medium-gray text-[20px] rounded-lg leading-8 ${selectedTag === e.value ? 'bg-[#171513]' : ''}`} onClick={() => handleSelect(e.value)}>
                                     {e.label}
                                 </div>
                             ))}
