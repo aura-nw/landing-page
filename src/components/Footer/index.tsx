@@ -38,7 +38,7 @@ function Footer() {
                 </Link>
               ))}
             </div>
-            <span className="text-medium-gray font-normal leading-6">A high performance Layer 1 ecosystem with built-in modularity, leading the mass adoption of Web3 in emerging markets.</span>
+            <span className="text-medium-gray font-normal leading-6">The First Abstraction Layer for Intellectual Properties</span>
           </div>
           <div className="flex flex-wrap gap-16 xl:gap-[80px] justify-between">
             <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">

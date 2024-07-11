@@ -6,7 +6,7 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --blur-dark-charcoal: rgba(31, 28, 25, 0.90);
+  --blur-dark-charcoal: #1F1C1999;
   --dark-charcoal: #171513;
   --medium-charcoal: #292523;
   --light-charcoal: #3B3632;
@@ -36,6 +36,32 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .scrolling {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    white-space: nowrap;
+  }
+
+  .paused {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .border-gradient {
+    border-width: 1px;
+    border-style: solid;
+    border-image-source: linear-gradient(180deg, rgba(160, 150, 114, 0.2) 0%, rgba(160, 150, 114, 0) 100%);
+    border-image-slice: 1;
+    border-radius: 8px;
   }
 }
 
@@ -86,13 +112,13 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .main-container {
-    padding-top: 250px;
+    padding-top: 324px;
     margin: auto;
   }
 
   .nav-menu,
   .nav-icon-close,
-  .nav-overlay  {
+  .nav-overlay {
     display: none !important;
   }
 
@@ -188,6 +214,55 @@ body {
 .icon:hover #ngc path {
   fill: white;
 }
+
+/* NGC icon */
+.icon:hover #crypto path {
+  fill: white;
+}
+
+/* Crypto icon */
+.icon:hover #crypto #Vector_1,
+.icon:hover #crypto #Vector_2,
+.icon:hover #crypto #Vector_3,
+.icon:hover #crypto #Vector_4,
+.icon:hover #crypto #Vector_5 {
+  fill: #48FFCF;
+}
+.icon:hover #crypto #Vector_6 {
+  fill: white;
+}
+
+/* zentry icon */
+.icon:hover #zentry path {
+  fill: white;
+}
+
+/* dwf icon */
+.icon:hover #dwf path {
+  fill: white;
+}
+
+/* gbv icon */
+.icon:hover #gbv mask {
+  fill: #F1D050;
+}
+
+/* kucoin icon */
+.icon:hover #kucoin path {
+  fill: #28CD96;
+}
+
+/* finance icon */
+.icon:hover #finance #Vector_2 {
+  fill: #00FFB9
+}
+.icon:hover #finance #Vector_3 {
+  fill: #00DAFF;
+}
+.icon:hover #finance path {
+  fill: white;
+}
+
 
 /* Statistic card */
 .statistic-card:hover #card-bg circle {
@@ -296,4 +371,8 @@ body {
   border-top: none;
   border-right: none;
   border-bottom: none;
+}
+
+.border-linear {
+  border-image: linear-gradient(180deg, rgba(160, 150, 114, 0.2) 0%, rgba(160, 150, 114, 0) 100%);
 }

@@ -1,25 +1,28 @@
 "use client";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
-import Script from "next/script";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Tutorials from "../sections/tutorials";
-import "./globals.css";
-import "@rainbow-me/rainbowkit/styles.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { WagmiProvider } from "wagmi";
 import { aura } from "@/common/aura-chain";
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
+import "@rainbow-me/rainbowkit/styles.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { WagmiProvider } from "wagmi";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import "./globals.css";
 
 const ppmori = localFont({
   src: "./../assets/fonts/PPMori-SemiBold.otf",
   variable: "--font-ppmori-semibold",
 });
 const inter = Inter({ subsets: ["latin"] });
+
+const jetBrains_mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: "--font-jetBrains-mono",
+})
 
 // export const metadata: Metadata = {
 //   title: "Aura Network - The Layer 1 for emerging countries",
@@ -57,7 +60,7 @@ export default function RootLayout({
             }}
           />
           <body
-            className={`${inter.className} ${ppmori.variable} scroll-smooth`}
+            className={`${inter.className} ${ppmori.variable} ${jetBrains_mono.variable} scroll-smooth`}
           >
             <div>
               <input

@@ -1,23 +1,24 @@
-import img_coins from '@/assets/images/img_coins.svg'
-import img_blocks from '@/assets/images/img_blocks.svg'
-import img_universe from '@/assets/images/img_universe.svg'
+import img_coins from '@/assets/images/img_coins_2.png'
+import img_blocks from '@/assets/images/img_blocks_2.png'
+import img_universe from '@/assets/images/img_universe_2.png'
 import Card from './components/Card';
 import GradientButton from '../../components/Button/GradientButton';
+import Image from 'next/image';
 
 const featuresData = [{
+    img: img_universe,
+    title: "Cross-Chain Interoperability Protocols",
+    description: "LayerZero, Axelar, Wormhole, Celer, etc., offer secure and efficient cross-chain transactions."
+},
+{
     img: img_coins,
     title: "Account Abstraction",
-    description: "Aura brings account abstraction to Cosmos for the first time, allowing developers and chains to build mainstream-friendly DApps and create unparalleled improvements in user experience."
+    description: "AA enables us to create smart contract accounts, bundle multiple transactions into a single execution, and abstract gas fees from the user's perspective."
 },
 {
     img: img_blocks,
-    title: "Modularity",
-    description: "DApps that are mainstream-friendly require significant customizations and complications. Aura's built-in modularity enables developers to build next-generation DApps and protocols."
-},
-{
-    img: img_universe,
-    title: "Emerging market",
-    description: "Southeast Asia has been the key catalyst of web3 adoption throughout the past decade. Aura's regional presence unlocks the potential of mass adoption."
+    title: "Chain Abstraction",
+    description: "CA is a new paradigm that allows users to execute transactions or their intent to transact on any chain within Web3."
 }]
 
 function Features() {
@@ -26,7 +27,7 @@ function Features() {
             <div>
                 <div className="flex flex-col gap-12 justify-center items-center self-stretch lg:items-start lg:justify-start lg:pt-20 lg:w-[540px] sticky top-[140px]">
                     <div className='flex flex-col gap-4 justify-center items-center self-stretch xl:items-start'>
-                        <span className="text-light-yellow font-normal text-center xl:text-start xl:text-xl">Aura's distinguished features</span>
+                        <span className="text-light-yellow font-normal text-center text-sm xl:text-start xl:text-xl font-jetBrains-mono">AURA'S DISTINGUISHED FEATURES</span>
                         <h2 className="font-ppmori-semibold text-[28px] text-center font-semibold leading-9 min-w-[313px] xl:text-start xl:text-[48px] xl:leading-[56px]">Breaking down the barriers to mass adoption</h2>
                     </div>
                     <GradientButton className='hidden xl:flex' href='/introduction'>Learn more</GradientButton>

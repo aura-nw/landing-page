@@ -24,7 +24,7 @@ function Card({ post }: CardProps) {
             </Link>
             <div className="flex flex-col gap-2 p-6 xl:px-10 xl:pt-8 xl:pb-12">
                 <span className="text-[rgba(253,149,82,1)] font-normal leading-6">{tag}</span>
-                <Link href={url} target="_blank" className="text-white font-ppmori-semibold text-[22px] font-semibold leading-8 hover:underline">{title}</Link>
+                <Link href={url} target="_blank" className="text-white font-ppmori-semibold text-[22px] font-semibold leading-8 hover:underline line-clamp-3">{title}</Link>
             </div>
         </div>
     );
