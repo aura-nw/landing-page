@@ -30,28 +30,32 @@ import Image from 'next/image';
 function Explore() {
     return (
         <div className='flex flex-col gap-10 w-full lg:gap-0'>
-            <div className="flex flex-col gap-6 items-center lg:order-first lg:flex-row lg:justify-between lg:sticky lg:-top-[52px]">
-                <span className='text-[28px] font-semibold font-ppmori-semibold leading-9 lg:w-[360px]'>Explore Aura IP Network</span>
-            </div>
+
             {/* Infrastructure */}
-            <div className='flex flex-col gap-4 lg:gap-10 lg:min-h-[692px] lg:order-2 lg:flex-row lg:items-start lg:sticky lg:-top-[52px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:pt-[320px]'>
-                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 5.58746H13M4 12.5875H28M4 19.5875H13M4 26.5875H13M19 5.58746H28M19 19.5875H28M19 26.5875H28" stroke="url(#paint0_linear_3094_4889)" stroke-width="2" stroke-linecap="round" />
-                        <defs>
-                            <linearGradient id="paint0_linear_3094_4889" x1="4" y1="3.57011" x2="-0.449862" y2="19.5524" gradientUnits="userSpaceOnUse">
-                                <stop offset="0.23" stop-color="#EC737E" />
-                                <stop offset="0.31" stop-color="#EC7977" />
-                                <stop offset="0.43" stop-color="#ED8A65" />
-                                <stop offset="0.44" stop-color="#ED8C63" />
-                                <stop offset="0.75" stop-color="#FFDF8F" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <span className='font-semibold font-ppmori-semibold text-2xl'>Infrastructure</span>
+            <div className='flex flex-col gap-4 lg:gap-10 lg:min-h-[652px] lg:order-2 lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
+                <div className='flex flex-col gap-10'>
+                    <div className="flex flex-col gap-6 items-center lg:order-first lg:flex-row lg:justify-between lg:sticky">
+                        <span className='text-[28px] lg:text-[32px] font-ppmori-semibold lg:leading-9 leading-10 w-full lg:w-[360px]'>Explore Aura IP Network</span>
+                    </div>
+                    <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px]'>
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 5.58746H13M4 12.5875H28M4 19.5875H13M4 26.5875H13M19 5.58746H28M19 19.5875H28M19 26.5875H28" stroke="url(#paint0_linear_3094_4889)" stroke-width="2" stroke-linecap="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_3094_4889" x1="4" y1="3.57011" x2="-0.449862" y2="19.5524" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.23" stop-color="#EC737E" />
+                                    <stop offset="0.31" stop-color="#EC7977" />
+                                    <stop offset="0.43" stop-color="#ED8A65" />
+                                    <stop offset="0.44" stop-color="#ED8C63" />
+                                    <stop offset="0.75" stop-color="#FFDF8F" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span className='font-ppmori-semibold text-2xl'>Infrastructure</span>
+                    </div>
                 </div>
 
-                <div className='flex flex-col gap-5 lg:flex-row lg:flex-1 lg:bg-black-linear-gradient lg:pt-[320px]'>
+
+                <div className='flex flex-col gap-5 lg:flex-row lg:flex-1 lg:bg-black-linear-gradient lg:pt-[120px]'>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[252px] relative lg:flex-1'>
                         <div className='h-[120px]'>
                             <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_story_protocol} />
@@ -74,8 +78,8 @@ function Explore() {
             </div>
 
             {/* Abstraction Layer */}
-            <div className='flex flex-col gap-4 lg:gap-10 lg:min-h-[692px] lg:order-3 lg:flex-row lg:items-start lg:sticky lg:-top-[52px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[62px] lg:pt-[320px] '>
+            <div className='flex flex-col gap-4 lg:gap-10 lg:min-h-[652px] lg:order-3 lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[182px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 12.5875H28M4 19.5875H24.5M17 5.58746H28M4 26.5875H15.5" stroke="url(#paint0_linear_3094_4910)" stroke-width="2" stroke-linecap="round" />
                         <defs>
@@ -91,7 +95,7 @@ function Explore() {
                     <span className='font-semibold font-ppmori-semibold text-2xl'>Abstraction Layer</span>
                 </div>
 
-                <div className='flex flex-col gap-5 lg:flex-row lg:pt-[320px] lg:bg-black-linear-gradient'>
+                <div className='flex flex-col gap-5 lg:flex-row lg:pt-[120px] lg:bg-black-linear-gradient'>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative'>
                         <div className='h-[120px]'>
                             <Image className='w-full rounded-t-2xl h-[120px]' alt='img_layer_zero' src={img_layer_zero} />
@@ -138,8 +142,8 @@ function Explore() {
             </div>
 
             {/* IP Source */}
-            <div id='ip-source' className='flex flex-col gap-4 lg:gap-10 lg:min-h-[1212px] lg:order-last lg:flex-row lg:items-end lg:sticky lg:-top-[52px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[15px] lg:min-w-[360px] lg:pt-[320px]'>
+            <div id='ip-source' className='flex flex-col gap-4 lg:gap-10 lg:max-h-[1172px] lg:order-last lg:flex-row lg:sticky lg:top-0'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] lg:mt-[796px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 10.5874V22.5874M11 10.5874H9M11 10.5874H13M11 22.5874H9M11 22.5874H13M17 22.5874V16.5874M17 16.5874V10.5874H21C22.6569 10.5874 24 11.9305 24 13.5874C24 15.2443 22.6569 16.5874 21 16.5874H17Z" stroke="url(#paint0_linear_3096_4953)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <rect x="3" y="5.5874" width="26" height="22" rx="4" stroke="url(#paint1_linear_3096_4953)" stroke-width="2" stroke-linecap="round" />
@@ -163,7 +167,7 @@ function Explore() {
                     <span className='font-semibold font-ppmori-semibold text-2xl'>IP Source</span>
                 </div>
 
-                <div className='flex flex-col gap-4 lg:gap-5 lg:pt-[320px] lg:bg-black-linear-gradient'>
+                <div className='flex flex-col gap-4 lg:gap-5 lg:bg-black-linear-gradient lg:pt-[120px]'>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 lg:flex lg:gap-6'>
                         <div className='flex flex-col gap-6 lg:py-[15px] lg:flex-1'>
                             <Image alt='' src={img_punkga} />
@@ -268,8 +272,8 @@ function Explore() {
             </div>
 
             {/* IP Consumer */}
-            <div id='ip-consumer' className='flex flex-col gap-4 lg:gap-10 lg:order-6 lg:min-h-[692px] lg:flex-row lg:items-start lg:sticky lg:-top-[52px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[248px] lg:pt-[320px]'>
+            <div id='ip-consumer' className='flex flex-col gap-4 lg:gap-10 lg:order-6 lg:min-h-[652px] lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[368px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="16" cy="16.5874" rx="15" ry="6" stroke="url(#paint0_linear_3096_5028)" stroke-width="2" stroke-linecap="round" />
                         <path d="M17 27.5874C14.2386 27.5874 12 22.6625 12 16.5874C12 10.5123 14.2386 5.63225 17 5.63225M16 27.5874C9.92487 27.5874 5 22.6625 5 16.5874C5 10.5123 9.92487 5.5874 16 5.5874C22.0751 5.5874 27 10.5123 27 16.5874C27 22.6625 22.0751 27.5874 16 27.5874Z" stroke="url(#paint1_linear_3096_5028)" stroke-width="2" stroke-linecap="round" />
@@ -292,7 +296,7 @@ function Explore() {
                     </svg>
                     <span className='font-semibold font-ppmori-semibold text-2xl'>IP Consumer</span>
                 </div>
-                <div className='flex flex-col gap-4 lg:flex-row lg:flex-1 lg:pt-[320px] lg:bg-black-linear-gradient'>
+                <div className='flex flex-col gap-4 lg:flex-row lg:flex-1 lg:pt-[120px] lg:min-h-[652px] lg:bg-black-linear-gradient'>
                     <div className='bg-dark-charcoal rounded-lg p-5 border-linear flex flex-col gap-5 lg:flex-1 lg:h-[200px] lg:p-9'>
                         <div className='flex flex-col gap-3 lg:justify-between h-full'>
                             <div className='bg-[#2C2825] rounded-full p-4 h-16 w-16'>
@@ -348,8 +352,8 @@ function Explore() {
             </div>
 
             {/* Data Visualization */}
-            <div className='flex flex-col gap-4 lg:gap-10 lg:order-4 lg:min-h-[692px] lg:flex-row lg:items-start lg:sticky lg:-top-[52px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[124px] lg:pt-[320px]'>
+            <div className='flex flex-col gap-4 lg:gap-10 lg:order-4 lg:min-h-[652px] lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[246px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 22.5874L5 28.5874M12 28.5874V14.5874M19 4.5874L19 28.5874M26 19.5874V28.5874" stroke="url(#paint0_linear_3096_5060)" stroke-width="2" stroke-linecap="round" />
                         <defs>
@@ -365,7 +369,7 @@ function Explore() {
 
                     <span className='font-semibold font-ppmori-semibold text-2xl'>Data Visualization</span>
                 </div>
-                <div className='lg:pt-[320px] lg:bg-black-linear-gradient lg:w-full lg:min-h-[692px]'>
+                <div className='lg:bg-black-linear-gradient lg:w-full lg:min-h-[652px] lg:pt-[120px]'>
                     <div className='bg-dark-charcoal p-6 rounded-lg flex flex-col gap-6 border border-linear lg:h-[140px] lg:flex-1'>
                         <span className='font-jetBrains-mono text-[16px] text-light-yellow'>COMING SOON</span>
                         <span className='font-ppmori-semibold text-[28px] leading-9'>IPScan</span>
@@ -374,9 +378,9 @@ function Explore() {
             </div>
 
             {/* Wallet */}
-            <div id='wallet' className='flex flex-col gap-4 lg:gap-10 lg:order-5 lg:flex-row lg:max-h-[692px] lg:sticky lg:-top-[52px]'>
-                <div className='lg:mt-[172px] lg:pt-[320px]'>
-                    <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px]'>
+            <div id='wallet' className='flex flex-col gap-4 lg:gap-10 lg:order-5 lg:flex-row lg:h-[652px] lg:sticky lg:top-[160px]'>
+                <div className='lg:mt-[306px]'>
+                    <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] '>
                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 9.58728V8.49212C24 6.52102 22.1316 5.08553 20.227 5.59341L6.22701 9.32675C4.91375 9.67695 4 10.8663 4 12.2255V12.5873M24 9.58728H8C5.79086 9.58728 4 11.3781 4 13.5873V24.5873C4 26.7964 5.79086 28.5873 8 28.5873H24C26.2091 28.5873 28 26.7964 28 24.5873V13.5873C28 11.3781 26.2091 9.58728 24 9.58728Z" stroke="url(#paint0_linear_3096_5071)" stroke-width="2" stroke-linecap="round" />
                             <circle cx="22" cy="18.5874" r="1" stroke="#EC737E" stroke-width="2" stroke-linecap="round" />
@@ -395,15 +399,15 @@ function Explore() {
 
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 p-4 lg:p-0 lg:grid-cols-3 lg:flex-1 lg:pt-[320px] lg:bg-black-linear-gradient">
-                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[178px]">
+                <div className="grid grid-cols-2 gap-4 p-4 lg:p-0 lg:grid-cols-3 lg:flex-1 lg:pt-[120px] lg:bg-black-linear-gradient lg:h-fit">
+                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
                         <div className='w-12 h-12 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                             <Image className='w-full rounded-xl' alt='' src={img_c98} />
                         </div>
                         <span className='font-ppmori-semibold text-xl'>Coin98</span>
                     </div>
 
-                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[178px]">
+                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
                         <div className='w-12 h-12 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                             <Image className='w-full rounded-xl' alt='' src={img_keplr} />
                         </div>
@@ -411,28 +415,28 @@ function Explore() {
                     </div>
 
 
-                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[178px]">
+                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
                         <div className='w-12 h-12 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                             <Image className='w-full rounded-xl' alt='' src={img_leap} />
                         </div>
                         <span className='font-ppmori-semibold text-xl'>Leap Wallet</span>
                     </div>
 
-                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[178px]">
+                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
                         <div className='w-12 h-12 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                             <Image className='w-full rounded-xl' alt='' src={img_subwallet} />
                         </div>
                         <span className='font-ppmori-semibold text-xl'>Subwallet</span>
                     </div>
 
-                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[178px]">
+                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
                         <div className='w-12 h-12 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                             <Image className='w-full rounded-xl' alt='' src={img_metamask} />
                         </div>
                         <span className='font-ppmori-semibold text-xl'>Metamask</span>
                     </div>
 
-                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[178px]">
+                    <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
                         <div className='w-12 h-12 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                             <Image className='w-full rounded-xl' alt='' src={img_klever} />
                         </div>

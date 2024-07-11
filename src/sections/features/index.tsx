@@ -3,6 +3,7 @@ import img_blocks from '@/assets/images/img_blocks_2.png'
 import img_universe from '@/assets/images/img_universe_2.png'
 import Card from './components/Card';
 import GradientButton from '../../components/Button/GradientButton';
+import Image from 'next/image';
 
 const featuresData = [{
     img: img_universe,
@@ -10,8 +11,7 @@ const featuresData = [{
     description: "LayerZero, Axelar, Wormhole, Celer, etc., offer secure and efficient cross-chain transactions."
 },
 {
-    img: img_blocks,
-    subImg: img_coins,
+    img: img_coins,
     title: "Account Abstraction",
     description: "AA enables us to create smart contract accounts, bundle multiple transactions into a single execution, and abstract gas fees from the user's perspective."
 },

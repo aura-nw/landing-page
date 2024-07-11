@@ -7,7 +7,7 @@ import ic_arrow from "@/assets/icons/ic_arrow.svg";
 import { PAGE_ROUTE } from "@/common"
 
 
-const Item = ({ children, path, subItems }: { children: ReactNode, path?: string, subItems?: any }) => {
+const Item = ({ children, path, subItems, target }: { children: ReactNode, path?: string, subItems?: any, target?: string }) => {
     const pathname = usePathname()
 
     if (subItems) {
@@ -42,7 +42,7 @@ const Item = ({ children, path, subItems }: { children: ReactNode, path?: string
 
     return (
         <div className="flex justify-center items-center">
-            <Link href={path ?? PAGE_ROUTE.HOME} className={`px-6 py-3 hover:bg-medium-charcoal text-medium-gray ${(pathname === PAGE_ROUTE.HOME ? pathname : pathname.slice(0, -1)) === path ? 'bg-medium-charcoal' : ''} rounded-2xl text-lg flex justify-center items-center`}>{children}</Link>
+            <Link href={path ?? PAGE_ROUTE.HOME} target={target} className={`px-6 py-3 hover:bg-medium-charcoal text-medium-gray ${(pathname === PAGE_ROUTE.HOME ? pathname : pathname.slice(0, -1)) === path ? 'bg-medium-charcoal' : ''} rounded-2xl text-lg flex justify-center items-center`}>{children}</Link>
         </div>
     )
 

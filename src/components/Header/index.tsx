@@ -77,7 +77,7 @@ function Header() {
         <div className="gap-1 hidden lg:flex">
           <Item path={PAGE_ROUTE.HOME}>Home</Item>
           <Item path={PAGE_ROUTE.ECOSYSTEM}>Ecosystem</Item>
-          <Item path={PAGE_ROUTE.DOCS}>Docs</Item>
+          <Item path={PAGE_ROUTE.DOCS} target="_blank">Docs</Item>
           <Item subItems={communityMenu}>Community</Item>
         </div>
         <div className="hidden lg:contents">

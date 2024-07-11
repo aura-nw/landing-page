@@ -2932,6 +2932,13 @@ fraction.js@^4.3.7:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
+framer-motion@^11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.3.0.tgz#dd2fe041577c520b2bf1b136b3ed31f866308f54"
+  integrity sha512-hjYjMUQaWuqilwRr5kC0CunHZFVMtKWHy/IdL/LPRBD0C491DKTvYwQRJ5qRXEAOT+Rth7Vi4XBe4TA4bFOn3A==
+  dependencies:
+    tslib "^2.4.0"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
@@ -4545,6 +4552,11 @@ react-hook-form@^7.52.0:
   version "7.52.0"
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.52.0.tgz#e52b33043e283719586b9dd80f6d51b68dd3999c"
   integrity sha512-mJX506Xc6mirzLsmXUJyqlAI3Kj9Ph2RhplYhUVffeOQSnubK2uVqBFOBJmvKikvbFV91pxVXmDiR+QMF19x6A==
+
+react-intersection-observer@^9.11.0:
+  version "9.11.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.11.0.tgz#f9e271ceb09391dcb612eeeb9dd564889f8e005c"
+  integrity sha512-fIaYm1nN7FGa4Lpa+sIf8YZWPGbYvctAHQWFjWMv+z+MSMiq9gfPkHLtCglyiPMpaH49ZgGxXuH+THCGcHX75Q==
 
 react-is@^16.13.1:
   version "16.13.1"

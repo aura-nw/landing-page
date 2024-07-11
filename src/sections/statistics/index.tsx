@@ -1,8 +1,13 @@
+"use client"
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import useWindowSize from "../../hooks/useWindowSize";
 import Card from "./components/Card";
 
 const statisticData = [
     {
-        value: "1.5M+",
+        value: "1.5B+",
         title: "Transactions",
         img: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 7.5C10.7574 7.5 9.75 8.50736 9.75 9.75C9.75 10.9926 10.7574 12 12 12C13.2426 12 14.25 10.9926 14.25 9.75C14.25 8.50736 13.2426 7.5 12 7.5Z" fill="url(#paint0_linear_3109_1580)" />
@@ -29,7 +34,7 @@ const statisticData = [
 
     },
     {
-        value: "10,000+",
+        value: "14.5M+",
         title: "Deployed smart contract",
         img: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.315 7.58365C12.1956 3.88296 16.6946 1.50021 21.75 1.5C21.9489 1.49999 22.1397 1.57901 22.2803 1.71966C22.421 1.86031 22.5 2.05108 22.5 2.25C22.5 7.30564 20.1173 11.805 16.4165 14.6859C16.4715 15.0329 16.5 15.3883 16.5 15.75C16.5 19.4779 13.4779 22.5 9.75 22.5C9.33579 22.5 9 22.1642 9 21.75V17.6185C8.99075 17.6118 8.98163 17.6049 8.97264 17.5978C8.02063 16.8429 7.15799 15.9803 6.40312 15.0282C6.39577 15.019 6.38866 15.0096 6.38179 15H2.25C1.83579 15 1.5 14.6642 1.5 14.25C1.5 10.5221 4.52208 7.5 8.25 7.5C8.61198 7.5 8.96772 7.52856 9.315 7.58365ZM15 6.75C13.7574 6.75 12.75 7.75736 12.75 9C12.75 10.2426 13.7574 11.25 15 11.25C16.2426 11.25 17.25 10.2426 17.25 9C17.25 7.75736 16.2426 6.75 15 6.75Z" fill="url(#paint0_linear_3109_632)" />
@@ -50,7 +55,7 @@ const statisticData = [
 
     },
     {
-        value: "41,000+",
+        value: "141,000+",
         title: "Unique active addresses",
         img: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.3779 1.60217C12.1444 1.46594 11.8556 1.46594 11.6221 1.60217L3 6.63172L12 11.8817L21 6.63172L12.3779 1.60217Z" fill="url(#paint0_linear_3109_659)" />
@@ -98,6 +103,35 @@ const statisticData = [
     }
 ]
 function Statistics() {
+    const { isMobile } = useWindowSize()
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const variants = {
+        hidden: (direction: number) => ({
+            opacity: 0,
+            x: direction > 0 ? 100 : -100,
+        }),
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5,
+            },
+        },
+    };
+
     return (
         <div className="flex flex-col gap-6 w-full items-center lg:gap-14">
             <div className="flex flex-col gap-4 items-center">
@@ -105,9 +139,24 @@ function Statistics() {
                 <h2 className="font-ppmori-semibold self-stretch text-[28px] lg:text-[48px] text-center font-semibold leading-9 lg:leading-[56px] max-w-[659px] min-w-[313px]">The most thriving blockchain in emerging countries</h2>
             </div>
             <div className="flex flex-col gap-3 xl:flex-row xl:gap-6 w-full items-center justify-center">
-                {statisticData.map((item, i) => (
-                    <Card key={i} data={item} />
-                ))}
+                {statisticData.map((item: any, i: number) => {
+                    if (isMobile) return (
+                        < Card data={item} />
+                    )
+                    return (
+                        <motion.div
+                            key={i}
+                            ref={ref}
+                            custom={i % 2 === 0 ? 1 : -1}
+                            initial="hidden"
+                            animate={controls}
+                            variants={variants}
+                            className="w-full"
+                        >
+                            <Card data={item} />
+                        </motion.div>
+                    )
+                })}
             </div>
         </div>
     );
