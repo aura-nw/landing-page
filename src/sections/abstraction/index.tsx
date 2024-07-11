@@ -3,6 +3,7 @@ import img_abstrac_pc from "@/assets/images/img_abstrac_pc.png";
 
 import Image from "next/image";
 import GradientButton from "../../components/Button/GradientButton";
+import { PAGE_ROUTE } from "../../common";
 
 function AbstractionLayer() {
     return (
@@ -16,7 +17,7 @@ function AbstractionLayer() {
                         A decentralized middleware infrastructure accelerates the interoperability of IPs across chains.
                     </span>
                 </div>
-                <GradientButton href='/'>Explore our ecosystem</GradientButton>
+                <GradientButton href={PAGE_ROUTE.ECOSYSTEM}>Explore our ecosystem</GradientButton>
             </div>
         </div>
     );
