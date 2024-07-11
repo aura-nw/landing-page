@@ -15,7 +15,7 @@ function Tutorials() {
                         Build Your DApp With Aura
                     </h2>
                     <GradientButton href="https://docs.aura.network/developer/">
-                        Submit your project
+                        Tutorials
                     </GradientButton>
                 </div>
             </div>
