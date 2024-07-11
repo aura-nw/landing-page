@@ -1,5 +1,5 @@
-import img_aura from '@/assets/images/img_aura.png';
 import img_aura_2 from '@/assets/images/img_aura_2.png';
+import img_aura_thumb from '@/assets/images/img_aura_thumb.png';
 import img_c98 from '@/assets/images/img_c98.png';
 import img_cat_22 from '@/assets/images/img_cat-22.png';
 import img_catze from '@/assets/images/img_catze.png';
@@ -7,12 +7,11 @@ import img_catze_1 from '@/assets/images/img_catze_1.png';
 import img_catze_2 from '@/assets/images/img_catze_2.png';
 import img_creek_river from '@/assets/images/img_creek_river.png';
 import img_crescentshine from '@/assets/images/img_crescentshine.png';
-import img_depip_2 from '@/assets/images/img_depip_2.png';
+import img_daisies from '@/assets/images/img_daisies.png';
 import img_depip from '@/assets/images/img_depip.png';
+import img_depip_2 from '@/assets/images/img_depip_2.png';
 import img_keplr from '@/assets/images/img_keplr.png';
 import img_klever from '@/assets/images/img_klever.png';
-import img_layer_zero from '@/assets/images/img_layer_zero.png';
-import img_layer_zero_2 from '@/assets/images/img_layer_zero_2.png';
 import img_leap from '@/assets/images/img_leap.png';
 import img_metamask from '@/assets/images/img_metamask.png';
 import img_monsterra from '@/assets/images/img_monsterra.png';
@@ -24,6 +23,7 @@ import img_punkga_3 from '@/assets/images/img_punkga_3.png';
 import img_story_protocol from '@/assets/images/img_story_protocol.png';
 import img_story_protocol_2 from '@/assets/images/img_story_protocol_2.png';
 import img_subwallet from '@/assets/images/img_subwallet.png';
+
 
 
 import Image from 'next/image';
@@ -96,24 +96,10 @@ function Explore() {
                     <span className='font-semibold font-ppmori-semibold text-2xl'>Abstraction Layer</span>
                 </div>
 
-                <div className='flex flex-col gap-5 lg:flex-row lg:pt-[120px] lg:bg-black-linear-gradient'>
-                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative'>
+                <div className='flex flex-col gap-5 lg:flex-row lg:pt-[120px] lg:bg-black-linear-gradient lg:w-full'>
+                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative lg:flex-1'>
                         <div className='h-[120px]'>
-                            <Image className='w-full rounded-t-2xl h-[120px]' alt='img_layer_zero' src={img_layer_zero} />
-                        </div>
-                        <div className='flex flex-col absolute top-[84px] gap-6 px-6 pb-6'>
-                            <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
-                                <Image className='w-full rounded-xl' alt='' src={img_layer_zero_2} />
-                            </div>
-                            <div className='flex flex-col gap-1'>
-                                <span className='font-ppmori-semibold text-xl'>Layer Zero</span>
-                                <span className='text-[16px] leading-6 text-medium-gray line-clamp-2'>The open-source omnichain interoperability protocol that enables multiple blockchains to communicate cross-chain and share information seamlessly.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative'>
-                        <div className='h-[120px]'>
-                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_aura} />
+                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_aura_thumb} />
                         </div>
                         <div className='flex flex-col absolute top-[84px] gap-6 px-6 pb-6'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
@@ -125,7 +111,7 @@ function Explore() {
                             </div>
                         </div>
                     </div>
-                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative'>
+                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative lg:flex-1'>
                         <div className='h-[120px]'>
                             <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_depip} />
                         </div>
@@ -251,7 +237,7 @@ function Explore() {
 
                         <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 flex flex-col gap-6 lg:flex-1'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
-                                <Image className='w-full rounded-xl' alt='' src={img_layer_zero_2} />
+                                <Image className='w-full rounded-xl' alt='' src={img_daisies} />
                             </div>
                             <div className='flex flex-col gap-2'>
                                 <span className='font-ppmori-semibold text-xl'>Daisies DayDreams</span>

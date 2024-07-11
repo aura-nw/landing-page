@@ -1,38 +1,30 @@
 "use client";
 
 import ahafast from "@/assets/images/ecosystem/aha_fast.png";
-import ahamove from "@/assets/images/ecosystem/ahamove.png";
 import aliniex from "@/assets/images/ecosystem/aliniex.png";
 import aura_scan from "@/assets/images/ecosystem/aura_scan.png";
 import band from "@/assets/images/ecosystem/band.png";
-import bbb from "@/assets/images/ecosystem/bbb.png";
 import bingx from "@/assets/images/ecosystem/bingx.png";
 import c98 from "@/assets/images/ecosystem/c98.png";
-import fpt_play from "@/assets/images/ecosystem/fpt_play.png";
 import gate from "@/assets/images/ecosystem/gate.png";
 import halotrade from "@/assets/images/ecosystem/halotrade.png";
 import horo from "@/assets/images/ecosystem/horo.png";
 import nimbus from "@/assets/images/ecosystem/img_nimbus.png";
 import keplr from "@/assets/images/ecosystem/keplr.png";
-import kimetsu from "@/assets/images/ecosystem/kimetsu.png";
 import klever from "@/assets/images/ecosystem/klever.png";
 import leap from "@/assets/images/ecosystem/leap.png";
 import metamask from "@/assets/images/ecosystem/metamask.png";
 import mexc from "@/assets/images/ecosystem/mexc.png";
 import micro3 from "@/assets/images/ecosystem/micro3.png";
 import monsterra from "@/assets/images/ecosystem/monsterra.png";
-import yooldo from "@/assets/images/ecosystem/yooldo.png";
 import nois from "@/assets/images/ecosystem/nois.png";
 import onus from "@/assets/images/ecosystem/onus.png";
 import pyxis from "@/assets/images/ecosystem/pyxis.png";
-import seekhype from "@/assets/images/ecosystem/seekhype.png";
 import squid from "@/assets/images/ecosystem/squid.png";
 import stakify from "@/assets/images/ecosystem/stakify.png";
+import seekhype from "@/assets/images/ecosystem/seekhype.png";
 import sub_wallet from "@/assets/images/ecosystem/sub_wallet.png";
-import tc_network from "@/assets/images/ecosystem/tc_network.png";
-import the_data_nerd from "@/assets/images/ecosystem/the_data_nerd.png";
-import larking from "@/assets/images/ecosystem/larking.png";
-
+import yooldo from "@/assets/images/ecosystem/yooldo.png";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import Select from "../../components/Select";
@@ -48,8 +40,8 @@ const options = [
     { value: 'Wallet', label: 'Wallet' },
     { value: 'SocialFi', label: 'SocialFi' },
     { value: 'Oracle', label: 'Oracle' },
+    { value: 'DeFi', label: 'DeFi' },
     { value: 'Others', label: 'Others' },
-
 ];
 
 const data = [
@@ -57,188 +49,172 @@ const data = [
         title: 'Aurascan',
         description: 'The next generation blockchain explorer for Aura Network',
         tag: 'Tools',
-        img: aura_scan
+        img: aura_scan,
+        link: 'https://aurascan.io/'
     },
     {
         title: 'Pyxis Safe',
         description: 'Multi-signature and fine -grain access control, asset management tool',
         tag: 'Tools',
-        img: pyxis
+        img: pyxis,
+        link: 'https://pyxis.aura.network/'
     },
     {
         title: 'Horoscope',
         description: 'An indexing service to provide real-time data for Aura ecosystem',
         tag: 'Tools',
-        img: horo
+        img: horo,
+        link: 'https://horoscope.aura.network/'
     },
     {
         title: 'Nimbus',
         description: 'A Personalized Portfolio for Crypto investors',
         tag: 'Tools',
-        img: nimbus
-    },
-    {
-        title: 'SeekHYPE',
-        description: 'The Simplest NFT Marketplace',
-        tag: 'NFT',
-        img: seekhype
-    },
-    {
-        title: 'Stakify',
-        description: 'NFT Staking Campaign Platform',
-        tag: 'NFT',
-        img: stakify
+        img: nimbus,
+        link: 'https://getnimbus.io/'
     },
     {
         title: 'Halotrade',
         description: 'Seamless crypto trading, built for all',
         tag: 'DEX',
-        img: halotrade
+        img: halotrade,
+        link: 'https://halotrade.zone/'
     },
     {
         title: 'BingX',
         tag: 'CEX',
-        img: bingx
+        img: bingx,
+        link: 'https://bingx.com/vi-vn/'
     },
     {
         title: 'MEXC',
         tag: 'CEX',
-        img: mexc
+        img: mexc,
+        link: 'https://www.mexc.com/'
     },
     {
         title: 'ONUS',
         tag: 'CEX',
-        img: onus
+        img: onus,
+        link: 'https://goonus.io/'
     },
     {
         title: 'Gate',
         tag: 'CEX',
-        img: gate
+        img: gate,
+        link: 'http://gate.io'
     },
     {
         title: 'Aliniex',
         tag: 'CEX',
-        img: aliniex
+        img: aliniex,
+        link: 'https://aliniex.com/'
+
     },
     {
         title: 'Monsterra',
         description: 'A leading multi-chain NFT Game with free-to-play-and-earn mechanism developed by CrescentShine Studio, offering gamers an unparalleled and immersive gaming experience.',
         tag: 'Web3 Game',
-        img: monsterra
+        img: monsterra,
+        link: 'https://monsterra.io/'
     },
     {
         title: 'Yooldo',
         description: 'Yooldo is a gaming platform renowned for its innovative Anti abuse system, Jury DAO',
         tag: 'Web3 Game',
-        img: yooldo
+        img: yooldo,
+        link: 'https://www.yooldo.gg/'
     },
     {
         title: 'AhaFast Ride 2 Earn',
         description: 'Spearheading the Blockchain O2O (Online-to-offline) movement in Vietnam',
-        tag: 'Tools',
-        img: ahafast
+        tag: 'Others',
+        img: ahafast,
+        link: 'https://twitter.com/ahafastofficial'
     },
     {
         title: 'Nois Network',
         description: 'Reliable Randomness For the Interchain',
         tag: 'Others',
-        img: nois
+        img: nois,
+        link: 'https://nois.network/'
     },
     {
         title: 'Coin98',
         description: 'The #1 non-custodial, multi-chain wallet, and DeFi gateway, designed to seamlessly connect users to the crypto world in a safe and secure manner.',
         tag: 'Wallet',
-        img: c98
+        img: c98,
+        link: 'https://wallet.coin98.com/'
     },
     {
         title: 'Keplr',
         description: 'Wallet for the Inter blockchain ecosystem',
         tag: 'Wallet',
-        img: keplr
+        img: keplr,
+        link: 'https://www.klever.io/'
     },
     {
         title: 'Leap Wallet',
         description: 'The Super Wallet‍ for Web3',
         tag: 'Wallet',
-        img: leap
+        img: leap,
+        link: 'https://www.leapwallet.io/'
     },
     {
         title: 'Subwallet',
         description: 'A non-custodial Web3 Wallet',
         tag: 'Wallet',
-        img: sub_wallet
+        img: sub_wallet,
+        link: 'https://www.subwallet.app/'
     },
     {
         title: 'Metamask',
         description: 'A non-custodial Web3 Wallet',
         tag: 'Wallet',
-        img: metamask
+        img: metamask,
+        link: 'https://metamask.io/'
     },
     {
         title: 'Klever',
         description: 'A non-custodial Web3 Wallet',
         tag: 'Wallet',
-        img: klever
-    },
-    {
-        title: 'FPT Play',
-        description: 'One of the leading online TV streaming applications in Vietnam',
-        tag: 'NFT',
-        img: fpt_play
-    },
-    {
-        title: 'Ahamove',
-        description: 'Ahamove is an on-demand logistics company that connects motorbike and truck drivers with consumers for efficient, low-cost deliveries',
-        tag: 'NFT',
-        img: ahamove
-    },
-    {
-        title: 'Business Bolar Bear',
-        description: 'The Premier NFT collection on AuraNetwork that combines breathtaking visual art with powerful tools for accelerating communities on Cosmos ecosystems.',
-        tag: 'NFT',
-        img: bbb
-    },
-    {
-        title: 'The Data Nerd',
-        description: 'Research & analytics firm that gathers top minds and utilizes machine learning to create actionable insights & give alpha signals.',
-        tag: 'NFT',
-        img: the_data_nerd
-    },
-    {
-        title: 'TC Network',
-        description: 'NFT Creators include group of blockchain developers and enthusiasts who run nodes on Proof-of-Stake (PoS) blockchains.',
-        tag: 'NFT',
-        img: tc_network
-    },
-    {
-        title: 'Aura x Kimetsu',
-        description: 'An NFT collection inspired by Kimetsu No Yaiba (Demon Slayer)',
-        tag: 'NFT',
-        img: kimetsu
-    },
-    {
-        title: 'Larking on the Blockchain',
-        description: 'This collection is the result of a collaboration between GM Vietnam and Jay Tran to accelerate the Vietnamese blockchain ecosystem globally.',
-        tag: 'NFT',
-        img: larking
+        img: klever,
+        link: 'https://www.klever.io/'
     },
     {
         title: 'Band Protocol',
         description: 'A cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts.',
         tag: 'Oracle',
-        img: band
+        img: band,
+        link: 'https://www.bandprotocol.com/'
     },
     {
         title: 'Squid',
         description: 'The first native-to-native cross-chain solution, replacing bridges with 1-click cross-chain swaps',
-        tag: 'Oracle',
-        img: squid
+        tag: 'DeFi',
+        img: squid,
+        link: 'https://www.squidrouter.com/'
     },
     {
         title: 'Micro3',
         description: 'A Decentralized SocialFi Mint-To-Earn platform that empowers Web3 projects and individuals through the creator economy, leveraging advanced LayerZero and Chainlink technologies.',
         tag: 'SocialFi',
-        img: micro3
+        img: micro3,
+        link: 'https://micro3.io/'
+    },
+    {
+        title: 'SeekHYPE',
+        description: 'The Simplest NFT Marketplace',
+        tag: 'NFT',
+        img: seekhype,
+        link: 'https://beta.seekhype.io/'
+    },
+    {
+        title: 'Stakify',
+        description: 'NFT Staking Campaign Platform',
+        tag: 'NFT',
+        img: stakify,
+        link: 'https://stakify.zone/'
     },
 ]
 
