@@ -59,7 +59,7 @@ function Explore() {
                 <div className='flex flex-col gap-5 lg:flex-row lg:flex-1 lg:bg-black-linear-gradient lg:pt-[120px]'>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[252px] relative lg:flex-1'>
                         <div className='h-[120px]'>
-                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_story_protocol} />
+                            <Image className='w-full rounded-t-2xl h-[120px] object-cover' alt='' src={img_story_protocol} />
                         </div>
                         <div className='flex flex-col absolute top-[84px] left-6 gap-6'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
@@ -99,7 +99,7 @@ function Explore() {
                 <div className='flex flex-col gap-5 lg:flex-row lg:pt-[120px] lg:bg-black-linear-gradient lg:w-full'>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative lg:flex-1'>
                         <div className='h-[120px]'>
-                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_aura_thumb} />
+                            <Image className='w-full rounded-t-2xl h-[120px] object-cover' alt='' src={img_aura_thumb} />
                         </div>
                         <div className='flex flex-col absolute top-[84px] gap-6 px-6 pb-6'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
@@ -113,7 +113,7 @@ function Explore() {
                     </div>
                     <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[276px] relative lg:flex-1'>
                         <div className='h-[120px]'>
-                            <Image className='w-full rounded-t-2xl h-[120px]' alt='' src={img_depip} />
+                            <Image className='w-full rounded-t-2xl h-[120px] object-cover' alt='' src={img_depip} />
                         </div>
                         <div className='flex flex-col absolute top-[84px] gap-6 px-6 pb-6'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
@@ -181,7 +181,7 @@ function Explore() {
                             </div>
                             <div className='hidden lg:flex flex-col gap-4'>
                                 <span className='font-ppmori-semibold'>Monsterra</span>
-                                <Image className='w-full rounded-lg' alt='img_monsterra' src={img_monsterra} />
+                                <Image className='w-full rounded-lg object-cover' alt='img_monsterra' src={img_monsterra} />
                             </div>
                         </div>
 
@@ -195,9 +195,9 @@ function Explore() {
                             </div>
                             <div className='hidden lg:flex flex-col gap-4'>
                                 <span className='font-ppmori-semibold'>Yooldo, TROUBLE PUNK: CYBER GALZ, Random Private Defense</span>
-                                <div className='flex gap-2'>
-                                    <Image className='w-full rounded-lg' alt='img_catze_1' src={img_catze_1} />
-                                    <Image className='w-full rounded-lg' alt='img_catze_2' src={img_catze_2} />
+                                <div className='flex gap-2 max-2xl:flex-col'>
+                                    <Image className='w-full rounded-lg object-cover' alt='img_catze_1' src={img_catze_1} />
+                                    <Image className='w-full rounded-lg object-cover' alt='img_catze_2' src={img_catze_2} />
                                 </div>
                             </div>
                         </div>
