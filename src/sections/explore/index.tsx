@@ -80,7 +80,7 @@ function Explore() {
 
             {/* Abstraction Layer */}
             <div className='flex flex-col gap-4 lg:gap-10 lg:min-h-[652px] lg:order-3 lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[182px]'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[174px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 12.5875H28M4 19.5875H24.5M17 5.58746H28M4 26.5875H15.5" stroke="url(#paint0_linear_3094_4910)" stroke-width="2" stroke-linecap="round" />
                         <defs>
@@ -129,8 +129,8 @@ function Explore() {
             </div>
 
             {/* IP Source */}
-            <div id='ip-source' className='flex flex-col gap-4 lg:gap-10 lg:max-h-[1172px] lg:order-last lg:flex-row lg:sticky lg:top-0'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] lg:mt-[796px]'>
+            <div id='ip-source' className='flex flex-col gap-4 lg:gap-10 lg:h-[1172px] lg:order-last lg:flex-row lg:sticky lg:top-0'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] lg:mt-[942px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 10.5874V22.5874M11 10.5874H9M11 10.5874H13M11 22.5874H9M11 22.5874H13M17 22.5874V16.5874M17 16.5874V10.5874H21C22.6569 10.5874 24 11.9305 24 13.5874C24 15.2443 22.6569 16.5874 21 16.5874H17Z" stroke="url(#paint0_linear_3096_4953)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <rect x="3" y="5.5874" width="26" height="22" rx="4" stroke="url(#paint1_linear_3096_4953)" stroke-width="2" stroke-linecap="round" />
@@ -154,8 +154,8 @@ function Explore() {
                     <span className='font-semibold font-ppmori-semibold text-2xl'>IP Source</span>
                 </div>
 
-                <div className='flex flex-col gap-4 lg:gap-5 lg:bg-black-linear-gradient lg:pt-[120px]'>
-                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 lg:flex lg:gap-6'>
+                <div className='flex flex-col gap-4 lg:gap-5 lg:bg-black-linear-gradient lg:pt-[280px]'>
+                    <div className='border border-[#221F19] rounded-2xl bg-black-charcoal p-6 lg:flex lg:gap-6'>
                         <div className='flex flex-col gap-6 lg:py-[15px] lg:flex-1'>
                             <Image alt='' src={img_punkga} />
                             <div className='flex flex-col gap-2'>
@@ -195,16 +195,21 @@ function Explore() {
                             </div>
                             <div className='hidden lg:flex flex-col gap-4'>
                                 <span className='font-ppmori-semibold'>Yooldo, TROUBLE PUNK: CYBER GALZ, Random Private Defense</span>
-                                <div className='flex gap-2 max-2xl:flex-col'>
-                                    <Image className='w-full rounded-lg object-cover' alt='img_catze_1' src={img_catze_1} />
-                                    <Image className='w-full rounded-lg object-cover' alt='img_catze_2' src={img_catze_2} />
+                                <div className='flex gap-2 object-cover'>
+                                    <div className='w-full rounded-lg'>
+                                        <Image className='w-full rounded-lg' alt='img_catze_1' src={img_catze_1} />
+                                    </div>
+                                    <div className='w-full rounded-lg object-cover'>
+                                        <Image className='w-full rounded-lg' alt='img_catze_2' src={img_catze_2} />
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className='flex flex-col gap-4 lg:flex-row lg:gap-5'>
-                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 flex flex-col gap-6 lg:flex-1'>
+                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal p-6 flex flex-col gap-6 lg:flex-1'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                                 <Image className='w-full rounded-xl' alt='' src={img_creek_river} />
                             </div>
@@ -225,7 +230,7 @@ function Explore() {
                             </div>
                         </div>
 
-                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 flex flex-col gap-6 lg:flex-1'>
+                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal p-6 flex flex-col gap-6 lg:flex-1'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                                 <Image className='w-full rounded-xl' alt='' src={img_cat_22} />
                             </div>
@@ -235,7 +240,7 @@ function Explore() {
                             </div>
                         </div>
 
-                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 flex flex-col gap-6 lg:flex-1'>
+                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal p-6 flex flex-col gap-6 lg:flex-1'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                                 <Image className='w-full rounded-xl' alt='' src={img_daisies} />
                             </div>
@@ -245,7 +250,7 @@ function Explore() {
                             </div>
                         </div>
 
-                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal h-[220px] p-6 flex flex-col gap-6 lg:flex-1'>
+                        <div className='border border-[#221F19] rounded-2xl bg-black-charcoal p-6 flex flex-col gap-6 lg:flex-1'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                                 <Image className='w-full rounded-xl' alt='' src={img_peacock} />
                             </div>
@@ -260,7 +265,7 @@ function Explore() {
 
             {/* IP Consumer */}
             <div id='ip-consumer' className='flex flex-col gap-4 lg:gap-10 lg:order-6 lg:min-h-[652px] lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[368px]'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[360px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="16" cy="16.5874" rx="15" ry="6" stroke="url(#paint0_linear_3096_5028)" stroke-width="2" stroke-linecap="round" />
                         <path d="M17 27.5874C14.2386 27.5874 12 22.6625 12 16.5874C12 10.5123 14.2386 5.63225 17 5.63225M16 27.5874C9.92487 27.5874 5 22.6625 5 16.5874C5 10.5123 9.92487 5.5874 16 5.5874C22.0751 5.5874 27 10.5123 27 16.5874C27 22.6625 22.0751 27.5874 16 27.5874Z" stroke="url(#paint1_linear_3096_5028)" stroke-width="2" stroke-linecap="round" />
@@ -340,7 +345,7 @@ function Explore() {
 
             {/* Data Visualization */}
             <div className='flex flex-col gap-4 lg:gap-10 lg:order-4 lg:min-h-[652px] lg:flex-row lg:items-start lg:sticky lg:top-[160px]'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[246px]'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:min-w-[360px] lg:mt-[236px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 22.5874L5 28.5874M12 28.5874V14.5874M19 4.5874L19 28.5874M26 19.5874V28.5874" stroke="url(#paint0_linear_3096_5060)" stroke-width="2" stroke-linecap="round" />
                         <defs>
@@ -366,8 +371,7 @@ function Explore() {
 
             {/* Wallet */}
             <div id='wallet' className='flex flex-col gap-4 lg:gap-10 lg:order-5 lg:flex-row lg:h-[652px] lg:sticky lg:top-[160px]'>
-                <div className='lg:mt-[306px]'>
-                    <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] '>
+                    <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px]  lg:mt-[298px]'>
                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 9.58728V8.49212C24 6.52102 22.1316 5.08553 20.227 5.59341L6.22701 9.32675C4.91375 9.67695 4 10.8663 4 12.2255V12.5873M24 9.58728H8C5.79086 9.58728 4 11.3781 4 13.5873V24.5873C4 26.7964 5.79086 28.5873 8 28.5873H24C26.2091 28.5873 28 26.7964 28 24.5873V13.5873C28 11.3781 26.2091 9.58728 24 9.58728Z" stroke="url(#paint0_linear_3096_5071)" stroke-width="2" stroke-linecap="round" />
                             <circle cx="22" cy="18.5874" r="1" stroke="#EC737E" stroke-width="2" stroke-linecap="round" />
@@ -383,8 +387,6 @@ function Explore() {
                         </svg>
                         <span className='font-semibold font-ppmori-semibold text-2xl'>Wallet</span>
                     </div>
-
-                </div>
 
                 <div className="grid grid-cols-2 gap-4 p-4 lg:p-0 lg:grid-cols-3 lg:flex-1 lg:pt-[120px] lg:bg-black-linear-gradient lg:h-fit">
                     <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">

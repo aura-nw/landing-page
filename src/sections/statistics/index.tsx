@@ -1,7 +1,9 @@
 "use client"
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { A11y, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import useWindowSize from "../../hooks/useWindowSize";
 import Card from "./components/Card";
 
@@ -138,25 +140,25 @@ function Statistics() {
                 <span className="text-light-yellow text-sm lg:text-xl font-normal font-jetBrains-mono">AURA IN NUMBERS</span>
                 <h2 className="font-ppmori-semibold self-stretch text-[28px] lg:text-[48px] text-center font-semibold leading-9 lg:leading-[56px] max-w-[659px] min-w-[313px]">The most thriving blockchain in emerging countries</h2>
             </div>
-            <div className="flex flex-col gap-3 xl:flex-row xl:gap-6 w-full items-center justify-center">
-                {statisticData.map((item: any, i: number) => {
-                    if (isMobile) return (
-                        < Card data={item} />
-                    )
-                    return (
-                        <motion.div
-                            key={i}
-                            ref={ref}
-                            custom={i % 2 === 0 ? 1 : -1}
-                            initial="hidden"
-                            animate={controls}
-                            variants={variants}
-                            className="w-full"
-                        >
-                            <Card data={item} />
-                        </motion.div>
-                    )
-                })}
+            <div className="flex flex-col gap-3 xl:flex-row xl:gap-6 w-full xl:w-[calc(100vw_-_6px)] items-center justify-center">
+                <Swiper
+                    modules={[A11y, Navigation]}
+                    spaceBetween={16}
+                    slidesPerView="auto"
+                    pagination={{
+                        clickable: true,
+                    }}
+
+                >
+                    <div className='flex gap-4'>
+                        {statisticData.map((item: any, i: number) => {
+                            return (
+                                <SwiperSlide key={i}> < Card data={item} /></SwiperSlide>
+                            )
+                        })}
+                    </div>
+
+                </Swiper>
             </div>
         </div>
     );
