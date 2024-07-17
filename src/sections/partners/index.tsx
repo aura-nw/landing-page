@@ -212,8 +212,6 @@ function Parters() {
                 <span className="font-ppmori-semibold text-[32px] lg:text-[48px] text-center font-semibold leading-[40px] lg:leading-[56px]">Backed by the best</span>
             </div>
             <div className="relative overflow-hidden w-full">
-
-
                 <Marquee>
                     <div className="flex gap-10 px-2 justify-center items-center lg:gap-16 lg:px-10 xl:flex-nowrap">
                         {partners.map((item) => (
