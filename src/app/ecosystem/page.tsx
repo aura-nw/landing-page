@@ -166,6 +166,13 @@ const data = [
         link: 'https://twitter.com/ahafastofficial'
     },
     {
+        title: 'Subwallet',
+        description: 'A non-custodial Web3 Wallet',
+        tag: 'Wallet',
+        img: sub_wallet,
+        link: 'https://www.subwallet.app/'
+    },
+    {
         title: 'Coin98',
         description: 'The #1 non-custodial, multi-chain wallet, and DeFi gateway, designed to seamlessly connect users to the crypto world in a safe and secure manner.',
         tag: 'Wallet',
@@ -185,13 +192,6 @@ const data = [
         tag: 'Wallet',
         img: leap,
         link: 'https://www.leapwallet.io/'
-    },
-    {
-        title: 'Subwallet',
-        description: 'A non-custodial Web3 Wallet',
-        tag: 'Wallet',
-        img: sub_wallet,
-        link: 'https://www.subwallet.app/'
     },
     {
         title: 'Klever',
