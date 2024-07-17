@@ -1,10 +1,6 @@
 "use client"
-import { useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 import { A11y, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import useWindowSize from "../../hooks/useWindowSize";
 import Card from "./components/Card";
 
 const statisticData = [
@@ -104,36 +100,8 @@ const statisticData = [
 
     }
 ]
+
 function Statistics() {
-    const { isMobile } = useWindowSize()
-    const controls = useAnimation();
-    const [ref, inView] = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
-    });
-
-    useEffect(() => {
-        if (inView) {
-            controls.start('visible');
-        } else {
-            controls.start('hidden');
-        }
-    }, [controls, inView]);
-
-    const variants = {
-        hidden: (direction: number) => ({
-            opacity: 0,
-            x: direction > 0 ? 100 : -100,
-        }),
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.5,
-            },
-        },
-    };
-
     return (
         <div className="flex flex-col gap-6 w-full items-center lg:gap-14">
             <div className="flex flex-col gap-4 items-center">

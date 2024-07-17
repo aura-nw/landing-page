@@ -6,6 +6,7 @@ import aura_scan from "@/assets/images/ecosystem/aura_scan.png";
 import band from "@/assets/images/ecosystem/band.png";
 import bingx from "@/assets/images/ecosystem/bingx.png";
 import c98 from "@/assets/images/ecosystem/c98.png";
+import dev3 from "@/assets/images/ecosystem/dev3.png";
 import gate from "@/assets/images/ecosystem/gate.png";
 import halotrade from "@/assets/images/ecosystem/halotrade.png";
 import horo from "@/assets/images/ecosystem/horo.png";
@@ -13,18 +14,30 @@ import nimbus from "@/assets/images/ecosystem/img_nimbus.png";
 import keplr from "@/assets/images/ecosystem/keplr.png";
 import klever from "@/assets/images/ecosystem/klever.png";
 import leap from "@/assets/images/ecosystem/leap.png";
-import metamask from "@/assets/images/ecosystem/metamask.png";
 import mexc from "@/assets/images/ecosystem/mexc.png";
 import micro3 from "@/assets/images/ecosystem/micro3.png";
 import monsterra from "@/assets/images/ecosystem/monsterra.png";
 import nois from "@/assets/images/ecosystem/nois.png";
 import onus from "@/assets/images/ecosystem/onus.png";
 import pyxis from "@/assets/images/ecosystem/pyxis.png";
-import squid from "@/assets/images/ecosystem/squid.png";
-import stakify from "@/assets/images/ecosystem/stakify.png";
 import seekhype from "@/assets/images/ecosystem/seekhype.png";
+import stakify from "@/assets/images/ecosystem/stakify.png";
 import sub_wallet from "@/assets/images/ecosystem/sub_wallet.png";
+import validator_0 from "@/assets/images/ecosystem/validator_0.png";
+import validator_1 from "@/assets/images/ecosystem/validator_1.png";
+import validator_10 from "@/assets/images/ecosystem/validator_10.png";
+import validator_11 from "@/assets/images/ecosystem/validator_11.png";
+import validator_2 from "@/assets/images/ecosystem/validator_2.png";
+import validator_3 from "@/assets/images/ecosystem/validator_3.png";
+import validator_4 from "@/assets/images/ecosystem/validator_4.png";
+import validator_5 from "@/assets/images/ecosystem/validator_5.png";
+import validator_6 from "@/assets/images/ecosystem/validator_6.png";
+import validator_7 from "@/assets/images/ecosystem/validator_7.png";
+import validator_8 from "@/assets/images/ecosystem/validator_8.png";
+import validator_9 from "@/assets/images/ecosystem/validator_9.png";
 import yooldo from "@/assets/images/ecosystem/yooldo.png";
+
+
 import { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import Select from "../../components/Select";
@@ -32,51 +45,71 @@ import useWindowSize from "../../hooks/useWindowSize";
 
 const options = [
     { value: 'All', label: 'All ' },
-    { value: 'Tools', label: 'Tools' },
+    { value: 'Infrastructure', label: 'Infrastructure' },
     { value: 'NFT', label: 'NFT' },
-    { value: 'DEX', label: 'DEX' },
     { value: 'CEX', label: 'CEX' },
-    { value: 'Web3 Game', label: 'Web3 Game' },
     { value: 'Wallet', label: 'Wallet' },
-    { value: 'SocialFi', label: 'SocialFi' },
-    { value: 'Oracle', label: 'Oracle' },
     { value: 'DeFi', label: 'DeFi' },
-    { value: 'Others', label: 'Others' },
+    { value: 'Validator', label: 'Validator' },
+    { value: 'Web3 Game', label: 'Web3 Game' },
+    { value: 'SocialFi', label: 'SocialFi' },
+    { value: 'Web2 Transition', label: 'Web2 Transition' },
 ];
 
 const data = [
     {
         title: 'Aurascan',
         description: 'The next generation blockchain explorer for Aura Network',
-        tag: 'Tools',
+        tag: 'Infrastructure',
         img: aura_scan,
         link: 'https://aurascan.io/'
     },
     {
         title: 'Pyxis Safe',
         description: 'Multi-signature and fine -grain access control, asset management tool',
-        tag: 'Tools',
+        tag: 'Infrastructure',
         img: pyxis,
         link: 'https://pyxis.aura.network/'
     },
     {
         title: 'Horoscope',
         description: 'An indexing service to provide real-time data for Aura ecosystem',
-        tag: 'Tools',
+        tag: 'Infrastructure',
         img: horo,
         link: 'https://horoscope.aura.network/'
     },
     {
+        title: 'Band Protocol',
+        description: 'A cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts.',
+        tag: 'Infrastructure',
+        img: band,
+        link: 'https://www.bandprotocol.com/'
+    },
+    {
+        title: 'Nois Network',
+        description: 'Reliable Randomness For the Interchain',
+        tag: 'Infrastructure',
+        img: nois,
+        link: 'https://nois.network/'
+    },
+    {
+        title: 'Dev3Map',
+        description: 'The Interchain Developers Metrics Map',
+        tag: 'Infrastructure',
+        img: dev3,
+        link: 'https://beta.dev3map.com/'
+    },
+    {
         title: 'Nimbus',
         description: 'A Personalized Portfolio for Crypto investors',
-        tag: 'Tools',
+        tag: 'DeFi',
         img: nimbus,
         link: 'https://getnimbus.io/'
     },
     {
         title: 'Halotrade',
         description: 'Seamless crypto trading, built for all',
-        tag: 'DEX',
+        tag: 'DeFi',
         img: halotrade,
         link: 'https://halotrade.zone/'
     },
@@ -128,16 +161,9 @@ const data = [
     {
         title: 'AhaFast Ride 2 Earn',
         description: 'Spearheading the Blockchain O2O (Online-to-offline) movement in Vietnam',
-        tag: 'Others',
+        tag: 'Web2 Transition',
         img: ahafast,
         link: 'https://twitter.com/ahafastofficial'
-    },
-    {
-        title: 'Nois Network',
-        description: 'Reliable Randomness For the Interchain',
-        tag: 'Others',
-        img: nois,
-        link: 'https://nois.network/'
     },
     {
         title: 'Coin98',
@@ -175,27 +201,6 @@ const data = [
         link: 'https://www.klever.io/'
     },
     {
-        title: 'Band Protocol',
-        description: 'A cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts.',
-        tag: 'Oracle',
-        img: band,
-        link: 'https://www.bandprotocol.com/'
-    },
-    {
-        title: 'Squid',
-        description: 'The first native-to-native cross-chain solution, replacing bridges with 1-click cross-chain swaps',
-        tag: 'DeFi',
-        img: squid,
-        link: 'https://www.squidrouter.com/'
-    },
-    {
-        title: 'Micro3',
-        description: 'A Decentralized SocialFi Mint-To-Earn platform that empowers Web3 projects and individuals through the creator economy, leveraging advanced LayerZero and Chainlink technologies.',
-        tag: 'SocialFi',
-        img: micro3,
-        link: 'https://micro3.io/'
-    },
-    {
         title: 'SeekHYPE',
         description: 'NFT Marketplace for IP',
         tag: 'NFT',
@@ -208,6 +213,21 @@ const data = [
         tag: 'NFT',
         img: stakify,
         link: 'https://stakify.zone/'
+    },
+    {
+        title: 'Aura Validators',
+        tag: 'Validator',
+        img: aura_scan,
+        listImgs: [validator_0, validator_1, validator_2, validator_3, validator_4, validator_5, validator_6, validator_7, validator_8, validator_9, validator_10, validator_11],
+        link: 'https://aurascan.io/validators'
+    },
+    {
+        title: 'Micro3',
+        description: 'A Decentralized SocialFi Mint-To-Earn platform that empowers Web3 projects and individuals through the creator economy, leveraging advanced LayerZero and Chainlink technologies.',
+        tag: 'SocialFi',
+        img: micro3,
+        link: 'https://micro3.io/',
+        isBigger: true
     },
 ]
 
@@ -272,9 +292,21 @@ function Ecosystem() {
                         </div>
                         <div className="flex flex-col gap-4 flex-1">
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                                {visibleItems.map((e, index) => (
-                                    <Card key={index} data={e} />
-                                ))}
+                                {visibleItems.map((e, index) => {
+                                    if (e.isBigger) {
+                                        return (
+                                            <div key={index} className="col-span-1 lg:col-span-2">
+                                                <Card data={e} />
+                                            </div>
+                                        );
+                                    }
+                                    return (
+                                        <div key={index} className="col-span-1">
+                                            <Card data={e} />
+                                        </div>
+                                    );
+                                }
+                                )}
                             </div>
                             {visibleItems.length < filteredData.length && (
                                 <button

@@ -1,3 +1,4 @@
+'use client'
 import img_aura_2 from '@/assets/images/img_aura_2.png';
 import img_aura_thumb from '@/assets/images/img_aura_thumb.png';
 import img_c98 from '@/assets/images/img_c98.png';
@@ -23,10 +24,10 @@ import img_punkga_3 from '@/assets/images/img_punkga_3.png';
 import img_story_protocol from '@/assets/images/img_story_protocol.png';
 import img_story_protocol_2 from '@/assets/images/img_story_protocol_2.png';
 import img_subwallet from '@/assets/images/img_subwallet.png';
-
-
+import img_random_pirate from '@/assets/images/img_random_pirate.png';
 
 import Image from 'next/image';
+import Slider from './component/Slider';
 
 function Explore() {
     return (
@@ -129,8 +130,8 @@ function Explore() {
             </div>
 
             {/* IP Source */}
-            <div id='ip-source' className='flex flex-col gap-4 lg:gap-10 lg:h-[1172px] lg:order-last lg:flex-row lg:sticky lg:top-0'>
-                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] lg:mt-[942px]'>
+            <div id='ip-source' className='flex flex-col gap-4 lg:gap-10 lg:h-[1412px] lg:order-last lg:flex-row lg:sticky lg:top-0'>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px] lg:mt-[1182px]'>
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 10.5874V22.5874M11 10.5874H9M11 10.5874H13M11 22.5874H9M11 22.5874H13M17 22.5874V16.5874M17 16.5874V10.5874H21C22.6569 10.5874 24 11.9305 24 13.5874C24 15.2443 22.6569 16.5874 21 16.5874H17Z" stroke="url(#paint0_linear_3096_4953)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <rect x="3" y="5.5874" width="26" height="22" rx="4" stroke="url(#paint1_linear_3096_4953)" stroke-width="2" stroke-linecap="round" />
@@ -181,7 +182,9 @@ function Explore() {
                             </div>
                             <div className='hidden lg:flex flex-col gap-4'>
                                 <span className='font-ppmori-semibold'>Monsterra</span>
-                                <Image className='w-full rounded-lg object-cover' alt='img_monsterra' src={img_monsterra} />
+                                <div className='rounded-lg object-cover'>
+                                    <Image className='rounded-lg h-[124px] w-[275px]' width={275} height={124} alt='img_monsterra' src={img_monsterra} />
+                                </div>
                             </div>
                         </div>
 
@@ -195,20 +198,14 @@ function Explore() {
                             </div>
                             <div className='hidden lg:flex flex-col gap-4'>
                                 <span className='font-ppmori-semibold'>Yooldo, TROUBLE PUNK: CYBER GALZ, Random Private Defense</span>
-                                <div className='flex gap-2 object-cover'>
-                                    <div className='w-full rounded-lg'>
-                                        <Image className='w-full rounded-lg' alt='img_catze_1' src={img_catze_1} />
-                                    </div>
-                                    <div className='w-full rounded-lg object-cover'>
-                                        <Image className='w-full rounded-lg' alt='img_catze_2' src={img_catze_2} />
-
-                                    </div>
+                                <div className='flex gap-2'>
+                                    <Slider data={[img_catze_1, img_catze_2, img_random_pirate]} />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className='flex flex-col gap-4 lg:flex-row lg:gap-5'>
+                    <div className='flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-5'>
                         <div className='border border-[#221F19] rounded-2xl bg-black-charcoal p-6 flex flex-col gap-6 lg:flex-1'>
                             <div className='w-16 h-16 rounded-xl border-4 border-[#221F19] bg-[#111111]'>
                                 <Image className='w-full rounded-xl' alt='' src={img_creek_river} />
@@ -371,22 +368,22 @@ function Explore() {
 
             {/* Wallet */}
             <div id='wallet' className='flex flex-col gap-4 lg:gap-10 lg:order-5 lg:flex-row lg:h-[652px] lg:sticky lg:top-[160px]'>
-                    <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px]  lg:mt-[298px]'>
-                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 9.58728V8.49212C24 6.52102 22.1316 5.08553 20.227 5.59341L6.22701 9.32675C4.91375 9.67695 4 10.8663 4 12.2255V12.5873M24 9.58728H8C5.79086 9.58728 4 11.3781 4 13.5873V24.5873C4 26.7964 5.79086 28.5873 8 28.5873H24C26.2091 28.5873 28 26.7964 28 24.5873V13.5873C28 11.3781 26.2091 9.58728 24 9.58728Z" stroke="url(#paint0_linear_3096_5071)" stroke-width="2" stroke-linecap="round" />
-                            <circle cx="22" cy="18.5874" r="1" stroke="#EC737E" stroke-width="2" stroke-linecap="round" />
-                            <defs>
-                                <linearGradient id="paint0_linear_3096_5071" x1="4" y1="3.27169" x2="-1.30286" y2="20.5885" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0.23" stop-color="#EC737E" />
-                                    <stop offset="0.31" stop-color="#EC7977" />
-                                    <stop offset="0.43" stop-color="#ED8A65" />
-                                    <stop offset="0.44" stop-color="#ED8C63" />
-                                    <stop offset="0.75" stop-color="#FFDF8F" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <span className='font-semibold font-ppmori-semibold text-2xl'>Wallet</span>
-                    </div>
+                <div className='flex gap-5 items-center border-b border-[#221F19] py-[14px] lg:max-h-[62px] lg:min-w-[360px]  lg:mt-[298px]'>
+                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 9.58728V8.49212C24 6.52102 22.1316 5.08553 20.227 5.59341L6.22701 9.32675C4.91375 9.67695 4 10.8663 4 12.2255V12.5873M24 9.58728H8C5.79086 9.58728 4 11.3781 4 13.5873V24.5873C4 26.7964 5.79086 28.5873 8 28.5873H24C26.2091 28.5873 28 26.7964 28 24.5873V13.5873C28 11.3781 26.2091 9.58728 24 9.58728Z" stroke="url(#paint0_linear_3096_5071)" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="22" cy="18.5874" r="1" stroke="#EC737E" stroke-width="2" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="paint0_linear_3096_5071" x1="4" y1="3.27169" x2="-1.30286" y2="20.5885" gradientUnits="userSpaceOnUse">
+                                <stop offset="0.23" stop-color="#EC737E" />
+                                <stop offset="0.31" stop-color="#EC7977" />
+                                <stop offset="0.43" stop-color="#ED8A65" />
+                                <stop offset="0.44" stop-color="#ED8C63" />
+                                <stop offset="0.75" stop-color="#FFDF8F" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span className='font-semibold font-ppmori-semibold text-2xl'>Wallet</span>
+                </div>
 
                 <div className="grid grid-cols-2 gap-4 p-4 lg:p-0 lg:grid-cols-3 lg:flex-1 lg:pt-[120px] lg:bg-black-linear-gradient lg:h-fit">
                     <div className="bg-dark-charcoal rounded-lg p-5 flex flex-col gap-3 border border-linear h-[128px] lg:h-[200px]">
