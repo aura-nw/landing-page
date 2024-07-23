@@ -16,7 +16,7 @@ function Blogs() {
                     <SwiperButton onClickPrev={() => sliderRef.current?.slidePrev()} onClickNext={() => sliderRef.current?.slideNext()} />
                 </div>
             </div>
-            <div className="w-screen pl-6 xl:w-[calc(100vw_-_6px)] xl:pl-[calc((100vw_-_1408px)_/_2)]">
+            <div className="w-screen pl-6 xl:w-[calc(100vw_-_6px)] xl:pl-0">
                 <BlogsSlider ref={sliderRef} />
             </div>
         </div>

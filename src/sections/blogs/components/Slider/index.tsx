@@ -98,8 +98,8 @@ const BlogsSlider = forwardRef((props, ref: any) => {
                 }
             }}
         >
-            {posts.map((post: Post) => (
-                <SwiperSlide key={post.id}><Card post={post} /></SwiperSlide>
+            {posts.map((post: Post, i: number) => (
+                <SwiperSlide key={post.id} className={`${ i === 0 && 'xl:ml-[calc((100vw_-_1408px)_/_2)]'} w-[323px] h-[335px] xl:h-[474px] xl:w-[540px]`}><Card post={post} /></SwiperSlide>
             ))}
         </Swiper>
     );
