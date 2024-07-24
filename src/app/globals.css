@@ -86,16 +86,6 @@ body {
   .card {
     width: 272px;
   }
-
-  .swiper {
-    height: 370px !important;
-  }
-}
-
-@media screen and (min-width: 375px) {
-  .card {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 425px) {

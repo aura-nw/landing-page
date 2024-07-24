@@ -16,7 +16,6 @@ const BlogsSlider = forwardRef((props, ref: any) => {
     const [sliderReach, setSliderReach] = useState<string>("start")
     const [posts, setPosts] = useState<Post[]>([])
 
-
     useEffect(() => {
         const changeButtonStyle = (button: HTMLElement, isReached: boolean) => {
             if (isReached) {
