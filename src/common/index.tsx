@@ -4,7 +4,7 @@ export const enum PAGE_ROUTE {
     TECH_STACK = '/tech-stack',
     BUILD = '/build',
     DOCS = 'https://docs.aura.network/',
-    GET_AURA = '/get-aura',
+    GET_AURA = 'https://app.dev.aura.network/',
     DEPOSIT_AURA = '/get-aura/deposit-aura',
     WITHDRAW_AURA = '/get-aura/withdraw-aura',
     ECOSYSTEM = '/ecosystem',
