@@ -81,8 +81,8 @@ function Header() {
           <Item subItems={communityMenu}>Community</Item>
         </div>
         <div className="hidden lg:contents">
-          <Link href={PAGE_ROUTE.GET_AURA}>
-            <Button>Get AURA</Button>
+          <Link href={PAGE_ROUTE.GET_AURA} target="_blank">
+            <Button>Launch app</Button>
           </Link>
         </div>
       </div>
