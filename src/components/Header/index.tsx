@@ -62,7 +62,7 @@ function Header() {
         <div className="main-container">
           <div className="w-full flex justify-between items-center nav-container py-4">
             <Link href={PAGE_ROUTE.HOME} className="flex">
-              <Image src={ic_logo} alt="logo" width={150} height={80} />
+              <Image src={ic_logo} alt="logo" width={150} height={80} className="w-[114px] sm:w-[150px] h-[40px] sm:h-[80px]"/>
             </Link>
 
             <div
