@@ -1,26 +1,43 @@
-'use client'
+"use client";
 import SwiperButton from "@/components/Button/SwiperButton";
 import { useRef } from "react";
 import BlogsSlider from "./components/Slider";
+import Link from "next/link";
 
 function Blogs() {
-    const sliderRef = useRef<any>();
-    return (
-        <div className="flex flex-col gap-8 items-center xl:mt-10 xl:w-full">
-            <div className="flex w-full justify-center lg:px-6 xl:px-0">
-                <div className="flex flex-col gap-4 items-center px-10 lg:px-0 lg:w-full lg:items-start">
-                    <span id="aura-blogs" className="text-light-yellow font-normal text-center text-sm xl:text-start xl:text-xl font-jetBrains-mono">AURA'S BLOG</span>
-                    <h3 className="text-white text-center font-ppmori-semibold text-[28px] font-semibold leading-9">Discover the future of Web3</h3>
-                </div>
-                <div className="hidden lg:flex">
-                    <SwiperButton onClickPrev={() => sliderRef.current?.slidePrev()} onClickNext={() => sliderRef.current?.slideNext()} />
-                </div>
+  const sliderRef = useRef<any>();
+  return (
+    <div className="py-[64px] sm:py-[120px] flex flex-col gap-10 w-full" id="press">
+      <div className="w-full">
+        <div className="main-container px-0 sm:px-24">
+          <div className="px-0 sm:px-[200px] flex justify-between">
+            <div className="text-[#1c1f2a] text-[40px] font-semibold font-interTight leading-[52px]">
+              Press
             </div>
-            <div className="pl-6 w-[calc(100vw_-_6px)] xl:pl-0">
-                <BlogsSlider ref={sliderRef} />
-            </div>
+            <Link
+              href={"https://insight.aura.network/"}
+              target="_blank"
+              className="group h-12 px-6 py-3 bg-white rounded-[99px] border border-[#e0dedd] justify-center items-center gap-2 inline-flex hover:bg-gray-100 transition-all"
+            >
+              <div className="text-[#1c1f2a] text-base font-semibold font-interTight leading-normal group-hover:text-[#2671cf]">
+                Explore our apps
+              </div>
+            </Link>
+          </div>
         </div>
-    );
+      </div>
+      {/* <div className="hidden lg:flex">
+        <SwiperButton
+          onClickPrev={() => sliderRef.current?.slidePrev()}
+          onClickNext={() => sliderRef.current?.slideNext()}
+        />
+      </div> */}
+
+      <div className="pl-[24px] sm:pl-6 w-[calc(100vw_-_24px)] sm:w-[calc(100vw_-_6px)] xl:pl-0">
+        <BlogsSlider ref={sliderRef} />
+      </div>
+    </div>
+  );
 }
 
 export default Blogs;

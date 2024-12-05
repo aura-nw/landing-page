@@ -2,19 +2,19 @@ import GradientButton from "@/components/Button/GradientButton";
 
 function Introduction() {
   return (
-    <div className="max-w-[867px] flex flex-col gap-8 lg:gap-12 px-2">
-      <div className="flex flex-col items-center gap-10 lg:gap-6">
-        <div className="flex flex-col gap-4 lg:gap-6 items-center lg:w-[1102px]">
-          <h1 className="text-white self-stretch text-start lg:text-center text-[48px] lg:text-[72px] font-semibold leading-[52px] lg:leading-[86px] font-ppmori-semibold">
-            The First Abstraction Layer for Intellectual Properties
-          </h1>
-          <h3 className="text-medium-gray text-start lg:text-center text-xl lg:text-[22px] font-normal leading-8">
-            Enabling on-chain transactions for creating, registering, and managing IP across multiple chains.
-          </h3>
+    <div className="w-full h-[665px] sm:h-[870px] py-20 justify-end items-end gap-5 inline-flex">
+      <div className="grow shrink basis-0 self-stretch justify-end sm:justify-start items-start sm:items-end gap-5 flex flex-col  sm:flex-row">
+        <div className="sm:grow shrink basis-0 text-white text-[38px] sm:text-[60px] 2xl:text-[90px] font-semibold font-nacelle 2xl:leading-[99px]">
+          The Blockchain for
+          <br />
+          Enterprise & Entertainment
         </div>
-      </div>
-      <div className="flex lg:justify-center">
-        <GradientButton href="/introduction">Learn more</GradientButton>
+        <div className="w-[330px] 2xl:w-[417px] text-white text-md 2xl:text-xl font-normal font-interTight leading-7">
+          Aura Network is building the next generation of blockchain
+          infrastructure, powering both enterprise transformation and
+          entertainment innovation with enhanced efficiency, transparency, and
+          accessibility.
+        </div>
       </div>
     </div>
   );

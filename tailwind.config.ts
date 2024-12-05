@@ -1,7 +1,12 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}", "./src/sections/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     // screens: {
     //   xs: "375px",
@@ -9,12 +14,19 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "blur-brand-linear-gradient": "linear-gradient(339deg, rgba(255, 213, 105, 0.08) 23.57%, rgba(252, 142, 79, 0.08) 50.76%, rgba(255, 105, 123, 0.08) 76.37%)",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "blur-brand-linear-gradient":
+          "linear-gradient(339deg, rgba(255, 213, 105, 0.08) 23.57%, rgba(252, 142, 79, 0.08) 50.76%, rgba(255, 105, 123, 0.08) 76.37%)",
         "brand-gradient": "linear-gradient(339deg, #FFD569, #FC8E4F, #FF697B)",
-        "brand-linear-gradient": "linear-gradient(0deg, rgba(255, 213, 105, 1), rgba(252, 142, 79, 1), rgba(255, 105, 123, 1))",
-        "border-linear-gradient": "linear-gradient(180deg, rgba(160, 150, 114, 0.2) 0%, rgba(160, 150, 114, 0) 100%)",
-        "black-linear-gradient": "linear-gradient(180deg, rgba(12, 10, 9, 0) 0%, #0C0A09 27.76%)",
+        "brand-linear-gradient":
+          "linear-gradient(0deg, rgba(255, 213, 105, 1), rgba(252, 142, 79, 1), rgba(255, 105, 123, 1))",
+        "border-linear-gradient":
+          "linear-gradient(180deg, rgba(160, 150, 114, 0.2) 0%, rgba(160, 150, 114, 0) 100%)",
+        "black-linear-gradient":
+          "linear-gradient(180deg, rgba(12, 10, 9, 0) 0%, #0C0A09 27.76%)",
+        "custom-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.80) 100%), #2671CF",
       },
       colors: {
         "black-charcoal": "var(--black-charcoal)",
@@ -29,6 +41,15 @@ const config: Config = {
       fontFamily: {
         "ppmori-semibold": ["var(--font-ppmori-semibold)"],
         "jetBrains-mono": ["var(--font-jetBrains-mono)"],
+        "interTight": ["var(--font-inter-tight)"],
+        "nacelle": ["var(--font-nacelle)"],
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1900px', // Custom 2xl breakpoint at 1900px
       },
     },
   },

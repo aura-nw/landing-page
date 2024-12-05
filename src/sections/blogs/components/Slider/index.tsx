@@ -74,11 +74,11 @@ const BlogsSlider = forwardRef((props, ref: any) => {
     return (
         <Swiper
             modules={[Navigation, Pagination, A11y]}
-            spaceBetween={isMobile ? 16 : 32}
+            spaceBetween={isMobile ? 20 : 32}
             slidesPerView="auto"
             pagination={{
                 clickable: true,
-                enabled: isMobile
+                enabled: false
             }}
             onSwiper={(swiper) => {
                 ref && (ref.current = swiper);
@@ -98,7 +98,7 @@ const BlogsSlider = forwardRef((props, ref: any) => {
             }}
         >
             {posts.map((post: Post, i: number) => (
-                <SwiperSlide key={post.id} className={`${ i === 0 && 'xl:ml-[calc((100vw_-_1408px)_/_2)]'} w-[323px] h-[335px] xl:h-[474px] xl:w-[540px]`}><Card post={post} /></SwiperSlide>
+                <SwiperSlide key={post.id} className={`${ i === 0 && 'xl:ml-[calc((100vw_-_1408px)_/_2)]'} w-[318px] sm:w-[420px]`}><Card post={post} /></SwiperSlide>
             ))}
         </Swiper>
     );
