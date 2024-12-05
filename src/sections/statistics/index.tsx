@@ -258,7 +258,7 @@ function Statistics() {
             </div>
             <div className="flex flex-col gap-4 lg:hidden w-full">
               {statisticData.map((item: any, i: number) => {
-                return <Card data={item} />;
+                return <Card data={item} key={i}/>;
               })}
             </div>
           </div>
