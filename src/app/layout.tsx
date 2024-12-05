@@ -82,7 +82,7 @@ export default function RootLayout({
               />
               <Header />
               <RainbowKitProvider>{children}</RainbowKitProvider>
-              {children}
+              {/* {children} */}
               <ToastContainer
                 position="top-right"
                 autoClose={3000}
