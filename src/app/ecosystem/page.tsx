@@ -279,24 +279,10 @@ function Ecosystem() {
   };
 
   return (
-    <div className="mb-[60px] lg:mb-[160px] pt-0 sm:pt-[192px]">
+    <div className="mb-[60px] lg:mb-[160px] pt-[100px] sm:pt-[192px]">
       <div className="main-container">
-        <div className="flex flex-col items-center gap-6 lg:gap-16 mt-[14px] w-full lg:mt-0">
-          {/* <div className="xl:max-w-[867px] flex flex-col gap-10 px-2 items-center">
-                        <div className="flex flex-col items-center gap-16">
-                            <div>
-                                <div className="flex flex-col">
-                                    <h1 className="text-white self-stretch text-center lg:text-center text-[36px] lg:text-[48px] font-semibold leading-[52px] lg:leading-[80px] font-ppmori-semibold">
-                                        Ecosystem
-                                    </h1>
-                                    <span className="text-medium-gray text-[20px] leading-8 text-center">
-                                        Explore applications and integrations in the Aura ecosystem.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-          <div className="w-[1360px] h-[98px] flex-col justify-start items-center gap-4 inline-flex">
+        <div className="flex flex-col items-center gap-6 lg:gap-16 w-full lg:mt-0">
+          <div className="flex-col justify-start items-center gap-4 inline-flex">
             <div className="self-stretch text-[#1c1f2a] text-[50px] font-semibold font-nacelle leading-[55px]">
               Ecosystem
             </div>

@@ -43,7 +43,7 @@ function Header() {
   return (
     <>
       <header
-        className="fixed z-40 left-1/2 -translate-x-1/2 w-full transition-all duration-300"
+        className="fixed w-screen z-40 transition-all duration-300"
         id="navbar"
       >
         <div className="main-container">
@@ -52,9 +52,7 @@ function Header() {
               <Image
                 src={pathname === "/ecosystem/" ? logo3 : ic_logo}
                 alt="logo"
-                width={150}
-                height={80}
-                className="w-[114px] sm:w-[150px] h-[40px] sm:h-[80px]"
+                className="w-[114px] sm:w-[150px]"
               />
             </Link>
 
@@ -118,7 +116,11 @@ function Header() {
                 }}
                 className="flex"
               >
-                <Image src={ic_logo} alt="logo" width={150} height={80} />
+                <Image
+                  src={ic_logo}
+                  alt="logo"
+                  className="w-[114px] sm:w-[150px]"
+                />
               </Link>
               <div
                 className="text-white text-lg font-semibold font-interTight leading-[27px]"
