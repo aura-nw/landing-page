@@ -282,7 +282,7 @@ function Ecosystem() {
     <div className="mb-[60px] lg:mb-[160px] pt-[100px] sm:pt-[192px]">
       <div className="main-container">
         <div className="flex flex-col items-center gap-6 lg:gap-16 w-full lg:mt-0">
-          <div className="flex-col justify-start items-center gap-4 inline-flex">
+          <div className="flex-col justify-start items-center gap-4 inline-flex w-full">
             <div className="self-stretch text-[#1c1f2a] text-[50px] font-semibold font-nacelle leading-[55px]">
               Ecosystem
             </div>
