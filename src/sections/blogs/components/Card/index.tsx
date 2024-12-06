@@ -30,7 +30,7 @@ function Card({ post }: CardProps) {
         <div className="w-[318px] sm:w-[420px] h-auto sm:h-[358px] flex-col justify-start items-start gap-4 inline-flex">
              <Link href={url} target="_blank" className="rounded-lg overflow-hidden">
                 <div className="self-stretch h-[222px] w-[318px] sm:w-[420px] relative">
-                    <BlurImage fill src={featureImage} alt='img_blog' />
+                    <BlurImage fill src={featureImage} alt='img_blog'  className="object-cover"/>
                 </div>
             </Link>
             <div className="flex flex-col gap-2">

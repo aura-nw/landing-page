@@ -238,7 +238,7 @@ body {
 
 @media only screen and (min-width: 1536px) {
   .main-container {
-    max-width: 1216px;
+    max-width: 1360px;
     margin: auto;
     padding-right: 0px;
     padding-left: 0px;
@@ -247,7 +247,7 @@ body {
 
 @media only screen and (min-width: 1728px) {
   .main-container {
-    max-width: 1760px;
+    max-width: 1360px;
     margin: auto;
     padding-right: 0px;
     padding-left: 0px;

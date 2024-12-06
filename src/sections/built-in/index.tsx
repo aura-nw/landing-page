@@ -37,7 +37,7 @@ function BuiltIn() {
               </div>
             </div>
             <a className="self-stretch justify-start items-start gap-5 inline-flex" href="#enterprise">
-              <div className="grow shrink basis-0 text-right text-[#3189e2] text-lg font-semibold font-interTight leading-[27px] hover:text-blue-400 animate-bounce">
+              <div className="grow shrink basis-0 text-left text-[#3189e2] text-lg font-semibold font-interTight leading-[27px] hover:text-blue-400 animate-bounce">
                 Scroll down ↓{" "}
               </div>
             </a>

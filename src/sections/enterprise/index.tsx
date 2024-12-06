@@ -8,8 +8,8 @@ function Enterprise() {
       className="w-full py-[64px] sm:py-20 bg-[#2671cf] bg-[url('../assets/images/bg_section_31.png')] bg-cover bg-no-repeat"
       id="enterprise"
     >
-      <div className="main-container m-auto">
-        <div className="justify-start items-center gap-5 flex flex-col-reverse sm:flex-row px-6 2xl:px-[200px]">
+      <div className="main-container">
+        <div className="justify-start items-center gap-5 flex flex-col-reverse sm:flex-row">
           <div className="grow shrink basis-0 px-0 sm:px-6 2xl:px-24 py-[20px] sm:py-20 flex-col justify-start items-center sm:items-start gap-12 inline-flex">
             <div className="self-stretch flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch text-center sm:text-left text-white text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px]">

@@ -233,9 +233,9 @@ const statisticData = [
 function Statistics() {
   return (
     <div className="w-full py-[64px] sm:py-20 bg-[#1a3151] bg-[url('../assets/images/ic_section_5.png')] bg-cover bg-no-repeat">
-      <div className="w-full sm:max-w-[1360px] mx-auto">
+      <div className="main-container">
         <div className="flex flex-col gap-14 sm:gap-6 w-full items-center lg:gap-14">
-          <div className="text-white text-[38px] font-semibold font-nacelle leading-[41.80px] w-full px-6">
+          <div className="text-white text-[38px] font-semibold font-nacelle leading-[41.80px] w-full">
             The most thriving blockchain <br />
             in emerging countries
           </div>
@@ -256,7 +256,7 @@ function Statistics() {
                 })}
               </Swiper>
             </div>
-            <div className="flex flex-col gap-4 lg:hidden w-full mx-6">
+            <div className="flex flex-col gap-4 lg:hidden w-full">
               {statisticData.map((item: any, i: number) => {
                 return <Card data={item} key={i} />;
               })}

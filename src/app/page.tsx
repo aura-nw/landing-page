@@ -17,9 +17,9 @@ import Entertainment from "@/sections/entertainment";
 const Blogs = dynamic(() => import("../sections/blogs"));
 
 export const metadata: Metadata = {
-  title: "Aura Network - The Abstraction Layer For Programmable IPs",
+  title: "The Blockchain for Enterprise & Entertainment",
   description:
-    "Aura Network is an Abstraction Layer for Intellectual Property (IP), aiming to revolutionize RWA areas.",
+    "Aura Network is building the next generation of blockchain infrastructure, powering both enterprise transformation and entertainment innovation with enhanced efficiency, transparency, and accessibility.",
   openGraph: {
     images: "https://aura.network/img_thumb.png",
   },

@@ -8,13 +8,13 @@ function Entertainment() {
     <div className="main-container">
       <div className="py-[64px] sm:py-[120px] justify-start items-center gap-10 sm:gap-5 flex flex-col sm:flex-row w-full">
         <div className="flex-1 basis-auto flex justify-end">
-          <div className="w-full sm:w-[670px] h-auto sm:h-[480px] relative rounded-lg overflow-hidden">
+          <div className="w-full sm:max-w-[670px] h-auto sm:max-h-[480px] relative rounded-lg overflow-hidden">
             <Image className="w-full h-full" src={ic_section_4} alt="bg" />
-            <Image
+            {/* <Image
               className="mix-blend-screen top-0 left-[50px] sm:left-[100px] absolute w-[70%] h-auto sm:w-[464px] sm:h-[464px]"
               src={ic_section_42}
               alt="bg"
-            />
+            /> */}
           </div>
         </div>
         <div className="flex-1 basis-auto px-0 sm:px-6 2xl:px-24 py-0 sm:py-20 flex-col justify-start items-start gap-12 flex">
