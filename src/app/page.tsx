@@ -4,15 +4,22 @@ import Tutorials from "@/sections/tutorials";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import AbstractionLayer from "../sections/abstraction";
-import Elixir from "../sections/elixir";
 import Explore from "../sections/explore";
 import Parters from "../sections/partners";
 import Statistics from "../sections/statistics";
+
+import Image from "next/image";
+import BuiltIn from "@/sections/built-in";
+import GetStarted from "@/sections/get-started";
+import Footer from "@/components/Footer";
+import Enterprise from "@/sections/enterprise";
+import Entertainment from "@/sections/entertainment";
 const Blogs = dynamic(() => import("../sections/blogs"));
 
 export const metadata: Metadata = {
-  title: "Aura Network - The Abstraction Layer For Programmable IPs",
-  description: "Aura Network is an Abstraction Layer for Intellectual Property (IP), aiming to revolutionize RWA areas.",
+  title: "The Blockchain for Enterprise & Entertainment",
+  description:
+    "Aura Network is building the next generation of blockchain infrastructure, powering both enterprise transformation and entertainment innovation with enhanced efficiency, transparency, and accessibility.",
   openGraph: {
     images: "https://aura.network/img_thumb.png",
   },
@@ -20,22 +27,23 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="bg-[url('../assets/images/img_bg_mobile_2.png')] lg:bg-[url('../assets/images/img_bg_desktop_2.png')] bg-cover bg-no-repeat">
-      <div className="main-container">
-        <div className="flex min-h-screen flex-col items-center mb-20 xl:mb-[120px]">
-          <Introduction />
-          <div className="mt-[141px] lg:mt-[246px] flex flex-col gap-20 w-full items-center">
-            <Parters />
-            <Elixir />
-            <Explore />
-            <AbstractionLayer />
-            <Statistics />
-            <Features />
-            <Blogs />
-          </div>
+    <>
+      <Introduction />
+      <div className="flex min-h-screen flex-col items-center">
+        <div className="flex flex-col gap-0 w-full items-center">
+          <Parters />
+          <BuiltIn />
+          <Enterprise />
+          <Entertainment />
+          {/* <Explore /> */}
+          {/* <AbstractionLayer /> */}
+          <Statistics />
+          {/* <Features /> */}
+          <Blogs />
+          <GetStarted />
         </div>
       </div>
-      <Tutorials />
-    </div>
-  )
+      {/* <Footer /> */}
+    </>
+  );
 }

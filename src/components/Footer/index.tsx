@@ -1,8 +1,8 @@
 import ic_discord from "@/assets/icons/ic_discord_none_bg.svg";
-import ic_telegram from "@/assets/icons/ic_telegram_gray.svg";
+import ic_telegram from "@/assets/icons/ic_telegram.svg";
 import ic_x from "@/assets/icons/ic_x.svg";
-import ic_logo from "@/assets/images/img_logo.svg";
-import { SOCIAL } from "@/common";
+import logo_2 from "@/assets/images/logo_2.png";
+import { PAGE_ROUTE, SOCIAL } from "@/common";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,60 +10,105 @@ const socials = [
   {
     name: "X",
     link: SOCIAL.TWITTER,
-    icon: ic_x
+    icon: ic_x,
   },
   {
     name: "Discord",
     link: SOCIAL.DISCORD,
-    icon: ic_discord
+    icon: ic_discord,
   },
   {
     name: "Telegram",
     link: SOCIAL.TELEGRAM,
-    icon: ic_telegram
+    icon: ic_telegram,
   },
-]
+];
 
 function Footer() {
   return (
-    <footer className="bg-[url('../assets/images/img_bg_footer_mb.png')] bg-cover bg-no-repeat pt-[200px] md:pt-[320px] lg:pt-0 lg:bg-none">
-      <div className="flex flex-col gap-[50px] border-b border-[rgba(150,140,124,0.20)] justify-end px-6 pb-[120px] bg-black xl:px-[313px] xl:pt-16 xl:pb-[240px]">
-        <div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between">
-          <div className="flex flex-col gap-6 lg:gap-8 xl:w-[378px]">
-            <Image src={ic_logo} alt="logo" height={36}/>
-            <div className="flex gap-9">
-              {socials.map((item) => (
-                <Link key={item.name} href={item.link} target="_blank" className="block">
-                  <Image className="w-5 h-5" src={item.icon} alt={item.name} />
-                </Link>
-              ))}
-            </div>
-            <span className="text-medium-gray font-normal leading-6">The First Abstraction Layer for Intellectual Properties</span>
-          </div>
-          <div className="flex flex-wrap gap-16 xl:gap-[80px] justify-between">
-            <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
-              <span className="font-ppmori-semibold font-semibold leading-5">
-                Developer
+    <footer className="bg-[#0b1d30]">
+      <div className="main-container">
+        <div className="flex flex-col gap-[50px] justify-end pt-[64px] sm:pt-[120px] pb-[64px] sm:pb-[40px]">
+          <div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between">
+            <div className="flex flex-col gap-6 lg:gap-8 xl:w-[378px]">
+              <Image src={logo_2} alt="logo" height={85} />
+              <span className="text-white/80 text-base font-normal font-interTight leading-normal">
+                Building the next generation of blockchain infrastructure,
+                powering both enterprise transformation and entertainment
+                innovation.
               </span>
-              <div className="flex flex-col gap-2">
-                <Link href='https://docs.aura.network/' target="_blank" className="text-medium-gray leading-6 font-normal">Docs</Link>
-                <Link href='https://docs.aura.network/developer/' target="_blank" className="text-medium-gray leading-6 font-normal">Tools</Link>
-                {/* <Link href='https://bscscan.com/address/0x23c5D1164662758b3799103Effe19cC064d897D6' target="_blank" className="text-medium-gray leading-6 font-normal">Contracts</Link> */}
+              <div className="flex gap-9">
+                {socials.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.link}
+                    target="_blank"
+                    className="block"
+                  >
+                    <Image
+                      className="w-5 h-5"
+                      src={item.icon}
+                      alt={item.name}
+                    />
+                  </Link>
+                ))}
               </div>
             </div>
-
-            <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
-              <span className="font-ppmori-semibold font-semibold leading-5">
-                Ecosystem
-              </span>
-              <div className="flex flex-col gap-2">
-                <Link href='https://github.com/aura-nw/whitepaper/blob/main/release/Aura_Network___whitepaper.pdf' target="_blank" className="text-medium-gray leading-6 font-normal">Whitepaper</Link>
-                <Link href='https://docs.aura.network/overview/intro/' target="_blank" className="text-medium-gray leading-6 font-normal">DApps</Link>
-                <Link href='https://docs.aura.network/overview/tokenomic/' target="_blank" className="text-medium-gray leading-6 font-normal">Token</Link>
+            <div className="flex flex-wrap gap-16 xl:gap-[80px] justify-between">
+              <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
+                <span className="text-white text-base font-semibold font-interTight leading-normal">
+                  Explore
+                </span>
+                <div className="flex flex-col gap-2">
+                  <Link
+                    href={PAGE_ROUTE.HOME}
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="https://app.aura.network/"
+                    target="_blank"
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Products
+                  </Link>
+                  <Link
+                    href="#press"
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Press
+                  </Link>
+                </div>
               </div>
-            </div>
 
-            {/* <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
+              <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
+                <span className="text-white text-base font-semibold font-interTight leading-normal">
+                  Legal
+                </span>
+                <div className="flex flex-col gap-2">
+                  <Link
+                    href="#"
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Terms of use
+                  </Link>
+                  <Link
+                    href="#"
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Privacy policy
+                  </Link>
+                  <Link
+                    href="#"
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Legal terms
+                  </Link>
+                </div>
+              </div>
+
+              {/* <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
               <span className="font-ppmori-semibold font-semibold leading-5">
                 Legal
               </span>
@@ -74,22 +119,30 @@ function Footer() {
               </div>
             </div> */}
 
-            <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto">
-              <span className="font-ppmori-semibold font-semibold leading-5">
-                Career
-              </span>
-              <div className="flex flex-col gap-2">
-                <Link href='https://www.notion.so/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23' target="_blank" className="text-medium-gray leading-6 font-normal">Jobs</Link>
+              <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto">
+                <span className="text-white text-base font-semibold font-interTight leading-normal">
+                  Career
+                </span>
+                <div className="flex flex-col gap-2">
+                  <Link
+                    href="https://www.notion.so/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23"
+                    target="_blank"
+                    className="text-white/80 text-base font-normal font-interTight leading-normal"
+                  >
+                    Jobs
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="justify-center pt-8 hidden xl:flex xl:border-t border-[rgba(150,140,124,0.20)]">
-          <span className="text-medium-gray leading-6 font-normal text-center">© Aura Network 2024. All rights reserved</span>
+          <div className="justify-start pt-8 sm:pt-2 flex border-t border-[rgba(150,140,124,0.20)]">
+            <span className="text-white/80 text-sm font-normal font-interTight leading-tight">
+              © Aura Network 2024. All rights reserved
+            </span>
+          </div>
         </div>
       </div>
     </footer>
-
   );
 }
 
