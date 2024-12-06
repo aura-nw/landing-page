@@ -2,27 +2,12 @@ import ic_discord from "@/assets/icons/ic_discord_none_bg.svg";
 import ic_telegram from "@/assets/icons/ic_telegram.svg";
 import ic_x from "@/assets/icons/ic_x.svg";
 import ic_logo from "@/assets/images/img_logo.svg";
+import logo3 from "@/assets/images/logo3.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { PAGE_ROUTE, SOCIAL } from "../../common";
-
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
-const learnMenu = [
-  {
-    name: "Introduction",
-    pageRoute: PAGE_ROUTE.INTRODUCTION,
-  },
-  {
-    name: "Tech Stack",
-    pageRoute: PAGE_ROUTE.TECH_STACK,
-  },
-
-  {
-    name: "Docs",
-    link: "https://docs.aura.network/",
-  },
-];
 
 const socials = [
   {
@@ -43,6 +28,8 @@ const socials = [
 ];
 function Header() {
   const [isShow, setIsShow] = useState(false);
+  const pathname = usePathname();
+  // console.log(pathname);
   useEffect(() => {
     const navbar: any = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
@@ -62,11 +49,19 @@ function Header() {
         <div className="main-container">
           <div className="w-full flex justify-between items-center nav-container py-4">
             <Link href={PAGE_ROUTE.HOME} className="flex">
-              <Image src={ic_logo} alt="logo" width={150} height={80} className="w-[114px] sm:w-[150px] h-[40px] sm:h-[80px]"/>
+              <Image
+                src={pathname === "/ecosystem/" ? logo3 : ic_logo}
+                alt="logo"
+                width={150}
+                height={80}
+                className="w-[114px] sm:w-[150px] h-[40px] sm:h-[80px]"
+              />
             </Link>
 
             <div
-              className="text-white text-lg font-semibold font-interTight leading-[27px] sm:hidden"
+              className={`${
+                pathname === "/ecosystem/" ? "text-black" : "text-white"
+              } text-lg font-semibold font-interTight leading-[27px] sm:hidden`}
               onClick={() => {
                 setIsShow(true);
               }}
@@ -77,19 +72,34 @@ function Header() {
             <div className="hidden lg:flex gap-10">
               <Link
                 href={PAGE_ROUTE.HOME}
-                className="flex transform transition-transform duration-300 hover:scale-110"
+                className={`${
+                  pathname === "/ecosystem/" ? "text-black" : "text-white"
+                } flex transform transition-transform duration-300 hover:scale-110`}
               >
                 Home
               </Link>
               <Link
-                href="#about"
-                className="flex transform transition-transform duration-300 hover:scale-110"
+                href={pathname !== "/ecosystem/" ? "#about" : PAGE_ROUTE.HOME}
+                className={`${
+                  pathname === "/ecosystem/" ? "text-black" : "text-white"
+                } flex transform transition-transform duration-300 hover:scale-110`}
               >
                 About
               </Link>
               <Link
-                href="#press"
-                className="flex transform transition-transform duration-300 hover:scale-110"
+                href={PAGE_ROUTE.ECOSYSTEM}
+                className={`${
+                  pathname === "/ecosystem/" ? "text-black" : "text-white"
+                } flex transform transition-transform duration-300 hover:scale-110`}
+              >
+                Ecosystem
+              </Link>
+              <Link
+                href="https://insight.aura.network/"
+                target="_blank"
+                className={`${
+                  pathname === "/ecosystem/" ? "text-black" : "text-white"
+                } flex transform transition-transform duration-300 hover:scale-110`}
               >
                 Press
               </Link>
@@ -132,10 +142,7 @@ function Header() {
                 </div>
               </Link>
               <Link
-                href="#about"
-                onClick={() => {
-                  setIsShow(false);
-                }}
+                href={pathname !== "/ecosystem/" ? "#about" : PAGE_ROUTE.HOME}
                 className="self-stretch px-5 py-3 border-b border-white/25 justify-center items-center gap-2 inline-flex"
               >
                 <div className="grow shrink basis-0 text-white text-[38px] font-semibold font-nacelle leading-[41.80px]">
@@ -143,10 +150,19 @@ function Header() {
                 </div>
               </Link>
               <Link
-                href="#press"
+                href={PAGE_ROUTE.ECOSYSTEM}
                 onClick={() => {
                   setIsShow(false);
                 }}
+                className="self-stretch px-5 py-3 border-b border-white/25 justify-center items-center gap-2 inline-flex"
+              >
+                <div className="grow shrink basis-0 text-white text-[38px] font-semibold font-nacelle leading-[41.80px]">
+                  Ecosystem
+                </div>
+              </Link>
+              <Link
+                href="https://insight.aura.network/"
+                target="_blank"
                 className="self-stretch px-5 py-3 border-b border-white/25 justify-center items-center gap-2 inline-flex"
               >
                 <div className="grow shrink basis-0 text-white text-[38px] font-semibold font-nacelle leading-[41.80px]">
