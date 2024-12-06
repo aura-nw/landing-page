@@ -7,19 +7,19 @@ function GetStarted() {
     <div className="w-full bg-[#eff2f4]">
       <div className="main-container">
         <div className="py-[64px] sm:py-20 justify-start items-start gap-14 flex flex-col">
-          <div className="self-stretch justify-start items-start gap-5 flex flex-col sm:flex-row w-full">
-            <div className="grow shrink basis-0 text-[#1c1f2a] text-[38px] font-semibold font-nacelle leading-[41.80px]">
+          <div className="self-stretch justify-center items-start gap-5 flex flex-col sm:flex-row w-full">
+            <div className="grow shrink basis-0 text-[#1c1f2a] text-[38px] font-semibold font-nacelle leading-[41.80px] sm:max-w-[650px]">
               Get Started with Aura
             </div>
-            <div className="grow shrink basis-0 text-[#64656a] text-lg font-normal font-interTight leading-[27px]">
+            <div className="grow shrink basis-0 text-[#64656a] text-lg font-normal font-interTight leading-[27px] sm:max-w-[650px]">
               Ready to dive into Aura? Here's how, whether you're a developer or
               a web3 enthusiast.
             </div>
           </div>
-          <div className="self-stretch justify-start items-start gap-5 flex flex-col sm:flex-row">
-            <div className="grow shrink basis-0 p-10 bg-white rounded-lg flex-col justify-start items-start gap-10 inline-flex w-full">
-              <div className="self-stretch h-[67px] flex-col justify-start items-start gap-4 flex">
-                <div className="self-stretch h-[31px] flex-col justify-start items-start gap-1 flex">
+          <div className="self-stretch justify-center items-start gap-5 flex flex-col sm:flex-row">
+            <div className="grow shrink basis-0 p-10 bg-white rounded-lg flex-col justify-start items-start gap-10 inline-flex w-full sm:max-w-[670px]">
+              <div className="self-stretch flex-col justify-start items-start gap-4 flex">
+                <div className="self-stretch flex-col justify-start items-start gap-1 flex">
                   <div className="self-stretch text-[#1c1f2a] text-[28px] font-semibold font-nacelle leading-[30.80px]">
                     For developers
                   </div>
@@ -38,9 +38,9 @@ function GetStarted() {
                 </div>
               </Link>
             </div>
-            <div className="grow shrink basis-0 p-10 bg-[#1a3151] rounded-lg flex-col justify-start items-start gap-10 inline-flex w-full">
-              <div className="self-stretch h-[67px] flex-col justify-start items-start gap-4 flex">
-                <div className="self-stretch h-[31px] flex-col justify-start items-start gap-1 flex">
+            <div className="grow shrink basis-0 p-10 bg-[#1a3151] rounded-lg flex-col justify-start items-start gap-10 inline-flex w-full sm:max-w-[670px]">
+              <div className="self-stretch flex-col justify-start items-start gap-4 flex">
+                <div className="self-stretch flex-col justify-start items-start gap-1 flex">
                   <div className="self-stretch text-white text-[28px] font-semibold font-nacelle leading-[30.80px]">
                     For web3 enthusiast
                   </div>

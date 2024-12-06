@@ -9,8 +9,8 @@ function Blogs() {
   return (
     <div className="py-[64px] sm:py-[120px] flex flex-col gap-10 w-full" id="press">
       <div className="w-full">
-        <div className="main-container px-0 sm:px-24">
-          <div className="px-0 sm:px-[200px] flex justify-between">
+        <div className="w-full sm:max-w-[1360px] mx-auto">
+          <div className="flex justify-between mx-[24px]">
             <div className="text-[#1c1f2a] text-[40px] font-semibold font-interTight leading-[52px]">
               Press
             </div>
@@ -33,7 +33,7 @@ function Blogs() {
         />
       </div> */}
 
-      <div className="pl-[24px] sm:pl-6 w-[calc(100vw_-_24px)] sm:w-[calc(100vw_-_6px)] xl:pl-0">
+      <div className="pl-6 w-[calc(100vw_-_24px)]">
         <BlogsSlider ref={sliderRef} />
       </div>
     </div>

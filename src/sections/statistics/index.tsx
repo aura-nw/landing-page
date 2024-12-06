@@ -235,12 +235,12 @@ function Statistics() {
     <div className="w-full py-[64px] sm:py-20 bg-[#1a3151] bg-[url('../assets/images/ic_section_5.png')] bg-cover bg-no-repeat">
       <div className="main-container">
         <div className="flex flex-col gap-14 sm:gap-6 w-full items-center lg:gap-14">
-          <div className="text-white text-[38px] font-semibold font-nacelle leading-[41.80px] sm:w-[1376px]">
+          <div className="text-white text-[38px] font-semibold font-nacelle leading-[41.80px] sm:max-w-[1360px] w-full">
             The most thriving blockchain <br />
             in emerging countries
           </div>
           <div className="flex justify-center gap-4 w-full">
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex w-full">
               <Swiper
                 modules={[A11y, Navigation]}
                 spaceBetween={16}
