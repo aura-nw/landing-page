@@ -19,7 +19,7 @@ const Blogs = dynamic(() => import("../sections/blogs"));
 export const metadata: Metadata = {
   title: "The Blockchain for Enterprise & Entertainment",
   description:
-    "Aura Network is building the next generation of blockchain infrastructure, powering both enterprise transformation and entertainment innovation with enhanced efficiency, transparency, and accessibility.",
+    "Next-generation blockchain infrastructure powering enterprise transformation and entertainment innovation. Built for efficiency, security, and accessibility",
   openGraph: {
     images: "https://aura.network/img_thumb.png",
   },
