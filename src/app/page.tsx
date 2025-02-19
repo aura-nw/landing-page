@@ -19,9 +19,9 @@ import GovernmentFramework from "@/sections/government-framework";
 const Blogs = dynamic(() => import("../sections/blogs"));
 
 export const metadata: Metadata = {
-  title: "The Blockchain for Enterprise & Entertainment",
+  title: "The RWA Chain for Enterprise, Entertainment & Government",
   description:
-    "Next-generation blockchain infrastructure powering enterprise transformation and entertainment innovation. Built for efficiency, security, and accessibility",
+    "Aura Network is the dedicated RWA chain designed for the next generation of enterprise, entertainment, and government innovation, delivering enhanced efficiency, transparency, and accessibility",
   openGraph: {
     images: "https://aura.network/img_thumb.png",
   },
