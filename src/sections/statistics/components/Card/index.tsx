@@ -24,7 +24,7 @@ function Card({ data, className }: CardProps) {
     //     </div>
     // </div>
 
-    <div className="h-[240px] w-full sm:w-[328px] p-10 bg-white rounded-lg flex-col justify-between items-start inline-flex">
+    <div className="h-[240px] w-full sm:w-[328px] p-6 bg-white rounded-lg flex-col justify-between items-start inline-flex">
       <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
         <div className="text-[#3189e2] text-[56px] font-semibold font-interTight leading-[64px]">
           {value}

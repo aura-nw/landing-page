@@ -1,21 +1,21 @@
 import Image from "next/image";
-import ic_section_3 from "@/assets/images/ic_section_3.png";
+import ic_section_3 from "@/assets/images/government-framework.png";
 import Link from "next/link";
 
-function Enterprise() {
+function GovernmentFramework() {
   return (
-    <div className="w-full py-[64px] sm:py-20 bg-[#2671cf] bg-[url('../assets/images/bg_section_31.png')] bg-cover bg-no-repeat" id="enterprise">
+    <div className="w-full py-[64px] sm:py-20 bg-[#1A3151]" id="enterprise">
       <div className="main-container">
         <div className="justify-start items-center gap-5 flex flex-col-reverse sm:flex-row">
-          <div className="w-full sm:w-[670px] rounded-lg justify-start items-center flex">
-            <Image className="mix-blend-screen" src={ic_section_3} alt="Example Image" width={556} height={556} />
+          <div className="w-full sm:w-[670px] rounded-lg justify-start items-center flex bg-[#234E85]">
+            <Image className="mix-blend-screen w-full" src={ic_section_3} alt="Example Image" width={556} height={556} />
           </div>
           <div className="grow shrink basis-0 px-0 sm:px-6 2xl:px-24 py-[20px] sm:py-20 flex-col justify-start items-center sm:items-start gap-12 inline-flex">
             <div className="self-stretch flex-col justify-start items-start gap-6 flex">
-              <div className="self-stretch text-center sm:text-left text-white text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px]">Enterprise RWA Verification System </div>
+              <div className="self-stretch text-center sm:text-left text-white text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px]">Government Framework</div>
               <div className="self-stretch text-center sm:text-left text-white/80 text-lg font-normal font-interTight leading-[27px]">
-                Deploy scalable solutions with verifiable credentials and enterprise-grade asset management. Our infrastructure enables secure tokenization while maintaining proof-of-ownership and
-                operational excellence.
+                Enable public sector transformation through blockchain-based asset management and verifiable credentials. A comprehensive foundation for government services with secure identity
+                verification and regulatory compliance.
               </div>
             </div>
             <Link
@@ -32,4 +32,4 @@ function Enterprise() {
   );
 }
 
-export default Enterprise;
+export default GovernmentFramework;

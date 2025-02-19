@@ -14,12 +14,14 @@ import GetStarted from "@/sections/get-started";
 import Footer from "@/components/Footer";
 import Enterprise from "@/sections/enterprise";
 import Entertainment from "@/sections/entertainment";
+import AssetIdentityProtocol from "@/sections/asset-identity-protocol";
+import GovernmentFramework from "@/sections/government-framework";
 const Blogs = dynamic(() => import("../sections/blogs"));
 
 export const metadata: Metadata = {
-  title: "The Blockchain for Enterprise & Entertainment",
+  title: "The RWA Chain for Enterprise, Entertainment & Government",
   description:
-    "Next-generation blockchain infrastructure powering enterprise transformation and entertainment innovation. Built for efficiency, security, and accessibility",
+    "Aura Network is the dedicated RWA chain designed for the next generation of enterprise, entertainment, and government innovation, delivering enhanced efficiency, transparency, and accessibility",
   openGraph: {
     images: "https://aura.network/img_thumb.png",
   },
@@ -33,8 +35,10 @@ export default function Home() {
         <div className="flex flex-col gap-0 w-full items-center">
           <Parters />
           <BuiltIn />
+          <AssetIdentityProtocol />
           <Enterprise />
           <Entertainment />
+          <GovernmentFramework />
           {/* <Explore /> */}
           {/* <AbstractionLayer /> */}
           <Statistics />

@@ -8,7 +8,7 @@ import bingx from "@/assets/images/ecosystem/bingx.png";
 import c98 from "@/assets/images/ecosystem/c98.png";
 import dev3 from "@/assets/images/ecosystem/dev3.png";
 import gate from "@/assets/images/ecosystem/gate.png";
-import halotrade from "@/assets/images/ecosystem/halotrade.png";
+import halotrade from "@/assets/images/ecosystem/auraswap.webp";
 import horo from "@/assets/images/ecosystem/horo.png";
 import nimbus from "@/assets/images/ecosystem/img_nimbus.png";
 import keplr from "@/assets/images/ecosystem/keplr.png";
@@ -109,8 +109,8 @@ const data = [
     link: "https://getnimbus.io/",
   },
   {
-    title: "Halotrade",
-    description: "Seamless crypto trading, built for all",
+    title: "AuraSwap",
+    description: "Swap, earn, and bridge real-world assets with secure, compliant infrastructure",
     tag: "DeFi",
     img: halotrade,
     link: "https://halotrade.zone/",

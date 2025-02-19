@@ -46,7 +46,7 @@ function Header() {
         className="fixed w-screen z-40 transition-all duration-300"
         id="navbar"
       >
-        <div className="main-container">
+        <div className="mx-20">
           <div className="w-full flex justify-between items-center nav-container py-4">
             <Link href={PAGE_ROUTE.HOME} className="flex">
               <Image
