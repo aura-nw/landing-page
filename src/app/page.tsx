@@ -14,6 +14,8 @@ import GetStarted from "@/sections/get-started";
 import Footer from "@/components/Footer";
 import Enterprise from "@/sections/enterprise";
 import Entertainment from "@/sections/entertainment";
+import AssetIdentityProtocol from "@/sections/asset-identity-protocol";
+import GovernmentFramework from "@/sections/government-framework";
 const Blogs = dynamic(() => import("../sections/blogs"));
 
 export const metadata: Metadata = {
@@ -33,8 +35,10 @@ export default function Home() {
         <div className="flex flex-col gap-0 w-full items-center">
           <Parters />
           <BuiltIn />
+          <AssetIdentityProtocol />
           <Enterprise />
           <Entertainment />
+          <GovernmentFramework />
           {/* <Explore /> */}
           {/* <AbstractionLayer /> */}
           <Statistics />

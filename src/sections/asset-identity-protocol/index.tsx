@@ -1,18 +1,17 @@
 import Image from "next/image";
-import ic_section_4 from "@/assets/images/ic_section_4.png";
+import ic_section_4 from "@/assets/images/asset-identity-protocol.png";
 import ic_section_42 from "@/assets/images/ic_section_42.png";
 import Link from "next/link";
 
-function Entertainment() {
+function AssetIdentityProtocol() {
   return (
     <div className="main-container">
       <div className="py-[64px] sm:py-[120px] justify-start items-center gap-10 sm:gap-5 flex flex-col sm:flex-row w-full">
         <div className="flex-1 basis-auto px-0 sm:px-6 2xl:px-24 py-0 sm:py-20 flex-col justify-start items-start gap-12 flex">
           <div className="flex-col justify-start items-start gap-6 flex">
-            <div className="text-[#1c1f2a] text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px] max-w-[500px]">Entertainment Through RWA Chain</div>
+            <div className="text-[#1c1f2a] text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px] max-w-[500px]">Asset Identity Protocol (AIP)</div>
             <div className="text-[#64656a] text-lg font-normal font-interTight leading-[27px] max-w-[500px]">
-              Transform entertainment properties into verified on-chain assets through self-sovereign infrastructure. Aura Network enables secure tokenization and proof-of-ownership for real-world
-              entertainment assets, from media rights to franchise properties.
+              Aura Network enables secure verification of real-world assets through a comprehensive identity protocol, ensuring transparent ownership and simplified compliance for RWA tokenization.
             </div>
           </div>
           <Link
@@ -38,4 +37,4 @@ function Entertainment() {
   );
 }
 
-export default Entertainment;
+export default AssetIdentityProtocol;
