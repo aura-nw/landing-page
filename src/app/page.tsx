@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Aura Network is the dedicated RWA chain designed for the next generation of enterprise, entertainment, and government innovation, delivering enhanced efficiency, transparency, and accessibility",
   openGraph: {
-    images: "https://aura.network/img_thumb.png",
+    images: "https://aura.network/img_thumb.webp",
   },
 };
 
