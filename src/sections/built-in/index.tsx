@@ -18,7 +18,7 @@ function BuiltIn() {
           <div className="grow shrink basis-0 px-0 sm:px-6 2xl:px-24 flex-col justify-start items-start gap-6 inline-flex">
             <div className="self-stretch text-[#1c1f2a] text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px]">RWA Infrastructure</div>
             <div className="self-stretch justify-start items-start gap-5 flex flex-col sm:flex-row">
-              <div className="grow shrink basis-0 text-[#64656a] text-lg font-normal font-interTight leading-[27px]">
+              <div className="grow shrink basis-0 text-[#64656a] text-xl font-normal font-interTight leading-[27px]">
                 Aura Network provides the scalable foundation for real-world asset tokenization through its modular architecture. This built-in flexibility enables secure and efficient transformation
                 of traditional assets while optimizing for specific use cases and user experience.
               </div>

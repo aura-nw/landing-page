@@ -54,7 +54,7 @@ function Footer() {
                     Products
                   </Link>
                   <Link href="#press" className="text-white/80 text-base font-normal font-interTight leading-normal">
-                    Press
+                  Insight
                   </Link>
                 </div>
               </div>

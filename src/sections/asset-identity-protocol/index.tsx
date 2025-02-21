@@ -10,17 +10,17 @@ function AssetIdentityProtocol() {
         <div className="flex-1 basis-auto px-0 sm:px-6 2xl:px-24 py-0 sm:py-20 flex-col justify-start items-start gap-12 flex">
           <div className="flex-col justify-start items-start gap-6 flex">
             <div className="text-[#1c1f2a] text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px] max-w-[500px]">Asset Identity Protocol (AIP)</div>
-            <div className="text-[#64656a] text-lg font-normal font-interTight leading-[27px] max-w-[500px]">
+            <div className="text-[#64656a] text-xl font-normal font-interTight leading-[27px] max-w-[500px]">
               Aura Network enables secure verification of real-world assets through a comprehensive identity protocol, ensuring transparent ownership and simplified compliance for RWA tokenization.
             </div>
           </div>
-          <Link
+          {/* <Link
             href={"https://app.aura.network/"}
             target="_blank"
             className="group h-14 px-6 py-3.5 bg-[#3189e2] rounded-[99px] justify-center items-center gap-2 inline-flex hover:bg-blue-600 transition-all"
           >
             <div className="text-white text-lg font-semibold font-interTight leading-[27px]">Try Aura now</div>
-          </Link>
+          </Link> */}
         </div>
         <div className="flex-1 basis-auto flex justify-end">
           <div className="w-full sm:max-w-[670px] h-auto sm:max-h-[480px] relative rounded-lg overflow-hidden">

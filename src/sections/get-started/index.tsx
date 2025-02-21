@@ -37,7 +37,7 @@ function GetStarted() {
               </div>
             </div>
             <div className="grow shrink basis-0 flex flex-col gap-8">
-              <div className="grow shrink basis-0 text-[#64656a] text-lg font-normal font-interTight leading-[27px] sm:max-w-[650px] min-h-[55px]">
+              <div className="grow shrink basis-0 text-[#64656a] text-xl font-normal font-interTight leading-[27px] sm:max-w-[650px] min-h-[55px]">
                 Ready to dive into Aura? Here's how, whether you're a developer
                 or a web3 enthusiast.
               </div>

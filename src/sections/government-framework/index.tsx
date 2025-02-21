@@ -13,18 +13,18 @@ function GovernmentFramework() {
           <div className="grow shrink basis-0 px-0 sm:px-6 2xl:px-24 py-[20px] sm:py-20 flex-col justify-start items-center sm:items-start gap-12 inline-flex">
             <div className="self-stretch flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch text-center sm:text-left text-white text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px]">Government Framework</div>
-              <div className="self-stretch text-center sm:text-left text-white/80 text-lg font-normal font-interTight leading-[27px]">
+              <div className="self-stretch text-center sm:text-left text-white/80 text-xl font-normal font-interTight leading-[27px]">
                 Enable public sector transformation through blockchain-based asset management and verifiable credentials. A comprehensive foundation for government services with secure identity
                 verification and regulatory compliance.
               </div>
             </div>
-            <Link
+            {/* <Link
               href={"https://app.aura.network/"}
               target="_blank"
               className="group h-14 px-6 py-3.5 bg-white rounded-[99px] border border-[#3189e2] justify-center items-center gap-2 inline-flex hover:bg-gray-100 transition-all"
             >
               <div className="text-[#1c1f2a] text-lg font-semibold font-interTight leading-[27px] group-hover:text-[#2671cf]">Explore our apps</div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

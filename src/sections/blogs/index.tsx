@@ -14,7 +14,7 @@ function Blogs() {
       <div className="main-container pb-10">
         <div className="flex justify-between w-full">
           <div className="text-[#1c1f2a] text-[40px] font-semibold font-interTight leading-[52px]">
-            Press
+            Insight
           </div>
           <Link
             href={"https://insight.aura.network/"}

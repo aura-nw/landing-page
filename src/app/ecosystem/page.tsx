@@ -64,7 +64,7 @@ const data = [
     link: "https://aurascan.io/",
   },
   {
-    title: "Pyxis Safe",
+    title: "Aura Safe",
     description:
       "Multi-signature and fine -grain access control, asset management tool",
     tag: "Infrastructure",
@@ -72,7 +72,7 @@ const data = [
     link: "https://pyxis.aura.network/",
   },
   {
-    title: "Horoscope",
+    title: "Aura Index",
     description:
       "An indexing service to provide real-time data for Aura ecosystem",
     tag: "Infrastructure",
