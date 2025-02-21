@@ -57,7 +57,7 @@ const MobileTableItem: React.FC<props> = ({ tableItem }) => {
             </div>
           </div>
           <div
-            className="button cusor-pointer"
+            className="button cursor-pointer"
             onClick={() => {
               setExpand(!expand);
             }}
