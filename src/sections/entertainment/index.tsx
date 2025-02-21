@@ -15,13 +15,13 @@ function Entertainment() {
               entertainment assets, from media rights to franchise properties.
             </div>
           </div>
-          <Link
+          {/* <Link
             href={"https://app.aura.network/"}
             target="_blank"
             className="group h-14 px-6 py-3.5 bg-[#3189e2] rounded-[99px] justify-center items-center gap-2 inline-flex hover:bg-blue-600 transition-all"
           >
             <div className="text-white text-lg font-semibold font-interTight leading-[27px]">Try Aura now</div>
-          </Link>
+          </Link> */}
         </div>
         <div className="flex-1 basis-auto flex justify-end">
           <div className="w-full sm:max-w-[670px] h-auto sm:max-h-[480px] relative rounded-lg overflow-hidden">

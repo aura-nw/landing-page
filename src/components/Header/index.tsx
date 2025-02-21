@@ -99,7 +99,7 @@ function Header() {
                   pathname === "/ecosystem/" ? "text-black" : "text-white"
                 } flex transform transition-transform duration-300 hover:scale-110`}
               >
-                Press
+                Insight
               </Link>
             </div>
           </div>

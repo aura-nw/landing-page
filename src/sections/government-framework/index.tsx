@@ -18,13 +18,13 @@ function GovernmentFramework() {
                 verification and regulatory compliance.
               </div>
             </div>
-            <Link
+            {/* <Link
               href={"https://app.aura.network/"}
               target="_blank"
               className="group h-14 px-6 py-3.5 bg-white rounded-[99px] border border-[#3189e2] justify-center items-center gap-2 inline-flex hover:bg-gray-100 transition-all"
             >
               <div className="text-[#1c1f2a] text-lg font-semibold font-interTight leading-[27px] group-hover:text-[#2671cf]">Explore our apps</div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

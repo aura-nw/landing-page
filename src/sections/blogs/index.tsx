@@ -17,7 +17,7 @@ function Blogs() {
             Press
           </div>
           <Link
-            href={"https://insight.aura.network/"}
+            href={"https://docs.aura.network/"}
             target="_blank"
             className="group h-12 px-6 py-3 bg-white rounded-[99px] border border-[#e0dedd] justify-center items-center gap-2 inline-flex hover:bg-gray-100 transition-all"
           >
