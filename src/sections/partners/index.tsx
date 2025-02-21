@@ -1081,7 +1081,7 @@ function Parters() {
   return (
     <div className="flex flex-col sm:flex-row w-full items-center py-[64px] sm:py-[60px] gap-10 sm:gap-0">
       <div className="self-stretch justify-start items-center gap-6 flex">
-        <div className="self-stretch text-[#64656a] text-lg font-normal font-inter leading-[27px] flex items-center whitespace-nowrap px-20">
+        <div className="self-stretch text-[#64656a] text-xl font-normal font-inter leading-[27px] flex items-center whitespace-nowrap px-20">
           Our partners and investors
         </div>
       </div>

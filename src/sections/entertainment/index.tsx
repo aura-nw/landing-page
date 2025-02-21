@@ -10,7 +10,7 @@ function Entertainment() {
         <div className="flex-1 basis-auto px-0 sm:px-6 2xl:px-24 py-0 sm:py-20 flex-col justify-start items-start gap-12 flex">
           <div className="flex-col justify-start items-start gap-6 flex">
             <div className="text-[#1c1f2a] text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px] max-w-[500px]">Entertainment Through RWA Chain</div>
-            <div className="text-[#64656a] text-lg font-normal font-interTight leading-[27px] max-w-[500px]">
+            <div className="text-[#64656a] text-xl font-normal font-interTight leading-[27px] max-w-[500px]">
               Transform entertainment properties into verified on-chain assets through self-sovereign infrastructure. Aura Network enables secure tokenization and proof-of-ownership for real-world
               entertainment assets, from media rights to franchise properties.
             </div>

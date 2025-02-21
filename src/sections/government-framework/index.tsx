@@ -13,7 +13,7 @@ function GovernmentFramework() {
           <div className="grow shrink basis-0 px-0 sm:px-6 2xl:px-24 py-[20px] sm:py-20 flex-col justify-start items-center sm:items-start gap-12 inline-flex">
             <div className="self-stretch flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch text-center sm:text-left text-white text-[28px] sm:text-[38px] font-semibold font-nacelle leading-[41.80px]">Government Framework</div>
-              <div className="self-stretch text-center sm:text-left text-white/80 text-lg font-normal font-interTight leading-[27px]">
+              <div className="self-stretch text-center sm:text-left text-white/80 text-xl font-normal font-interTight leading-[27px]">
                 Enable public sector transformation through blockchain-based asset management and verifiable credentials. A comprehensive foundation for government services with secure identity
                 verification and regulatory compliance.
               </div>

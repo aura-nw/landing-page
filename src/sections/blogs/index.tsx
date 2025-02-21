@@ -14,10 +14,10 @@ function Blogs() {
       <div className="main-container pb-10">
         <div className="flex justify-between w-full">
           <div className="text-[#1c1f2a] text-[40px] font-semibold font-interTight leading-[52px]">
-            Press
+            Insight
           </div>
           <Link
-            href={"https://docs.aura.network/"}
+            href={"https://insight.aura.network/"}
             target="_blank"
             className="group h-12 px-6 py-3 bg-white rounded-[99px] border border-[#e0dedd] justify-center items-center gap-2 inline-flex hover:bg-gray-100 transition-all"
           >
