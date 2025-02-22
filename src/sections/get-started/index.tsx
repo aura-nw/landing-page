@@ -53,12 +53,12 @@ function GetStarted() {
                   </div>
                 </div>
                 <Link
-                  href={"https://app.aura.network/"}
+                  href={"https://x.com/AuraNetworkHQ"}
                   target="_blank"
                   className="h-14 px-6 py-3.5 bg-[#3189e2] rounded-[99px] justify-center items-center gap-2 inline-flex hover:bg-blue-600 transition-all"
                 >
                   <div className="text-white text-lg font-semibold font-interTight leading-[27px]">
-                    Start using
+                    Follow Aura on X
                   </div>
                 </Link>
               </div>
