@@ -168,7 +168,7 @@ function Header() {
                 className="self-stretch px-5 py-3 border-b border-white/25 justify-center items-center gap-2 inline-flex"
               >
                 <div className="grow shrink basis-0 text-white text-[38px] font-semibold font-nacelle leading-[41.80px]">
-                  Press
+                  Insight
                 </div>
               </Link>
             </div>
