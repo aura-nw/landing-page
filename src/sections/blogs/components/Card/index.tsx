@@ -34,7 +34,7 @@ function Card({ post }: CardProps) {
             fill
             src={featureImage}
             alt="img_blog"
-            className="object-cover"
+            className="object-contain md:object-cover"
           />
         </div>
       </Link>
