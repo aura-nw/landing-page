@@ -54,7 +54,7 @@ function Footer() {
                     Products
                   </Link>
                   <Link href="#press" className="text-white/80 text-base font-normal font-interTight leading-normal">
-                  Insight
+                    Insight
                   </Link>
                 </div>
               </div>
@@ -88,7 +88,7 @@ function Footer() {
               <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto">
                 <span className="text-white text-base font-semibold font-interTight leading-normal">Career</span>
                 <div className="flex flex-col gap-2">
-                  <Link href="https://www.notion.so/Aura-Job-Board-172bb39a89d844b0a0e1d8871026dc23" target="_blank" className="text-white/80 text-base font-normal font-interTight leading-normal">
+                  <Link href="https://aura-network.notion.site/hiring" target="_blank" className="text-white/80 text-base font-normal font-interTight leading-normal">
                     Jobs
                   </Link>
                 </div>
