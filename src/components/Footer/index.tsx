@@ -62,7 +62,7 @@ function Footer() {
               <div className="flex flex-col gap-4 w-[133px] xl:w-auto xl:h-auto h-[124px]">
                 <span className="text-white text-base font-semibold font-interTight leading-normal">Legal</span>
                 <div className="flex flex-col gap-2">
-                  <Link href="#" className="text-white/80 text-base font-normal font-interTight leading-normal">
+                  <Link href="https://images.aura.network/docs/Terms-of-Use.pdf" className="text-white/80 text-base font-normal font-interTight leading-normal">
                     Terms of use
                   </Link>
                   <Link href="#" className="text-white/80 text-base font-normal font-interTight leading-normal">
