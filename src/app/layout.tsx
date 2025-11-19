@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 // import { WagmiProvider } from "wagmi";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import TermsModal from "../components/TermsModal";
 import "./globals.css";
 import { WagmiProvider } from "wagmi";
 
@@ -74,6 +75,7 @@ export default function RootLayout({
         <body
           className={`${inter.className} ${ppmori.variable} ${jetBrains_mono.variable} ${interTight.variable} ${nacelle.variable} scroll-smooth`}
         >
+          <TermsModal />
           <div>
             {/* <input
               className="nav-input hidden"
